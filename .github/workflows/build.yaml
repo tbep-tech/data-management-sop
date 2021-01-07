@@ -4,7 +4,7 @@ on:
        - main
 
 
-name: renderbook
+name: build
 
 jobs:
   bookdown:
