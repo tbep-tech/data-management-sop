@@ -1,13 +1,16 @@
 fig:michener
-prerequisites
+execsum
 background
 importance-of-data
 why-we-need-to-effectively-manage-data
+the-tbep-philosophy
 goalsobjectives-of-this-document
 keys
 general-concepts
 specific-concepts
 workflow
+the-tbep-approach
+how-can-you-manage-data
 cases
 tberf-oyster-restoration-project
 desotorestore-project
