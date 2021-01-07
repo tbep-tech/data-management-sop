@@ -1,0 +1,8 @@
+# Data Management Workflow {#workflow}
+
+* Setup some kind of flow chart (if this, then that)
+     * What type of project am I working on? 
+     * What types of products am I expecting?
+     * Where am I at with the project (beginning, middle, end/damage control)?
+     * How do I want to make the data accessible?
+

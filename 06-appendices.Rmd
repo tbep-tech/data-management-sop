@@ -1,0 +1,34 @@
+# Appendice {#appendices}
+
+## Guidelines for best data management practices
+
+## Data types
+
+* Field data
+     * Survey forms
+     * Tabular*
+     * Database of tables
+* Database 
+     * Synthesis
+     * New
+* Model
+     * Actual model
+     * Model results
+* Dashboard
+
+## Definitions
+
+Dashboard
+Data
+Aggregation vs. synthesis
+Model
+Tabular
+Database
+Flat file
+Tidy data
+
+## Metadata templates
+
+General - Who, what, when, where, why?
+
+Specific - XML, EML, etc.

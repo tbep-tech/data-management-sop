@@ -1,0 +1,21 @@
+# Key Concepts and Principles {#keys}
+
+## General concepts
+
+* What are data, i.e., from the perspective of the researcher/agency scientist/manager? 
+     * Workflow (e..g, operationalizing Twitter scraping), dataset (field/lab data), model products, etc.
+     * Ask yourself, who is going to use this and how do I make their lives “easier” by opening the data using FAIR principles?
+* The FAIR principles (very broad, emphasize throughout), also general open science definition and how data relates to open science (channel PeerJ paper distinction)
+
+## Specific concepts
+
+* Specific concepts (particularly for tabular data)
+     * an overview of tidy data, can a machine read it? 
+     * normalized tables (including discussion of key variables), what are unique ids (e.g., tberf oyster, how did I make the unique id?), facilitate standard DB queries
+     * metadata documentation (min requirements, relevant standards)
+* types of data products (e.g., raw data, models, synthesized/derived data, etc.) or types of data (flat file, spatial, disparate)
+* how-to cookbooks for data prep (could speak to different parts of the analysis workflow, e.g., project inception, mid-project, post-project/damage control) for archival, naming conventions (e.g., no spaces, short but descriptive, etc.), data dictionaries
+* where do data live long-term, what's a doi, considering a data paper, federated repository, etc.
+     * GitHub repository
+     * Stable URL
+     * Official repository

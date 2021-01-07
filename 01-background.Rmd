@@ -1,0 +1,25 @@
+# Background {#background}
+
+## Importance of data
+
+* Data are the foundation of all research products and management decisions
+* A data definition, e.g., raw information in flat files, synthesized/derived datasets, models, etc. 
+* How data are used in applied research/environmental sciences
+
+## Why we need to effectively manage data
+
+* What happens when data are not managed properly - Figure 1, bit-rot
+* Professorware
+* Benefits of a data management workflow
+* Applications in open science
+
+## Goals/objectives of this document
+
+* What it is, what it is not - including what makes TBEP different from other organizations, i.e., we have hands in lots of projects vs one central product (e.g., OHI), so our SOP needs to be generalizable
+* Develop pathway for metadata
+* Intended audience
+
+```{r michener, echo = F, fig.cap = 'Loss of information over time in the absence of data management [@Michener97]'}
+knitr::include_graphics('img/michener.png')
+```
+
