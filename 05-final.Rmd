@@ -2,4 +2,5 @@
 
 * emphasis on "something is better than nothing", fully open is ideal but difficult to achieve
 * Just remember FAIR
+* evolving tools
 

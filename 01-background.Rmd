@@ -2,24 +2,36 @@
 
 ## Importance of data
 
-* Data are the foundation of all research products and management decisions
+* Data are the foundation of all research products that can be used to inform management decisions
 * A data definition, e.g., raw information in flat files, synthesized/derived datasets, models, etc. 
 * How data are used in applied research/environmental sciences
 
 ## Why we need to effectively manage data
 
-* What happens when data are not managed properly - Figure 1, bit-rot
-* Professorware
+* What happens when data are not managed properly - Figure \@ref(fig:michener)
+* Professorware [@Mons18]
 * Benefits of a data management workflow
 * Applications in open science
-
-## Goals/objectives of this document
-
-* What it is, what it is not - including what makes TBEP different from other organizations, i.e., we have hands in lots of projects vs one central product (e.g., OHI), so our SOP needs to be generalizable
-* Develop pathway for metadata
-* Intended audience
 
 ```{r michener, echo = F, fig.cap = 'Loss of information over time in the absence of data management [@Michener97]'}
 knitr::include_graphics('img/michener.png')
 ```
+
+## The TBEP philosophy
+
+* How TBEP is using open science to manage internal/external data and how is this increasing transparency, reproducibility, and efficiency of our reporting products
+* TBEP Open Science Subcommittee, building the community of practice
+
+## Goals/objectives of this document
+
+* Goal: Motivate internal staff and external partners to become stewards of their data by demonstrating the value of open data practices and providing a road map to achieving this goal.
+* Link to QMP [@tbep1620] and distinction between the documents
+* What it is, what it is not - including what makes TBEP different from other organizations, i.e., we have hands in lots of projects vs one central product (e.g., OHI), so our SOP needs to be generalizable
+     * It is: An overview document explaining the TBEP approach to data management, explains philosophy in details, tools we have developed
+     * It is: A cookbook describing how to manage datasets in an open science framework, including considerations before, during, and after a project, with full realization that data management should begin during project planning but often does not
+     * It is not: A definitive overview of best practices for data management
+     * It is not: A definitive overview of available online services for opening data, but we lean towards use of specific platforms that we find useful
+* Develop pathway for metadata documentation
+* Intended audience: TBEP internal staff and external partners, targeted towards technical staff in the latter case while also appealing to managers/admin that can create space to foster better practices for data management, also see TBEP QMP sec 1.3 
+
 

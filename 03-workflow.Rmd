@@ -1,8 +1,30 @@
 # Data Management Workflow {#workflow}
 
+This section describes our approach to managing data internally, to help describe what we do and why we do it.  This is context to how data management can be achieved for future internal and external projects.  
+
+## The TBEP approach
+
+* The TBEP data [QMP](https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing) [@tbep1620]: what, why, how
+* The Open Science cake, what it is and how we do we implement it
+* General workflow - source to product
+* GitHub as a collaborative tool and quasi-archive
+     * version control
+     * collaborative tool to work together - issues, pull requests
+     * DOI through Zenodo
+     * Automation with GitHub Actions and badges
+     * GitHub linkage to TBEP website
+* The tbeptools package as central component
+     * How does the package facilitate the above?
+
+## How can you manage data? 
+
+* Section is written as a road map for developing a data product, there will be steps/checkboxes/forms
+* Modularity is key to reproducibility
 * Setup some kind of flow chart (if this, then that)
      * What type of project am I working on? 
      * What types of products am I expecting?
      * Where am I at with the project (beginning, middle, end/damage control)?
      * How do I want to make the data accessible?
+* how-to cookbooks for data prep (could speak to different parts of the analysis workflow, e.g., project inception, mid-project, post-project/damage control) for archival, naming conventions (e.g., no spaces, short but descriptive, etc.), data dictionaries
+
 

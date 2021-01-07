@@ -9,9 +9,9 @@ bibliography: [refs.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: tbep-tech/data-management-sop
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+description: "This is a web page describing the TBEP data management SOP"
 ---
 
-# Prerequisites
+# Executive Summary {#execsum}
 
 

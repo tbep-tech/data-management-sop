@@ -1,9 +1,15 @@
 # Case Studies {#cases}
 
-Demonstrate the workflow
+Demonstrate the workflow, identify questions that were asked initially and what does done to answer them
 
 ## TBERF oyster restoration project
 
+Example of mid-project data curation
+
 ## DeSoto/RESTORE project
 
+Example of continuous stream data
+
 ## Red Tide Twitter repo
+
+Example of specific data product with linkage to technical and primary lit publication

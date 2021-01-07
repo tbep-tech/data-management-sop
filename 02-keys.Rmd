@@ -1,20 +1,24 @@
 # Key Concepts and Principles {#keys}
 
+Before we get started, we need to discuss some basic ideas around data and their management.  Understanding these concepts and why they're important will facilitate the development and curation of open data for others to use - it will save you time in the future.
+
 ## General concepts
 
 * What are data, i.e., from the perspective of the researcher/agency scientist/manager? 
      * Workflow (e..g, operationalizing Twitter scraping), dataset (field/lab data), model products, etc.
-     * Ask yourself, who is going to use this and how do I make their lives “easier” by opening the data using FAIR principles?
-* The FAIR principles (very broad, emphasize throughout), also general open science definition and how data relates to open science (channel PeerJ paper distinction)
+     * Ask yourself, who is going to use this and how do I make their (my) lives “easier” by opening the data using FAIR principles?
+* What is open data? The FAIR principles (very broad, emphasize throughout), also general open science definition and how data relates to open science (channel PeerJ paper distinction @Beck20)
+* What is metadata and why do we need it?
 
 ## Specific concepts
 
-* Specific concepts (particularly for tabular data)
+* types of data products (e.g., raw data, models, synthesized/derived data, etc.) or types of data (flat file, spatial, disparate)
+* Tabular data
+     * The wrong approach
      * an overview of tidy data, can a machine read it? 
      * normalized tables (including discussion of key variables), what are unique ids (e.g., tberf oyster, how did I make the unique id?), facilitate standard DB queries
      * metadata documentation (min requirements, relevant standards)
-* types of data products (e.g., raw data, models, synthesized/derived data, etc.) or types of data (flat file, spatial, disparate)
-* how-to cookbooks for data prep (could speak to different parts of the analysis workflow, e.g., project inception, mid-project, post-project/damage control) for archival, naming conventions (e.g., no spaces, short but descriptive, etc.), data dictionaries
+     * data dictionaries, naming conventions
 * where do data live long-term, what's a doi, considering a data paper, federated repository, etc.
      * GitHub repository
      * Stable URL
