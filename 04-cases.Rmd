@@ -4,12 +4,18 @@ Demonstrate the workflow, identify questions that were asked initially and what 
 
 ## TBERF oyster restoration project
 
-Example of mid-project data curation
+* Initial questions - Are we formatting our data correctly? 
+* Example of mid-project data curation
+* Emphasis on data dictionary, normalized tables
 
 ## DeSoto/RESTORE project
 
-Example of continuous stream data
+* Initial questions - how can we fulfill RESTORE requirements for data delivery based on a general grant requirement?
+* Example of continuous stream data
+* Emphasis on CI/CD checks and web products
 
 ## Red Tide Twitter repo
 
-Example of specific data product with linkage to technical and primary lit publication
+* Initial questions - What are the most relevant products from this project and how can we make them accessible?
+* Example of specific data product with linkage to technical and primary lit publication
+* Emphasis on creating a GitHub repo for archive of lexicon and source data, DOI

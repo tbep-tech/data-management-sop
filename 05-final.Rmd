@@ -3,4 +3,6 @@
 * emphasis on "something is better than nothing", fully open is ideal but difficult to achieve
 * Just remember FAIR
 * evolving tools
+* trying to be both a domain expert and data expert will spread you thin [@Mons18, p. 27, 36], look to the helpers/community
+
 

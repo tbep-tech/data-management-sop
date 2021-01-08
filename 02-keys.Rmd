@@ -5,21 +5,22 @@ Before we get started, we need to discuss some basic ideas around data and their
 ## General concepts
 
 * What are data, i.e., from the perspective of the researcher/agency scientist/manager? 
-     * Workflow (e..g, operationalizing Twitter scraping), dataset (field/lab data), model products, etc.
+     * A workflow (e..g, operationalizing Twitter scraping), dataset (field/lab data), model products, etc.
      * Ask yourself, who is going to use this and how do I make their (my) lives “easier” by opening the data using FAIR principles?
+     * OPEDAS [@Mons18] - other people's data and services - this is critical to TBEP that depends on partner data for reporting
 * What is open data? The FAIR principles (very broad, emphasize throughout), also general open science definition and how data relates to open science (channel PeerJ paper distinction @Beck20)
 * What is metadata and why do we need it?
 
 ## Specific concepts
 
-* types of data products (e.g., raw data, models, synthesized/derived data, etc.) or types of data (flat file, spatial, disparate)
+* Types of data products (e.g., raw data, models, synthesized/derived data, etc.) or types of data (flat file, spatial, disparate)
 * Tabular data
      * The wrong approach
      * an overview of tidy data, can a machine read it? 
      * normalized tables (including discussion of key variables), what are unique ids (e.g., tberf oyster, how did I make the unique id?), facilitate standard DB queries
      * metadata documentation (min requirements, relevant standards)
      * data dictionaries, naming conventions
-* where do data live long-term, what's a doi, considering a data paper, federated repository, etc.
+* Where do data live long-term, what's a doi, considering a data paper, federated repository, etc.
      * GitHub repository
      * Stable URL
      * Official repository

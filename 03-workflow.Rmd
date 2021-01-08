@@ -1,6 +1,6 @@
 # Data Management Workflow {#workflow}
 
-This section describes our approach to managing data internally, to help describe what we do and why we do it.  This is context to how data management can be achieved for future internal and external projects.  
+This section describes our approach to managing data internally, to help describe what we do and why we do it.  This is context for section \@ref(#howyou) that provides a road map for opening internal or external datasets.  
 
 ## The TBEP approach
 
@@ -16,7 +16,7 @@ This section describes our approach to managing data internally, to help describ
 * The tbeptools package as central component
      * How does the package facilitate the above?
 
-## How can you manage data? 
+## How can you manage data? {#howyou}
 
 * Section is written as a road map for developing a data product, there will be steps/checkboxes/forms
 * Modularity is key to reproducibility
