@@ -83,7 +83,11 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>4</b> Data Management Workflow</a><ul>
 <li class="chapter" data-level="4.1" data-path="workflow.html"><a href="workflow.html#the-tbep-approach"><i class="fa fa-check"></i><b>4.1</b> The TBEP approach</a></li>
-<li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#howyou"><i class="fa fa-check"></i><b>4.2</b> How can you manage data?</a></li>
+<li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#howyou"><i class="fa fa-check"></i><b>4.2</b> How can you manage data?</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="workflow.html"><a href="workflow.html#im-at-the-beginning-of-my-project"><i class="fa fa-check"></i><b>4.2.1</b> I’m at the beginning of my project</a></li>
+<li class="chapter" data-level="4.2.2" data-path="workflow.html"><a href="workflow.html#im-somehwere-in-the-middle-of-my-project"><i class="fa fa-check"></i><b>4.2.2</b> I’m somehwere in the middle of my project</a></li>
+<li class="chapter" data-level="4.2.3" data-path="workflow.html"><a href="workflow.html#im-at-the-end-of-my-project"><i class="fa fa-check"></i><b>4.2.3</b> I’m at the end of my project</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="cases.html"><a href="cases.html"><i class="fa fa-check"></i><b>5</b> Case Studies</a><ul>
 <li class="chapter" data-level="5.1" data-path="cases.html"><a href="cases.html#tberf-oyster-restoration-project"><i class="fa fa-check"></i><b>5.1</b> TBERF oyster restoration project</a></li>
@@ -91,8 +95,8 @@
 <li class="chapter" data-level="5.3" data-path="cases.html"><a href="cases.html#red-tide-twitter-repo"><i class="fa fa-check"></i><b>5.3</b> Red Tide Twitter repo</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
-<li class="chapter" data-level="7" data-path="appendices.html"><a href="appendices.html"><i class="fa fa-check"></i><b>7</b> Appendice</a><ul>
-<li class="chapter" data-level="7.1" data-path="appendices.html"><a href="appendices.html#guidelines-for-best-data-management-practices"><i class="fa fa-check"></i><b>7.1</b> Guidelines for best data management practices</a></li>
+<li class="chapter" data-level="7" data-path="appendices.html"><a href="appendices.html"><i class="fa fa-check"></i><b>7</b> Appendices</a><ul>
+<li class="chapter" data-level="7.1" data-path="appendices.html"><a href="appendices.html#list-of-resources"><i class="fa fa-check"></i><b>7.1</b> List of resources</a></li>
 <li class="chapter" data-level="7.2" data-path="appendices.html"><a href="appendices.html#data-types"><i class="fa fa-check"></i><b>7.2</b> Data types</a></li>
 <li class="chapter" data-level="7.3" data-path="appendices.html"><a href="appendices.html#definitions"><i class="fa fa-check"></i><b>7.3</b> Definitions</a></li>
 <li class="chapter" data-level="7.4" data-path="appendices.html"><a href="appendices.html#metadata-templates"><i class="fa fa-check"></i><b>7.4</b> Metadata templates</a></li>
@@ -120,13 +124,29 @@
             <section class="normal" id="section-">
 <div id="workflow" class="section level1">
 <h1><span class="header-section-number">Section 4</span> Data Management Workflow</h1>
-<p>This section describes our approach to managing data internally, to help describe what we do and why we do it. This is context for section @ref(#howyou) that provides a road map for opening internal or external datasets.</p>
+<p>This section describes our approach to managing data internally, to help describe what we do and why we do it. This is context for section <a href="workflow.html#howyou">4.2</a> that provides a road map for opening internal or external datasets.</p>
 <div id="the-tbep-approach" class="section level2">
 <h2><span class="header-section-number">4.1</span> The TBEP approach</h2>
 <ul>
 <li>The TBEP data <a href="https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing">QMP</a> <span class="citation">(E.T. Sherwood, G. Raulerson, M. Beck, M. Burke <a href="#ref-tbep1620" role="doc-biblioref">2020</a>)</span>: what, why, how</li>
-<li>The Open Science cake, what it is and how we do we implement it</li>
-<li>General workflow - source to product</li>
+<li>The Open Science cake, what it is and how we do we implement it, figure <a href="workflow.html#fig:cake">4.1</a></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:cake"></span>
+<img src="img/cake.png" alt="The open science cake showing the connection between research, environmental decisions, and the public."  />
+<p class="caption">
+Figure 4.1: The open science cake showing the connection between research, environmental decisions, and the public.
+</p>
+</div>
+<ul>
+<li>General workflow - source to product, figure <a href="workflow.html#fig:osworkflow">4.2</a></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:osworkflow"></span>
+<img src="img/os-workflow.png" alt="The TBEP open science workflow connecting source data to decision-support products."  />
+<p class="caption">
+Figure 4.2: The TBEP open science workflow connecting source data to decision-support products.
+</p>
+</div>
+<ul>
 <li>GitHub as a collaborative tool and quasi-archive
 <ul>
 <li>version control</li>
@@ -144,18 +164,42 @@
 <div id="howyou" class="section level2">
 <h2><span class="header-section-number">4.2</span> How can you manage data?</h2>
 <ul>
-<li>Section is written as a road map for developing a data product, there will be steps/checkboxes/forms</li>
-<li>Modularity is key to reproducibility</li>
-<li>Setup some kind of flow chart (if this, then that)
+<li>Section is written as a road map for developing a data product, there will be steps/checkboxes/forms, roughly following figure <a href="workflow.html#fig:dataworkflow">4.3</a></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:dataworkflow"></span>
+<img src="img/dataworkflow.png" alt="A hypothetical and generalized timeline for managing data associated with a project." width="80%" />
+<p class="caption">
+Figure 4.3: A hypothetical and generalized timeline for managing data associated with a project.
+</p>
+</div>
+<ul>
+<li>Modularity is key to reproducibility, it is independent of where you’re at in the project</li>
+<li>Setup some kind of flow chart (if this, then that)</li>
+</ul>
+<p>Where am I at with the project (beginning, middle, end/damage control)?</p>
+<div id="im-at-the-beginning-of-my-project" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> I’m at the beginning of my project</h3>
 <ul>
 <li>What type of project am I working on?</li>
 <li>What types of products am I expecting?</li>
-<li>Where am I at with the project (beginning, middle, end/damage control)?</li>
 <li>How do I want to make the data accessible?</li>
-</ul></li>
-<li>how-to cookbooks for data prep (could speak to different parts of the analysis workflow, e.g., project inception, mid-project, post-project/damage control) for archival, naming conventions (e.g., no spaces, short but descriptive, etc.), data dictionaries</li>
+</ul>
+</div>
+<div id="im-somehwere-in-the-middle-of-my-project" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> I’m somehwere in the middle of my project</h3>
+<ul>
+<li>Have I collected data?</li>
+<li>Are my data in tidy format (if tabular)?</li>
+<li>Have I been documenting metadata?</li>
+</ul>
+</div>
+<div id="im-at-the-end-of-my-project" class="section level3">
+<h3><span class="header-section-number">4.2.3</span> I’m at the end of my project</h3>
+<ul>
+<li>Time for damage control</li>
 </ul>
 
+</div>
 </div>
 </div>
 <h3>References</h3>

@@ -1,4 +1,7 @@
 fig:michener
+fig:cake
+fig:osworkflow
+fig:dataworkflow
 execsum
 background
 importance-of-data
@@ -11,13 +14,16 @@ specific-concepts
 workflow
 the-tbep-approach
 howyou
+im-at-the-beginning-of-my-project
+im-somehwere-in-the-middle-of-my-project
+im-at-the-end-of-my-project
 cases
 tberf-oyster-restoration-project
 desotorestore-project
 red-tide-twitter-repo
 final
 appendices
-guidelines-for-best-data-management-practices
+list-of-resources
 data-types
 definitions
 metadata-templates
