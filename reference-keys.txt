@@ -10,7 +10,7 @@ general-concepts
 specific-concepts
 workflow
 the-tbep-approach
-how-can-you-manage-data
+howyou
 cases
 tberf-oyster-restoration-project
 desotorestore-project
