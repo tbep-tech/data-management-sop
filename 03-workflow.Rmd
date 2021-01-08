@@ -1,12 +1,22 @@
 # Data Management Workflow {#workflow}
 
-This section describes our approach to managing data internally, to help describe what we do and why we do it.  This is context for section \@ref(#howyou) that provides a road map for opening internal or external datasets.  
+This section describes our approach to managing data internally, to help describe what we do and why we do it.  This is context for section \@ref(howyou) that provides a road map for opening internal or external datasets.  
 
 ## The TBEP approach
 
 * The TBEP data [QMP](https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing) [@tbep1620]: what, why, how
-* The Open Science cake, what it is and how we do we implement it
-* General workflow - source to product
+* The Open Science cake, what it is and how we do we implement it,  figure \@ref(fig:cake)
+
+```{r cake, fig.cap = 'The open science cake showing the connection between research, environmental decisions, and the public.'}
+knitr::include_graphics('img/cake.png')
+```
+
+* General workflow - source to product, figure \@ref(fig:osworkflow)
+
+```{r osworkflow, fig.cap = 'The TBEP open science workflow connecting source data to decision-support products.'}
+knitr::include_graphics('img/os-workflow.png')
+```
+
 * GitHub as a collaborative tool and quasi-archive
      * version control
      * collaborative tool to work together - issues, pull requests
@@ -18,13 +28,31 @@ This section describes our approach to managing data internally, to help describ
 
 ## How can you manage data? {#howyou}
 
-* Section is written as a road map for developing a data product, there will be steps/checkboxes/forms
-* Modularity is key to reproducibility
+* Section is written as a road map for developing a data product, there will be steps/checkboxes/forms, roughly following figure \@ref(fig:dataworkflow)
+
+```{r dataworkflow, fig.cap = 'A hypothetical and generalized timeline for managing data associated with a project.', out.width = '80%'}
+knitr::include_graphics('img/dataworkflow.png')
+```
+
+* Modularity is key to reproducibility, it is independent of where you're at in the project
 * Setup some kind of flow chart (if this, then that)
-     * What type of project am I working on? 
-     * What types of products am I expecting?
-     * Where am I at with the project (beginning, middle, end/damage control)?
-     * How do I want to make the data accessible?
-* how-to cookbooks for data prep (could speak to different parts of the analysis workflow, e.g., project inception, mid-project, post-project/damage control) for archival, naming conventions (e.g., no spaces, short but descriptive, etc.), data dictionaries
+
+Where am I at with the project (beginning, middle, end/damage control)?
+
+### I'm at the beginning of my project
+
+* What type of project am I working on? 
+* What types of products am I expecting?
+* How do I want to make the data accessible?
+
+### I'm somehwere in the middle of my project
+
+* Have I collected data?
+* Are my data in tidy format (if tabular)? 
+* Have I been documenting metadata? 
+
+### I'm at the end of my project
+
+* Time for damage control
 
 

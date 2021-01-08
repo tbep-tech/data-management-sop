@@ -1,6 +1,6 @@
-# Appendice {#appendices}
+# Appendices {#appendices}
 
-## Guidelines for best data management practices
+## List of resources
 
 ## Data types
 
