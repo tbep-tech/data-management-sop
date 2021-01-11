@@ -2,7 +2,12 @@ fig:michener
 fig:cake
 fig:osworkflow
 fig:dataworkflow
-execsum
+overview
+contributing-to-this-document
+opt1
+option-2
+option-3
+option-4
 background
 importance-of-data
 why-we-need-to-effectively-manage-data
