@@ -17,14 +17,15 @@ knitr::include_graphics('img/cake.png')
 knitr::include_graphics('img/os-workflow.png')
 ```
 
+* R/RStudio IDE workflow
+     * The tbeptools package as central component
+     * How does the package facilitate the above?
 * GitHub as a collaborative tool and quasi-archive
      * version control
      * collaborative tool to work together - issues, pull requests
      * DOI through Zenodo
-     * Automation with GitHub Actions and badges
+     * CI/CD, Automation with GitHub Actions and badges
      * GitHub linkage to TBEP website
-* The tbeptools package as central component
-     * How does the package facilitate the above?
 
 ## How can you manage data? {#howyou}
 
@@ -36,8 +37,6 @@ knitr::include_graphics('img/dataworkflow.png')
 
 * Modularity is key to reproducibility, it is independent of where you're at in the project
 * Setup some kind of flow chart (if this, then that)
-
-Where am I at with the project (beginning, middle, end/damage control)?
 
 ### I'm at the beginning of my project
 
