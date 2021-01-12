@@ -20,15 +20,15 @@ knitr::opts_chunk$set(
 
 # Overview {#overview}
 
-Welcome to the Tampa Bay Estuary Program Data Management SOP.  This document describes our philosophy for managing data used by our program and serves as motivation for our external partners to become stewards of their own data. Working together, we can improve how data are used to support the continued protection and restoration of Tampa Bay.
+Welcome to the Tampa Bay Estuary Program Data Management SOP. This document describes our philosophy for managing data used by our program and serves as motivation for our external partners to become stewards of their own data. Working together, we can improve how data are used to support the continued protection and restoration of Tampa Bay.
 
-Using an open science ethos, we strongly encourage community collaboration in contributing to how this document evolves.  Please follow the guidelines in section \@ref(contrib) to learn how to contribute and improve this SOP. 
+Using an open science ethos, we strongly encourage community collaboration in contributing to how this document evolves. Please follow the guidelines in section \@ref(contrib) to learn how to contribute and improve this SOP. 
 
 ## Contributing to this document {#contrib}
 
-This SOP was created using [bookdown](https://bookdown.org/), which is an approach to creating long-form documents with RMarkdown.  The source code is available on the TBEP GitHub group web page here: <https://github.com/tbep-tech/data-management-sop>.  Each section is a plain .Rmd text file that can be edited or commented to  provide feedback on content.  There are several ways you can contribute to or edit this document.
+This SOP was created using [bookdown](https://bookdown.org/), which is an approach to creating long-form documents with RMarkdown. The source code is available on the TBEP GitHub group web page: <https://github.com/tbep-tech/data-management-sop>. Each section is a plain .Rmd text file that can be edited or commented to  provide feedback on content.  There are several ways you can contribute to or edit this document.
 
-Before you choose your editing option, you should be comfortable with Git/GitHub basics and have some working knowledge of RMarkdown files (but see \@ref(opt4)).  The first step is to make sure you have a [GitHub account](https://github.com/join) so you can edit the files.  Jenny Bryan's [Happpy Git and GitHub for the useR](https://happygitwithr.com/) is an excellent resource to get started with version control.  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) is a great resource for learning RMarkdown (also see the [cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)).
+Before you choose your editing option, you should be comfortable with Git/GitHub basics and have some working knowledge of RMarkdown files (but see \@ref(opt4)). The first step is to make sure you have a [GitHub account](https://github.com/join) so you can edit the files.  Jenny Bryan's [Happpy Git and GitHub for the useR](https://happygitwithr.com/) is an excellent resource to get started with version control.  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) is a great resource for learning RMarkdown (also see the [cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)).
 
 ### Option 1 {#opt1}
 
