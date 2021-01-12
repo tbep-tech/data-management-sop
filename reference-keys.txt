@@ -5,9 +5,9 @@ fig:dataworkflow
 overview
 contributing-to-this-document
 opt1
-option-2
-option-3
-option-4
+opt2
+opt3
+opt4
 background
 importance-of-data
 why-we-need-to-effectively-manage-data
