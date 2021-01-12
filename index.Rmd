@@ -22,9 +22,9 @@ knitr::opts_chunk$set(
 
 ## Contributing to this document
 
-This SOP was created using [bookdown](https://bookdown.org/) and the source code is available on the TBEP GitHub group web page here: <https://github.com/tbep-tech/data-management-sop>.  Each section is a plain .Rmd text file that can be edited or commented to provide feedback on content.  There are several ways you can contribute to or edit this document.
+This SOP was created using [bookdown](https://bookdown.org/), which is an approach to creating long-form documents with RMarkdown.  The source code is available on the TBEP GitHub group web page here: <https://github.com/tbep-tech/data-management-sop>.  Each section is a plain .Rmd text file that can be edited or commented to provide feedback on content.  There are several ways you can contribute to or edit this document.
 
-Before you choose your editing option, you should be comfortable with Git/GitHub basics and have some working knowledge of RMarkdown files.  Jenny Bryan's [Happpy Git and GitHub for the useR](https://happygitwithr.com/) is an excellent resource to get started with version control.  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) is a great resource for learning RMarkdown.
+Before you choose your editing option, you should be comfortable with Git/GitHub basics and have some working knowledge of RMarkdown files (but see \@ref(opt4)).  Jenny Bryan's [Happpy Git and GitHub for the useR](https://happygitwithr.com/) is an excellent resource to get started with version control.  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) is a great resource for learning RMarkdown (also see the [cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)).
 
 ### Option 1 {#opt1}
 
@@ -42,25 +42,25 @@ Clicking on the edit button will take you to GitHub, where you will see an edit 
 knitr::include_graphics('img/editme.PNG')
 ```
 
-Each edit page is specific to the section where you've selected the edit button, e.g., if you select edit button for section 2, you'll be sent to the edit page for the .Rmd file for section 2.  Feel free to make any changes on the .Rmd file.  When you're done, scroll to the bottom and "commit" your changes.  This simply means you write a few words describing the edits you've made.  Be as succinct as possible. When you're done, hit the green "Commit changes" button.  
+Each edit page is specific to the section where you've selected the edit button, e.g., if you click the edit button for section 2, you'll be sent to the edit page for the .Rmd file for section 2.  Feel free to make any changes on the .Rmd file.  When you're done, scroll to the bottom and "commit" your changes.  This simply means you write a few words describing the edits you've made.  Be as succinct as possible. When you're done, hit the green "Commit changes" button.  
 
 ```{r, out.width = '100%'}
 knitr::include_graphics('img/editme2.PNG')
 ```
 
-### Option 2
+### Option 2 {#opt2}
 
 *Requires*: Github account
 
-Follow the above steps in option \@ref(opt1) by navigating to a section you'd like to edit and selecting the edit button. If you don't have write access to the repository, you will see something like this: 
+Follow the above steps in \@ref(opt1) by navigating to a section you'd like to edit on this website and selecting the edit button. If you don't have write access to the repository, you will see something like this: 
 
 ```{r, out.width = '100%'}
 knitr::include_graphics('img/editme3.PNG')
 ```
 
-This simply means that you do not have write access to this repository and you need to create your own copy to edit.  Once editing is done, you can submit a pull request to the original repository with your proposed changes.  Not sure what this means? Check out this chapter here: [https://happygitwithr.com/fork-and-clone.html](https://happygitwithr.com/fork-and-clone.html)
+This simply means that you need to create your own copy to edit.  You can fork your own copy to your personal account and make your edits there. Once editing is done, you can submit a pull request to the original repository with your proposed changes.  Not sure what this means? Check out this chapter here: [https://happygitwithr.com/fork-and-clone.html](https://happygitwithr.com/fork-and-clone.html)
 
-### Option 3
+### Option 3 {#opt3}
 
 *Requires*: GitHub account
 
@@ -70,15 +70,15 @@ If none of the above sounds appealing, you can always post any suggestions or ed
 knitr::include_graphics('img/issues.PNG')
 ```
 
-Give your issue a short but informative title (e.g., "suggests edits to section 2").  Under the "Write" tab, explain what edits or changes you'd like to see.  Feel free to select a member of the TBEP staff to assign the issue.  The issues descriptions support Markdown syntax, so get create (i.e., make lists, link to documents, etc.).
+Give your issue a short but informative title (e.g., "suggests edits to section 2").  Under the "Write" tab, explain what edits or changes you'd like to see.  Feel free to select a member of the TBEP staff to assign the issue using the menu on the right.  The issues descriptions support Markdown syntax, so get creative in your descriptions (i.e., make lists, link to documents, etc., see the [cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)).
 
-In general, one issue should cover only one change.  However, multiple text edits to the same document can be submitted to the same issue so long as they cover similar topics.  
+In general, one issue should cover only one suggested change to the document.  However, multiple text edits to the same document can be submitted to the same issue so long as they cover similar topics, e.g., one issue for several suggeested edits to one section.  
 
-### Option 4
+### Option 4 {#opt4}
 
 *Requires*: Email
 
-Just [email me](mailto:mbeck@tbep.org) any changes you'd like to see. 
+Just [email me](mailto:mbeck@tbep.org) any changes you'd like to see! 
 
 
 
