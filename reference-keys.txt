@@ -2,8 +2,9 @@ fig:michener
 fig:cake
 fig:osworkflow
 fig:dataworkflow
+fig:codehero
 overview
-contributing-to-this-document
+contrib
 opt1
 opt2
 opt3
@@ -18,10 +19,14 @@ general-concepts
 specific-concepts
 workflow
 the-tbep-approach
+our-philosopy
+tools-we-use
 howyou
 im-at-the-beginning-of-my-project
 im-somehwere-in-the-middle-of-my-project
 im-at-the-end-of-my-project
+metadata-workflow
+lets-get-it-online
 cases
 tberf-oyster-restoration-project
 desotorestore-project
