@@ -4,7 +4,7 @@ This section describes our approach to managing data internally, to help describ
 
 ## The TBEP approach
 
-### Our philosopy
+### Our philosophy
 
 * The TBEP data [QMP](https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing) [@tbep1620]: what, why, how
 * The Open Science cake: what it is, how we do we implement it, and what does it mean for data management, figure \@ref(fig:cake)
@@ -48,7 +48,7 @@ knitr::include_graphics('img/dataworkflow.png')
 * What types of products am I expecting?
 * How do I want to make the data accessible?
 
-### I'm somehwere in the middle of my project
+### I'm somewhere in the middle of my project
 
 * Have I collected data?
 * Are my data in tidy format (if tabular)? 

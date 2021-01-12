@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 
 Welcome to the Tampa Bay Estuary Program Data Management SOP.  This document describes our philosophy for managing data used by our program and serves as motivation for our external partners to become stewards of their own data. Working together, we can improve how data are used to support the continued protection and restoration of Tampa Bay.
 
-Uisng an open science ethos, we strongly encourage community collaboration in contributing to how this document evolves.  Please follow the guidelines in section \@ref(contrib) to learn how to contribute and improve this SOP. 
+Using an open science ethos, we strongly encourage community collaboration in contributing to how this document evolves.  Please follow the guidelines in section \@ref(contrib) to learn how to contribute and improve this SOP. 
 
 ## Contributing to this document {#contrib}
 
@@ -76,7 +76,7 @@ knitr::include_graphics('img/issues.PNG')
 
 Give your issue a short but informative title (e.g., "suggests edits to section 2").  Under the "Write" tab, explain what edits or changes you'd like to see.  Feel free to select a member of the TBEP staff to assign the issue using the menu on the right.  The issues descriptions support Markdown syntax, so get creative in your descriptions (i.e., make lists, link to documents, etc., see the [cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)).
 
-In general, one issue should cover only one suggested change to the document.  However, multiple text edits to the same document can be submitted to the same issue so long as they cover similar topics, e.g., one issue for several suggeested edits to one section.  
+In general, one issue should cover only one suggested change to the document.  However, multiple text edits to the same document can be submitted to the same issue so long as they cover similar topics, e.g., one issue for several suggested edits to one section.  
 
 ### Option 4 {#opt4}
 
