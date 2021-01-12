@@ -4,8 +4,10 @@ This section describes our approach to managing data internally, to help describ
 
 ## The TBEP approach
 
+### Our philosopy
+
 * The TBEP data [QMP](https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing) [@tbep1620]: what, why, how
-* The Open Science cake, what it is and how we do we implement it,  figure \@ref(fig:cake)
+* The Open Science cake: what it is, how we do we implement it, and what does it mean for data management, figure \@ref(fig:cake)
 
 ```{r cake, fig.cap = 'The open science cake showing the connection between research, environmental decisions, and the public.'}
 knitr::include_graphics('img/cake.png')
@@ -16,6 +18,8 @@ knitr::include_graphics('img/cake.png')
 ```{r osworkflow, fig.cap = 'The TBEP open science workflow connecting source data to decision-support products.'}
 knitr::include_graphics('img/os-workflow.png')
 ```
+
+### Tools we use
 
 * R/RStudio IDE workflow
      * The tbeptools package as central component
@@ -54,4 +58,12 @@ knitr::include_graphics('img/dataworkflow.png')
 
 * Time for damage control
 
+### Metadata workflow
 
+* USGS resources <https://www.usgs.gov/products/data-and-tools/data-management>
+* Metadata questionnaire <https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/atoms/files/MetadataQuestionnaire_508compliant.pdf>
+* Data dictionaries <https://www.usgs.gov/products/data-and-tools/data-management/data-dictionaries>
+
+### Let's get it online!
+
+* How to of where do you put your data

@@ -1,6 +1,6 @@
 # Key Concepts and Principles {#keys}
 
-Before we get started, we need to discuss some basic ideas around data and their management.  Understanding these concepts and why they're important will facilitate the development and curation of open data for others to use - it will save you time in the future.
+Before we get started, we need to discuss some basic ideas around data and their management.  Understanding these concepts and why they're important will facilitate the development and curation of open data for others to use - it will save you time in the future.  We start first with general concepts and then dive into some detailed concepts that may seem daunting but are important when considering how best to manage data.
 
 ## General concepts
 
@@ -17,10 +17,16 @@ Before we get started, we need to discuss some basic ideas around data and their
 * Tabular data
      * The wrong approach
      * an overview of tidy data, can a machine read it? 
+* Basic database principles
+     * logical extension of tidy data
      * normalized tables (including discussion of key variables), what are unique ids (e.g., tberf oyster, how did I make the unique id?), facilitate standard DB queries
-     * metadata documentation (min requirements, relevant standards)
+* Metadata principles
+     * Why? Supports the F in FAIR, also supports use by others
+     * Minimum requirements
+     * Formal standards
      * data dictionaries, naming conventions
 * Where do data live long-term, what's a doi, considering a data paper, federated repository, etc.
+     * The A in FAIR
      * GitHub repository
      * Stable URL
      * Official repository

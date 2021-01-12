@@ -3,6 +3,9 @@
 * emphasis on "something is better than nothing", fully open is ideal but difficult to achieve
 * Just remember FAIR
 * evolving tools
-* trying to be both a domain expert and data expert will spread you thin [@Mons18, p. 27, 36], look to the helpers/community
+* trying to be both a domain expert and data expert will spread you thin [@Mons18, p. 27, 36], look to the helpers/community (Figure \@ref(fig:codehero))
 
+```{r codehero, out.width = '100%', fig.cap = 'Look to the helpers and your open science community! Artwork by [\\@allison_horst](https://twitter.com/allison_horst).'}
+knitr::include_graphics('img/code_hero.jpg')
+```
 
