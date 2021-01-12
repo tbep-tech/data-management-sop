@@ -10,14 +10,15 @@ Before we get started, we need to discuss some basic ideas around data and their
      * OPEDAS [@Mons18] - other people's data and services - this is critical to TBEP that depends on partner data for reporting
 * What is open data? The FAIR principles (very broad, emphasize throughout), also general open science definition and how data relates to open science (channel PeerJ paper distinction @Beck20)
 * What is metadata and why do we need it?
+* Best practices for QA
 
 ## Specific concepts
 
 * Types of data products (e.g., raw data, models, synthesized/derived data, etc.) or types of data (flat file, spatial, disparate)
 * Tabular data
-     * The wrong approach
      * an overview of tidy data, can a machine read it? 
-* Basic database principles
+     * The wrong approach
+ * Basic database principles
      * logical extension of tidy data
      * normalized tables (including discussion of key variables), what are unique ids (e.g., tberf oyster, how did I make the unique id?), facilitate standard DB queries
 * Metadata principles
