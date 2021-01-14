@@ -22,9 +22,9 @@ knitr::opts_chunk$set(
 
 Welcome to the Tampa Bay Estuary Program Data Management SOP. This document describes our philosophy for managing data used by our program and serves as motivation for our external partners to become stewards of their own data. Working together, we can improve how data are used to support the continued protection and restoration of Tampa Bay.
 
-Using an open science ethos, we strongly encourage community collaboration in contributing to how this document evolves. Please follow the guidelines in section \@ref(contrib) to learn how to contribute and improve this SOP. 
-
 ## Contributing to this document {#contrib}
+
+Using an open science ethos, we strongly encourage community collaboration in how this document evolves. This means anybody can contribute directly to content in this document.  Please follow the guidelines in section \@ref(contrib) to learn how to contribute and improve this SOP. 
 
 This SOP was created using [bookdown](https://bookdown.org/), which is an approach to creating long-form documents with RMarkdown. The source code is available on the TBEP GitHub group web page: <https://github.com/tbep-tech/data-management-sop>. Each section is a plain .Rmd text file that can be edited or commented to  provide feedback on content.  There are several ways you can contribute to or edit this document.
 
@@ -84,5 +84,17 @@ In general, one issue should cover only one suggested change to the document.  H
 
 Just [email me](mailto:mbeck@tbep.org) any changes you'd like to see! 
 
+## About
 
+The Tampa Bay Estuary Program is one of [28 National Estuary Programs](http://nationalestuaries.org/) designated by Congress to restore and protect "estuaries of national significance." Administered by the U.S Environmental Protection Agency under the Clean Water Act, each program must develop a science-based plan using community input to protect and enhance the natural resources of its respective estuary and surrounding watershed.  
 
+The [Comprehensive Conservation and Management Plan](http://ccmp.tbep.org/) (CCMP, updated in 2017) presents 39 actions to sustain progress in bay restoration through the year 2027.  To address the actions in our CCMP, our [2021-2025 Strategic Plan](https://drive.google.com/file/d/11xohuoaHDxNHRqgXoOHdI37FpWvac_rn/view) provides a framework to guide decisions about how to align personnel and financial resources with the Program’s mission in ways that maximize our impact on Tampa Bay recovery.  A cornerstone strategy of this plan is the use of open science principles and methods to allow the TBEP to be the primary source of trusted, unbiased, and actionable science for the Tampa Bay Estuary.  This document is a reflection of these strategies. 
+
+Please visit our website for additional information about our program: <https://www.tbep.org>
+
+----------
+
+<a rel='license' href='http://creativecommons.org/licenses/by/4.0/'><img alt='Creative Commons License' style='border-width:0' src='https://i.creativecommons.org/l/by/4.0/88x31.png' /></a>&nbsp;&nbsp;This book is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a>.
+
+[![build](https://github.com/tbep-tech/data-management-sop/workflows/build/badge.svg)](https://github.com/tbep-tech/data-management-sop/actions)
+ This version of the book was built automatically with GitHub Actions on `r Sys.Date()`.
