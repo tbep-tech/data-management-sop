@@ -13,6 +13,7 @@ about
 background
 importance-of-data
 why-we-need-to-effectively-manage-data
+open-science
 the-tbep-philosophy
 goalsobjectives-of-this-document
 keys
