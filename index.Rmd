@@ -1,6 +1,6 @@
 --- 
 title: "Data Management SOP for the Tampa Bay Estuary Program"
-author: "Marcus W. Beck"
+author: "Marcus W. Beck, Gary E. Raulerson"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
