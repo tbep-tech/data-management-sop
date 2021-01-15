@@ -15,13 +15,13 @@ importance-of-data
 why-we-need-to-effectively-manage-data
 open-science
 the-tbep-philosophy
-goalsobjectives-of-this-document
+goals-and-objectives-of-this-document
 keys
 general-concepts
 specific-concepts
 workflow
 the-tbep-approach
-our-philosophy
+philo
 tools-we-use
 howyou
 im-at-the-beginning-of-my-project
