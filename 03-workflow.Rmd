@@ -4,7 +4,7 @@ This section describes our approach to managing data internally, to help describ
 
 ## The TBEP approach
 
-### Our philosophy
+### Our philosophy {#philo}
 
 * The TBEP data [QMP](https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing) [@tbep1620]: what, why, how
 * The Open Science cake: what it is, how we do we implement it, and what does it mean for data management, figure \@ref(fig:cake)
@@ -13,6 +13,7 @@ This section describes our approach to managing data internally, to help describ
 knitr::include_graphics('img/cake.png')
 ```
 
+* Applied science, not implied science
 * General workflow - source to product, figure \@ref(fig:osworkflow)
 
 ```{r osworkflow, fig.cap = 'The TBEP open science workflow connecting source data to decision-support products.'}
