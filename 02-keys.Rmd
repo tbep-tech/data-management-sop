@@ -1,8 +1,42 @@
 # Key Concepts and Principles {#keys}
 
-Before we get started, we need to discuss some basic ideas around data and their management.  Understanding these concepts and why they're important will facilitate the development and curation of open data for others to use - it will save you time in the future.  We start first with general concepts and then dive into some detailed concepts that may seem daunting but are important when considering how best to manage data.
+Before we get started, we need to discuss some basic ideas around data and their management.  Understanding these concepts and why they're important will facilitate the development and curation of open data for others to use.  Perhaps more importantly, it will also save you time in the future.  We start first with general concepts and then dive into some detailed concepts.  The detailed concepts may seem daunting, but they are critical in supporting your journey in managing your own data.
 
 ## General concepts
+
+### Data types and identifying important contributions
+
+We briefly introduced a general concept of data in section \@ref(dataimp).  Here and throughout, we use the term "data" to describe a variety of products either directly supporting decision-making processes or used for research to support the former.  Data can be generated to support or refute hypotheses in research, whereas research can also produce data products that support environmental management.  The end game in all of these processes is Understanding that data can be present at any stage in research and/or decisions that support environmental management.  Individuals may generally use the term "data" to describe products at any point in this workflow.  Understanding the diferent ways we talk about data will allow you to more carefully identify your data management needs.    
+
+Identifying the types of data that are important to support decision-making is the first task in developing a data management workflow.  Any research project could produce countless datasets and it may be challenging to understand which datasets are important or are merely intermediate steps in a larger process.  Ask these questions to help you identify which datasets are important to your project.
+
+1. What is the most important and tangible contribution of this project?  
+1. Who is going to benefit from the results of this project? 
+1. How can I use data management practices to make the use of these data "easier" for decision-making?
+
+Answers to these questions can help you identify important data products that needs a formal data management workflow.  However, coming to a single answer is the exception not the norm and a typical answer usually is "it depends".  Also realize that you may be the direct beneficiary of a particular research project - documenting and using proper data management workflows will save you from headache in the future.  Evaluating these questions at different steps throughout a project can help you identify the valuable contributions. 
+
+In a perfect world where we have endless time and resources, and not to mention interest, to dedicate to data management, we would track and document the provenance of every single dataset used by a research project.  Of course, we don't have time to do this, nor do we need to curate every piece of data.  Here are a couple scenarios that can help you identify the most important data contribution of your project. 
+
+> I am collecting field data and/or running experiments in a laboratory.
+
+The field or experimental data are obvious candidates for developing a data management workflow, yet it is rarely one dataset that is produced.  Working with these data continuously throughout a project will benefit from developing a data dictionary and understanding linking keys between different data tables.  If you don't want or need to archive all the datasets you've used or created, identify a master dataset that provides the main results for your study.
+
+> I am using data from an external source as primary or secondary information to support analysis or generate a reporting product
+
+A derived dataset may be the most important contribution of this project.  This dataset includes multiple combinations of input datasets from external sources.  It is important to document the steps that were used to develop this dataset, including the raw sources of information and where they can be accessed.  Documentation could be a general description (less desirable) to reproducible source code (most desirable) to create the derived dataset.  The most important contribution may be the workflow or the derived dataset, depending on "who" can benefit most from this project. 
+
+> I am producing a model to support scenario exploration or understanding of natural processes
+
+Tracking data provenance of a modelling project is a challenging task simply because a "model" does not conform to the conventional understanding of data.  As noted above, we describe data as anything that can support decision-making in environmental management.  Models are commonly used for this task, yet understanding of their information content over time often rests with one individual, giving that modeller a very high bus factor.  There are practical limitations for fully tracking a model as a data product (e.g., computational limits, time requirements, required knowledge of its working components), but there are certainly derived datasets from models that can benefit from data management.  In particular, model results, parameters, or source code are all prime candidates for data management, depending on the audience. 
+
+> I am developing a decision-support tool 
+
+Related to the challenges of data management for modelling, so-called "decision-support" tools are increasingly used as a front-end for decision-makers to access relevant information from a research project or intensive data colllection effort. Online interactive dashboards have proliferated tremendously in the last ten years to meet this need.  These tools can be useful in the right hands, yet there is no community standard for how to treat these products as data to track their origin and metadata.  In this case, documenting the workflow, source code, and requisite datasets for powering the dashboard may be the most important contributions.
+
+### The FAIR principles
+
+The previous section presented several questions to ask yourself that can aid in identifying important contributions of a research project.  In all cases, once that important contribution is identified, community standards or best practices for that dataset should be used to ensure the intended audience can find, access, use, and replicate the data.  
 
 * What are data, i.e., from the perspective of the researcher/agency scientist/manager? 
      * A workflow (e..g, operationalizing Twitter scraping), dataset (field/lab data), model products, etc.

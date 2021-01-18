@@ -1,6 +1,6 @@
 # Background {#background}
 
-## Importance of data
+## Importance of data {#dataimp}
 
 Informed decisions about how we manage behaviors and actions that affect the environment cannot be made without data.  As a fundamental part of the scientific method, data provide the raw information to support hypotheses that inform our understanding of natural processes.  Environmental research develops this understanding to support informed decisions for managing natural resources and data are the foundation for research. As methods for managing environmental resources continue to evolve, so does our understanding of data beyond its conventional role in an academic setting.
 
