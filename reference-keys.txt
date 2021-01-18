@@ -11,13 +11,15 @@ opt3
 opt4
 about
 background
-importance-of-data
+dataimp
 why-we-need-to-effectively-manage-data
 open-science
 the-tbep-philosophy
 goals-and-objectives-of-this-document
 keys
 general-concepts
+data-types-and-identifying-important-contributions
+the-fair-principles
 specific-concepts
 workflow
 the-tbep-approach
