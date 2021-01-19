@@ -20,7 +20,7 @@ knitr::include_graphics('img/cake.png')
 knitr::include_graphics('img/os-workflow.png')
 ```
 
-### Tools we use
+### Tools we use {#tools}
 
 * R/RStudio IDE workflow
      * The tbeptools package as central component

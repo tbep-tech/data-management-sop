@@ -1,6 +1,6 @@
 # Final Words {#final}
 
-* emphasis on "something is better than nothing", fully open is ideal but difficult to achieve
+* emphasis on "something is better than nothing", fully open is ideal but difficult to achieve, e.g., "good enough practice" [@Wilson17]
 * Just remember FAIR
 * evolving tools
 * trying to be both a domain expert and data expert will spread you thin [@Mons18, p. 27, 36], look to the helpers/community (Figure \@ref(fig:codehero))
