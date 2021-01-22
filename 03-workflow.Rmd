@@ -47,6 +47,7 @@ knitr::include_graphics('img/dataworkflow.png')
 
 * What type of project am I working on? 
 * What types of products am I expecting?
+* Which datasets are important? Guidance for determining which datasets are important are expressed in great detail in section \@ref(keys).
 * How do I want to make the data accessible?
 * What QA protocols should be established?
 
