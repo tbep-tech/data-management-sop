@@ -1,6 +1,6 @@
 --- 
 title: "Data Management SOP for the Tampa Bay Estuary Program"
-author: "Marcus W. Beck, Gary E. Raulerson"
+author: "Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
