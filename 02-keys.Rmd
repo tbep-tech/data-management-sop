@@ -24,7 +24,7 @@ The field or experimental data are obvious candidates for developing a data mana
 
 > I am using data from an external source as primary or secondary information to support analysis or generate a reporting product
 
-A derived dataset may be the most important contribution of this project.  This dataset includes multiple combinations of input datasets from external sources.  It is important to document the steps that were used to develop this dataset, including the raw sources of information and where they can be accessed.  Documentation could be a general description (less desirable) to reproducible source code (most desirable) to create the derived dataset.  The most important contribution may be the workflow or the derived dataset, depending on "who" can benefit most from this project. 
+A derived dataset may be the most important contribution of this project.  This dataset includes multiple combinations of input datasets from external sources.  It is important to document the steps that were used to develop this dataset, including the raw sources of information and where they can be accessed.  Documentation can range from a general description of the dataset (less desirable) to complete access to source code for reproducing the derived dataset (more desirable).  The most important contribution may be the workflow or the derived dataset, depending on "who" can benefit most from this project. 
 
 > I am producing a model to support scenario exploration or understanding of natural processes
 
@@ -43,18 +43,13 @@ The previous section presented several questions to ask yourself that can aid in
 * **I**interoperable: The ability of data or tools from non-cooperating resources to integrate or work together with minimal effort.
 * **R**eusable: If the above are achieved, the data and metadata are described in a way that they can be replicated and/or combined in different settings.  
 
-What this means simply is that 1) each dataset has a name that doesn't change and can be found with minimal effort using that name, 2) once it's found, you can actually get your hands on it (e.g., not behind a paywall), 3) once you have it, you can use readily available tools to work with the data (e.g., not using proprietary software), and 4) you can actually apply the data for your own needs becuase it has sufficient context, including its reproduction, given the the first three principles are met.  
+What this means simply is that 1) each dataset has a name that doesn't change and can be found with minimal effort using that name, 2) once it's found, you can actually get your hands on it (e.g., not behind a paywall), 3) once you have it, you can use readily available tools to work with the data (e.g., not using proprietary software), and 4) you can actually apply the data for your own needs because it has sufficient context, including its reproduction, given the the first three principles are met.  
 
-The FAIR principles invoke several concepts that will be described in detail later, but we describe some here as a gentle introduction.  The term "globally unique and persistent identifier" is a mouthful that simply means the dataset has a name assigned to itself that is not assigned to any other dataset (globally unique) and it's permanent (persistent).  This doesn't mean a descriptive or literal name, such as you would assign to a file on your own computer, rather it means a computer-generated identifier created using a known standard.  One such example is a DOI, or digital object identifier.  These are commonly assigned to publications as a static web address (persistent) and are increasingly being used as identifiers for datasets.  
+In practice, the FAIR principles invoke several concepts that will be described in detail later, but we describe some here as a gentle introduction.  The term "globally unique and persistent identifier" (under **F**) is a mouthful that simply means the dataset has a name assigned to itself that is not assigned to any other dataset (globally unique) and it's permanent (persistent).  This doesn't mean a descriptive or literal name, such as you would assign to a file on your own computer, rather it means a computer-generated identifier created using a known standard.  One such example is a [DOI](https://www.doi.org/), or digital object identifier.  These are commonly assigned to publications as a static web address (unique and persistent) and are increasingly being used as identifiers for datasets.  
 
 Findable and accessible also imply the data have a home with an address.  The latter describes the unique identifier, whereas the home itself is permanent location as a requirement for accessibility.  There are several options for where data can live long-term and theoretically forever so long as the internet exists.  There are literally thousands of repositories online that can be used for data archival and the answer to which repository you should use is almost always going to be "it depends".  We provide some examples in section \@ref(tools) as one option used by TBEP.
 
 The FAIR principles are not rigorous standards, rather they establish general questions you should ask of a dataset to make sure you've done your due diligence in achieving openness.  Further, because they are not rigorously defined, different organizations may interpret the principles differently and it's important to realize that your understanding of the principles may differ from others.  For example, individuals may define "reusable" in different ways that can affect the level of detail provided in the metadata. These principles are presented here as a reminder to think about them often, especially during the beginning of a project, and how they can be applied in opening the most important contribution of your project. 
-
-### Metadata 
-
-* What is metadata and why do we need it?
-* Best practices for QA
 
 ## Specific concepts
 
@@ -66,9 +61,22 @@ The FAIR principles are not rigorous standards, rather they establish general qu
      * logical extension of tidy data
      * normalized tables (including discussion of key variables), what are unique ids (e.g., tberf oyster, how did I make the unique id?), facilitate standard DB queries
 * Metadata principles
+
+### Metadata 
+
+Just as "data" can have different meanings to different people, "metadata" is a loosely defined term that describes one of the most important aspects of data management.  Metadata varies from simple text descriptions of a dataset, such as "who", "what", "when", "why", and "where", to formalized standards with the intent of preparing your data for archival in a long-term repository.  Having no metadata is almost a guarantee that your dataset will be orphaned or misused by others, either inadvertently or with willful acknowledgment that the original purpose of the data is unknown and therefore use of the data may be inappropriate for the task at hand.  Metadata are also important for enabling discovery of your data (the __F__ in FAIR).  So, when you think of data management, you should think of it as being synonymous with metadata curation. 
+
+At its basic level, metadata is literally defined as "data about data" or "information about information" as en even more generalized definition.  A more comprehensive definition is provided by @Gilliland16:  
+
+> Metadata: A suite of industry or disciplinary standards as well as additional internal and external documentation and other data necessary for the identification, representation, interoperability, technical management, performance, and use of data contained in an information system
+
+We use this definition as a starting point to develop our thinking around best practices for metadata generation and curation.  Again, it's good to emphasize that some metadata is better than no metadata.  Just because you are not using industry or disciplinary standards for generating metadata doesn't mean you're approach is incorrect.  As you get comfortable with the general purpose of metadata and how it's developed as a description for a dataset, you can build on this knowledge by adopting more formalized standards for developing metadata.   
+
+* What is metadata and why do we need it?
+* Best practices for QA
      * Why? Supports the F in FAIR, also supports use by others
-     * Minimum requirements
-     * Formal standards
+     * Minimum requirements - seagrass desoto buoy example
+     * Formal standards, https://nceas.github.io/oss-lessons/ecological-metadata/ecological-metadata.html
      * data dictionaries, naming conventions
 * Where do data live long-term, what's a doi, considering a data paper, federated repository, etc.
      * The A in FAIR

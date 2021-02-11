@@ -2,6 +2,8 @@
 
 ## List of resources
 
+From EDI https://environmentaldatainitiative.org/dm-resources/
+
 ## Data types
 
 * Field data
