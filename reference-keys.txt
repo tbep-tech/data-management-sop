@@ -20,8 +20,8 @@ keys
 general-concepts
 data-types-and-identifying-important-contributions
 the-fair-principles
-metadata
 specific-concepts
+metadata
 workflow
 the-tbep-approach
 philo
