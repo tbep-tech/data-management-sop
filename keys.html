@@ -24,7 +24,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2021-02-11" />
+<meta name="date" content="2021-02-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -208,22 +208,43 @@
 </ul>
 <div id="metadata" class="section level3">
 <h3><span class="header-section-number">3.2.1</span> Metadata</h3>
-<p>Just as “data” can have different meanings to different people, “metadata” is a loosely defined term that describes one of the most important aspects of data management. Metadata varies from simple text descriptions of a dataset, such as “who”, “what”, “when”, “why”, and “where”, to formalized standards with the intent of preparing your data for archival in a long-term repository. Having no metadata is almost a guarantee that your dataset will be orphaned or misused by others, either inadvertently or with willful acknowledgment that the original purpose of the data is unknown and therefore use of the data may be inappropriate for the task at hand. Metadata are also important for enabling discovery of your data (the <strong>F</strong> in FAIR). So, when you think of data management, you should think of it as being synonymous with metadata curation.</p>
+<p>Just as “data” can have different meanings to different people, “metadata” is a loosely defined term that describes one of the most important aspects of data management. Metadata varies from simple text descriptions of a dataset, such as “who”, “what”, “when”, “where”, “why”, and “how”, to more formalized standards with the intent of preparing your data for archival in a long-term repository. Having no metadata is almost a guarantee that your dataset will be orphaned or misused by others, either inadvertently or with willful acknowledgment that the original purpose of the data is unknown and its use may be inappropriate for the task at hand. Metadata are also important for enabling discovery of your data (the <strong>F</strong> in FAIR). So, when you think of data management, you should think of it as being synonymous with metadata curation.</p>
 <p>At its basic level, metadata is literally defined as “data about data” or “information about information” as en even more generalized definition. A more comprehensive definition is provided by <span class="citation">Gilliland (<a href="#ref-Gilliland16" role="doc-biblioref">2016</a>)</span>:</p>
 <blockquote>
-<p>Metadata: A suite of industry or disciplinary standards as well as additional internal and external documentation and other data necessary for the identification, representation, interoperability, technical management, performance, and use of data contained in an information system</p>
+<p>A suite of industry or disciplinary standards as well as additional internal and external documentation and other data necessary for the identification, representation, interoperability, technical management, performance, and use of data contained in an information system</p>
 </blockquote>
 <p>We use this definition as a starting point to develop our thinking around best practices for metadata generation and curation. Again, it’s good to emphasize that some metadata is better than no metadata. Just because you are not using industry or disciplinary standards for generating metadata doesn’t mean you’re approach is incorrect. As you get comfortable with the general purpose of metadata and how it’s developed as a description for a dataset, you can build on this knowledge by adopting more formalized standards for developing metadata.</p>
+<p>At its basic level, think of metadata as a simple text file containing the information about your dataset. This text file provides answers to common questions about the origin of your data so that anyone (or a computer) with zero knowledge about your data can quickly orient themselves as to its purpose. The US Geological Survey provides a useful document on creating <a href="https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/atoms/files/Metadata%20in%20Plain%20Language_508compliant.pdf">Metadata in “plain language”</a> to distill the basic information contained in a metadata file. As indicated above, it provides a workflow for answering the “who”, “what”, “when”, “where”, “why”, and “how” questions for metadata. We provide a brief synopsis of these questions below. You can use this workflow to generate your own metadata.</p>
+<blockquote>
+<p>What does the dataset describe?</p>
+</blockquote>
+<p>Information here would include very basic details about the dataset including a <strong>title</strong>, <strong>geographic extent</strong>, and <strong>period of time</strong> covered by the data. For geographic extent, this may often include explicit coordinates covering the study area, i.e., the lower left and upper right of a bounding box. Location is useful for indexing your dataset relative to others, if for example, a researcher wanted to find data for all studies in the geographic extent of Tampa Bay. Other useful information about the “what” might include the type of data, e.g., tabular, map, online dashboard, etc.</p>
+<blockquote>
+<p>Who produced the dataset?</p>
+</blockquote>
+<p>This would be yourself and anyone else who has made a significant contribution to the development of a dataset. People may have differing opinions regarding what defines a “significant” contribution, but as the curator of a dataset, it’s up to you to determine how important it is for including an individual as a contributor. Data are increasingly being used as citable reseources and including individuals that were important in its generation ensures proper attribution. For scientific publications, each author is generally expected to have made substantial contributions to the study conception and design, data acquisition or analysis, or interpretation of results. The same would apply to data. If someone has spent hours toiling in the field to collect the data or hours visually scanning a spreadsheet for quality control, include them!</p>
+<blockquote>
+<p>why was the dataset created?</p>
+</blockquote>
+<p>Describing why a dataset was created is critically important for developing context. If others want to use your data, they need to know if its appropriate for their needs. Here you would describe the goal or objectives of the research for which the data were collected. It should be clear if there are limitations in your data defined by your goals, if for example, you collect field data in a particular season to address temporal questions. Using these data to answer broader temporal questions, such as inter-annual changes, would not be inappropriate and could lead to wrong conclusions. Identifying the “why” of your dataset could also prevent misinterpretation or misuse of the data by non-specialists. Think of it as an insurance policy for your data.</p>
+<blockquote>
+<p>How was the dataset created?</p>
+</blockquote>
+<p>Here you would describe the methods used to generate the data, e.g., field sampling techniques, laboratory methods, etc. This information is important so others can know if you’ve used proper and accepted methods for generating the data. Citing existing SOPs or methods that are recognized standards in your field would be appropriate. If you are generating a synthesis data product using data from external sources, make sure to document where those data come from and the methods you used for synthesis. Pay attention to documenting the software that was used, including the version numbers. If you have analysis code or script that was used for synthesis, provide a link if possible.</p>
+<blockquote>
+<p>How reliable are the data?</p>
+</blockquote>
+<p>It’s also very important to document aspects of a dataset that affect reliability. The answers you provide to the above questions can provide context to this reliability, but it’s also imporant to explicitly note instances when the data could be questionable or inappropriate to use. Here you could describe any quality assurance or quality control (QAQC) checks that were used on the data. There are often formalized ways to do so, such as codes or descriptors in tabular data defining QAQC values (e.g., data in range, below detection, sensor out of service, etc.). You will want to clearly describe what each of these codes mean and if they cover the range of conditions possible for your data. Other QAQC procedures, such as how the data were verified for accuracy, can also be described.</p>
+<blockquote>
+<p>How can someone get a copy of the dataset?</p>
+</blockquote>
+<p>Good metadata always has information on who has the data and how to contact them for requesting access. For archived or publicly available data, this information is more important for who to contact should you have questions. Information on obtaining a copy of the data should also describe any special software or licensing issues related to accessing the data. Under the <strong>I</strong> in FAIR, you should strive to make your data as interoperable as possible and not store your data in an obscure format that requires specialized software. If this is unavoidable (e.g., your data are large and its need to be compressed), describe what needs to be done to access the data. Any licensing or permissions issues on using data should also be described, e.g., is it free for use with or without attribution, are there limitations on its use, etc. There’s a lot to say about licensing</p>
+<pre><code> * Minimum requirements - seagrass desoto buoy example
+ * Formal standards, https://nceas.github.io/oss-lessons/ecological-metadata/ecological-metadata.html
+ * data dictionaries, naming conventions</code></pre>
 <ul>
-<li>What is metadata and why do we need it?</li>
-<li>Best practices for QA
-<ul>
-<li>Why? Supports the F in FAIR, also supports use by others</li>
-<li>Minimum requirements - seagrass desoto buoy example</li>
-<li>Formal standards, <a href="https://nceas.github.io/oss-lessons/ecological-metadata/ecological-metadata.html" class="uri">https://nceas.github.io/oss-lessons/ecological-metadata/ecological-metadata.html</a></li>
-<li>data dictionaries, naming conventions</li>
-</ul></li>
-<li>Where do data live long-term, what’s a doi, considering a data paper, federated repository, etc.
+<li><p>Best practices for QA</p></li>
+<li><p>Where do data live long-term, what’s a doi, considering a data paper, federated repository, etc.</p>
 <ul>
 <li>The A in FAIR</li>
 <li>GitHub repository</li>
