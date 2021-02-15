@@ -8,7 +8,7 @@ Demonstrate the workflow, identify questions that were asked initially and what 
 * Example of mid-project data curation
 * Emphasis on data dictionary, normalized tables
 
-## DeSoto/RESTORE project
+## DeSoto/RESTORE project {#desoto}
 
 * Initial questions - how can we fulfill RESTORE requirements for data delivery based on a general grant requirement?
 * Example of continuous stream data
