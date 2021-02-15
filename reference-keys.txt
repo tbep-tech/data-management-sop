@@ -1,4 +1,6 @@
 fig:michener
+fig:desotometa
+fig:emlsimple
 fig:cake
 fig:osworkflow
 fig:dataworkflow
@@ -22,6 +24,10 @@ data-types-and-identifying-important-contributions
 the-fair-principles
 specific-concepts
 metadata
+metadata-examples
+the-eml-standard
+data-dictionaries
+where-do-data-live
 workflow
 the-tbep-approach
 philo
@@ -34,7 +40,7 @@ metadata-workflow
 lets-get-it-online
 cases
 tberf-oyster-restoration-project
-desotorestore-project
+desoto
 red-tide-twitter-repo
 final
 appendices
