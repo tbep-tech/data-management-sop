@@ -87,13 +87,13 @@
 <li class="chapter" data-level="2.5" data-path="background.html"><a href="background.html#goals-and-objectives-of-this-document"><i class="fa fa-check"></i><b>2.5</b> Goals and objectives of this document</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="keys.html"><a href="keys.html"><i class="fa fa-check"></i><b>3</b> Key Concepts and Principles</a><ul>
-<li class="chapter" data-level="3.1" data-path="keys.html"><a href="keys.html#data-types-and-identifying-important-contributions"><i class="fa fa-check"></i><b>3.1</b> Data types and identifying important contributions</a></li>
+<li class="chapter" data-level="3.1" data-path="keys.html"><a href="keys.html#identifying-important-contributions"><i class="fa fa-check"></i><b>3.1</b> Identifying important contributions</a></li>
 <li class="chapter" data-level="3.2" data-path="keys.html"><a href="keys.html#the-fair-principles"><i class="fa fa-check"></i><b>3.2</b> The FAIR principles</a></li>
-<li class="chapter" data-level="3.3" data-path="keys.html"><a href="keys.html#specific-concepts"><i class="fa fa-check"></i><b>3.3</b> Specific concepts</a></li>
+<li class="chapter" data-level="3.3" data-path="keys.html"><a href="keys.html#the-importance-of-tidy-data"><i class="fa fa-check"></i><b>3.3</b> The importance of tidy data</a></li>
 <li class="chapter" data-level="3.4" data-path="keys.html"><a href="keys.html#metadata"><i class="fa fa-check"></i><b>3.4</b> Metadata</a><ul>
 <li class="chapter" data-level="3.4.1" data-path="keys.html"><a href="keys.html#metadata-examples"><i class="fa fa-check"></i><b>3.4.1</b> Metadata examples</a></li>
 <li class="chapter" data-level="3.4.2" data-path="keys.html"><a href="keys.html#the-eml-standard"><i class="fa fa-check"></i><b>3.4.2</b> The EML standard</a></li>
-<li class="chapter" data-level="3.4.3" data-path="keys.html"><a href="keys.html#data-dictionaries"><i class="fa fa-check"></i><b>3.4.3</b> Data dictionaries</a></li>
+<li class="chapter" data-level="3.4.3" data-path="keys.html"><a href="keys.html#dict"><i class="fa fa-check"></i><b>3.4.3</b> Data dictionaries</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="keys.html"><a href="keys.html#where-do-data-live"><i class="fa fa-check"></i><b>3.5</b> Where do data live?</a></li>
 </ul></li>
@@ -146,8 +146,8 @@
 <div id="keys" class="section level1">
 <h1><span class="header-section-number">Section 3</span> Key Concepts and Principles</h1>
 <p>Before we get started, we need to discuss some basic ideas around data and their management. Understanding these concepts and why they’re important will facilitate the development and curation of open data for both you and others to use. Some of these concepts are very general, whereas others may seem fairly specific. The detailed concepts may seem daunting, but they are critical in supporting your journey in managing your own data.</p>
-<div id="data-types-and-identifying-important-contributions" class="section level2">
-<h2><span class="header-section-number">3.1</span> Data types and identifying important contributions</h2>
+<div id="identifying-important-contributions" class="section level2">
+<h2><span class="header-section-number">3.1</span> Identifying important contributions</h2>
 <p>We briefly introduced a general concept of data in section <a href="background.html#dataimp">2.1</a>. Throughout this document, we use the term “data” to describe a variety of products either directly supporting decision-making processes or used for research to support the former. Data can be generated to support or refute hypotheses in research, whereas research can also produce data products that support environmental management. The end game in all of these processes is understanding that data can be present at any stage in research and/or decisions that support environmental management. Individuals may generally use the term “data” to describe products at any point in this workflow. Understanding the diferent ways we talk about data will allow you to more carefully identify your data management needs.</p>
 <p>Identifying the types of data that are important to support decision-making is the first task in developing a data management workflow. Any research project could produce countless datasets and it may be challenging to understand which datasets are important or are merely intermediate steps in a larger process. To help you identify which datasets are important to your project, ask these questions:</p>
 <ol style="list-style-type: decimal">
@@ -157,11 +157,11 @@
 <li>How can I use data management practices to make the use of these data “easier” for decision-making?</li>
 </ol>
 <p>Answers to these questions can help you identify important data products that need formal data management workflows. However, coming to a single answer is the exception, not the norm, and a typical answer usually is “it depends”. Also realize that you may be the direct beneficiary of a particular research project - documenting and using proper data management workflows will save you from headaches in the future. Evaluating these questions at different steps throughout a project can help you identify the valuable contributions.</p>
-<p>In a perfect world where we have endless time and resources, and not to mention interest, to dedicate to data management, we would track and document the provenance of every single dataset used by a research project. Of course, this is impractical, nor do we need to curate every piece of data. You will need to identify the most important contribution of a project among alternatives based on your answers to the above questions. Here are a couple scenarios that can help in this process.</p>
+<p>In a perfect world where we have endless time and resources, and not to mention interest, to dedicate to data management, we would track and document the provenance of every single dataset used by a research project. Of course, this is impractical and we do not need to curate every piece of data. You will need to identify the most important contribution of a project among alternatives based on your answers to the above questions. Here are a couple scenarios that can help in this process.</p>
 <blockquote>
 <p>I am collecting field data and/or running experiments in a laboratory.</p>
 </blockquote>
-<p>The field or experimental data are obvious candidates for developing a data management workflow, yet it is rarely a solitary dataset that is produced. Working with these data continuously throughout a project will benefit from developing a data dictionary and understanding linking keys between different data tables. If you don’t want or need to archive all the datasets you’ve used or created, identify a master dataset that provides the main results for your study.</p>
+<p>The field or experimental data are obvious candidates for developing a data management workflow, yet it is rarely a solitary dataset that is produced. Working with these data continuously throughout a project will benefit from developing a data dictionary (section <a href="keys.html#dict">3.4.3</a>) and understanding linking keys between different data tables. If you don’t want or need to archive all the datasets you’ve used or created, identify a master dataset that provides the main results for your study.</p>
 <blockquote>
 <p>I am using data from an external source as primary or secondary information to support analysis or generate a reporting product</p>
 </blockquote>
@@ -174,6 +174,14 @@
 <p>I am developing a decision-support tool</p>
 </blockquote>
 <p>Related to the challenges of data management for modelling, so-called “decision-support” tools are increasingly used as a front-end for decision-makers to access relevant information from a research project or intensive data collection effort. Online interactive dashboards have proliferated tremendously in the last ten years to meet this need. These tools can be useful in the right hands, yet there is no community standard for how to treat these products as data to track their origin and metadata. In this case, documenting the workflow, source code, and requisite datasets for powering the dashboard may be the most important contributions.</p>
+<p>In summary, identifying the most important data contribution is a challenge that can guided through careful evaluation of the above. This may lead you to choose one or more data products to develop a data management workflow for a specific project. These could include:</p>
+<ul>
+<li>Tabular data either as standalone or as several tables linked by common keys</li>
+<li>Derived or synthesis data, often tabular, created as the sum of other, disparate datasets</li>
+<li>Model output or model information that describe environmental processes or likely outcomes of management scenarios</li>
+<li>Workflows to creating a data product, which could include analysis code as a continuous pipeline from source to product</li>
+<li>An online dashboard to support user engagement with data</li>
+</ul>
 </div>
 <div id="the-fair-principles" class="section level2">
 <h2><span class="header-section-number">3.2</span> The FAIR principles</h2>
@@ -189,10 +197,13 @@
 <p>Findable and accessible also imply the data have a home with an address. The latter describes the unique identifier, whereas the home itself is permanent location as a requirement for accessibility. There are several options for where data can live long-term and theoretically forever so long as the internet exists. There are literally thousands of repositories online that can be used for data archival and the answer to which repository you should use is almost always going to be “it depends”. We provide some examples in section <a href="workflow.html#tools">4.1.2</a> as one option used by TBEP.</p>
 <p>The FAIR principles are not rigorous standards, rather they establish general questions you should ask of a dataset to make sure you’ve done your due diligence in achieving openness. Further, because they are not rigorously defined, different organizations may interpret the principles differently and it’s important to realize that your understanding of the principles may differ from others. For example, individuals may define “reusable” in different ways that can affect the level of detail provided in the metadata. These principles are presented here as a reminder to think about them often, especially during the beginning of a project, and how they can be applied in opening the most important contribution of your project.</p>
 </div>
-<div id="specific-concepts" class="section level2">
-<h2><span class="header-section-number">3.3</span> Specific concepts</h2>
+<div id="the-importance-of-tidy-data" class="section level2">
+<h2><span class="header-section-number">3.3</span> The importance of tidy data</h2>
+<p>We have covered a variety of data products that may require a data management workflow, ranging from tabular data to more abstract definitions that may include analysis pipelines or online services. Tabular data are by far the most recognized and most common data type and it’s worth covering a few basic principles for managing these data that will help you tremendously in the long run. At their core, tabular data are a simple conceptual model for storing information as observations in rows and variables in columns, yet its very common to try to make a table more than it should be. Unless you spend a lot of time working with data, it’s very easy to abuse your tables by making them something they shouldn’t be.</p>
+<p>Before we get into tidy data, I want to rant a bit about Excel. It may seem elitist, but my intention is to make your life easier. There are many examples that demonstrate how Excel has contributed to the abuse of tables and even to the detriment of science. Although it is a very interesting and clever program, it is not software developed for data storage. It is a graphical user interface masquerading as database software. What I mean by this is that it includes many tools that may appear useful for organizing information, but that ultimately make your life as an ananlyst more difficult. Excels allows you to abuse your data in many ways, such adding color to cells, embedding formulas, automatically formatting cell types, etc. The problem occurs when this organization becomes ambiguous and only has meaning inside the head of the person who created the spreadsheet. For example, color may be used to fill cells of a given category and this may seem harmless, but in doing so, you’ve not only created more data, but you’ve created data that have an ambiguous meaning. what do these colors represent? This leads to irreproducible datasets and an inability of a machine (i.e., your computer) to unambiguosly determine what these different formatting features mean.</p>
+<p>If you absolutely must use Excel to store data, the only acceptable format you should use as a responsible data steward is a rectangular, flat file. We mean rectangular as only rows and columns in matrix format (e.g., 10 x 5, 12 x 4, etc.), with no “dangling” cells outside of the grid or more than one table in a spreadsheet. We mean flat file as no cell formatting, no embedded formulas, no multiple spreadsheets in the same file, and data entered only as alphanumeric characters. This will ensure that there is no ambiguous information and a machine will have no problem reading your data. Your data will be pure and simple and not abused.</p>
+<p>Now that that’s out of the way, we can apply some basic principles to these rectangular, flat data that will improve how they are used in downstream analysis pipelines. The “tidy” data principles developed by Hadley Wickham are a set of simple rules</p>
 <ul>
-<li>Types of data products (e.g., raw data, models, synthesized/derived data, etc.) or types of data (flat file, spatial, disparate)</li>
 <li>Tabular data
 <ul>
 <li>an overview of tidy data, can a machine read it?</li>
@@ -266,7 +277,7 @@ Figure 3.2: A very simple example of an EML file for metadata, shown as an XML f
 the EML packages provides a set of functions where a user can input basic metadata information to create the XML file automatically. All you need is a basic understanding of R and metadata to use the EML package for your own needs. More information can be found on the website: <a href="https://docs.ropensci.org/EML/" class="uri">https://docs.ropensci.org/EML/</a></p>
 <p>Of course, you can always manually enter your metadata when you submit a dataset to an online repository. Most repositories, KNB included, provide a form entry system for doing so. This may not be the most efficient choice, but is often the preferred for first-timers that may not yet be comfortable using other tools to generate metadata.</p>
 </div>
-<div id="data-dictionaries" class="section level3">
+<div id="dict" class="section level3">
 <h3><span class="header-section-number">3.4.3</span> Data dictionaries</h3>
 <p>A final note about metadata relates to data dictionaries and what they mean for describing a dataset. A data dictionary can be used for tabular datasets to describe column names and the type of data in each column. This can be incredibly useful for understanding context of a dataset, which is why we include a short description here in the metadata section. However, data dictionaries also have importance for more general best practices for data management. Simple things like how you name a data column can have larger implications for downstream analysis pipelines or interpretability of a dataset. In metadata, a data dictionary can be as simple as the example in figure <a href="keys.html#fig:desotometa">3.1</a> for the parameters that were collected. There we see the column names, units, and formats for time variables. This is invaluable information for others that might want to use your data.</p>
 <p>Here we provide some general guidelines for developing your own data dictionary. This is all information that can be included in metadata, but it is also useful to consider for data management.</p>

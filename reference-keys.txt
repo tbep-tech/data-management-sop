@@ -19,13 +19,13 @@ open-science
 the-tbep-philosophy
 goals-and-objectives-of-this-document
 keys
-data-types-and-identifying-important-contributions
+identifying-important-contributions
 the-fair-principles
-specific-concepts
+the-importance-of-tidy-data
 metadata
 metadata-examples
 the-eml-standard
-data-dictionaries
+dict
 where-do-data-live
 workflow
 the-tbep-approach
