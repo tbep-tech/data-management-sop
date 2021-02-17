@@ -1,4 +1,5 @@
 fig:michener
+fig:tidy
 fig:desotometa
 fig:emlsimple
 fig:cake
@@ -38,7 +39,7 @@ im-at-the-end-of-my-project
 metadata-workflow
 lets-get-it-online
 cases
-tberf-oyster-restoration-project
+oyster
 desoto
 red-tide-twitter-repo
 final
