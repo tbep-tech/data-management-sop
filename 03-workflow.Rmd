@@ -34,6 +34,8 @@ knitr::include_graphics('img/os-workflow.png')
 
 ## How can you manage data? {#howyou}
 
+Ten simple rules for creating a good data management plan: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525
+
 * Section is written as a road map for developing a data product, there will be steps/checkboxes/forms, roughly following figure \@ref(fig:dataworkflow)
 
 ```{r dataworkflow, fig.cap = 'A hypothetical and generalized timeline for managing data associated with a project.', out.width = '80%'}
