@@ -1,4 +1,5 @@
 fig:michener
+fig:excelbad
 fig:tidy
 fig:desotometa
 fig:emlsimple
