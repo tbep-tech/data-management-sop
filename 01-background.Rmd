@@ -39,9 +39,9 @@ In summary, poor data management practices can lead to the following:
 * Less creative approaches to managing environmental resources
 * Inefficient and error prone workflows that are neither scalable nor sustainable
 
-## Open Science 
+## Open Science {#opengeneral}
 
-The open science approach provides a philosophy and set of tools to help address the costs of poor data management.  Before we proceed, we need to make a distinction between the broader concept of open science and open data as one component of the former.  Many of the guidelines and examples in this SOP fall broadly under the open science umbrella (or cake as you'll see later), but it's important to understand how data management includes a set of tools that are part of, but not exhaustive of, the entire open science toolbox.  Conversely, many broadly applicable open science tools that can be applied to other management scenarios can also benefit data management. 
+The open science approach provides a philosophy and set of tools to help address the costs of poor data management.  Before we proceed, we need to make a distinction between the broader concept of open science and open data as one component of the former.  Many of the guidelines and examples in this SOP fall broadly under the open science umbrella (or cake as you'll see in section \@ref(philo)), but it's important to understand how data management includes a set of tools that are part of, but not exhaustive of, the entire open science toolbox.  Conversely, many broadly applicable open science tools that can be applied to other management scenarios can also benefit data management. 
 
 An example may be helpful.  A key component of data management that leads to more open sharing is metadata.  Although metadata can be created in an open environment and is often created for the purpose of facilitating openness, it can also be created completely in isolation with a closed workflow.  So, when we talk about metadata, the assumption is that its creation is to promote sharing and transparency for open data, whereas metadata by themselves are only so useful in how they can facilitate the latter.  
 
@@ -49,7 +49,7 @@ On the other hand, broader open science principles that support a culture of sha
 
 For these reasons, this document covers many topics that may fall squarely under the realm of data management, while at other times advocating for more general open science principles with the intent of supporting a culture of better data management. 
 
-## The TBEP philosophy
+## The TBEP philosophy {#philogeneral}
 
 The Tampa Bay Estuary Program ([TBEP](https://www.tbep.org)) is one of [28 National Estuary Programs](http://nationalestuaries.org/) designated by Congress to restore and protect "estuaries of national significance." Many of these estuaries are heavily urban (i.e., having economic, recreational, cultural importance) and have had historical or ongoing issues contributing to poor environmental quality.  The recovery of Tampa Bay is an exceptional story of an urban estuary that demonstrates the value of the NEP approach to restoring and protecting environmental resources. Through a coordinated regional effort of environmental professionals, utility operators, community members, and local politicians, nutrient loads to the Bay have been reduced by ~2⁄3 from 1970s levels and seagrasses have surpassed the 1950s benchmark extent [@Greening14;@Sherwood17]. Even more remarkable is that while the human population in the Tampa Bay watershed continues to increase, nutrient loads into the Bay remain low. 
 

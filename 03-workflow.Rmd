@@ -1,12 +1,17 @@
 # Data Management Workflow {#workflow}
 
-This section describes our approach to managing data internally, to help describe what we do and why we do it.  This is context for section \@ref(howyou) that provides a road map for opening internal or external datasets.  
+This section is in two parts to first describe a workflow that we use internally at TBEP to manage our data and then to describe a road map for opening internal or external datasets at your own organization.  The first section expands on our philosophy for using open science to manage data, including specific workflows we use, as context to the second section.  Our approach is one way of applying open science to managing data.  Applying the exact same approach at your organization may or may not be appropriate depending on your internal and external needs for managing data.  As such, our approach is generalizable and modular - any of the approaches can be modified in part or together for your own needs. 
 
 ## The TBEP approach
 
 ### Our philosophy {#philo}
 
-* The TBEP data [QMP](https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing) [@tbep1620]: what, why, how
+Sections \@ref(opengeneral) and \@ref(philogeneral) introduced you to our basic philosophy and approach to managing data at TBEP.  As an organization that facilitates science, management, and outreach activities among our local partners, we adopt open science as a cornerstore strategy that will serve the Program's core values.  This approach is made explicit in our [Strategic Plan](https://drive.google.com/file/d/11xohuoaHDxNHRqgXoOHdI37FpWvac_rn/view?usp=sharing) that describes how we achieve programmatic goals defined under our [Comprehensive conservation and Management Plan](https://indd.adobe.com/view/cf7b3c48-d2b2-4713-921c-c2a0d4466632) (CCMP) and who we can work with in our [Interlocal Agreement](https://drive.google.com/file/d/1iJcWxmc5SeyDTqiCQ3MLQGWEY_EDGtZT/view?usp=sharing) to help us achieve our goals. 
+
+Our data [Quality Management Plan](https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view) (QMP, @Sherwood20) is a companion document to this SOP that ensures the data used by TBEP for decision-making has known and documented quality and is being used appropriately. The QMP establishes an internal process for verifying data quality standards that conform with federal requirements we have as an organization funded in part by federal dollars under Section 320 of the [Clean Water Act](https://www.epa.gov/laws-regulations/summary-clean-water-act).  On the other hand, this SOP is a more hands-on and accessible document that describes a how-to approach for data management that we adopt as an organization.  The SOP goes beyond the QMP by exposing the process and ideas behind how we manage data at TBEP so that others can learn from our experience.  We encourage you to view our QMP to understand the literal benchmark we use an organization to ensure quality of our data.
+
+We actively work to apply open science every activity we pursue to achieve our goals under the CCMP.  
+
 * The Open Science cake: what it is, how we do we implement it, and what does it mean for data management, figure \@ref(fig:cake)
 
 ```{r cake, fig.cap = 'The open science cake showing the connection between research, environmental decisions, and the public.'}
