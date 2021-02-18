@@ -8,7 +8,7 @@ When we discuss "data" we often describe a very general term that has different 
 
 This document describes one approach to address data management needs for the long-term restoration and protection of natural resources in Tampa Bay and its watershed.  We are inclusive of multiple definitions of data from simple spreadsheets to more complicated workflows for generating reporting products that support environmental decisions. This broad net is purposeful to account for both the variety of data we use as a Program and the diversity of partner agencies we depend on to achieve our mission.  The management of environmental resources combines a healthy mix of conventional science with consensus driven decisions, often with strong regulatory overtones.  The foundation for all of these processes requires a robust approach for working with data that promotes trust and validity in the environmental decision and to ensure the science continues to progress without reinventing the wheel.    
 
-## Why we need to effectively manage data
+## Why we need to effectively manage data {#whymanage}
 
 There are many reasons why data may not be effectively managed, chief among which is that it can be tedious and unglamorous work that is often an afterthought.  The value of investing time upfront to managing a dataset can have long term benefits, however these values may not be obvious or realized in the short-term.  Lack of effective data management results in "orphaned" datasets and data products which at one point had a known origin and purpose, but over time this information is lost because formal documentation and accessiblility by others is lacking. 
 

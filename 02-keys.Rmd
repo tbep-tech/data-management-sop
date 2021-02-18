@@ -40,7 +40,7 @@ In summary, identifying the most important data contribution is a challenge that
 * Workflows to creating a data product, which could include analysis code as a continuous pipeline from source to product
 * An online dashboard to support user engagement with data
 
-## The FAIR principles
+## The FAIR principles {#fair}
 
 The previous section presented several questions to ask yourself that can aid in identifying important contributions of a research project as a focus for data management.  In all cases, once that important contribution is identified, community standards or best practices for that dataset or product should be used to ensure the intended audience can find, access, use, and replicate the data.  The FAIR principles [@Wilkinson16] provide some general guidelines to follow for ensuring the openness of a data product.  The FAIR acronym is described as follows:
 
