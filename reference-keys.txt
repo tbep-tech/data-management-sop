@@ -2,6 +2,7 @@ fig:michener
 fig:tidy
 fig:desotometa
 fig:emlsimple
+fig:divide
 fig:cake
 fig:osworkflow
 fig:dataworkflow
@@ -15,13 +16,13 @@ opt4
 about
 background
 dataimp
-why-we-need-to-effectively-manage-data
+whymanage
 opengeneral
 philogeneral
 goals-and-objectives-of-this-document
 keys
 identifying-important-contributions
-the-fair-principles
+fair
 the-importance-of-tidy-data
 metadata
 metadata-examples
@@ -31,6 +32,7 @@ where-do-data-live
 workflow
 the-tbep-approach
 philo
+the-open-science-cake
 tools
 howyou
 im-at-the-beginning-of-my-project
