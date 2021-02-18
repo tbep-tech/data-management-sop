@@ -24,7 +24,7 @@ Welcome to the Tampa Bay Estuary Program Data Management SOP. This document desc
 
 ## Contributing to this document {#contrib}
 
-Using an open science ethos, we strongly encourage community collaboration in how this document evolves. This means anybody can contribute directly to content in this document.  Please follow the guidelines in section \@ref(contrib) to learn how to contribute and improve this SOP. 
+Using an open science ethos, we strongly encourage community collaboration in how this document evolves. This means anybody can contribute directly to content in this document.  Please follow the guidelines in this section to learn how to contribute and improve this SOP. 
 
 This SOP was created using [bookdown](https://bookdown.org/), which is an approach to creating long-form documents with RMarkdown. The source code is available on the TBEP GitHub group web page: <https://github.com/tbep-tech/data-management-sop>. Each section is a plain .Rmd text file that can be edited or commented to  provide feedback on content.  There are several ways you can contribute to or edit this document.
 
@@ -96,4 +96,4 @@ Please visit our website for additional information about our program: <https://
 
 <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'><img alt='Creative Commons License' style='border-width:0' src='https://i.creativecommons.org/l/by/4.0/88x31.png' /></a>&nbsp;&nbsp;This book is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a>.
 
- This version of the book was built automatically with [GitHub Actions](https://github.com/tbep-tech/data-management-sop/actions) on `r Sys.Date()`.
+[![build](https://github.com/tbep-tech/data-management-sop/workflows/build/badge.svg)](https://github.com/tbep-tech/data-management-sop/actions) This version of the book was built automatically with [GitHub Actions](https://github.com/tbep-tech/data-management-sop/actions) on `r Sys.Date()`.
