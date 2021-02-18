@@ -16,8 +16,8 @@ about
 background
 dataimp
 why-we-need-to-effectively-manage-data
-open-science
-the-tbep-philosophy
+opengeneral
+philogeneral
 goals-and-objectives-of-this-document
 keys
 identifying-important-contributions
