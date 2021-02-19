@@ -4,6 +4,7 @@ fig:tidy
 fig:joins
 fig:desotometa
 fig:emlsimple
+fig:datadict
 fig:divide
 fig:cake
 fig:osworkflow

@@ -295,17 +295,22 @@ Figure 3.5: A very simple example of an EML file for metadata, shown as an XML f
 </div>
 <div id="dict" class="section level3">
 <h3><span class="header-section-number">3.4.3</span> Data dictionaries</h3>
-<p>A final note about metadata relates to data dictionaries and what they mean for describing a dataset. A data dictionary can be used for tabular datasets to describe column names and the type of data in each column. This can be incredibly useful for understanding context of a dataset, which is why we include a short description here in the metadata section. However, data dictionaries also have importance for more general best practices for data management. Simple things like how you name a data column can have larger implications for downstream analysis pipelines or interpretability of a dataset. In metadata, a data dictionary can be as simple as the example in figure <a href="keys.html#fig:desotometa">3.4</a> for the parameters that were collected. There we see the column names, units, and formats for time variables. This is invaluable information for others that might want to use your data.</p>
+<p>A final note about metadata relates to data dictionaries and what they mean for describing a dataset. A data dictionary can be used for tabular datasets to describe column names and the type of data in each column (Figure <a href="keys.html#fig:datadict">3.6</a>). This can be incredibly useful for understanding context of a dataset, which is why we include a short description here in the metadata section. However, data dictionaries also have importance for more general best practices for data management. Simple things like how you name a data column can have larger implications for downstream analysis pipelines or interpretability of a dataset. In metadata, a data dictionary can be as simple as the example in figure <a href="keys.html#fig:desotometa">3.4</a> for the parameters that were collected. There we see the column names, units, and formats for time variables. This is invaluable information for others that might want to use your data.</p>
 <p>Here we provide some general guidelines for developing your own data dictionary. This is all information that can be included in metadata, but it is also useful to consider for data management.</p>
 <blockquote>
 <p>Column names</p>
 </blockquote>
-<p>Be as descriptive as possible while trying to keep the name as short as possible. Really long names with lots of detail can be just as frustrating as very short names with very little detail. Ideally, the description of data in a column can be included in metadata, but the column name should also be intuitive to point the analyst in the right direction. Try to avoid spaces in column names since some software may interpret that as the start of a new column.</p>
+<p>Be as descriptive as possible while trying to keep the name as short as possible. Really long names with lots of detail can be just as frustrating as very short names with very little detail. Ideally, the description of data in a column can be included in metadata, but the column name should also be intuitive to point the analyst in the right direction. Try to avoid spaces in column names since some software may interpret that as the start of a new column. It may also be useful to identify a “plot name” for each column name <span class="citation">(<span class="citeproc-not-found" data-reference-id="Broman20"><strong>???</strong></span>)</span> that uses proper spelling and punctuation. Using a column name directly in a graphic is generally a bad idea since their meaning outside of the dataset may not be obvious.</p>
 <blockquote>
 <p>Column types</p>
 </blockquote>
 <p>Each column includes only one type of data, e.g., numerical measurements, categorical descriptors, or counts of observations. Never, ever mix data types in the same column. If your data are continuous numeric values, try to identify an acceptable range for the values, e.g., are there minimum or maximum values that would indicate the data are out of range? Also make note of the units that were used. For categorical descriptors, identify all possible categories that are acceptable values for the column, e.g., small, medium, or large for a qualitative descriptor of size. For dates, make note of the format, e.g., YYYY-MM-DD. For time, identify the timezone.</p>
-<p>Show example from Broman or recreate with relevant example.</p>
+<div class="figure" style="text-align: center"><span id="fig:datadict"></span>
+<img src="img/datadict.png" alt="An example of a data dictionary." width="80%" />
+<p class="caption">
+Figure 3.6: An example of a data dictionary.
+</p>
+</div>
 </div>
 </div>
 <div id="where-do-data-live" class="section level2">
