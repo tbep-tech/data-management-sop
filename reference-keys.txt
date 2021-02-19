@@ -1,6 +1,7 @@
 fig:michener
 fig:excelbad
 fig:tidy
+fig:joins
 fig:desotometa
 fig:emlsimple
 fig:divide
