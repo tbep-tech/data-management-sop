@@ -36,6 +36,7 @@ workflow
 the-tbep-approach
 philo
 the-open-science-cake
+how-is-connectivity-achieved-automation
 tools
 howyou
 im-at-the-beginning-of-my-project
