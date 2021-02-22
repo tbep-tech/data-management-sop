@@ -24,7 +24,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2021-02-21" />
+<meta name="date" content="2021-02-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -101,8 +101,7 @@
 <li class="chapter" data-level="4.1" data-path="workflow.html"><a href="workflow.html#the-tbep-approach"><i class="fa fa-check"></i><b>4.1</b> The TBEP approach</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="workflow.html"><a href="workflow.html#philo"><i class="fa fa-check"></i><b>4.1.1</b> Our philosophy</a></li>
 <li class="chapter" data-level="4.1.2" data-path="workflow.html"><a href="workflow.html#the-open-science-cake"><i class="fa fa-check"></i><b>4.1.2</b> The open science cake</a></li>
-<li class="chapter" data-level="4.1.3" data-path="workflow.html"><a href="workflow.html#how-is-connectivity-achieved-automation"><i class="fa fa-check"></i><b>4.1.3</b> How is connectivity achieved? {<span class="citation">(<span class="citeproc-not-found" data-reference-id="automation"><strong>???</strong></span>)</span>}</a></li>
-<li class="chapter" data-level="4.1.4" data-path="workflow.html"><a href="workflow.html#tools"><i class="fa fa-check"></i><b>4.1.4</b> Tools we use</a></li>
+<li class="chapter" data-level="4.1.3" data-path="workflow.html"><a href="workflow.html#automation"><i class="fa fa-check"></i><b>4.1.3</b> How do we build the cake?</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#howyou"><i class="fa fa-check"></i><b>4.2</b> How can you manage data?</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="workflow.html"><a href="workflow.html#im-at-the-beginning-of-my-project"><i class="fa fa-check"></i><b>4.2.1</b> I’m at the beginning of my project</a></li>
@@ -187,22 +186,36 @@ Figure 4.2: The open science cake showing the connection between research, envir
 </div>
 <p>Most of our partners that we work with are professionals from resource management or local government agencies that have some vested interest in the protection and restoration of Tampa Bay. This is our primary audience that we can inform for decision-making. Broadly speaking, this is the audience that needs distilled information from research products but with a level of specificity that goes beyond education materials. These individuals are in the middle of the cake and the slices they take are actionable science products, such as interactive dashboards, automated report cards, and other decision support tools. The middle part of the cake is where conventional science becomes truly applied science.</p>
 <p>The cake also emphasizes a vertical connection among the layers that allows an individual to take a slice as high or as low in the cake as they want. This is a critical principle of open science that speaks to accessibility of information at all levels of the scientific process. Most of the time, an individual will take a slice from the cut at the level that’s appropriate for their needs. However, we want our science (and data) to be transparent and accessible under the FAIR principles and someone can take a slice at a different level if they have a need to do so. This also speaks to developing a community of practice for open science - access to the tools and the ability to use them to reproduce or expand on existing products.</p>
-<p>Our web products on the <a href="https://tbep.org/our-work/data-vizualization/">data visualization</a> section of our web page allow an individual to take slices of the cake at different levels. The website is setup as a series of cards (cakes) for each reporting product that act as an entryway (top of the cake) to different levels of the cake. If someone clicks on the <a href="https://tbep.org/water-quality-report-card/">Water Quality Report Card</a> for example, they get to a web page that has very general information about the reporting product and links to our <a href="https://drive.google.com/file/d/124FXmLcXKYUf3ktaVOvFejndiPS0m7K7/view?usp=sharing">summary pdf</a> that distills over forty years of water quality data for the Bay. There are links on the right side of the page that provide access to the building blocks of the report card, including the online dashboard, source code for the report card, build status of the report (more on this in section <a href="#automation"><strong>??</strong></a>, citable DOI, and technical documents that describe the science behind our water quality assessment approach. These links provide the path to the lower levels of the cake.</p>
+<p>Our web products on the <a href="https://tbep.org/our-work/data-vizualization/">data visualization</a> section of our web page allow an individual to take slices of the cake at different levels. The website is setup as a series of cards (cakes) for each reporting product that act as an entryway (top of the cake) to different levels of each cake. If someone clicks on the <a href="https://tbep.org/water-quality-report-card/">Water Quality Report Card</a> for example, they get to a web page that has very general information about the reporting product and links to our <a href="https://drive.google.com/file/d/124FXmLcXKYUf3ktaVOvFejndiPS0m7K7/view?usp=sharing">summary pdf</a> that distills over forty years of water quality data for the Bay. There are links on the right side of the page that provide access to the building blocks of the report card, including the online dashboard, source code for the report card, build status of the report (more on this in section <a href="workflow.html#automation">4.1.3</a>, citable DOI, and technical documents that describe the science behind our water quality assessment approach. These links provide the path to the lower levels of the cake.</p>
 </div>
-<div id="how-is-connectivity-achieved-automation" class="section level3">
-<h3><span class="header-section-number">4.1.3</span> How is connectivity achieved? {<span class="citation">(<span class="citeproc-not-found" data-reference-id="automation"><strong>???</strong></span>)</span>}</h3>
-<ul>
-<li>General workflow - source to product, figure <a href="workflow.html#fig:osworkflow">4.3</a></li>
-</ul>
+<div id="automation" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> How do we build the cake?</h3>
+<p>The cake is a useful metaphor to describe how we apply open science to achieve applied science, but how is this done in practice? How are the layers of the cake actually linked to one another? We use several open source programming tools to link source data to reporting products with the goal of producing the most timely information for decision-makers with minimal overhead by internal staff. In this section, we describe these tools and how we link them together to crate a workflow that is both automated and reproducible.</p>
+<p>The workflow we use to link source data to reporting products for our annual water quality assessment is shown in figure <a href="workflow.html#fig:osworkflow">4.3</a>. The process begins by accessing an external data source from our partners. In this case, this workflow accesses a spreadsheet of water quality data on an <a href="ftp://ftp.epchc.org/EPC_ERM_FTP/WQM_Reports/">FTP site</a> maintained by the Hillsborough county Environmental Protection Commission. These data are processed with a suite of open source tools, including R, RStudio, relevant data wrangling packages, and tools for document preparation. The open source tools we’ve created are also hosted online on GitHub which serves two goals. First, providing the tools on GitHub makes them discoverable and accessible to others and second, they are integrated into an automated process to make sure the most current data are used. Once the build process is done, the final products as a Shiny web application and our two-page PDF report are hosted on the TBEP website.</p>
 <div class="figure" style="text-align: center"><span id="fig:osworkflow"></span>
 <img src="img/os-workflow.png" alt="The TBEP open science workflow connecting source data to decision-support products."  />
 <p class="caption">
 Figure 4.3: The TBEP open science workflow connecting source data to decision-support products.
 </p>
 </div>
+<p>The core component of this entire workflow is the <a href="https://tbep-tech.github.io/tbeptools/">tbeptools R package</a> <span class="citation">(Beck et al. <a href="#ref-Beck21" role="doc-biblioref">2021</a>)</span>. This is software that was developed using the <a href="https://cran.r-project.org/">R programming language</a> to read, analyze, and visualize data that we use to report on progress in achieving CCMP goals. Most of the data tools on our web page depend on functions within the tbeptools package to work with the raw data provided from our partners. Although tbeptools is primarily used by TBEP staff, the package is provided free of use (under the <a href="https://tldrlegal.com/license/mit-license">MIT license</a>) for anyone interested in exploring the data on their own. Importantly, all source code is available on GitHub so that anyone with an interest can understand exactly what is done to process the data we use for reporting. This is a literal definition of transparency.</p>
+<p>There are several functions in the tbeptools package that are built specifically for reporting on water quality, all of which are explained in detail in the <a href="https://tbep-tech.github.io/tbeptools/articles/intro.html">introduction vignette</a> for the tbeptools package. A “vignette” in the R world is a plain language document that explains how to use functions in a package. Currently, the tbeptools package includes five vignettes, one for each indicator that has reporting functions available in the package:</p>
+<ul>
+<li><a href="https://tbep-tech.github.io/tbeptools/articles/intro.html">Intro to TBEP tools</a>: A general overview of the package with specific examples of functions for working with the water quality report card</li>
+<li><a href="https://tbep-tech.github.io/tbeptools/articles/tbni.html">Tampa Bay Nekton Index</a>: Overview of functions to import, analyze, and plot results for the Tampa Bay Nekton Index</li>
+<li><a href="https://tbep-tech.github.io/tbeptools/articles/tbbi.html">Tampa Bay Benthic Index</a>: Overview of functions to import data for Tampa Bay Benthic Index, under development</li>
+<li><a href="https://tbep-tech.github.io/tbeptools/articles/tidalcreeks.html">Tidal Creeks Assessment</a>: Overview of functions to import, analyze, and plot results for the assessment of tidal creeks in southwest Florida</li>
+<li><a href="https://tbep-tech.github.io/tbeptools/articles/seagrasstransect.html">Seagrass Transect Data</a>: Overview of functions to import, analyze, and plot results for the seagrass transect data collected in Tampa Bay</li>
+</ul>
+<p>Each vignette is setup similarly by explaining the functions used to read, analyze, and visualize the data. In fact, every function name in the package is named accordingly, e.g., <code>read_transect()</code> imports seagrass data, <code>anlz_transectave()</code> estimates annual averages of seagrass frequency occurrence, and <code>show_transect()</code> creates a plot of the transect data. The examples in the vignette explain how to use the functions and what each function does when working with the data.</p>
+<p>The functions in tbeptools used to read data into R were all built to ensure the most timely data are used for analysis. Each function uses a workflow shown in figure <a href="#fig:readchk"><strong>??</strong></a>, where a set of internal checks are done to see if the data are available on your computer, compares the data to the online source, and downloads the most recent version if your current version is either not yet downloaded or out of date. This process also ensures that any downstream reporting products are using the most current data. For example, the web page for the</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
+<img src="img/readchk.png" alt="Internal checks used by the tbeptools R package to ensure the most current data are used for analysis." width="80%" />
+<p class="caption">
+Figure 4.4: Internal checks used by the tbeptools R package to ensure the most current data are used for analysis.
+</p>
 </div>
-<div id="tools" class="section level3">
-<h3><span class="header-section-number">4.1.4</span> Tools we use</h3>
+<p>This workflow depends on data being online in a stable location. This underlies the importance of proper data management practices….</p>
 <ul>
 <li>R/RStudio IDE workflow
 <ul>
@@ -224,12 +237,12 @@ Figure 4.3: The TBEP open science workflow connecting source data to decision-su
 <h2><span class="header-section-number">4.2</span> How can you manage data?</h2>
 <p>Ten simple rules for creating a good data management plan: <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525" class="uri">https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525</a></p>
 <ul>
-<li>Section is written as a road map for developing a data product, there will be steps/checkboxes/forms, roughly following figure <a href="workflow.html#fig:dataworkflow">4.4</a></li>
+<li>Section is written as a road map for developing a data product, there will be steps/checkboxes/forms, roughly following figure <a href="workflow.html#fig:dataworkflow">4.5</a></li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:dataworkflow"></span>
 <img src="img/dataworkflow.png" alt="A hypothetical and generalized timeline for managing data associated with a project." width="80%" />
 <p class="caption">
-Figure 4.4: A hypothetical and generalized timeline for managing data associated with a project.
+Figure 4.5: A hypothetical and generalized timeline for managing data associated with a project.
 </p>
 </div>
 <ul>
@@ -279,6 +292,9 @@ Figure 4.4: A hypothetical and generalized timeline for managing data associated
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
+<div id="ref-Beck21">
+<p>Beck, Marcus, Meagan Schrandt, Mike Wessel, Ed Sherwood, Gary Raulerson, and Ben Best. 2021. <em>Tbeptools: Data and Indicators for the Tampa Bay Estuary Program</em>. <a href="https://github.com/tbep-tech/tbeptools">https://github.com/tbep-tech/tbeptools</a>.</p>
+</div>
 <div id="ref-Beck20">
 <p>Beck, M. W., C. O’Hara nad J. S. S. Lowndes, R. D. Mazor, S. Theroux, D. J. Gillett, B. Lane, and G. Gearheart. 2020. “The Importance of Open Science for Biological Assessment of Aquatic Environments.” <em>PeerJ</em> 8: e9539. <a href="https://doi.org/https://doi.org/10.7717/peerj.9539">https://doi.org/https://doi.org/10.7717/peerj.9539</a>.</p>
 </div>
