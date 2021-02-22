@@ -38,6 +38,7 @@ the-tbep-approach
 philo
 the-open-science-cake
 automation
+more-on-github
 howyou
 im-at-the-beginning-of-my-project
 im-somewhere-in-the-middle-of-my-project
