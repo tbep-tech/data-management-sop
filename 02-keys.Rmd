@@ -178,7 +178,7 @@ knitr::include_graphics('img/datadict.png')
 ```
 
 
-## Where do data live? 
+## Where do data live? {#datahome}
 
 Identifying a location for where you data can be stored long-term can be just as important as using best practices for data curation.  Hosting your data in an online repository makes your data findable and accessible by others and also ensures that your data are of sufficient quality to adhere to standards for the repository.  There is a staggering variety of online repositories, many of which are domain-specific, and it can be difficult to find the best repository that is suitable to your needs.  
 

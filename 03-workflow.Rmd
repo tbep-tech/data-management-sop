@@ -81,20 +81,35 @@ A critical part of the workflow in figure \@ref(fig:osworkflow) is automation.  
 
 Many of the README files for the different GitHub projects we maintain include one or more "badges" that indicate of our CI/CD processes are working as we hope.  For example, the README file for our tbeptools R package includes three badges that indicate the status of different CI/CD processes (figure \@ref(fig:badges).  The first badge, R-CMD-Check, shows if the set of standard checks for R packages are passing.  There are dozens of checks for R packages, including things like making sure the documentation is up-to-date, file sizes aren't excessive, the file structure is setup correctly, the examples run without errors, etc. (see [chapter 19](https://r-pkgs.org/r-cmd-check.html)in @Wickham15 for a full description of these checks).  The second "build" badge shows if the [website](https://tbep-tech.github.io/tbeptools/) for the package has been successfully built with the last change to the repository, i.e., does information on the website reflect the package in its current state?  Finally, the "codecov" badge provides a general estimate of how much code in the package includes unit tests as part of best practices for software development. 
 
-```{r, echo = F, fig.cap = 'An example of the status badges included in the README file for the tbeptools R package.'}
+```{r badges, echo = F, fig.cap = 'An example of the status badges included in the README file for the tbeptools R package.'}
 knitr::include_graphics('img/badges.PNG')
 ```
 
 The CI/CD workflows are completely customizable to suit the needs of a given project. The badges in the previous example simply indicate if the CI/CD checks for a package and its website are working correctly.  These are often included in README files to give users a piece of mind that our development processes are following accepted community standards.  Other badges can indicate if a custom workflow is up to date, such as for our automated reporting products.  The water quality report card has a provisional draft that uses the most recent dataset from EPC.  The CI/CD process is setup rebuild the pdf by running a custom "build" file that imports the data, analyzes the results, and creates the plots, all using function from tbeptools. The output graphics are embedded in a type of document preparation system that mixes plain text and code to dynamically generate a static pdf.  All of this is accomplished in the build file, which is triggered daily through the CI/CD services on GitHub.  The CI/CD badge for this repository indicates if the daily build was run and if the provisional pdf was successfully created.  Many of our reporting products leverage these services and you can view the status from its appropriate badge we've placed on our main TBEP website. 
 
-### More on GitHub
+### More on Git and GitHub
 
-* GitHub as a collaborative tool and quasi-archive
-     * version control
-     * collaborative tool to work together - issues, pull requests
-     * DOI through Zenodo
-     * CI/CD, Automation with GitHub Actions and badges
-     * GitHub linkage to TBEP website
+GitHub is a foundational tool that is central to our data management workflow.  We've described how it can be used as an intermediate solution for hosting data (section \@ref(datahome)) and how we use it to share and automate our reporting workflows (section \@ref(automation)).  Our use of GitHub is in line with our broader philosophy of using open science and its useful to explain some more general concepts about what GitHub can provide to our community. 
+
+Many people describe Git and GitHub synonymously, but we need to distinguish between the two to develop an understanding of the different services each provides.  First, Git is a formal version control software, whereas GitHub is an online platform for sharing code that uses Git.  It's possible to use Git without using GitHub (i.e., using version control on your personal computer) and it's possible to use GitHub without using Git (e.g, using GitHub to share a file).  As expected, using both Git and GitHub together is a preferred approach to leveraging the benefits of each. The relationship between the two is very similar to that of R and RStudio.  Using R by itself is okay, but the value to yourself and others of using the RStudio as a vehicle for R will be greatly enhanced.  The same applies to Git and GitHub. 
+
+Version control is a way to track the development history of a project.  It serves joint purposes of 1) formally documenting the changes that have been made to code or software, and 2) making sure that the development history is permanent.  Documenting changes provides a transparent record for yourself and others and establishing permanency ensures that any of the changes that are made can be vetted and accessed as needed. Using Git is extra work, but when you need it you'll be glad you've invested your time wisely.  Think of an instance where you've saved different versions of a file with different names because you don't want to delete any of your old work.  You end up with many extra files and no clear way to understand the origin of each file. Git takes care of this for you by providing a navigable insurance plan for your project. 
+
+GitHub lets you share your code under Git version control in an online environment so that you and your collaborators can more easily work together. You can host multiple projects under version control, view the entire history of each project, and allow others to sync up with you work.  GitHub also has tools for tracking "issues" associated with different projects, which provide a simple way to document questions, bug fixes, or enhancements.  GitHub is a near perfect example open source in practice.  Anyone can view and potentially contribute to other people's projects using a platform that ensures everything is fully documented and never erased.
+
+GitHub also includes a variety of other tools that facilitate openness: 
+
+* Release tagging to assign formal version numbers to code, data or software 
+* GitHub actions to create your own CI/CD workflows, our examples in section \@ref(automation ) use these tools
+* Integration with [Zenodo](https://zenodo.org/) for DOI assignments to give your project a stable and permanent address.  You can see these links on many of our projects on GitHub (our [water quality dashboard](https://github.com/tbep-tech/wq-dash), for example).  
+* Website hosting, as for our [tbeptools](https://tbep-tech.github.io/tbeptools/) R package
+* Attaching licenses to a project with visible links ot the usage defined under each license
+
+All of this may sound very specific to software development, but GitHub can take you a long way towards adopting FAIR principles through better data management practices.  The concepts that apply to version control for code and software have parallels for data management and many of the features to facilitate openness in GitHub can also apply do data. Making your data accessible, documenting the changes you've made over time, and to establish a permanent home (e.g., through Zenodo) can all be done with GitHub.  We elaborate on a case study example using GitHub for data in section \@ref(twitter). 
+
+GitHub also lowers the barrier to inclusion for engaging others in a project.  Unless you work with a dedicated team of software or web developers, it's very rare that your colleagues will have experience with Git or even know what it is (although this is slowly changing).  This doesn't mean that others are excluded from contributing.  For example, anyone can post issues for a project through the simple web interface provided by GitHub.  Changes to source documents can also be made online that can be tracked through version control without having to use Git on your own (e.g., see our contributing section in \@ref(contrib)).  
+
+The TBEP has a [group GitHub page](https://github.com/tbep-tech) where all of our projects exist, including the source content for this SOP. We do this for all of the reasons mentioned above and as an attempt to serve as an example of how open sharing can lead to better science in less time [@Lowndes17]. Anyone can view our pages to understand the source code, see the changes we've made over time, and post issues/edit content to directly contribute.  This has immense value for how we work as a team and with our partners outside of TBEP. 
 
 ## How can you manage data? {#howyou}
 
