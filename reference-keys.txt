@@ -9,7 +9,7 @@ fig:divide
 fig:cake
 fig:osworkflow
 fig:unnamed-chunk-7
-fig:unnamed-chunk-8
+fig:badges
 fig:dataworkflow
 fig:codehero
 overview
@@ -33,13 +33,13 @@ metadata
 metadata-examples
 the-eml-standard
 dict
-where-do-data-live
+datahome
 workflow
 the-tbep-approach
 philo
 the-open-science-cake
 automation
-more-on-github
+more-on-git-and-github
 howyou
 im-at-the-beginning-of-my-project
 im-somewhere-in-the-middle-of-my-project
@@ -49,7 +49,7 @@ lets-get-it-online
 cases
 oyster
 desoto
-red-tide-twitter-repo
+twitter
 final
 appendices
 list-of-resources
