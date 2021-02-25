@@ -53,6 +53,70 @@
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -290,17 +354,149 @@ Figure 4.6: A hypothetical and generalized timeline for managing data associated
 <div id="metadata-workflow" class="section level3">
 <h3><span class="header-section-number">4.2.4</span> Metadata workflow</h3>
 <p>We described general metadata concepts in section <a href="keys.html#metadata">3.4</a>, but did not provide a workflow for creating or generating metadata. The process begins by answering the general questions we presented as a summary of those in the <a href="https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/atoms/files/Metadata%20in%20Plain%20Language_508compliant.pdf">Metadata in “plain language”</a> document. Just start by writing the answers down in a simple text file or even as a spreadsheet with columns for each question. Where the answers to these questions go depends on how formalized you want to make your metadata, which also depends on where you want to make your data accessible. More informal storage approaches (e.g., GitHub, FTP site) could store metadata as a text file (e.g., in a README document), whereas storing your data in a formal repository would require you to choose an appropriate metadata standard (e.g., EML in section <a href="keys.html#eml">3.4.2</a>). Custom workflows that combine metadata documentation through an online user interface can also be created if you or your team have the capacity to do so <span class="citation">(Jones et al. <a href="#ref-Jones07" role="doc-biblioref">2007</a>)</span>.</p>
-<p>These steps can be used as a generalized workflow for metadata generation, ideally at the beginning of a project. How far you go in these steps depends on where you want to store your metadata.</p>
+<p>The following can be used as a generalized workflow for metadata generation, ideally at the beginning of a project. How far you go in these steps depends on where you want to store your metadata.</p>
 <ol style="list-style-type: decimal">
 <li>Identify which dataset(s) are important contributions of a project that you intend on sharing and that need metadata (see section <a href="keys.html#contribs">3.1</a>).</li>
 <li>Draft a general document to answer the “who”, “what”, “when”, “where”, “why”, and “how” questions in section <a href="keys.html#metadata">3.4</a> for each data product. This can be a simple text file that “accompanies” each data product. A spreadsheet entry from can be useful to import into a program for converting your metadata into a formal standard or for uploading to a data repository.</li>
 <li>Convert the metadata document into an appropriate file format based on the metadata standard you’re using. For EML, this would be an XML file.</li>
 </ol>
-<ul>
-<li>USGS resources <a href="https://www.usgs.gov/products/data-and-tools/data-management" class="uri">https://www.usgs.gov/products/data-and-tools/data-management</a></li>
-<li>Metadata questionnaire <a href="https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/atoms/files/MetadataQuestionnaire_508compliant.pdf" class="uri">https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/atoms/files/MetadataQuestionnaire_508compliant.pdf</a></li>
-<li>Data dictionaries <a href="https://www.usgs.gov/products/data-and-tools/data-management/data-dictionaries" class="uri">https://www.usgs.gov/products/data-and-tools/data-management/data-dictionaries</a></li>
-</ul>
+<p>This workflow is a starting point for creating simple to more complex metadata. For a hypothetical example, the absolute bare minimum for metadata might look this like this (e.g., in a spreadsheet):</p>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="90%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Question</th>
+<th align="left">Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Who</td>
+<td align="left">Marcus Beck (<a href="mailto:fakeaddress@email.com" class="email">fakeaddress@email.com</a>)</td>
+</tr>
+<tr class="even">
+<td align="left">What</td>
+<td align="left">Water Quality Assessment Data</td>
+</tr>
+<tr class="odd">
+<td align="left">When</td>
+<td align="left">2020</td>
+</tr>
+<tr class="even">
+<td align="left">Where</td>
+<td align="left">Tampa Bay</td>
+</tr>
+<tr class="odd">
+<td align="left">Why</td>
+<td align="left">reporing on annual water quality trends for programmatic update</td>
+</tr>
+<tr class="even">
+<td align="left">How</td>
+<td align="left">Data were collected monthly as part of the Hillsborough Co. EPC monitoring program</td>
+</tr>
+</tbody>
+</table>
+<p>If we wanted to add some specificity, we could create separate fields to include more detailed information.</p>
+<table>
+<colgroup>
+<col width="1%" />
+<col width="98%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Attribute</th>
+<th align="left">Entry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">first</td>
+<td align="left">Marcus</td>
+</tr>
+<tr class="even">
+<td align="left">last</td>
+<td align="left">Beck</td>
+</tr>
+<tr class="odd">
+<td align="left">email</td>
+<td align="left"><a href="mailto:fakeaddress@email.com" class="email">fakeaddress@email.com</a></td>
+</tr>
+<tr class="even">
+<td align="left">title</td>
+<td align="left">Water Quality Assessment Data</td>
+</tr>
+<tr class="odd">
+<td align="left">startdate</td>
+<td align="left">1/1/2020</td>
+</tr>
+<tr class="even">
+<td align="left">enddate</td>
+<td align="left">12/31/2020</td>
+</tr>
+<tr class="odd">
+<td align="left">location</td>
+<td align="left">Tampa Bay, FL, USA</td>
+</tr>
+<tr class="even">
+<td align="left">west</td>
+<td align="left">-82.8</td>
+</tr>
+<tr class="odd">
+<td align="left">east</td>
+<td align="left">-82.3</td>
+</tr>
+<tr class="even">
+<td align="left">north</td>
+<td align="left">28</td>
+</tr>
+<tr class="odd">
+<td align="left">south</td>
+<td align="left">27.4</td>
+</tr>
+<tr class="even">
+<td align="left">methods</td>
+<td align="left">All data were from the Hillsborough County Environmental Protection Commission (<a href="https://www.epchc.org/i-want-to/view-gis-maps-and-data" class="uri">https://www.epchc.org/i-want-to/view-gis-maps-and-data</a>). Data are monthly at mid-depth for each of 50 stations throughout the Bay from 1974 to 2020. Stations were visited on a rotating schedule such that one third of all stations were sampled each week. Bay segments represent management units of interest with distinct chemical and physical differences. Accordingly, station data were aggregated by median values within each of four Bay segments. Data are used to assess progress in achieving programmatic goals for the Tampa Bay Estuary Program.</td>
+</tr>
+</tbody>
+</table>
+<p>Finally, if we wanted to convert this information to an EML metadata file, we can use some tools in the EML R package. Although there are specific tags and entry methods for each of the attributes, this includes all of the information from the last example. The methods information can als be entered as a separate file for more long-form documentation. After the file is written with <code>write_eml()</code>, it can be validated for accuracy and completeness with <code>eml_validate()</code>. The finished metadata file can be viewed <a href="data/my_eml.xml">here</a>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="workflow.html#cb1-1"></a><span class="kw">library</span>(EML)</span>
+<span id="cb1-2"><a href="workflow.html#cb1-2"></a></span>
+<span id="cb1-3"><a href="workflow.html#cb1-3"></a><span class="co"># enter the metadata</span></span>
+<span id="cb1-4"><a href="workflow.html#cb1-4"></a>me &lt;-<span class="st"> </span><span class="kw">list</span>(</span>
+<span id="cb1-5"><a href="workflow.html#cb1-5"></a>  <span class="dt">individualName =</span> <span class="kw">list</span>(<span class="dt">givenName =</span> <span class="st">&#39;Marcus&#39;</span>, <span class="dt">surName =</span> <span class="st">&#39;Beck&#39;</span>), </span>
+<span id="cb1-6"><a href="workflow.html#cb1-6"></a>  <span class="dt">electronicMailAddress =</span> <span class="st">&#39;fakeaddress@email.com&#39;</span></span>
+<span id="cb1-7"><a href="workflow.html#cb1-7"></a>)</span>
+<span id="cb1-8"><a href="workflow.html#cb1-8"></a>title &lt;-<span class="st"> &#39;Water Quality Assessment Data&#39;</span></span>
+<span id="cb1-9"><a href="workflow.html#cb1-9"></a>coverage &lt;-<span class="st"> </span><span class="kw">set_coverage</span>(</span>
+<span id="cb1-10"><a href="workflow.html#cb1-10"></a>  <span class="dt">begin =</span> <span class="st">&#39;2020-01-01&#39;</span>, </span>
+<span id="cb1-11"><a href="workflow.html#cb1-11"></a>  <span class="dt">end =</span> <span class="st">&#39;2020-12-31&#39;</span>,</span>
+<span id="cb1-12"><a href="workflow.html#cb1-12"></a>  <span class="dt">geographicDescription =</span> <span class="st">&#39;Tampa Bay, Florida, USA&#39;</span>,</span>
+<span id="cb1-13"><a href="workflow.html#cb1-13"></a>  <span class="dt">west =</span> <span class="fl">-82.8</span>, <span class="dt">east =</span> <span class="fl">-82.3</span>, </span>
+<span id="cb1-14"><a href="workflow.html#cb1-14"></a>  <span class="dt">north =</span> <span class="dv">28</span>, <span class="dt">south =</span> <span class="fl">27.4</span>)</span>
+<span id="cb1-15"><a href="workflow.html#cb1-15"></a>methods &lt;-<span class="st"> </span><span class="kw">set_methods</span>(<span class="st">&#39;data/methods.docx&#39;</span>)</span>
+<span id="cb1-16"><a href="workflow.html#cb1-16"></a></span>
+<span id="cb1-17"><a href="workflow.html#cb1-17"></a><span class="co"># combine the metadata</span></span>
+<span id="cb1-18"><a href="workflow.html#cb1-18"></a>my_eml &lt;-<span class="st"> </span>eml<span class="op">$</span><span class="kw">eml</span>(</span>
+<span id="cb1-19"><a href="workflow.html#cb1-19"></a>  <span class="dt">packageId =</span> uuid<span class="op">::</span><span class="kw">UUIDgenerate</span>(),  </span>
+<span id="cb1-20"><a href="workflow.html#cb1-20"></a>  <span class="dt">system =</span> <span class="st">&quot;uuid&quot;</span>,</span>
+<span id="cb1-21"><a href="workflow.html#cb1-21"></a>  <span class="dt">dataset =</span> eml<span class="op">$</span><span class="kw">dataset</span>(</span>
+<span id="cb1-22"><a href="workflow.html#cb1-22"></a>    <span class="dt">title =</span> title,</span>
+<span id="cb1-23"><a href="workflow.html#cb1-23"></a>    <span class="dt">creator =</span> me,</span>
+<span id="cb1-24"><a href="workflow.html#cb1-24"></a>    <span class="dt">contact =</span> me,</span>
+<span id="cb1-25"><a href="workflow.html#cb1-25"></a>    <span class="dt">coverage =</span> coverage, </span>
+<span id="cb1-26"><a href="workflow.html#cb1-26"></a>    <span class="dt">methods =</span> methods</span>
+<span id="cb1-27"><a href="workflow.html#cb1-27"></a>  )</span>
+<span id="cb1-28"><a href="workflow.html#cb1-28"></a>)</span>
+<span id="cb1-29"><a href="workflow.html#cb1-29"></a></span>
+<span id="cb1-30"><a href="workflow.html#cb1-30"></a><span class="co"># write and validate the file</span></span>
+<span id="cb1-31"><a href="workflow.html#cb1-31"></a><span class="kw">write_eml</span>(my_eml, <span class="st">&quot;data/ex.xml&quot;</span>)</span>
+<span id="cb1-32"><a href="workflow.html#cb1-32"></a><span class="kw">eml_validate</span>(my_eml)</span></code></pre></div>
+<p>There are many more attributes that can be included in EML metadata. For example, we discussed the importance of a data dictionary in section <a href="keys.html#dict">3.4.3</a>. This information can be documented in an EML metadata file in different ways and we encourage you to view the complete <a href="https://docs.ropensci.org/EML/">EML website</a> for a full overview.</p>
+<p>The intent of presenting this example was to demonstrate simplicity to complexity in the different approaches you can use to create metadata. However, it’s also worth pointing out that this process can be completely operationalized through the workflows described in section <a href="workflow.html#philo">4.1.1</a>. It would be entirely conceivable to use a spreadsheet or web form entry to collect attributes for the EML file, import that information in R, and create the file with the EML R package. This can be automated through a CI/CD build process on GitHub, where a user would only have to enter data on a web form and the rest can be handled through a routine created in R. Moving towards this approach to documenting and creating metadata would be a tremendous leap forward in curating data products that are used by TBEP and its partners.</p>
 </div>
 <div id="lets-get-it-online" class="section level3">
 <h3><span class="header-section-number">4.2.5</span> Let’s get it online!</h3>
