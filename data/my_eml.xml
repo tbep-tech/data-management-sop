@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="022e1cf5-51dd-4aff-8f89-f315cde375c4" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+  <dataset>
+    <title>Water Quality Assessment Data</title>
+    <creator>
+      <individualName>
+        <givenName>Marcus</givenName>
+        <surName>Beck</surName>
+      </individualName>
+      <electronicMailAddress>fakeaddress@email.com</electronicMailAddress>
+    </creator>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Tampa Bay, Florida, USA</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-82.8</westBoundingCoordinate>
+          <eastBoundingCoordinate>-82.3</eastBoundingCoordinate>
+          <northBoundingCoordinate>28</northBoundingCoordinate>
+          <southBoundingCoordinate>27.4</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2020-01-01</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2020-12-31</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <contact>
+      <individualName>
+        <givenName>Marcus</givenName>
+        <surName>Beck</surName>
+      </individualName>
+      <electronicMailAddress>fakeaddress@email.com</electronicMailAddress>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>
+          <para>
+  All data were from the Hillsborough County Environmental Protection
+  Commission (https://www.epchc.org/i-want-to/view-gis-maps-and-data).
+  Data are monthly at mid-depth for each of 50 stations throughout the
+  Bay from 1974 to 2020. Stations were visited on a rotating schedule
+  such that one third of all stations were sampled each week. Bay
+  segments represent management units of interest with distinct chemical
+  and physical differences. Accordingly, station data were aggregated by
+  median values within each of four Bay segments. Data are used to
+  assess progress in achieving programmatic goals for the Tampa Bay
+  Estuary Program.
+</para>
+        </description>
+      </methodStep>
+    </methods>
+  </dataset>
+</eml:eml>

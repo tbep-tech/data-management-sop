@@ -357,8 +357,8 @@ Figure 4.6: A hypothetical and generalized timeline for managing data associated
 <p>The following can be used as a generalized workflow for metadata generation, ideally at the beginning of a project. How far you go in these steps depends on where you want to store your metadata.</p>
 <ol style="list-style-type: decimal">
 <li>Identify which dataset(s) are important contributions of a project that you intend on sharing and that need metadata (see section <a href="keys.html#contribs">3.1</a>).</li>
-<li>Draft a general document to answer the “who”, “what”, “when”, “where”, “why”, and “how” questions in section <a href="keys.html#metadata">3.4</a> for each data product. This can be a simple text file that “accompanies” each data product. A spreadsheet entry from can be useful to import into a program for converting your metadata into a formal standard or for uploading to a data repository.</li>
-<li>Convert the metadata document into an appropriate file format based on the metadata standard you’re using. For EML, this would be an XML file.</li>
+<li>Draft a general document to answer the “who”, “what”, “when”, “where”, “why”, and “how” questions in section <a href="keys.html#metadata">3.4</a> for each data product. This can be a simple text file that “accompanies” each data product. A spreadsheet entry form can also be useful so that the metadata are in tabular format. If it’s tidy, this can be used to import into a program for converting your metadata into a formal standard or for uploading to a data repository.</li>
+<li>Convert the metadata document into an appropriate file format based on the metadata standard you’re using. For EML metadata, this would be an XML file.</li>
 </ol>
 <p>This workflow is a starting point for creating simple to more complex metadata. For a hypothetical example, the absolute bare minimum for metadata might look this like this (e.g., in a spreadsheet):</p>
 <table>
@@ -391,7 +391,7 @@ Figure 4.6: A hypothetical and generalized timeline for managing data associated
 </tr>
 <tr class="odd">
 <td align="left">Why</td>
-<td align="left">reporing on annual water quality trends for programmatic update</td>
+<td align="left">Reporing on annual water quality trends for programmatic update</td>
 </tr>
 <tr class="even">
 <td align="left">How</td>
@@ -462,7 +462,7 @@ Figure 4.6: A hypothetical and generalized timeline for managing data associated
 </tr>
 </tbody>
 </table>
-<p>Finally, if we wanted to convert this information to an EML metadata file, we can use some tools in the EML R package. Although there are specific tags and entry methods for each of the attributes, this includes all of the information from the last example. The methods information can als be entered as a separate file for more long-form documentation. After the file is written with <code>write_eml()</code>, it can be validated for accuracy and completeness with <code>eml_validate()</code>. The finished metadata file can be viewed <a href="data/my_eml.xml">here</a>.</p>
+<p>Finally, if we wanted to convert this information to an EML metadata file, we can use some tools in the EML R package. This example includes all of the information from the last example, but using specific tags and entry methods for the EML format, The methods information can also be entered as a separate file for more long-form documentation (i.e., <code>set_methods('data/methods.docx')</code>). After the file is written with <code>write_eml()</code>, it can be validated for accuracy and completeness with <code>eml_validate()</code>. The finished metadata file can be viewed <a href="data/my_eml.xml">here</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="workflow.html#cb1-1"></a><span class="kw">library</span>(EML)</span>
 <span id="cb1-2"><a href="workflow.html#cb1-2"></a></span>
 <span id="cb1-3"><a href="workflow.html#cb1-3"></a><span class="co"># enter the metadata</span></span>
@@ -493,8 +493,8 @@ Figure 4.6: A hypothetical and generalized timeline for managing data associated
 <span id="cb1-28"><a href="workflow.html#cb1-28"></a>)</span>
 <span id="cb1-29"><a href="workflow.html#cb1-29"></a></span>
 <span id="cb1-30"><a href="workflow.html#cb1-30"></a><span class="co"># write and validate the file</span></span>
-<span id="cb1-31"><a href="workflow.html#cb1-31"></a><span class="kw">write_eml</span>(my_eml, <span class="st">&quot;data/ex.xml&quot;</span>)</span>
-<span id="cb1-32"><a href="workflow.html#cb1-32"></a><span class="kw">eml_validate</span>(my_eml)</span></code></pre></div>
+<span id="cb1-31"><a href="workflow.html#cb1-31"></a><span class="kw">write_eml</span>(my_eml, <span class="st">&#39;data/my_eml.xml&#39;</span>)</span>
+<span id="cb1-32"><a href="workflow.html#cb1-32"></a><span class="kw">eml_validate</span>(<span class="st">&#39;data/my_eml.xml&#39;</span>)</span></code></pre></div>
 <p>There are many more attributes that can be included in EML metadata. For example, we discussed the importance of a data dictionary in section <a href="keys.html#dict">3.4.3</a>. This information can be documented in an EML metadata file in different ways and we encourage you to view the complete <a href="https://docs.ropensci.org/EML/">EML website</a> for a full overview.</p>
 <p>The intent of presenting this example was to demonstrate simplicity to complexity in the different approaches you can use to create metadata. However, it’s also worth pointing out that this process can be completely operationalized through the workflows described in section <a href="workflow.html#philo">4.1.1</a>. It would be entirely conceivable to use a spreadsheet or web form entry to collect attributes for the EML file, import that information in R, and create the file with the EML R package. This can be automated through a CI/CD build process on GitHub, where a user would only have to enter data on a web form and the rest can be handled through a routine created in R. Moving towards this approach to documenting and creating metadata would be a tremendous leap forward in curating data products that are used by TBEP and its partners.</p>
 </div>
