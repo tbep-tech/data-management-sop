@@ -146,15 +146,66 @@ knitr::include_graphics('img/dataworkflow.png')
 
 We described general metadata concepts in section \@ref(metadata), but did not provide a workflow for creating or generating metadata.  The process begins by answering the general questions we presented as a summary of those in the [Metadata in "plain language"](https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/atoms/files/Metadata%20in%20Plain%20Language_508compliant.pdf) document.  Just start by writing the answers down in a simple text file or even as a spreadsheet with columns for each question.  Where the answers to these questions go depends on how formalized you want to make your metadata, which also depends on where you want to make your data accessible.  More informal storage approaches (e.g., GitHub, FTP site) could store metadata as a text file (e.g., in a README document), whereas storing your data in a formal repository would require you to choose an appropriate metadata standard (e.g., EML in section \@ref(eml)). Custom workflows that combine metadata documentation through an online user interface can also be created if you or your team have the capacity to do so [@Jones07].
 
-These steps can be used as a generalized workflow for metadata generation, ideally at the beginning of a project.  How far you go in these steps depends on where you want to store your metadata. 
+The following can be used as a generalized workflow for metadata generation, ideally at the beginning of a project.  How far you go in these steps depends on where you want to store your metadata. 
 
 1. Identify which dataset(s) are important contributions of a project that you intend on sharing and that need metadata (see section \@ref(contribs)). 
-1. Draft a general document to answer the "who", "what", "when", "where", "why", and "how" questions in section \@ref(metadata) for each data product.  This can be a simple text file that "accompanies" each data product. A spreadsheet entry from can be useful to import into a program for converting your metadata into a formal standard or for uploading to a data repository. 
+1. Draft a general document to answer the "who", "what", "when", "where", "why", and "how" questions in section \@ref(metadata) for each data product.  This can be a simple text file that "accompanies" each data product. A spreadsheet entry from can be useful to import into a program for converting your metadata into a formal standard or for uploading to a data repository.
 1. Convert the metadata document into an appropriate file format based on the metadata standard you're using. For EML, this would be an XML file.
 
-* USGS resources <https://www.usgs.gov/products/data-and-tools/data-management>
-* Metadata questionnaire <https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/atoms/files/MetadataQuestionnaire_508compliant.pdf>
-* Data dictionaries <https://www.usgs.gov/products/data-and-tools/data-management/data-dictionaries>
+This workflow is a starting point for creating simple to more complex metadata. For a hypothetical example, the absolute bare minimum for metadata might look this like this (e.g., in a spreadsheet):
+
+```{r, echo = F}
+tmp <- read.csv('data/metadataex.csv')
+knitr::kable(tmp)
+```
+
+If we wanted to add some specificity, we could create separate fields to include more detailed information.  
+
+```{r, echo = F}
+tmp <- read.csv('data/metadataex2.csv')
+knitr::kable(tmp)
+```
+
+Finally, if we wanted to convert this information to an EML metadata file, we can use some tools in the EML R package.  Although there are specific tags and entry methods for each of the attributes, this includes all of the information from the last example.  The methods information can als be entered as a separate file for more long-form documentation. After the file is written with `write_eml()`, it can be validated for accuracy and completeness with `eml_validate()`.  The finished metadata file can be viewed [here](data/my_eml.xml). 
+
+```{r, echo = T, warning = F, message = F, results = 'hide'}
+library(EML)
+
+# enter the metadata
+me <- list(
+  individualName = list(givenName = 'Marcus', surName = 'Beck'), 
+  electronicMailAddress = 'fakeaddress@email.com'
+)
+title <- 'Water Quality Assessment Data'
+coverage <- set_coverage(
+  begin = '2020-01-01', 
+  end = '2020-12-31',
+  geographicDescription = 'Tampa Bay, Florida, USA',
+  west = -82.8, east = -82.3, 
+  north = 28, south = 27.4)
+methods <- set_methods('data/methods.docx')
+
+# combine the metadata
+my_eml <- eml$eml(
+  packageId = uuid::UUIDgenerate(),  
+  system = "uuid",
+  dataset = eml$dataset(
+    title = title,
+    creator = me,
+    contact = me,
+    coverage = coverage, 
+    methods = methods
+  )
+)
+
+# write and validate the file
+write_eml(my_eml, "data/ex.xml")
+eml_validate(my_eml)
+```
+
+There are many more attributes that can be included in EML metadata.  For example, we discussed the importance of a data dictionary in section \@ref(dict).  This information can be documented in an EML metadata file in different ways and we encourage you to view the complete [EML website](https://docs.ropensci.org/EML/) for a full overview.  
+
+The intent of presenting this example was to demonstrate simplicity to complexity in the different approaches you can use to create metadata.  However, it's also worth pointing out that this process can be completely operationalized through the workflows described in section \@ref(philo). It would be entirely conceivable to use a spreadsheet or web form entry to collect attributes for the EML file, import that information in R, and create the file with the EML R package.  This can be automated through a CI/CD build process on GitHub, where a user would only have to enter data on a web form and the rest can be handled through a routine created in R.  Moving towards this approach to documenting and creating metadata would be a tremendous leap forward in curating data products that are used by TBEP and its partners. 
 
 ### Let's get it online!
 

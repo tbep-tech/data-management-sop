@@ -1,0 +1,13 @@
+Attribute,Entry
+first,Marcus
+last,Beck
+email,fakeaddress@email.com
+title,Water Quality Assessment Data
+startdate,1/1/2020
+enddate,12/31/2020
+location,"Tampa Bay, FL, USA"
+west,-82.8
+east,-82.3
+north,28
+south,27.4
+methods,"All data were from the Hillsborough County Environmental Protection Commission (https://www.epchc.org/i-want-to/view-gis-maps-and-data). Data are monthly at mid-depth for each of 50 stations throughout the Bay from 1974 to 2020. Stations were visited on a rotating schedule such that one third of all stations were sampled each week. Bay segments represent management units of interest with distinct chemical and physical differences. Accordingly, station data were aggregated by median values within each of four Bay segments. Data are used to assess progress in achieving programmatic goals for the Tampa Bay Estuary Program."
