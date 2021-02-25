@@ -1,6 +1,6 @@
 # Data Management Workflow {#workflow}
 
-This section is in two parts to first describe a workflow that we use internally at TBEP to manage our data and then to describe a road map for opening internal or external datasets at your own organization.  The first section expands on our philosophy for using open science to manage data, including specific workflows we use, as context to the second section.  Our approach is one way of applying open science to managing data.  Applying the same approach at your organization may or may not be appropriate depending on your internal and external needs for managing data.  As such, our approach is generalizable and modular - any of the approaches can be modified in part or together for your own needs. 
+This section is in two parts to first describe a workflow that we use internally at TBEP to manage our data in section \@ref(philo) and then to describe a road map for opening internal or external datasets at your own organization in section \@ref(howyou).  The first section expands on our philosophy for using open science to manage data, including specific workflows we use, as context to the second section.  Our approach is one way of applying open science to managing data.  Applying the same approach at your organization may or may not be appropriate depending on your internal and external needs for managing data.  As such, our approach is generalizable and modular - any of the approaches can be modified in part or together for your own needs. 
 
 ## The TBEP approach
 
@@ -143,6 +143,14 @@ knitr::include_graphics('img/dataworkflow.png')
 * Time for damage control
 
 ### Metadata workflow
+
+We described general metadata concepts in section \@ref(metadata), but did not provide a workflow for creating or generating metadata.  The process begins by answering the general questions we presented as a summary of those in the [Metadata in "plain language"](https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/atoms/files/Metadata%20in%20Plain%20Language_508compliant.pdf) document.  Just start by writing the answers down in a simple text file or even as a spreadsheet with columns for each question.  Where the answers to these questions go depends on how formalized you want to make your metadata, which also depends on where you want to make your data accessible.  More informal storage approaches (e.g., GitHub, FTP site) could store metadata as a text file (e.g., in a README document), whereas storing your data in a formal repository would require you to choose an appropriate metadata standard (e.g., EML in section \@ref(eml)). Custom workflows that combine metadata documentation through an online user interface can also be created if you or your team have the capacity to do so [@Jones07].
+
+These steps can be used as a generalized workflow for metadata generation, ideally at the beginning of a project.  How far you go in these steps depends on where you want to store your metadata. 
+
+1. Identify which dataset(s) are important contributions of a project that you intend on sharing and that need metadata (see section \@ref(contribs)). 
+1. Draft a general document to answer the "who", "what", "when", "where", "why", and "how" questions in section \@ref(metadata) for each data product.  This can be a simple text file that "accompanies" each data product. A spreadsheet entry from can be useful to import into a program for converting your metadata into a formal standard or for uploading to a data repository. 
+1. Convert the metadata document into an appropriate file format based on the metadata standard you're using. For EML, this would be an XML file.
 
 * USGS resources <https://www.usgs.gov/products/data-and-tools/data-management>
 * Metadata questionnaire <https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/atoms/files/MetadataQuestionnaire_508compliant.pdf>

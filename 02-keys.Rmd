@@ -2,7 +2,7 @@
 
 Before we get started, we need to discuss some basic ideas around data and their management.  Understanding these concepts and why they're important will facilitate the development and curation of open data for both you and others to use.  Some of these concepts are very general, whereas others may seem fairly specific.  The detailed concepts may seem daunting, but they are critical in supporting your journey in managing your own data.
 
-## Identifying important contributions
+## Identifying important contributions {#contribs}
 
 We briefly introduced a general concept of data in section \@ref(dataimp).  Throughout this document, we use the term "data" to describe a variety of products either directly supporting decision-making processes or used for research to support the former.  Data can be generated to support or refute hypotheses in research, whereas research can also produce data products that support environmental management.  The end game in all of these processes is understanding that data can be present at any stage in research and/or decisions that support environmental management.  Individuals may generally use the term "data" to describe products at any point in this workflow.  Understanding the different ways we talk about data will allow you to more carefully identify your data management needs.    
 
@@ -129,7 +129,7 @@ It's also very important to document aspects of a dataset that affect reliabilit
 
 Good metadata always has information on who has the data and how to contact them for requesting access.  For archived or publicly available data, this information is more important for who to contact should someone have questions.  Information on obtaining a copy of the data should also describe any special software or licensing issues related to accessing the data.  Under the **I** in FAIR, you should strive to make your data as interoperable as possible and not store your data in an obscure format that requires specialized software.  If this is unavoidable (e.g., your data are large and it needs to be compressed), describe what needs to be done to access the data.  Any licensing or permissions issues on using data should also be described, e.g., is it free for use with or without attribution, are there limitations on its use, etc. The [licensing chapter](https://r-pkgs.org/license.html) in @Wickham15 is a great place to start to learn more about licensing.  Although this chapter relates to code licensing, the same principles could apply to data.
 
-### Metadata examples 
+### Metadata examples {#metadata}
 
 Now that we've covered the general concepts of what is included in metadata, we provide some examples of what this looks like in practice.  At it's simplest, metadata can be a text file that includes information on the questions above. Below is one such example of metadata that accompanies a dataset that we describe in section \@ref(desoto).  
 
@@ -141,7 +141,7 @@ Just by looking at the metadata, we can quickly understand some basic informatio
 
 The example in figure \@ref(fig:desotometa) represents the bare minimum of what should be done to document metadata. This metadata is an excellent example of the principle that __some metadata is better than no metadata__. So many datasets lack even the simplest information to facilitate their use by others. At its core, metadata should serve the purpose of providing information about information.  No matter the level of specificity or metadata standard that was used, all metadata serve this need.  However, more formalized approaches to documenting metadata can play an important role in preparing a dataset for discovery by others and long-term archiving. The next section provides one example of a metadata standard that could be used for environmental datasets.   
 
-### The EML standard
+### The EML standard {#eml}
 
 There are countless standards for metadata that go beyond the simple descriptive text shown above. These standards provide a formalized approach or "schema" to documenting metadata that provides context about a dataset that is also machine readable.  The latter component is critical for making sure that all datasets prepared for hosting or archiving at a data repository follow the same standards for documenting metadata.  The core pieces of information (who, what, when, where, why, and how) are included, but in a formalized way to allow for rapid searching and queries when the data are stored along with hundreds to thousands of other datasets. 
 
