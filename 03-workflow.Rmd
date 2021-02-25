@@ -149,8 +149,8 @@ We described general metadata concepts in section \@ref(metadata), but did not p
 The following can be used as a generalized workflow for metadata generation, ideally at the beginning of a project.  How far you go in these steps depends on where you want to store your metadata. 
 
 1. Identify which dataset(s) are important contributions of a project that you intend on sharing and that need metadata (see section \@ref(contribs)). 
-1. Draft a general document to answer the "who", "what", "when", "where", "why", and "how" questions in section \@ref(metadata) for each data product.  This can be a simple text file that "accompanies" each data product. A spreadsheet entry from can be useful to import into a program for converting your metadata into a formal standard or for uploading to a data repository.
-1. Convert the metadata document into an appropriate file format based on the metadata standard you're using. For EML, this would be an XML file.
+1. Draft a general document to answer the "who", "what", "when", "where", "why", and "how" questions in section \@ref(metadata) for each data product.  This can be a simple text file that "accompanies" each data product. A spreadsheet entry form can also be useful so that the metadata are in tabular format.  If it's tidy, this can be used to import into a program for converting your metadata into a formal standard or for uploading to a data repository.
+1. Convert the metadata document into an appropriate file format based on the metadata standard you're using. For EML metadata, this would be an XML file.
 
 This workflow is a starting point for creating simple to more complex metadata. For a hypothetical example, the absolute bare minimum for metadata might look this like this (e.g., in a spreadsheet):
 
@@ -166,7 +166,7 @@ tmp <- read.csv('data/metadataex2.csv')
 knitr::kable(tmp)
 ```
 
-Finally, if we wanted to convert this information to an EML metadata file, we can use some tools in the EML R package.  Although there are specific tags and entry methods for each of the attributes, this includes all of the information from the last example.  The methods information can als be entered as a separate file for more long-form documentation. After the file is written with `write_eml()`, it can be validated for accuracy and completeness with `eml_validate()`.  The finished metadata file can be viewed [here](data/my_eml.xml). 
+Finally, if we wanted to convert this information to an EML metadata file, we can use some tools in the EML R package.  This example includes all of the information from the last example, but using specific tags and entry methods for the EML format,  The methods information can also be entered as a separate file for more long-form documentation (i.e., `set_methods('data/methods.docx')`). After the file is written with `write_eml()`, it can be validated for accuracy and completeness with `eml_validate()`.  The finished metadata file can be viewed [here](data/my_eml.xml). 
 
 ```{r, echo = T, warning = F, message = F, results = 'hide'}
 library(EML)
@@ -199,8 +199,8 @@ my_eml <- eml$eml(
 )
 
 # write and validate the file
-write_eml(my_eml, "data/ex.xml")
-eml_validate(my_eml)
+write_eml(my_eml, 'data/my_eml.xml')
+eml_validate('data/my_eml.xml')
 ```
 
 There are many more attributes that can be included in EML metadata.  For example, we discussed the importance of a data dictionary in section \@ref(dict).  This information can be documented in an EML metadata file in different ways and we encourage you to view the complete [EML website](https://docs.ropensci.org/EML/) for a full overview.  
