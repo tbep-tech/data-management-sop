@@ -87,12 +87,12 @@
 <li class="chapter" data-level="2.5" data-path="background.html"><a href="background.html#goals-and-objectives-of-this-document"><i class="fa fa-check"></i><b>2.5</b> Goals and objectives of this document</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="keys.html"><a href="keys.html"><i class="fa fa-check"></i><b>3</b> Key Concepts and Principles</a><ul>
-<li class="chapter" data-level="3.1" data-path="keys.html"><a href="keys.html#identifying-important-contributions"><i class="fa fa-check"></i><b>3.1</b> Identifying important contributions</a></li>
+<li class="chapter" data-level="3.1" data-path="keys.html"><a href="keys.html#contribs"><i class="fa fa-check"></i><b>3.1</b> Identifying important contributions</a></li>
 <li class="chapter" data-level="3.2" data-path="keys.html"><a href="keys.html#fair"><i class="fa fa-check"></i><b>3.2</b> The FAIR principles</a></li>
 <li class="chapter" data-level="3.3" data-path="keys.html"><a href="keys.html#the-importance-of-tidy-data"><i class="fa fa-check"></i><b>3.3</b> The importance of tidy data</a></li>
 <li class="chapter" data-level="3.4" data-path="keys.html"><a href="keys.html#metadata"><i class="fa fa-check"></i><b>3.4</b> Metadata</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="keys.html"><a href="keys.html#metadata-examples"><i class="fa fa-check"></i><b>3.4.1</b> Metadata examples</a></li>
-<li class="chapter" data-level="3.4.2" data-path="keys.html"><a href="keys.html#the-eml-standard"><i class="fa fa-check"></i><b>3.4.2</b> The EML standard</a></li>
+<li class="chapter" data-level="3.4.1" data-path="keys.html"><a href="keys.html#metadata"><i class="fa fa-check"></i><b>3.4.1</b> Metadata examples</a></li>
+<li class="chapter" data-level="3.4.2" data-path="keys.html"><a href="keys.html#eml"><i class="fa fa-check"></i><b>3.4.2</b> The EML standard</a></li>
 <li class="chapter" data-level="3.4.3" data-path="keys.html"><a href="keys.html#dict"><i class="fa fa-check"></i><b>3.4.3</b> Data dictionaries</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="keys.html"><a href="keys.html#datahome"><i class="fa fa-check"></i><b>3.5</b> Where do data live?</a></li>
@@ -147,7 +147,7 @@
             <section class="normal" id="section-">
 <div id="workflow" class="section level1">
 <h1><span class="header-section-number">Section 4</span> Data Management Workflow</h1>
-<p>This section is in two parts to first describe a workflow that we use internally at TBEP to manage our data and then to describe a road map for opening internal or external datasets at your own organization. The first section expands on our philosophy for using open science to manage data, including specific workflows we use, as context to the second section. Our approach is one way of applying open science to managing data. Applying the same approach at your organization may or may not be appropriate depending on your internal and external needs for managing data. As such, our approach is generalizable and modular - any of the approaches can be modified in part or together for your own needs.</p>
+<p>This section is in two parts to first describe a workflow that we use internally at TBEP to manage our data in section <a href="workflow.html#philo">4.1.1</a> and then to describe a road map for opening internal or external datasets at your own organization in section <a href="workflow.html#howyou">4.2</a>. The first section expands on our philosophy for using open science to manage data, including specific workflows we use, as context to the second section. Our approach is one way of applying open science to managing data. Applying the same approach at your organization may or may not be appropriate depending on your internal and external needs for managing data. As such, our approach is generalizable and modular - any of the approaches can be modified in part or together for your own needs.</p>
 <div id="the-tbep-approach" class="section level2">
 <h2><span class="header-section-number">4.1</span> The TBEP approach</h2>
 <div id="philo" class="section level3">
@@ -289,6 +289,13 @@ Figure 4.6: A hypothetical and generalized timeline for managing data associated
 </div>
 <div id="metadata-workflow" class="section level3">
 <h3><span class="header-section-number">4.2.4</span> Metadata workflow</h3>
+<p>We described general metadata concepts in section <a href="keys.html#metadata">3.4</a>, but did not provide a workflow for creating or generating metadata. The process begins by answering the general questions we presented as a summary of those in the <a href="https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/atoms/files/Metadata%20in%20Plain%20Language_508compliant.pdf">Metadata in “plain language”</a> document. Just start by writing the answers down in a simple text file or even as a spreadsheet with columns for each question. Where the answers to these questions go depends on how formalized you want to make your metadata, which also depends on where you want to make your data accessible. More informal storage approaches (e.g., GitHub, FTP site) could store metadata as a text file (e.g., in a README document), whereas storing your data in a formal repository would require you to choose an appropriate metadata standard (e.g., EML in section <a href="keys.html#eml">3.4.2</a>). Custom workflows that combine metadata documentation through an online user interface can also be created if you or your team have the capacity to do so <span class="citation">(Jones et al. <a href="#ref-Jones07" role="doc-biblioref">2007</a>)</span>.</p>
+<p>These steps can be used as a generalized workflow for metadata generation, ideally at the beginning of a project. How far you go in these steps depends on where you want to store your metadata.</p>
+<ol style="list-style-type: decimal">
+<li>Identify which dataset(s) are important contributions of a project that you intend on sharing and that need metadata (see section <a href="keys.html#contribs">3.1</a>).</li>
+<li>Draft a general document to answer the “who”, “what”, “when”, “where”, “why”, and “how” questions in section <a href="keys.html#metadata">3.4</a> for each data product. This can be a simple text file that “accompanies” each data product. A spreadsheet entry from can be useful to import into a program for converting your metadata into a formal standard or for uploading to a data repository.</li>
+<li>Convert the metadata document into an appropriate file format based on the metadata standard you’re using. For EML, this would be an XML file.</li>
+</ol>
 <ul>
 <li>USGS resources <a href="https://www.usgs.gov/products/data-and-tools/data-management" class="uri">https://www.usgs.gov/products/data-and-tools/data-management</a></li>
 <li>Metadata questionnaire <a href="https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/atoms/files/MetadataQuestionnaire_508compliant.pdf" class="uri">https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/atoms/files/MetadataQuestionnaire_508compliant.pdf</a></li>
@@ -314,6 +321,9 @@ Figure 4.6: A hypothetical and generalized timeline for managing data associated
 </div>
 <div id="ref-tbep1620">
 <p>E.T. Sherwood, G. Raulerson, M. Beck, M. Burke. 2020. “Tampa Bay Estuary Program: Quality Management Plan.” 16-20. St. Petersburg, Florida: Tampa Bay Estuary Program. <a href="https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing">https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing</a>.</p>
+</div>
+<div id="ref-Jones07">
+<p>Jones, Christopher, Carol Blanchette, Matthew Brooke, John Harris, Matthew Jones, and Mark Schildhauer. 2007. “A Metadata-Driven Framework for Generating Field Data Entry Interfaces in Ecology.” <em>Ecological Informatics</em> 2 (3): 270–78. <a href="https://doi.org/10.1016/j.ecoinf.2007.06.005">https://doi.org/10.1016/j.ecoinf.2007.06.005</a>.</p>
 </div>
 <div id="ref-Lowndes17">
 <p>Lowndes, J. S. S., B. D. Best, C. Scarborough, J. C. Afflerbach, M. R. Frazier, C. C. O’Hara, N. Jiang, and B. S. Halpern. 2017. “Our Path to Better Science in Less Time Using Open Data Science Tools.” <em>Nature Ecology &amp; Evolution</em> 1 (0160): 1–7. <a href="https://doi.org/10.1038/s41559-017-0160">https://doi.org/10.1038/s41559-017-0160</a>.</p>

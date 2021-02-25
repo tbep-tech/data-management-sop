@@ -26,12 +26,11 @@ opengeneral
 philogeneral
 goals-and-objectives-of-this-document
 keys
-identifying-important-contributions
+contribs
 fair
 the-importance-of-tidy-data
 metadata
-metadata-examples
-the-eml-standard
+eml
 dict
 datahome
 workflow
