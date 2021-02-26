@@ -2,7 +2,7 @@
 
 This section is in two parts to first describe a workflow that we use internally at TBEP to manage our data in section \@ref(philo) and then to describe a road map for opening internal or external datasets at your own organization in section \@ref(howyou).  The first section expands on our philosophy for using open science to manage data, including specific workflows we use, as context to the second section.  Our approach is one way of applying open science to managing data.  Applying the same approach at your organization may or may not be appropriate depending on your internal and external needs for managing data.  As such, our approach is generalizable and modular - any of the approaches can be modified in part or together for your own needs. 
 
-## The TBEP approach
+## The TBEP approach {#tbepapproach}
 
 ### Our philosophy {#philo}
 
@@ -113,16 +113,17 @@ The TBEP has a [group GitHub page](https://github.com/tbep-tech) where all of ou
 
 ## How can you manage data? {#howyou}
 
-Ten simple rules for creating a good data management plan: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525
+This section is written as a road map for developing a data product, keeping in mind the list of tools and resources in section \@ref(tbepapproach) that can be used along the way to develop the product.  These tools can help you at different stages of the data management process to work towards the different layers of the open science cake. The guidance provided by @Goodman14 and @Michener15 are also excellent resources presented as "simple rules" for working with data.  @Goodman14 focus on rules for the care and feeding of scientific data and @Michener15 focus on rules for developing a data management plan.  Many of the concepts and tools presented here are elaborated in these two resources.    
 
-* Section is written as a road map for developing a data product, there will be steps/checkboxes/forms, roughly following figure \@ref(fig:dataworkflow)
+A hypothetical road map to developing a plan and set of tools for delivering a data product is shown in figure \@ref(fig:dataworkflow).  This map is presented as a hypothetical one-year project from beginning to end, but can be applied to a project of any duration. The steps are separated along a general timeline with a notable distinction between steps occurring before and after data collection.  It's also very important to realize that "data collection" can have a literal interpretation as collecting data in the field or during an experiment, whereas collection can also be considered generically as the process of creating other potential data products (e.g., workflows, modelling output/information, decision-support tools, section \@ref(contribs)).
 
 ```{r dataworkflow, fig.cap = 'A hypothetical and generalized timeline for managing data associated with a project.', out.width = '80%'}
 knitr::include_graphics('img/dataworkflow.png')
 ```
 
-* Modularity is key to reproducibility, it is independent of where you're at in the project
-* Setup some kind of flow chart (if this, then that)
+There are five general steps in the road map.  Where you're at in the project determines what conversation you're having with yourself and your research team about developing the data product.  At the beginning of a project in Step 1, goals and objectives are defined, potential data contributions are identified, and metadata concepts are introduced. Step 2 is developing the data framework, meaning you will identify how your data are structured within the goals of the project.  Here you are thinking about data dictionaries or workflows you will use to generate the data product.  In Step 3, you are actively in the process of collecting data and curating it in a way that conforms to the framework you've developed.  This step is iterative because it is where most of the work happens and it may require you rethink some of the ideas around how you are curating the data based on how the collection process works in reality.  Steps 4 and 5 focus on identifying where the data are going to maintained/stored and finally delivering at that location.  
+
+The road map in figure \@ref(dataworkflow) can be used in parallel with other project timelines, such as those included in a scope of work.  It is a separate but complementary approach that focuses specifically on data, as compared to other details associated with a research project (e.g., budget, field work, etc.).  The road map also emphasizes that researchers should be proactive in actively thinking about their data deliverables, particularly regardaing important contributions, appropriate formats, and metadata concepts. The earlier these conversations happen in a project, the easier it will be to deliver a well-documented data product. A researcher or research team will benefit most by using this road map from the inception of a project, although we realize that this may not be the norm and data curation is routinely considered an afterthought.  For this reason, we present the following sections as a guide to developing a plan for delivering a data product at any stage of the research process.  
 
 ### I'm at the beginning of my project
 
@@ -205,7 +206,7 @@ eml_validate('data/my_eml.xml')
 
 There are many more attributes that can be included in EML metadata.  For example, we discussed the importance of a data dictionary in section \@ref(dict).  This information can be documented in an EML metadata file in different ways and we encourage you to view the complete [EML website](https://docs.ropensci.org/EML/) for a full overview.  
 
-The intent of presenting this example was to demonstrate simplicity to complexity in the different approaches you can use to create metadata.  However, it's also worth pointing out that this process can be completely operationalized through the workflows described in section \@ref(philo). It would be entirely conceivable to use a spreadsheet or web form entry to collect attributes for the EML file, import that information in R, and create the file with the EML R package.  This can be automated through a CI/CD build process on GitHub, where a user would only have to enter data on a web form and the rest can be handled through a routine created in R.  Moving towards this approach to documenting and creating metadata would be a tremendous leap forward in curating data products that are used by TBEP and its partners. 
+The intent of presenting this example was to demonstrate simplicity to complexity in the different approaches you can use to create metadata.  However, it's also worth pointing out that this process can be completely operationalized through the workflows described in section \@ref(automation). It would be entirely conceivable to use a spreadsheet or web form entry to collect attributes for the EML file, import that information in R, and create the file with the EML R package.  This can be automated through a CI/CD build process on GitHub, where a user would only have to enter data on a web form and the rest can be handled through a routine created in R.  Moving towards this approach to documenting and creating metadata would be a tremendous leap forward in curating data products that are used by TBEP and its partners. 
 
 ### Let's get it online!
 
