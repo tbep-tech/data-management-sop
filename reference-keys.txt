@@ -8,7 +8,7 @@ fig:datadict
 fig:divide
 fig:cake
 fig:osworkflow
-fig:unnamed-chunk-7
+fig:readchk
 fig:badges
 fig:dataworkflow
 fig:codehero
