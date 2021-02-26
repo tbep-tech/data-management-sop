@@ -24,7 +24,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2021-02-25" />
+<meta name="date" content="2021-02-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -162,7 +162,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5" data-path="keys.html"><a href="keys.html#datahome"><i class="fa fa-check"></i><b>3.5</b> Where do data live?</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>4</b> Data Management Workflow</a><ul>
-<li class="chapter" data-level="4.1" data-path="workflow.html"><a href="workflow.html#the-tbep-approach"><i class="fa fa-check"></i><b>4.1</b> The TBEP approach</a><ul>
+<li class="chapter" data-level="4.1" data-path="workflow.html"><a href="workflow.html#tbepapproach"><i class="fa fa-check"></i><b>4.1</b> The TBEP approach</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="workflow.html"><a href="workflow.html#philo"><i class="fa fa-check"></i><b>4.1.1</b> Our philosophy</a></li>
 <li class="chapter" data-level="4.1.2" data-path="workflow.html"><a href="workflow.html#the-open-science-cake"><i class="fa fa-check"></i><b>4.1.2</b> The open science cake</a></li>
 <li class="chapter" data-level="4.1.3" data-path="workflow.html"><a href="workflow.html#automation"><i class="fa fa-check"></i><b>4.1.3</b> How do we build the cake?</a></li>
@@ -212,7 +212,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="workflow" class="section level1">
 <h1><span class="header-section-number">Section 4</span> Data Management Workflow</h1>
 <p>This section is in two parts to first describe a workflow that we use internally at TBEP to manage our data in section <a href="workflow.html#philo">4.1.1</a> and then to describe a road map for opening internal or external datasets at your own organization in section <a href="workflow.html#howyou">4.2</a>. The first section expands on our philosophy for using open science to manage data, including specific workflows we use, as context to the second section. Our approach is one way of applying open science to managing data. Applying the same approach at your organization may or may not be appropriate depending on your internal and external needs for managing data. As such, our approach is generalizable and modular - any of the approaches can be modified in part or together for your own needs.</p>
-<div id="the-tbep-approach" class="section level2">
+<div id="tbepapproach" class="section level2">
 <h2><span class="header-section-number">4.1</span> The TBEP approach</h2>
 <div id="philo" class="section level3">
 <h3><span class="header-section-number">4.1.1</span> Our philosophy</h3>
@@ -313,20 +313,16 @@ Figure 4.5: An example of the status badges included in the README file for the 
 </div>
 <div id="howyou" class="section level2">
 <h2><span class="header-section-number">4.2</span> How can you manage data?</h2>
-<p>Ten simple rules for creating a good data management plan: <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525" class="uri">https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525</a></p>
-<ul>
-<li>Section is written as a road map for developing a data product, there will be steps/checkboxes/forms, roughly following figure <a href="workflow.html#fig:dataworkflow">4.6</a></li>
-</ul>
+<p>This section is written as a road map for developing a data product, keeping in mind the list of tools and resources in section <a href="workflow.html#tbepapproach">4.1</a> that can be used along the way to develop the product. These tools can help you at different stages of the data management process to work towards the different layers of the open science cake. The guidance provided by <span class="citation">Goodman et al. (<a href="#ref-Goodman14" role="doc-biblioref">2014</a>)</span> and <span class="citation">Michener (<a href="#ref-Michener15" role="doc-biblioref">2015</a>)</span> are also excellent resources presented as “simple rules” for working with data. <span class="citation">Goodman et al. (<a href="#ref-Goodman14" role="doc-biblioref">2014</a>)</span> focus on rules for the care and feeding of scientific data and <span class="citation">Michener (<a href="#ref-Michener15" role="doc-biblioref">2015</a>)</span> focus on rules for developing a data management plan. Many of the concepts and tools presented here are elaborated in these two resources.</p>
+<p>A hypothetical road map to developing a plan and set of tools for delivering a data product is shown in figure <a href="workflow.html#fig:dataworkflow">4.6</a>. This map is presented as a hypothetical one-year project from beginning to end, but can be applied to a project of any duration. The steps are separated along a general timeline with a notable distinction between steps occurring before and after data collection. It’s also very important to realize that “data collection” can have a literal interpretation as collecting data in the field or during an experiment, whereas collection can also be considered generically as the process of creating other potential data products (e.g., workflows, modelling output/information, decision-support tools, section <a href="keys.html#contribs">3.1</a>).</p>
 <div class="figure" style="text-align: center"><span id="fig:dataworkflow"></span>
 <img src="img/dataworkflow.png" alt="A hypothetical and generalized timeline for managing data associated with a project." width="80%" />
 <p class="caption">
 Figure 4.6: A hypothetical and generalized timeline for managing data associated with a project.
 </p>
 </div>
-<ul>
-<li>Modularity is key to reproducibility, it is independent of where you’re at in the project</li>
-<li>Setup some kind of flow chart (if this, then that)</li>
-</ul>
+<p>There are five general steps in the road map. Where you’re at in the project determines what conversation you’re having with yourself and your research team about developing the data product. At the beginning of a project in Step 1, goals and objectives are defined, potential data contributions are identified, and metadata concepts are introduced. Step 2 is developing the data framework, meaning you will identify how your data are structured within the goals of the project. Here you are thinking about data dictionaries or workflows you will use to generate the data product. In Step 3, you are actively in the process of collecting data and curating it in a way that conforms to the framework you’ve developed. This step is iterative because it is where most of the work happens and it may require you rethink some of the ideas around how you are curating the data based on how the collection process works in reality. Steps 4 and 5 focus on identifying where the data are going to maintained/stored and finally delivering at that location.</p>
+<p>The road map in figure <a href="#dataworkflow"><strong>??</strong></a> can be used in parallel with other project timelines, such as those included in a scope of work. It is a separate but complementary approach that focuses specifically on data, as compared to other details associated with a research project (e.g., budget, field work, etc.). The road map also emphasizes that researchers should be proactive in actively thinking about their data deliverables, particularly regardaing important contributions, appropriate formats, and metadata concepts. The earlier these conversations happen in a project, the easier it will be to deliver a well-documented data product. A researcher or research team will benefit most by using this road map from the inception of a project, although we realize that this may not be the norm and data curation is routinely considered an afterthought. For this reason, we present the following sections as a guide to developing a plan for delivering a data product at any stage of the research process.</p>
 <div id="im-at-the-beginning-of-my-project" class="section level3">
 <h3><span class="header-section-number">4.2.1</span> I’m at the beginning of my project</h3>
 <ul>
@@ -496,7 +492,7 @@ Figure 4.6: A hypothetical and generalized timeline for managing data associated
 <span id="cb1-31"><a href="workflow.html#cb1-31"></a><span class="kw">write_eml</span>(my_eml, <span class="st">&#39;data/my_eml.xml&#39;</span>)</span>
 <span id="cb1-32"><a href="workflow.html#cb1-32"></a><span class="kw">eml_validate</span>(<span class="st">&#39;data/my_eml.xml&#39;</span>)</span></code></pre></div>
 <p>There are many more attributes that can be included in EML metadata. For example, we discussed the importance of a data dictionary in section <a href="keys.html#dict">3.4.3</a>. This information can be documented in an EML metadata file in different ways and we encourage you to view the complete <a href="https://docs.ropensci.org/EML/">EML website</a> for a full overview.</p>
-<p>The intent of presenting this example was to demonstrate simplicity to complexity in the different approaches you can use to create metadata. However, it’s also worth pointing out that this process can be completely operationalized through the workflows described in section <a href="workflow.html#philo">4.1.1</a>. It would be entirely conceivable to use a spreadsheet or web form entry to collect attributes for the EML file, import that information in R, and create the file with the EML R package. This can be automated through a CI/CD build process on GitHub, where a user would only have to enter data on a web form and the rest can be handled through a routine created in R. Moving towards this approach to documenting and creating metadata would be a tremendous leap forward in curating data products that are used by TBEP and its partners.</p>
+<p>The intent of presenting this example was to demonstrate simplicity to complexity in the different approaches you can use to create metadata. However, it’s also worth pointing out that this process can be completely operationalized through the workflows described in section <a href="workflow.html#automation">4.1.3</a>. It would be entirely conceivable to use a spreadsheet or web form entry to collect attributes for the EML file, import that information in R, and create the file with the EML R package. This can be automated through a CI/CD build process on GitHub, where a user would only have to enter data on a web form and the rest can be handled through a routine created in R. Moving towards this approach to documenting and creating metadata would be a tremendous leap forward in curating data products that are used by TBEP and its partners.</p>
 </div>
 <div id="lets-get-it-online" class="section level3">
 <h3><span class="header-section-number">4.2.5</span> Let’s get it online!</h3>
@@ -518,11 +514,17 @@ Figure 4.6: A hypothetical and generalized timeline for managing data associated
 <div id="ref-tbep1620">
 <p>E.T. Sherwood, G. Raulerson, M. Beck, M. Burke. 2020. “Tampa Bay Estuary Program: Quality Management Plan.” 16-20. St. Petersburg, Florida: Tampa Bay Estuary Program. <a href="https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing">https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing</a>.</p>
 </div>
+<div id="ref-Goodman14">
+<p>Goodman, Alyssa, Alberto Pepe, Alexander W Blocker, Christine L Borgman, Kyle Cranmer, Merce Crosas, Rosanne Di Stefano, et al. 2014. “Ten Simple Rules for the Care and Feeding of Scientific Data.” <em>PLoS Computational Biology</em> 10 (4): e1003542. <a href="https://doi.org/10.1371/journal.pcbi.1003542">https://doi.org/10.1371/journal.pcbi.1003542</a>.</p>
+</div>
 <div id="ref-Jones07">
 <p>Jones, Christopher, Carol Blanchette, Matthew Brooke, John Harris, Matthew Jones, and Mark Schildhauer. 2007. “A Metadata-Driven Framework for Generating Field Data Entry Interfaces in Ecology.” <em>Ecological Informatics</em> 2 (3): 270–78. <a href="https://doi.org/10.1016/j.ecoinf.2007.06.005">https://doi.org/10.1016/j.ecoinf.2007.06.005</a>.</p>
 </div>
 <div id="ref-Lowndes17">
 <p>Lowndes, J. S. S., B. D. Best, C. Scarborough, J. C. Afflerbach, M. R. Frazier, C. C. O’Hara, N. Jiang, and B. S. Halpern. 2017. “Our Path to Better Science in Less Time Using Open Data Science Tools.” <em>Nature Ecology &amp; Evolution</em> 1 (0160): 1–7. <a href="https://doi.org/10.1038/s41559-017-0160">https://doi.org/10.1038/s41559-017-0160</a>.</p>
+</div>
+<div id="ref-Michener15">
+<p>Michener, William K. 2015. “Ten Simple Rules for Creating a Good Data Management Plan.” <em>PLoS Computational Biology</em> 11 (10): e1004525. <a href="https://doi.org/10.1371/journal.pcbi.1004525">https://doi.org/10.1371/journal.pcbi.1004525</a>.</p>
 </div>
 <div id="ref-Wickham15">
 <p>Wickham, H., and J. Bryan. 2015. <em>R Packages</em>. Sebastopol, California: O’Reilly.</p>

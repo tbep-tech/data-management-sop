@@ -34,7 +34,7 @@ eml
 dict
 datahome
 workflow
-the-tbep-approach
+tbepapproach
 philo
 the-open-science-cake
 automation
