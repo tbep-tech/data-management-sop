@@ -57,7 +57,7 @@ Findable and accessible also imply the data have a home with an address.  The la
 
 The FAIR principles are not rigorous standards, rather they establish general questions you should ask of a dataset to make sure you've done your due diligence in achieving openness.  Further, because they are not rigorously defined, different organizations may interpret the principles differently and it's important to realize that your understanding of the principles may differ from others.  For example, individuals may define "reusable" in different ways that can affect the level of detail provided in the metadata. These principles are presented here as a reminder to think about them often, especially during the beginning of a project, and how they can be applied in opening the most important contribution of your project. 
 
-## The importance of tidy data
+## The importance of tidy data {#whytidy}
 
 We introduced different data products in section \@ref(contrib) ranging from tabular data to more abstract definitions that may include analysis pipelines or online services.  Tabular data are by far the most recognized and most common data type and it's worth covering a few basic principles for managing these data that will help you tremendously in the long run.  At their core, tabular data are a simple conceptual model for storing information as observations in rows and variables in columns, yet its very common to try to make a table more than it should be.  Unless you spend a lot of time working with data, it can be difficult to recognize common mistakes that lead to table abuse.  
 
