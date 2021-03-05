@@ -28,7 +28,7 @@ goals-and-objectives-of-this-document
 keys
 contribs
 fair
-the-importance-of-tidy-data
+whytidy
 metadata
 eml
 dict
@@ -40,7 +40,7 @@ the-open-science-cake
 automation
 more-on-git-and-github
 howyou
-im-at-the-beginning-of-my-project
+beginning
 im-somewhere-in-the-middle-of-my-project
 im-at-the-end-of-my-project
 metadata-workflow

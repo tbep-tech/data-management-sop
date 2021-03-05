@@ -24,7 +24,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2021-02-26" />
+<meta name="date" content="2021-03-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -153,7 +153,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="keys.html"><a href="keys.html"><i class="fa fa-check"></i><b>3</b> Key Concepts and Principles</a><ul>
 <li class="chapter" data-level="3.1" data-path="keys.html"><a href="keys.html#contribs"><i class="fa fa-check"></i><b>3.1</b> Identifying important contributions</a></li>
 <li class="chapter" data-level="3.2" data-path="keys.html"><a href="keys.html#fair"><i class="fa fa-check"></i><b>3.2</b> The FAIR principles</a></li>
-<li class="chapter" data-level="3.3" data-path="keys.html"><a href="keys.html#the-importance-of-tidy-data"><i class="fa fa-check"></i><b>3.3</b> The importance of tidy data</a></li>
+<li class="chapter" data-level="3.3" data-path="keys.html"><a href="keys.html#whytidy"><i class="fa fa-check"></i><b>3.3</b> The importance of tidy data</a></li>
 <li class="chapter" data-level="3.4" data-path="keys.html"><a href="keys.html#metadata"><i class="fa fa-check"></i><b>3.4</b> Metadata</a><ul>
 <li class="chapter" data-level="3.4.1" data-path="keys.html"><a href="keys.html#metadata"><i class="fa fa-check"></i><b>3.4.1</b> Metadata examples</a></li>
 <li class="chapter" data-level="3.4.2" data-path="keys.html"><a href="keys.html#eml"><i class="fa fa-check"></i><b>3.4.2</b> The EML standard</a></li>
@@ -169,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1.4" data-path="workflow.html"><a href="workflow.html#more-on-git-and-github"><i class="fa fa-check"></i><b>4.1.4</b> More on Git and GitHub</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#howyou"><i class="fa fa-check"></i><b>4.2</b> How can you manage data?</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="workflow.html"><a href="workflow.html#im-at-the-beginning-of-my-project"><i class="fa fa-check"></i><b>4.2.1</b> I’m at the beginning of my project</a></li>
+<li class="chapter" data-level="4.2.1" data-path="workflow.html"><a href="workflow.html#beginning"><i class="fa fa-check"></i><b>4.2.1</b> I’m at the beginning of my project</a></li>
 <li class="chapter" data-level="4.2.2" data-path="workflow.html"><a href="workflow.html#im-somewhere-in-the-middle-of-my-project"><i class="fa fa-check"></i><b>4.2.2</b> I’m somewhere in the middle of my project</a></li>
 <li class="chapter" data-level="4.2.3" data-path="workflow.html"><a href="workflow.html#im-at-the-end-of-my-project"><i class="fa fa-check"></i><b>4.2.3</b> I’m at the end of my project</a></li>
 <li class="chapter" data-level="4.2.4" data-path="workflow.html"><a href="workflow.html#metadata-workflow"><i class="fa fa-check"></i><b>4.2.4</b> Metadata workflow</a></li>
@@ -263,7 +263,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Findable and accessible also imply the data have a home with an address. The latter describes the unique identifier, whereas the home itself is permanent location as a requirement for accessibility. There are several options for where data can live long-term and theoretically forever so long as the internet exists. There are literally thousands of repositories online that can be used for data archival and the answer to which repository you should use is almost always going to be “it depends”. We provide some examples in section <a href="#tools"><strong>??</strong></a> as one option used by TBEP.</p>
 <p>The FAIR principles are not rigorous standards, rather they establish general questions you should ask of a dataset to make sure you’ve done your due diligence in achieving openness. Further, because they are not rigorously defined, different organizations may interpret the principles differently and it’s important to realize that your understanding of the principles may differ from others. For example, individuals may define “reusable” in different ways that can affect the level of detail provided in the metadata. These principles are presented here as a reminder to think about them often, especially during the beginning of a project, and how they can be applied in opening the most important contribution of your project.</p>
 </div>
-<div id="the-importance-of-tidy-data" class="section level2">
+<div id="whytidy" class="section level2">
 <h2><span class="header-section-number">3.3</span> The importance of tidy data</h2>
 <p>We introduced different data products in section <a href="index.html#contrib">1.1</a> ranging from tabular data to more abstract definitions that may include analysis pipelines or online services. Tabular data are by far the most recognized and most common data type and it’s worth covering a few basic principles for managing these data that will help you tremendously in the long run. At their core, tabular data are a simple conceptual model for storing information as observations in rows and variables in columns, yet its very common to try to make a table more than it should be. Unless you spend a lot of time working with data, it can be difficult to recognize common mistakes that lead to table abuse.</p>
 <p>Before we get into tidy data, I want to rant a bit about Excel. It may seem elitist, but I have good intentions. There are <a href="http://www.eusprig.org/horror-stories.htm">many examples</a> that demonstrate how Excel has contributed to costly mistakes through the abuse of tables, often to the detriment of science <span class="citation">(Ziemann, Eren, and El-Osta <a href="#ref-Ziemann16" role="doc-biblioref">2016</a>)</span>. Although it is a very interesting and clever program, it is not software developed for data storage. It is a graphical user interface masquerading as database software. It includes many tools that may appear useful for organizing information, but that ultimately increase risk and make your life as an analyst more difficult.</p>
