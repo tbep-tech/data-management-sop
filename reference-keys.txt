@@ -38,7 +38,7 @@ tbepapproach
 philo
 the-open-science-cake
 automation
-more-on-git-and-github
+moregit
 howyou
 beginning
 im-somewhere-in-the-middle-of-my-project
