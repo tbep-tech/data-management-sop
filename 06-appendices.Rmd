@@ -4,6 +4,8 @@
 
 From EDI https://environmentaldatainitiative.org/dm-resources/
 
+DMP tool <https://dmptool.org/> (from NCEAS https://learning.nceas.ucsb.edu/2020-02-RRCourse/writing-good-data-management-plans.html)
+
 ## Data types
 
 * Field data
@@ -28,6 +30,8 @@ Tabular
 Database
 Flat file
 Tidy data
+Keys
+Data dictionary
 
 ## Metadata templates
 
