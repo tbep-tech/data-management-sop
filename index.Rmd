@@ -14,7 +14,7 @@ description: "This is a web page describing the TBEP data management SOP"
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
-  comment = "#>", echo = FALSE, fig.align = 'center'
+  comment = "#>", echo = FALSE, fig.align = 'center', out.width = '100%'
 )
 ```
 
