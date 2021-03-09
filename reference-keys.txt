@@ -11,6 +11,11 @@ fig:osworkflow
 fig:readchk
 fig:badges
 fig:dataworkflow
+fig:unnamed-chunk-11
+fig:oysexc
+tab:tabsitdat
+tab:tabwqmdat
+tab:taboysdat
 fig:codehero
 overview
 contrib
