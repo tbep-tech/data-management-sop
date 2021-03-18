@@ -16,6 +16,8 @@ fig:oysexc
 tab:tabsitdat
 tab:tabwqmdat
 tab:taboysdat
+fig:unnamed-chunk-13
+fig:desotoshiny
 fig:codehero
 overview
 contrib
