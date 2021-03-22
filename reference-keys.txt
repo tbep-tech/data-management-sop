@@ -18,6 +18,8 @@ tab:tabwqmdat
 tab:taboysdat
 fig:unnamed-chunk-13
 fig:desotoshiny
+fig:unnamed-chunk-14
+fig:redtidereadme
 fig:codehero
 overview
 contrib
@@ -48,8 +50,8 @@ automation
 moregit
 howyou
 beginning
-im-somewhere-in-the-middle-of-my-project
-im-at-the-end-of-my-project
+middleproject
+endproject
 metadata-workflow
 lets-get-it-online
 cases
