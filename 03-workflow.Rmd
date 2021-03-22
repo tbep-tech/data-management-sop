@@ -149,7 +149,7 @@ It's never too early to answer this question. Data typically won't be made acces
 
 Developing a plan for using the [FAIR](#fair) principles with your data is just as important as ensuring the data have adequate quality for use by you and others.  At the beginning of a project, start actively developing a data management plan that defines appropriate methods for collecting the data and verifying its quality.  Guidelines in @Michener15 can help with this process or you can use the online [Data Management Plan tool](https://dmptool.org/). 
 
-### I'm somewhere in the middle of my project
+### I'm somewhere in the middle of my project {#middleproject}
 
 In a less ideal scenario, you are somewhere in the middle of your project and are just now thinking about types of data products and the path you'll take for their delivery at the end of the project.  At this stage, you'll need to retrofit some answers to the questions in the last section to identify important data contributions, how you'll make them accessible, and how you'll collect and format the data to ensure adequate quality.  It will be easier to answer these questions if you have yet to collect any data.  However, you will need to make sure that you and your research team understands the value of data curation since now it will be seen more of an afterthought that was not discussed at the beginning of the project.  You will need to put in some extra work to normalize conversations around data management and why doing so is important.
 
@@ -157,7 +157,7 @@ If you have already collected data, you'll need to take some time to evaluate ho
 
 For metadata, the same rules apply in the middle of a project as those at the beginning of a project.  First identify where you plan on delivering and hosting your data and work backwards from there.  If the location has a specific metadata standard, identify the information you'll need to conform to that standard.  If you plan on hosting your data at a more general location, start collecting answers to the "who", "what", "when", "where", and "how" questions for your data.  The most important part of this process is realizing that documenting metadata should start as soon as you realize that you have not been doing so.  The longer you wait, the more likely it is that you'll be unable to track down information or you'll simply forget important details about a dataset. 
 
-### I'm at the end of my project
+### I'm at the end of my project {#endproject}
 
 Prepare yourself for damage control if you're at the end of your project and have yet to think about data management.  You not only have to make some judgment calls on the most important contribution, but you also have to begin the laborious process of finding and extracting intimate details about that contribution.  The temptation to identify low-hanging fruit that are easy to document but may not be the most important contribution is very real and you should avoid doing this to undersell the potential impact of a project. Putting in the time to backlog the provenance of a more important contribution should be an investment that will have more pay off in the future than documenting an intermediate or less relevant data product.  The most important question to answer at this stage is what is the most anticipated and impactful result of this research project and what dataset delivers this result?  
 
