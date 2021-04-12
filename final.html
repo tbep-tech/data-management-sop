@@ -24,7 +24,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2021-03-22" />
+<meta name="date" content="2021-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="cases.html"><a href="cases.html#desoto"><i class="fa fa-check"></i><b>5.2</b> RESTORE data management: Ft. DeSota circulation study</a></li>
 <li class="chapter" data-level="5.3" data-path="cases.html"><a href="cases.html#twitter"><i class="fa fa-check"></i><b>5.3</b> Red tide and social media</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="6" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>6</b> Final Words</a><ul>
+<li class="chapter" data-level="6.1" data-path="final.html"><a href="final.html#something-is-better-than-nothing"><i class="fa fa-check"></i><b>6.1</b> Something is better than nothing</a></li>
+<li class="chapter" data-level="6.2" data-path="final.html"><a href="final.html#just-remember-fair"><i class="fa fa-check"></i><b>6.2</b> Just remember FAIR</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="appendices.html"><a href="appendices.html"><i class="fa fa-check"></i><b>7</b> Appendices</a><ul>
 <li class="chapter" data-level="7.1" data-path="appendices.html"><a href="appendices.html#list-of-resources"><i class="fa fa-check"></i><b>7.1</b> List of resources</a></li>
 <li class="chapter" data-level="7.2" data-path="appendices.html"><a href="appendices.html#data-types"><i class="fa fa-check"></i><b>7.2</b> Data types</a></li>
@@ -211,8 +214,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="final" class="section level1">
 <h1><span class="header-section-number">Section 6</span> Final Words</h1>
+<p>This data management SOP is our best attempt at describing a general philosophy of how the TBEP approaches data management and a general framework for how others could manage data at their own institutions. We included a discussion of general and specific topics that are useful to understand for data management (section <a href="keys.html#keys">3</a>), a description of our philosophy towards data management (section <a href="workflow.html#philo">4.1.1</a>), a generic workflow for managing data (section <a href="workflow.html#howyou">4.2</a>), and some case case studies demonstrating how these principles play out in the real word (section <a href="cases.html#cases">5</a>). Our approach is constantly evolving as we works towards a more cohesive plan for managing data and the tools described in this SOP will form the foundation of our approach as we figure out what works and what doesn’t work for our organization and our partners.</p>
+<p>We finish this document by describing some general themes and lessons learned that should guide your approach towards data management. Whether you choose to use the specific tools we mention here (e.g., GitHub, R, Shiny, etc.) or adopt other techniques, the themes and lessons present throughout this document still apply. We reiterate them here as a reminder to approach data management with these principles in mind.</p>
+<div id="something-is-better-than-nothing" class="section level2">
+<h2><span class="header-section-number">6.1</span> Something is better than nothing</h2>
+<p>Novice data stewards can be overwhelmed by the apparent need to “check all the boxes” in the open science workflow of data management. This might include full metadata documentation using an accepted standard like EML, full version control of data workflows on GitHub, linking a repository with archive services like Zenodo, developing comprehensive data dictionaries, formatting all data in tidy format, and mastering open source data science languages like R. This can be especially daunting when considering that multiple data products could be considered “valuable contributions” of a research project.</p>
+<p>Unless you have a fully dedicated IT support team and all the time in the world, it’s impractical to try to adopt all of the principles in this document and apply them to every single piece of data for a project. Even applying all of these principles to the single most important data contribution of a project can be impractical. In light of this challenge, the tendency may be to simply treat data in a familiar way using entrenched workflows where data is seen only as a commodity that serves to address the research question at hand.</p>
+<p>We absolutely encourage you not to fall back on old habits and consider the fact that <strong>something is better than nothing</strong> when it comes to data management. Perhaps you set a goal of only checking one box for a particular project. Maybe you start by developing a simple metadata text file or developing a data dictionary. Even if you accomplish only one data management related task, this is a vast improvement over doing nothing at all. Channeling this concept, <span class="citation">Wilson et al. (<a href="#ref-Wilson17" role="doc-biblioref">2017</a>)</span> discuss “good enough practices” in scientific computing acknowledging the fact that very few of use are professionally trained in data science. So, be kind to yourself when learning new skills and realize that the first step will likely be frustration, but through frustration comes experience. The more comfortable you are in a new task, the more likely you’ll apply it to other data products. You’re efficiency will increase over time, making you more likely to attempt additional data management tasks.</p>
+<blockquote>
+<p>“Dude, suckin’ at something is the first step to being sorta good at something.” - Jake The Dog, <a href="https://en.wikipedia.org/wiki/Adventure_Time">Adventure Time</a></p>
+</blockquote>
+</div>
+<div id="just-remember-fair" class="section level2">
+<h2><span class="header-section-number">6.2</span> Just remember FAIR</h2>
 <ul>
-<li>emphasis on “something is better than nothing”, fully open is ideal but difficult to achieve, e.g., “good enough practice” <span class="citation">(Wilson et al. <a href="#ref-Wilson17" role="doc-biblioref">2017</a>)</span></li>
 <li>Just remember FAIR</li>
 <li>evolving tools</li>
 <li>trying to be both a domain expert and data expert will spread you thin <span class="citation">(Mons <a href="#ref-Mons18" role="doc-biblioref">2018</a>, 27, 36)</span>, look to the helpers/community (Figure <a href="final.html#fig:codehero">6.1</a>)</li>
@@ -225,7 +240,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Figure 6.1: Look to the helpers and your open science community! Artwork by <a href="https://twitter.com/allison_horst">@allison_horst</a>.
 </p>
 </div>
+<p>2ref</p>
 
+</div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">

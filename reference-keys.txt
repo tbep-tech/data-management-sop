@@ -59,6 +59,8 @@ oyster
 desoto
 twitter
 final
+something-is-better-than-nothing
+just-remember-fair
 appendices
 list-of-resources
 data-types
