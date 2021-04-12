@@ -73,7 +73,7 @@ Each section of the SOP address a critical topic or provides a roadmap that coll
 
 * Section \@ref(keys): An overview of general and specific topics that are useful to understand for data management
 * Section \@ref(workflow): An explanation of how TBEP manages data and a roadmap to developing your own workflows
-* Section \@ref(cases): Examples describing specific projects and why/how data management practices were applied to each.
+* Section \@ref(cases): Examples describing specific projects and why/how data management practices were applied to each
 * Section \@ref(final): Parting thoughts and words of wisdom to help you continue on your open science and data management journey
 * Section \@ref(appendices): A list of resources for continue learning or additional content supporting earlier sections
 

@@ -1,6 +1,22 @@
 # Final Words {#final}
 
-* emphasis on "something is better than nothing", fully open is ideal but difficult to achieve, e.g., "good enough practice" [@Wilson17]
+This data management SOP is our best attempt at describing a general philosophy of how the TBEP approaches data management and a general framework for how others could manage data at their own institutions.  We included a discussion of general and specific topics that are useful to understand for data management (section \@ref(keys)), a description of our philosophy towards data management (section \@ref(philo)), a generic workflow for managing data (section \@ref(howyou)), and some case case studies demonstrating how these principles play out in the real word (section \@ref(cases)).  Our approach is constantly evolving as we works towards a more cohesive plan for managing data and the tools described in this SOP will form the foundation of our approach as we figure out what works and what doesn't work for our organization and our partners.  
+
+We finish this document by describing some general themes and lessons learned that should guide your approach towards data management. Whether you choose to use the specific tools we mention here (e.g., GitHub, R, Shiny, etc.) or adopt other techniques, the themes and lessons present throughout this document still apply.  We reiterate them here as a reminder to approach data management with these principles in mind. 
+
+## Something is better than nothing
+
+Novice data stewards can be overwhelmed by the apparent need to "check all the boxes" in the open science workflow of data management.  This might include full metadata documentation using an accepted standard like EML, full version control of data workflows on GitHub, linking a repository with archive services like Zenodo, developing comprehensive data dictionaries, formatting all data in tidy format, and mastering open source data science languages like R.  This can be especially daunting when considering that multiple data products could be considered "valuable contributions" of a research project.  
+
+Unless you have a fully dedicated IT support team and all the time in the world, it's impractical to try to adopt all of the principles in this document and apply them to every single piece of data for a project.  Even applying all of these principles to the single most important data contribution of a project can be impractical. In light of this challenge, the tendency may be to simply treat data in a familiar way using entrenched workflows where data is seen only as a commodity that serves to address the research question at hand. 
+
+We absolutely encourage you not to fall back on old habits and consider the fact that __something is better than nothing__ when it comes to data management.  Perhaps you set a goal of only checking one box for a particular project.  Maybe you start by developing a simple metadata text file or developing a data dictionary. Even if you accomplish only one data management related task, this is a vast improvement over doing nothing at all.  Channeling this concept, @Wilson17 discuss "good enough practices" in scientific computing acknowledging the fact that very few of use are professionally trained in data science.  So, be kind to yourself when learning new skills and realize that the first step will likely be frustration, but through frustration comes experience.  The more comfortable you are in a new task, the more likely you'll apply it to other data products. You're efficiency will increase over time, making you more likely to attempt additional data management tasks.  
+
+> “Dude, suckin’ at something is the first step to being sorta good at something." - Jake The Dog, [Adventure Time](https://en.wikipedia.org/wiki/Adventure_Time)
+
+## Just remember FAIR
+
+
 * Just remember FAIR
 * evolving tools
 * trying to be both a domain expert and data expert will spread you thin [@Mons18, p. 27, 36], look to the helpers/community (Figure \@ref(fig:codehero)) 
@@ -11,3 +27,4 @@
 knitr::include_graphics('img/code_hero.jpg')
 ```
 
+2ref
