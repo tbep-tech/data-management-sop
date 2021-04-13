@@ -58,7 +58,7 @@ In this example, its useful to understand reasons why raw data are often structu
 
 ## RESTORE data management: Ft. DeSota circulation study {#desoto}
 
-```{r, out.width = '70%', fig.cap = 'Billions of dollars were made available for Gulf Coast restoration from legal actions following the BP Deepwater Horizon oil spill (image credit: <a href="https://www.flickr.com/photos/49425032@N08">EPI2oh</a></span> under <a href="https://creativecommons.org/licenses/by-nd/2.0/?ref=ccsearch&atype=html" target="_blank">CC BY-ND 2.0</a>.'}
+```{r, out.width = '70%', fig.cap = 'Billions of dollars were made available for Gulf Coast restoration from legal actions following the BP Deepwater Horizon oil spill.'}
 knitr::include_graphics('img/deepwater.jpg')
 ```
 
