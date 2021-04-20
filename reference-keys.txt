@@ -65,6 +65,9 @@ the-ever-evolving-toolbox
 look-to-the-community
 appendices
 list-of-resources
-data-types
+bulding-data-management-plans
+tbep-r-trainings
+r-lessons-tutorials
+r-ebookscourses
+gitgithub
 definitions
-metadata-templates

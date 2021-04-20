@@ -120,7 +120,7 @@
 
 \title{Data Management SOP for the Tampa Bay Estuary Program}
 \author{Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood}
-\date{2021-04-13}
+\date{2021-04-20}
 
 \begin{document}
 \maketitle
@@ -204,7 +204,7 @@ Please visit our website for additional information about our program: \url{http
 
 ~~This book is licensed under a Creative Commons Attribution 4.0 International License.
 
-This version of the book was built automatically with \href{https://github.com/tbep-tech/data-management-sop/actions}{GitHub Actions} on 2021-04-13.
+This version of the book was built automatically with \href{https://github.com/tbep-tech/data-management-sop/actions}{GitHub Actions} on 2021-04-20.
 
 \hypertarget{background}{%
 \chapter{Background}\label{background}}
@@ -319,7 +319,7 @@ Each section of the SOP address a critical topic or provides a roadmap that coll
 \item
   Section \ref{final}: Parting thoughts and words of wisdom to help you continue on your open science and data management journey
 \item
-  Section \ref{appendices}: A list of resources for continue learning or additional content supporting earlier sections
+  Section \ref{appendices}: A list of definitions and resources for continued learning
 \end{itemize}
 
 The TBEP has also developed a data \href{https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view}{Quality Management Plan} \citep[QMP;][]{tbep1620}. This SOP and the QMP can be viewed as partner documents that are complementary to each other, but are developed to meet different needs. The goal of this SOP is described above. The goal of the QMP is to ensure the data used by TBEP for decision-making has known and documented quality and is being used appropriately. In other words, the QMP establishes an internal process for ensuring data quality standards are in conformance with federal requirements, whereas the SOP document is a generalized introduction and how-to approach for data management that can help us achieve goals of the QMP.
@@ -1275,74 +1275,149 @@ I close with a graphic from \href{https://twitter.com/allison_horst}{Allison Hor
 \hypertarget{appendices}{%
 \chapter{Appendices}\label{appendices}}
 
+Below are several resources and definitions that may be helpful in developing a data management plan. This is by no means an exhaustive list. These are resources that we have either curated specifically for TBEP or resources we've found helpful in our own journey.
+
 \hypertarget{list-of-resources}{%
 \section{List of resources}\label{list-of-resources}}
 
-From EDI \url{https://environmentaldatainitiative.org/dm-resources/}
-
-DMP tool \url{https://dmptool.org/} (from NCEAS \url{https://learning.nceas.ucsb.edu/2020-02-RRCourse/writing-good-data-management-plans.html})
-
-\hypertarget{data-types}{%
-\section{Data types}\label{data-types}}
+\hypertarget{bulding-data-management-plans}{%
+\subsection{Bulding Data Management Plans}\label{bulding-data-management-plans}}
 
 \begin{itemize}
 \tightlist
 \item
-  Field data
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Survey forms
-  \item
-    Tabular*
-  \item
-    Database of tables
-  \end{itemize}
+  \href{https://environmentaldatainitiative.org/dm-resources/}{Environmental Data Initiative \textbf{Data Management Resources}}
 \item
-  Database
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Synthesis
-  \item
-    New
-  \end{itemize}
+  \href{https://dmptool.org/}{University of California \textbf{DMPTool}}
 \item
-  Model
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Actual model
-  \item
-    Model results
-  \end{itemize}
+  \href{https://www.usgs.gov/products/data-and-tools/data-management/metadata-creation}{US Geological Survey resources for \textbf{Metadata Creation}}
 \item
-  Dashboard
+  \href{https://ds-wizard.org/}{ELIXIR and others \textbf{Data Stewardship Wizard}}
+\end{itemize}
+
+\hypertarget{tbep-r-trainings}{%
+\subsection{TBEP R Trainings}\label{tbep-r-trainings}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://tbep-tech.github.io/pep-r-training}{Peconic Estuary Program R training}, \href{https://drive.google.com/file/d/1ZjVHFrVpw2uTKZw-BmD29umdbl6viutM/view?usp=sharing}{recording}
+\item
+  \href{https://tbep-tech.github.io/ecometab-r-training}{NERRS ecocystem metabolism R training}
+  \href{https://tbep-tech.github.io/tbep-r-training/}{TBEP June 2020 R training}, \href{https://www.youtube.com/watch?v=_RI4XMRWeV0\&list=PLfJ6-D-exF9RM5TPtT4T0nxieqpr_R4pJ}{recordings}
+\item
+  \href{https://tbep-tech.github.io/tbep-r-training/functions.html}{Writing functions in R}
+\item
+  \href{https://tbep-tech.github.io/tbep-r-training/packages.html}{R package development workflow}
+\item
+  \href{https://tbep-tech.github.io/tbep-r-training/shiny.html}{A soft introduction to Shiny}
+\end{itemize}
+
+\hypertarget{r-lessons-tutorials}{%
+\subsection{R Lessons \& Tutorials}\label{r-lessons-tutorials}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://data-lessons.github.io/gapminder-R/}{Software Carpentry: \textbf{R for Reproducible Scientific Analysis}}
+\item
+  \href{https://datacarpentry.org/geospatial-workshop/}{Data Carpentry: \textbf{Geospatial Workshop}}
+\item
+  \href{http://www.datacarpentry.org/R-ecology-lesson/}{Data Carpentry: \textbf{R for Data Analysis and Visualization of Ecological Data}}
+\item
+  \href{http://www.datacarpentry.org/spreadsheet-ecology-lesson/}{Data Carpentry: \textbf{Data Organization in Spreadsheets}}
+\item
+  \href{https://www.rstudio.com/resources/webinars/}{\textbf{RStudio Webinars}, many topics}
+\item
+  \href{http://rforcats.net/}{R For Cats: \textbf{Basic introduction site, with cats!}}
+\item
+  \href{http://www.rstudio.com/resources/cheatsheets/}{Topical cheatsheets from \textbf{RStudio}, also viewed from the help menu}
+\item
+  \href{http://cran.r-project.org/doc/contrib/Short-refcard.pdf}{Cheatsheet from CRAN of \textbf{base R functions}}
+\item
+  \href{https://github.com/allisonhorst/stats-illustrations}{Totally awesome \textbf{R-related artwork} by Allison Horst}
+\item
+  \href{http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf}{\textbf{Color reference} PDF with text names}, \href{https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf}{\textbf{Color cheatsheet} PDF from NCEAS}
+\end{itemize}
+
+\hypertarget{r-ebookscourses}{%
+\subsection{R eBooks/Courses}\label{r-ebookscourses}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://stat545.com/}{Jenny Bryan's \textbf{Stat545.com}}
+\item
+  \href{http://r4ds.had.co.nz/}{Garrett Grolemund and Hadley Wickham's \textbf{R For Data Science}}
+\item
+  \href{https://ismayc.github.io/moderndiver-book/}{Chester Ismay and Albert Y. Kim's \textbf{Modern DiveR}}
+\item
+  \href{http://tidytextmining.com/}{Julia Silge and David Robinson \textbf{Text Mining with R}}
+\item
+  \href{http://adv-r.had.co.nz/}{Hadley Wickham's \textbf{Advanced R}}
+\item
+  \href{https://r4ds.had.co.nz}{Hadley Wickham's \textbf{R for Data Science}}
+\item
+  \href{https://bookdown.org/yihui/rmarkdown/}{Yihui Xie \textbf{R Markdown: The Definitive Guide}}
+\item
+  \href{http://www.cookbook-r.com/}{Winston Chang \textbf{R Graphics Cookbook}}
+\item
+  \href{http://book.ecosens.org/RSEbook/}{Wegman et al.~\textbf{Remote Sensing and GIS for Ecologists: Using Open Source Software}}
+\item
+  \href{https://geocompr.robinlovelace.net/}{Lovelace et al.~\textbf{Geocomputation with R}}
+\item
+  \href{https://keen-swartz-3146c4.netlify.app/index.html}{Edszer Pebesma and Roger Bivand \textbf{Spatial Data Science}}
+\end{itemize}
+
+\hypertarget{gitgithub}{%
+\subsection{Git/Github}\label{gitgithub}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://happygitwithr.com/}{Jenny Bryan's \textbf{Happy Git and Github for the useR}}
+\item
+  \href{https://ourcodingclub.github.io/2017/02/27/git.html}{Coding Club \textbf{Intro to Github}}
 \end{itemize}
 
 \hypertarget{definitions}{%
 \section{Definitions}\label{definitions}}
 
-Dashboard
-Data
-Aggregation vs.~synthesis
-Model
-Tabular
-Database
-Flat file
-Tidy data
-Keys
-Data dictionary
+\textbf{CI/CD}: Continuous Integration/Continuous Deployment, describes web services that can be used to automate data checks, tests, or workflows. These are often integrated into third-party platforms, such as GitHub Actions on GitHub.
 
-\hypertarget{metadata-templates}{%
-\section{Metadata templates}\label{metadata-templates}}
+\textbf{Dashboard}: Interactive and dynamic user interfaces available online that can be created to facilitate understanding or to inform decision-making. Many flavors exist, including \href{https://shiny.rstudio.com/}{R Shiny}, \href{https://dash.plotly.com/}{Python Dash}, or \href{https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/overview}{ArcGIS storymaps}.
 
-General - Who, what, when, where, why?
+\textbf{Data}: A general term describing a variety of informational products that can support environmental decision-making or be used to test research hypotheses. Data can be as simple as a single spreadhsheet or more complex products such as model output or parameters.
 
-Specific - XML, EML, etc.
+\textbf{Database}: An organized collection of data, where each piece of data can be linked and accessed electronically through keys that act as unique identifiers for units of information. These are often called relational databases.
+
+\textbf{Data Dictionary}: A description of the information included in a dataset, often used to place boundaries on expected values or data types. This includes column names, types of data stored in each column, and expected values for each data type.
+
+\textbf{DOI}: Digital Object Identifier, a unique and permanent name for a dataset or other resource, used for archiving and discovery through online queries. Services like \href{https://zenodo.org/}{Zenodo} can be linked to GitHub to create a DOI for a repository.
+
+\textbf{FAIR}: Findable, Accessible, Interoperable, and Reusable, describes general guidelines for creating open data products or assessing the openness of existing products \citep{Wilkinson16}.
+
+\textbf{Flat File}: The simplest form of data, often as a rectangular grid of information stored as \href{https://en.wikipedia.org/wiki/ASCII}{ASCII} text in a non-proprietary file format. There is no information stored in each cell other than the observational values. These can also be called tabular data.
+
+\textbf{Keys}: Identifiers in data tables that can be used to link data from different sources. They are often used to identify unique rows of data, such as a station name or station name/date combination.
+
+\textbf{Federated Repository}: An online network of connected repositories that use similar standards to collectively store data for discovery and access. Uploading a dataset to one node of a repository will make it available through all other nodes.
+
+\textbf{Metadata}: A suite of industry or disciplinary standards as well as additional internal and external documentation and other data necessary for the identification, representation, interoperability, technical management, performance, and use of data contained in an information system \citep{Gilliland16}. Simply put, the who, what, when, where, why, and how of data.
+
+\textbf{Model}: A general term describing a theoretical representation of a real-world phenomenon. It can be as simple as a statistical linear regression model (i.e., y varies as a function of x in a linear fashion) or a more involved mechanistic model with linked equations that describe real-world processes occurring through space and time.
+
+\textbf{Open Science}: A philosophy and set of tools to make research reproducible and transparent, in addition to having long-term value through effective data preservation and sharing \citep{Beck20}
+
+\textbf{Open Source}: Software with code that is freely available under a license that typically grants users the rights to modify or distribute to others for any purpose. The \href{https://cran.r-project.org/}{R} statistical programming language is one example of open source software used in the environmental sciences.
+
+\textbf{Provenance}: The history of a dataset, including its origin, purpose, and metadata. Formally, this can include the records of inputs, software, and steps of analysis used to create a dataset. The intent is to establish context and also allow reproducibility.
+
+\textbf{Synthesis}: The collection and combination of datasets from different sources, often for research or to inform decision-making. The synthesis product may be considered a novel dataset in itself if the steps in its creation produce novel information not available from its source data.
+
+\textbf{Tidy Data}: A set of simple rules for storing tabular data, including each variable in its own column, each observation in its own row, and each value in its own cell \citep{Wickham14c}
+
+\textbf{Version Control}: A formal software or code development system that tracks and documents changes to create a record that describes the development history and that can be accessed at any time so that previous changes are never lost. \href{https://git-scm.com/}{Git} is version control software, as compared to \href{https://github.com/}{GitHub} which is an online platform for hosting projects using Git.
 
   \bibliography{refs.bib}
 
