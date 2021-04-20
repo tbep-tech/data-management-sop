@@ -1,40 +1,92 @@
 # Appendices {#appendices}
 
+Below are several resources and definitions that may be helpful in developing a data management plan. This is by no means an exhaustive list. These are resources that we have either curated specifically for TBEP or resources we've found helpful in our own journey. 
+
 ## List of resources
 
-From EDI https://environmentaldatainitiative.org/dm-resources/
+### Bulding Data Management Plans
 
-DMP tool <https://dmptool.org/> (from NCEAS https://learning.nceas.ucsb.edu/2020-02-RRCourse/writing-good-data-management-plans.html)
+* [Environmental Data Initiative **Data Management Resources**](https://environmentaldatainitiative.org/dm-resources/){target="_blank"}
+* [University of California **DMPTool**](https://dmptool.org/){target="_blank"}
+* [US Geological Survey resources for **Metadata Creation**](https://www.usgs.gov/products/data-and-tools/data-management/metadata-creation){target="_blank"}
+* [ELIXIR and others **Data Stewardship Wizard**](https://ds-wizard.org/){target="_blank"}
 
-## Data types
+### TBEP R Trainings
 
-* Field data
-     * Survey forms
-     * Tabular*
-     * Database of tables
-* Database 
-     * Synthesis
-     * New
-* Model
-     * Actual model
-     * Model results
-* Dashboard
+* [Peconic Estuary Program R training](https://tbep-tech.github.io/pep-r-training){target="_blank"}, [recording](https://drive.google.com/file/d/1ZjVHFrVpw2uTKZw-BmD29umdbl6viutM/view?usp=sharing){target="_blank"}
+* [NERRS ecocystem metabolism R training ](https://tbep-tech.github.io/ecometab-r-training){target="_blank"}
+ [TBEP June 2020 R training](https://tbep-tech.github.io/tbep-r-training/){target="_blank"}, [recordings](https://www.youtube.com/watch?v=_RI4XMRWeV0&list=PLfJ6-D-exF9RM5TPtT4T0nxieqpr_R4pJ){target="_blank"}
+* [Writing functions in R](https://tbep-tech.github.io/tbep-r-training/functions.html){target="_blank"}
+* [R package development workflow](https://tbep-tech.github.io/tbep-r-training/packages.html){target="_blank"}
+* [A soft introduction to Shiny](https://tbep-tech.github.io/tbep-r-training/shiny.html){target="_blank"}
+
+### R Lessons & Tutorials
+
+* [Software Carpentry: **R for Reproducible Scientific Analysis**](http://data-lessons.github.io/gapminder-R/){target="_blank"}
+* [Data Carpentry: **Geospatial Workshop**](https://datacarpentry.org/geospatial-workshop/){target="_blank"}
+* [Data Carpentry: **R for Data Analysis and Visualization of Ecological Data**](http://www.datacarpentry.org/R-ecology-lesson/){target="_blank"}
+* [Data Carpentry: **Data Organization in Spreadsheets**](http://www.datacarpentry.org/spreadsheet-ecology-lesson/){target="_blank"}
+* [**RStudio Webinars**, many topics](https://www.rstudio.com/resources/webinars/){target="_blank"}
+* [R For Cats: **Basic introduction site, with cats!**](http://rforcats.net/){target="_blank"}
+* [Topical cheatsheets from **RStudio**, also viewed from the help menu](http://www.rstudio.com/resources/cheatsheets/){target="_blank"}
+* [Cheatsheet from CRAN of **base R functions**](http://cran.r-project.org/doc/contrib/Short-refcard.pdf){target="_blank"} 
+* [Totally awesome **R-related artwork** by Allison Horst](https://github.com/allisonhorst/stats-illustrations){target="_blank"}
+* [**Color reference** PDF with text names](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf){target="_blank"}, [**Color cheatsheet** PDF from NCEAS](https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf){target="_blank"}
+
+### R eBooks/Courses
+
+* [Jenny Bryan's **Stat545.com**](http://stat545.com/){target="_blank"}
+* [Garrett Grolemund and Hadley Wickham's **R For Data Science**](http://r4ds.had.co.nz/){target="_blank"}
+* [Chester Ismay and Albert Y. Kim's **Modern DiveR**](https://ismayc.github.io/moderndiver-book/){target="_blank"}
+* [Julia Silge and David Robinson **Text Mining with R**](http://tidytextmining.com/){target="_blank"}
+* [Hadley Wickham's **Advanced R**](http://adv-r.had.co.nz/){target="_blank"}
+* [Hadley Wickham's **R for Data Science**](https://r4ds.had.co.nz){target="_blank"}
+* [Yihui Xie **R Markdown: The Definitive Guide**](https://bookdown.org/yihui/rmarkdown/){target="_blank"}
+* [Winston Chang **R Graphics Cookbook**](http://www.cookbook-r.com/){target="_blank"}
+* [Wegman et al. **Remote Sensing and GIS for Ecologists: Using Open Source Software**](http://book.ecosens.org/RSEbook/){target="_blank"}
+* [Lovelace et al. **Geocomputation with R**](https://geocompr.robinlovelace.net/){target="_blank"}
+* [Edszer Pebesma and Roger Bivand **Spatial Data Science**](https://keen-swartz-3146c4.netlify.app/index.html){target="_blank"}
+
+### Git/Github 
+
+* [Jenny Bryan's **Happy Git and Github for the useR**](http://happygitwithr.com/){target="_blank"}
+* [Coding Club **Intro to Github**](https://ourcodingclub.github.io/2017/02/27/git.html){target="_blank"}
 
 ## Definitions
 
-Dashboard
-Data
-Aggregation vs. synthesis
-Model
-Tabular
-Database
-Flat file
-Tidy data
-Keys
-Data dictionary
+__CI/CD__: Continuous Integration/Continuous Deployment, describes web services that can be used to automate data checks, tests, or workflows.  These are often integrated into third-party platforms, such as GitHub Actions on GitHub.  
 
-## Metadata templates
+__Dashboard__: Interactive and dynamic user interfaces available online that can be created to facilitate understanding or to inform decision-making.  Many flavors exist, including [R Shiny](https://shiny.rstudio.com/), [Python Dash](https://dash.plotly.com/), or [ArcGIS storymaps](https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/overview).
 
-General - Who, what, when, where, why?
+__Data__: A general term describing a variety of informational products that can support environmental decision-making or be used to test research hypotheses.  Data can be as simple as a single spreadhsheet or more complex products such as model output or parameters.
 
-Specific - XML, EML, etc.
+__Database__: An organized collection of data, where each piece of data can be linked and accessed electronically through keys that act as unique identifiers for units of information. These are often called relational databases.  
+
+__Data Dictionary__: A description of the information included in a dataset, often used to place boundaries on expected values or data types.  This includes column names, types of data stored in each column, and expected values for each data type.
+
+__DOI__: Digital Object Identifier, a unique and permanent name for a dataset or other resource, used for archiving and discovery through online queries. Services like [Zenodo](https://zenodo.org/) can be linked to GitHub to create a DOI for a repository.  
+
+__FAIR__: Findable, Accessible, Interoperable, and Reusable, describes general guidelines for creating open data products or assessing the openness of existing products [@Wilkinson16].
+
+__Flat File__: The simplest form of data, often as a rectangular grid of information stored as [ASCII](https://en.wikipedia.org/wiki/ASCII) text in a non-proprietary file format.  There is no information stored in each cell other than the observational values.  These can also be called tabular data.  
+
+__Keys__: Identifiers in data tables that can be used to link data from different sources.  They are often used to identify unique rows of data, such as a station name or station name/date combination. 
+
+__Federated Repository__: An online network of connected repositories that use similar standards to collectively store data for discovery and access.  Uploading a dataset to one node of a repository will make it available through all other nodes.  
+
+__Metadata__: A suite of industry or disciplinary standards as well as additional internal and external documentation and other data necessary for the identification, representation, interoperability, technical management, performance, and use of data contained in an information system [@Gilliland16].  Simply put, the who, what, when, where, why, and how of data.
+
+__Model__: A general term describing a theoretical representation of a real-world phenomenon.  It can be as simple as a statistical linear regression model (i.e., y varies as a function of x in a linear fashion) or a more involved mechanistic model with linked equations that describe real-world processes occurring through space and time. 
+
+__Open Science__: A philosophy and set of tools to make research reproducible and transparent, in addition to having long-term value through effective data preservation and sharing [@Beck20]
+
+__Open Source__: Software with code that is freely available under a license that typically grants users the rights to modify or distribute to others for any purpose. The [R](https://cran.r-project.org/) statistical programming language is one example of open source software used in the environmental sciences. 
+
+__Provenance__: The history of a dataset, including its origin, purpose, and metadata.  Formally, this can include the records of inputs, software, and steps of analysis used to create a dataset.  The intent is to establish context and also allow reproducibility.
+
+__Synthesis__: The collection and combination of datasets from different sources, often for research or to inform decision-making.  The synthesis product may be considered a novel dataset in itself if the steps in its creation produce novel information not available from its source data.  
+
+__Tidy Data__: A set of simple rules for storing tabular data, including each variable in its own column, each observation in its own row, and each value in its own cell [@Wickham14c]
+
+__Version Control__: A formal software or code development system that tracks and documents changes to create a record that describes the development history and that can be accessed at any time so that previous changes are never lost.  [Git](https://git-scm.com/) is version control software, as compared to [GitHub](https://github.com/) which is an online platform for hosting projects using Git. 
+

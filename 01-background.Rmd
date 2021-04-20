@@ -75,7 +75,7 @@ Each section of the SOP address a critical topic or provides a roadmap that coll
 * Section \@ref(workflow): An explanation of how TBEP manages data and a roadmap to developing your own workflows
 * Section \@ref(cases): Examples describing specific projects and why/how data management practices were applied to each
 * Section \@ref(final): Parting thoughts and words of wisdom to help you continue on your open science and data management journey
-* Section \@ref(appendices): A list of resources for continue learning or additional content supporting earlier sections
+* Section \@ref(appendices): A list of definitions and resources for continued learning
 
 The TBEP has also developed a data [Quality Management Plan](https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view) [QMP; @tbep1620].  This SOP and the QMP can be viewed as partner documents that are complementary to each other, but are developed to meet different needs.  The goal of this SOP is described above. The goal of the QMP is to ensure the data used by TBEP for decision-making has known and documented quality and is being used appropriately.  In other words, the QMP establishes an internal process for ensuring data quality standards are in conformance with federal requirements, whereas the SOP document is a generalized introduction and how-to approach for data management that can help us achieve goals of the QMP.  
 
