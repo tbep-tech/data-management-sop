@@ -38,6 +38,7 @@ keys
 contribs
 fair
 whytidy
+metadatadesc
 metadata
 eml
 dict
