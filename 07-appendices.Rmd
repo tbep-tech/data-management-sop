@@ -14,7 +14,7 @@ Below are several resources and definitions that may be helpful in developing a 
 ### TBEP R Trainings
 
 * [Peconic Estuary Program R training](https://tbep-tech.github.io/pep-r-training){target="_blank"}, [recording](https://drive.google.com/file/d/1ZjVHFrVpw2uTKZw-BmD29umdbl6viutM/view?usp=sharing){target="_blank"}
-* [NERRS ecocystem metabolism R training ](https://tbep-tech.github.io/ecometab-r-training){target="_blank"}
+* [NERRS ecosystem metabolism R training ](https://tbep-tech.github.io/ecometab-r-training){target="_blank"}
  [TBEP June 2020 R training](https://tbep-tech.github.io/tbep-r-training/){target="_blank"}, [recordings](https://www.youtube.com/watch?v=_RI4XMRWeV0&list=PLfJ6-D-exF9RM5TPtT4T0nxieqpr_R4pJ){target="_blank"}
 * [Writing functions in R](https://tbep-tech.github.io/tbep-r-training/functions.html){target="_blank"}
 * [R package development workflow](https://tbep-tech.github.io/tbep-r-training/packages.html){target="_blank"}
@@ -54,7 +54,7 @@ Below are several resources and definitions that may be helpful in developing a 
 
 ## Definitions
 
-__CI/CD__: Continuous Integration/Continuous Deployment, describes web services that can be used to automate data checks, tests, or workflows.  These are often integrated into third-party platforms, such as GitHub Actions on GitHub.  
+__CI/CD__: Continuous Integration/Continuous Deployment, describes web services that can be used to automate data checks, tests, or workflows.  These are often integrated into existing platforms, such as GitHub Actions on GitHub.  
 
 __Dashboard__: Interactive and dynamic user interfaces available online that can be created to facilitate understanding or to inform decision-making.  Many flavors exist, including [R Shiny](https://shiny.rstudio.com/), [Python Dash](https://dash.plotly.com/), or [ArcGIS storymaps](https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/overview).
 
@@ -62,15 +62,15 @@ __Data__: A general term describing a variety of informational products that can
 
 __Database__: An organized collection of data, where each piece of data can be linked and accessed electronically through keys that act as unique identifiers for units of information. These are often called relational databases.  
 
-__Data Dictionary__: A description of the information included in a dataset, often used to place boundaries on expected values or data types.  This includes column names, types of data stored in each column, and expected values for each data type.
+__Data Dictionary__: An informal description of the information included in a dataset, often used to place boundaries on expected values or data types.  This includes column names, types of data stored in each column, and expected values for each data type.
 
-__DOI__: Digital Object Identifier, a unique and permanent name for a dataset or other resource, used for archiving and discovery through online queries. Services like [Zenodo](https://zenodo.org/) can be linked to GitHub to create a DOI for a repository.  
+__DOI__: Digital Object Identifier, a unique and permanent name (persistent identifier) for a dataset or other resource, used for archiving and discovery through online queries. Services like [Zenodo](https://zenodo.org/) can be linked to GitHub to create a DOI for a repository.  
 
 __FAIR__: Findable, Accessible, Interoperable, and Reusable, describes general guidelines for creating open data products or assessing the openness of existing products [@Wilkinson16].
 
-__Flat File__: The simplest form of data, often as a rectangular grid of information stored as [ASCII](https://en.wikipedia.org/wiki/ASCII) text in a non-proprietary file format.  There is no information stored in each cell other than the observational values.  These can also be called tabular data.  
+__Flat File__: The simplest form of tabular data, often as a rectangular grid of information stored as [ASCII](https://en.wikipedia.org/wiki/ASCII) text in a non-proprietary file format.  There is no information stored in each cell other than the observational values.
 
-__Keys__: Identifiers in data tables that can be used to link data from different sources.  They are often used to identify unique rows of data, such as a station name or station name/date combination. 
+__Keys__: Identifiers that can be used to link data between tables. They are often used to identify unique rows of data, such as a station name or station name/date combination. 
 
 __Federated Repository__: An online network of connected repositories that use similar standards to collectively store data for discovery and access.  Uploading a dataset to one node of a repository will make it available through all other nodes.  
 
@@ -78,7 +78,7 @@ __Metadata__: A suite of industry or disciplinary standards as well as additiona
 
 __Model__: A general term describing a theoretical representation of a real-world phenomenon.  It can be as simple as a statistical linear regression model (i.e., y varies as a function of x in a linear fashion) or a more involved mechanistic model with linked equations that describe real-world processes occurring through space and time. 
 
-__Open Science__: A philosophy and set of tools to make research reproducible and transparent, in addition to having long-term value through effective data preservation and sharing [@Beck20]
+__Open Science__: A philosophy and set of tools to make research reproducible and transparent, in addition to having long-term value through effective data preservation and sharing [@Beck20].
 
 __Open Source__: Software with code that is freely available under a license that typically grants users the rights to modify or distribute to others for any purpose. The [R](https://cran.r-project.org/) statistical programming language is one example of open source software used in the environmental sciences. 
 
