@@ -120,7 +120,7 @@
 
 \title{Data Management SOP for the Tampa Bay Estuary Program}
 \author{Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood}
-\date{2021-05-21}
+\date{2021-05-27}
 
 \begin{document}
 \maketitle
@@ -204,7 +204,7 @@ Please visit our website for additional information about our program: \url{http
 
 ~~This book is licensed under a Creative Commons Attribution 4.0 International License.
 
-This version of the book was built automatically with \href{https://github.com/tbep-tech/data-management-sop/actions}{GitHub Actions} on 2021-05-21.
+This version of the book was built automatically with \href{https://github.com/tbep-tech/data-management-sop/actions}{GitHub Actions} on 2021-05-27.
 
 \hypertarget{background}{%
 \chapter{Background}\label{background}}
@@ -1418,6 +1418,58 @@ Below are several resources and definitions that may be helpful in developing a 
 \textbf{Tidy Data}: A set of simple rules for storing tabular data, including each variable in its own column, each observation in its own row, and each value in its own cell \citep{Wickham14c}
 
 \textbf{Version Control}: A formal software or code development system that tracks and documents changes to create a record that describes the development history and that can be accessed at any time so that previous changes are never lost. \href{https://git-scm.com/}{Git} is version control software, as compared to \href{https://github.com/}{GitHub} which is an online platform for hosting projects using Git.
+
+\hypertarget{rfp-language}{%
+\section{RFP language}\label{rfp-language}}
+
+The following includes standard language and links to SOP sections that can be used in competitive requests for proposal (RFPs) issued by the TBEP to support use of open science and best practices for data management as described in this SOP. This language can be used as an expression for partners to encourage use of descriptions and approaches in this document for competitive criteria used to assess proposal qualifications.
+
+\hypertarget{best-practices-for-open-data}{%
+\subsection{Best practices for open data}\label{best-practices-for-open-data}}
+
+Respondents should demonstrate adequate hardware and software capabilities and personnel trained to receive, store, disseminate, print, summarize, and transmit open standard GIS and statistical package files. All final datasets, statistical assessments, data reduction methods and syntheses should be delivered to the TBEP in open standard formats using open science frameworks, such as those developed through the RMarkdown language, R or Rstudio statistical analysis platforms, Python scripts, or the QGIS environment. All data products and spatial coverages will include appropriate Federal Geographic Data Committee (FGDC) standards, Ecological Metadata Language (EML) compliant metadata, or other descriptive information appropriate for metadata (\ref{metadatadesc}.
+
+Respondents must demonstrate an understanding of tidy data formats as applied to tabular data and an ability to deliver data products in non-proprietary file formats (e.g., csv flat files, shapefiles, or KML). Use of online sharing platforms that enable data products to be findable, accessible, interoperable, and reusable (\ref{fair}) are strongly encouraged. These can include formal data repositories that employ standardized metadata schema (e.g., \href{https://www.dataone.org/}{DataOne}). Small datasets (\textless100 Mb) can also be hosted on the TBEP GitHub website (\url{https://github.com/tbep-tech}) by contacting staff for access. View the guidance \href{https://tbep-tech.github.io/data-management-sop/keys.html\#datahome}{here} for other acceptable alternatives.
+
+\hypertarget{contract-language}{%
+\section{Contract language}\label{contract-language}}
+
+The following includes some standard language and links to SOP sections that can be used in contracts for deliverables for data products. The text here describes general expectations of how data products should be delivered to TBEP in as open a format as possible following concepts and descriptions of approaches in this document. The intent is to contractually obligate our partners to adopt best practices for data management following an open science ethos.
+
+\hypertarget{declaration-of-use}{%
+\subsection{Declaration of use}\label{declaration-of-use}}
+
+All data deliverables are to be licensed under permissive terms that enable reuse in the public domain. This could include the \href{https://choosealicense.com/licenses/mit/}{MIT} or \href{https://choosealicense.com/licenses/cc0-1.0/}{CC0} licenses provided as stand-alone text files included with data deliverables. Exceptions to the permissive reuse terms in these licenses will be handled on a case by case basis, e.g., if data are sensitive or include information on human subjects. Additional guidance on choosing a license can be found \href{https://choosealicense.com/}{here}.
+
+\hypertarget{general}{%
+\subsection{General}\label{general}}
+
+An approach for data management should be identified as soon as possible after project inception (\ref{howyou}). This will include identifying appropriate data deliverables at the beginning of the project using guidance in the SOP (\ref{contribs}). Plans for documenting and delivering identified data deliverables to the TBEP should also be identified, which primarily includes metadata documentation (\ref{metadatadesc}), appropriate data formats (\ref{whytidy}), and where data are hosted (\ref{datahome}).
+
+\hypertarget{tabular-data}{%
+\subsection{Tabular data}\label{tabular-data}}
+
+All tabular data are to be provided in a tidy format to the extent possible. This includes following simple rules for delivering data as 1) each variable in its own column, 2) one observation per row, and 3) one value per cell (\ref{whytidy}). Tidy data must be delivered in a non-proprietary or open-source compatible format, such as .csv flat files. Datasets using .xlsx file formats or that require proprietary software to access (e.g., SAS) will not be accepted.
+
+\hypertarget{geospatial-data}{%
+\subsection{Geospatial data}\label{geospatial-data}}
+
+Geospatial data must conform to Federal Geographic Data Committee (\href{https://www.fgdc.gov/standards}{FGDC}) standards and other open source formats as compatible with the Geographic Data Abstraction Library (\href{https://gdal.org/}{GDAL}) for spatial analysis (this includes most ESRI data products). Horizontal and vertical datums must be explicitly specified in any metadata, as well as any information describing attribute data accompanying spatial information. Appropriate datums should limit spatial distortion to the region of interest (e.g., \href{https://epsg.io/2237-1714}{NAD83 / Florida West (ftUS)} for Florida).
+
+\hypertarget{source-code}{%
+\subsection{Source code}\label{source-code}}
+
+Source code used to generate a data product or analyze/evaluate a data product can be supplied as a text file to allow reproducibility of information and conclusions relevant for the project. To the extent possible, this will include identification of data inputs required for the analysis software, dependent software packages (and versions) used for analysis, and generated output from the source code. This information can be identified with inline comments in the source code. Use of version control software as hosted on GitHub is strongly encouraged for the delivery of source code.
+
+\hypertarget{metadata-requirements}{%
+\subsection{Metadata requirements}\label{metadata-requirements}}
+
+All data products are to be accompanied with appropriate metadata. Formal metadata schema can be used following the EML standard (preferred, \ref{eml}) or as more general text files (acceptable but not preferred). A workflow for metadata generation as described in the SOP can be used (\ref{metadata-workflow}). Plain text descriptions for metadata can include data dictionaries to aid in the interpretation of data deliverables (\ref{dict})
+
+\hypertarget{delivery-of-data-products}{%
+\subsection{Delivery of data products}\label{delivery-of-data-products}}
+
+Data can be delivered through online sharing platforms that enable products to be findable, accessible, interoperable, and reusable (\ref{fair}). These can include formal data repositories that employ standardized metadata schema (e.g., \href{https://www.dataone.org/}{DataOne}). Small datasets (\textless100 Mb) can also be hosted on the TBEP GitHub website (\url{https://github.com/tbep-tech}) by contacting staff for access. View the guidance \href{https://tbep-tech.github.io/data-management-sop/keys.html\#datahome}{here} for other acceptable alternatives. All data products should have an associated DOI as a globally unique and persistent identifier (through \url{https://zenodo.org/}). An appropriate license should also be attached to the data.
 
   \bibliography{refs.bib}
 

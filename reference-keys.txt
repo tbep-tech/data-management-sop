@@ -72,3 +72,13 @@ r-lessons-tutorials
 r-ebookscourses
 gitgithub
 definitions
+rfp-language
+best-practices-for-open-data
+contract-language
+declaration-of-use
+general
+tabular-data
+geospatial-data
+source-code
+metadata-requirements
+delivery-of-data-products
