@@ -77,7 +77,7 @@ If none of the above sounds appealing, you can always post any suggestions or ed
 knitr::include_graphics('img/issues.PNG')
 ```
 
-Give your issue a short but informative title (e.g., "suggests edits to section 2").  Under the "Write" tab, explain what edits or changes you'd like to see.  Feel free to select a member of the TBEP staff to assign the issue using the menu on the right.  The issues descriptions support Markdown syntax, so get creative in your descriptions (i.e., make lists, link to documents, etc., see the [cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)).
+Give your issue a short but informative title (e.g., "Suggested edits to Section 2").  Under the "Write" tab, explain what edits or changes you'd like to see.  Feel free to select a member of the TBEP staff to assign the issue using the menu on the right.  The issues descriptions support Markdown syntax, so get creative in your descriptions (i.e., make lists, link to documents, etc., see the [cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)).
 
 In general, one issue should cover only one suggested change to the document.  However, multiple text edits to the same document can be submitted to the same issue so long as they cover similar topics, e.g., one issue for several suggested edits to one section.  
 
@@ -89,9 +89,9 @@ Just [email me](mailto:mbeck@tbep.org) any changes you'd like to see!
 
 ## About
 
-The Tampa Bay Estuary Program is one of [28 National Estuary Programs](http://nationalestuaries.org/) designated by Congress to restore and protect "estuaries of national significance." Administered by the U.S Environmental Protection Agency under the Clean Water Act, each program must develop a science-based plan using community input to protect and enhance the natural resources of its respective estuary and surrounding watershed.  
+The Tampa Bay Estuary Program (TBEP) is one of [28 National Estuary Programs](http://nationalestuaries.org/) designated by Congress to restore and protect "estuaries of national significance." Administered by the U.S Environmental Protection Agency under the Clean Water Act, each program must develop a science-based plan using community input to protect and enhance the natural resources of its respective estuary and surrounding watershed.  
 
-The [Comprehensive Conservation and Management Plan](http://ccmp.tbep.org/) (CCMP, updated in 2017) presents 39 actions to sustain progress in bay restoration through the year 2027.  To address the actions in our CCMP, our [2021-2025 Strategic Plan](https://drive.google.com/file/d/11xohuoaHDxNHRqgXoOHdI37FpWvac_rn/view) provides a framework to guide decisions about how to align personnel and financial resources with the Program’s mission in ways that maximize our impact on Tampa Bay recovery.  A cornerstone strategy of this plan is the use of open science principles and methods to allow the TBEP to be the primary source of trusted, unbiased, and actionable science for the Tampa Bay Estuary.  This document is a reflection of these strategies. 
+The TBEP [Comprehensive Conservation and Management Plan](http://ccmp.tbep.org/) (CCMP, updated in 2017) presents 39 actions to sustain progress in bay restoration through the year 2027.  To address the actions in our CCMP, our [2021-2025 Strategic Plan](https://drive.google.com/file/d/11xohuoaHDxNHRqgXoOHdI37FpWvac_rn/view) provides a framework to guide decisions about how to align personnel and financial resources with the Program’s mission in ways that maximize our impact on Tampa Bay recovery.  A cornerstone strategy of this plan is the use of open science principles and methods to allow the TBEP to be the primary source of trusted, unbiased, and actionable science for the Tampa Bay estuary.  This document is a reflection of these strategies. 
 
 Please visit our website for additional information about our program: <https://www.tbep.org>
 
