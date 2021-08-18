@@ -274,6 +274,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://datacarpentry.org/geospatial-workshop/" target="_blank">Data Carpentry: <strong>Geospatial Workshop</strong></a></li>
 <li><a href="http://www.datacarpentry.org/R-ecology-lesson/" target="_blank">Data Carpentry: <strong>R for Data Analysis and Visualization of Ecological Data</strong></a></li>
 <li><a href="http://www.datacarpentry.org/spreadsheet-ecology-lesson/" target="_blank">Data Carpentry: <strong>Data Organization in Spreadsheets</strong></a></li>
+<li><a href="https://noaa-iea.github.io/r3-train/" target="_blank"><strong>Reproducible Reporting with R (R<span class="math inline">\(^3\)</span>)</strong> for Marine Ecological Indicators</a></li>
+<li><a href="https://www.r4wrds.com/" target="_blank"><strong>R for Water Resources Data Science</strong></a></li>
 <li><a href="https://www.rstudio.com/resources/webinars/" target="_blank"><strong>RStudio Webinars</strong>, many topics</a></li>
 <li><a href="http://rforcats.net/" target="_blank">R For Cats: <strong>Basic introduction site, with cats!</strong></a></li>
 <li><a href="http://www.rstudio.com/resources/cheatsheets/" target="_blank">Topical cheatsheets from <strong>RStudio</strong>, also viewed from the help menu</a></li>
@@ -446,6 +448,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

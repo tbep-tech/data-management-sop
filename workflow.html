@@ -284,7 +284,7 @@ Figure 4.2: The open science cake showing the connection between research, envir
 </div>
 <p>Most of our partners are professionals from resource management or local government agencies that have some vested interest in the protection and restoration of Tampa Bay. This is the primary audience that we can inform for decision-making. Broadly speaking, this is the audience that needs distilled information from research products but with a level of specificity that goes beyond educational materials. These individuals are in the middle of the cake and the slices they take are actionable science products, such as interactive dashboards, automated report cards, and other decision support tools. The middle part of the cake is where conventional science becomes truly applied science.</p>
 <p>The cake also emphasizes a vertical connection among the layers that allows an individual to take a slice as high or as low in the cake as they want. This is a critical principle of open science that speaks to accessibility of information at all levels of the scientific process. Most of the time, an individual will take a slice from the cake at the level that’s appropriate for their needs. However, we want our science (and data) to be transparent and accessible under the FAIR principles and someone can take a slice at a different level, if they have a need to do so. This also speaks to developing a community of practice for open science - we develop this community to provide easier access to the tools at the bottom of the cake and develop the ability to use them to reproduce or expand on existing products at all levels.</p>
-<p>Our web products on the <a href="https://tbep.org/our-work/data-vizualization/">data visualization</a> section of our web page are designed to guide an individual to the slices they need at the different levels of the cake. The website is setup as a series of cards (cakes) for each reporting product that act as an entryway (top of the cake) to the middle and bottom layers of each cake. For exmple, if someone clicks on the <a href="https://tbep.org/water-quality-report-card/">Water Quality Report Card</a>, they are directed to a web page that has very general information about the reporting product and links to a <a href="https://drive.google.com/file/d/124FXmLcXKYUf3ktaVOvFejndiPS0m7K7/view?usp=sharing">summary pdf</a> that distills over forty years of water quality data for the Bay. There are links on the right side of the page that provide access to the building blocks of the report card, including the online dashboard, source code for the report card, build status of the report (more on this in section <a href="workflow.html#automation">4.1.3</a>), citable DOI, and technical documents that describe the science behind our water quality assessment approach. These links provide the path to the lower levels of the cake.</p>
+<p>Our web products on the <a href="https://tbep.org/our-work/data-vizualization/">data visualization</a> section of our web page are designed to guide an individual to the slices they need at the different levels of the cake. The website is setup as a series of cards (cakes) for each reporting product that act as an entryway (top of the cake) to the middle and bottom layers of each cake. For example, if someone clicks on the <a href="https://tbep.org/water-quality-report-card/">Water Quality Report Card</a>, they are directed to a web page that has very general information about the reporting product and links to a <a href="https://drive.google.com/file/d/124FXmLcXKYUf3ktaVOvFejndiPS0m7K7/view?usp=sharing">summary pdf</a> that distills over forty years of water quality data for the Bay. There are links on the right side of the page that provide access to the building blocks of the report card, including the online dashboard, source code for the report card, build status of the report (more on this in section <a href="workflow.html#automation">4.1.3</a>), citable DOI, and technical documents that describe the science behind our water quality assessment approach. These links provide the path to the lower levels of the cake.</p>
 </div>
 <div id="automation" class="section level3">
 <h3><span class="header-section-number">4.1.3</span> How do we build the cake?</h3>
@@ -632,6 +632,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
