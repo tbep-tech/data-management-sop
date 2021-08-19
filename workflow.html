@@ -24,7 +24,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2021-08-18" />
+<meta name="date" content="2021-08-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -399,100 +399,131 @@ Figure 4.6: A hypothetical and generalized timeline for managing data associated
 <li>Convert the metadata document into an appropriate file format based on the metadata standard you’re using. For EML metadata, this would be an XML file.</li>
 </ol>
 <p>This workflow is a starting point for creating simple to more complex metadata. For a hypothetical example, the absolute bare minimum for metadata might look like this (e.g., in a spreadsheet):</p>
-<table>
+<table style="width:61%;">
+<colgroup>
+<col width="15%" />
+<col width="45%" />
+</colgroup>
 <thead>
 <tr class="header">
-<th align="left">Question</th>
-<th align="left">Answer</th>
+<th align="center">Question</th>
+<th align="center">Answer</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Who</td>
-<td align="left">Marcus Beck (<a href="mailto:fakeaddress@email.com" class="email">fakeaddress@email.com</a>)</td>
+<td align="center">Who</td>
+<td align="center">Marcus Beck
+(<a href="mailto:fakeaddress@email.com" class="email">fakeaddress@email.com</a>)</td>
 </tr>
 <tr class="even">
-<td align="left">What</td>
-<td align="left">Water Quality Assessment Data</td>
+<td align="center">What</td>
+<td align="center">Water Quality Assessment Data</td>
 </tr>
 <tr class="odd">
-<td align="left">When</td>
-<td align="left">2020</td>
+<td align="center">When</td>
+<td align="center">2020</td>
 </tr>
 <tr class="even">
-<td align="left">Where</td>
-<td align="left">Tampa Bay</td>
+<td align="center">Where</td>
+<td align="center">Tampa Bay</td>
 </tr>
 <tr class="odd">
-<td align="left">Why</td>
-<td align="left">Reporing on annual water quality trends for programmatic update</td>
+<td align="center">Why</td>
+<td align="center">Reporing on annual water
+quality trends for
+programmatic update</td>
 </tr>
 <tr class="even">
-<td align="left">How</td>
-<td align="left">Data were collected monthly as part of the EPCHC monitoring program</td>
+<td align="center">How</td>
+<td align="center">Data were collected monthly as
+part of the EPCHC monitoring
+program</td>
 </tr>
 </tbody>
 </table>
 <p>If we wanted to add some specificity, we could create separate fields to include more detailed information.</p>
 <table>
 <colgroup>
-<col width="1%" />
-<col width="98%" />
+<col width="16%" />
+<col width="83%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Attribute</th>
-<th align="left">Entry</th>
+<th align="center">Attribute</th>
+<th align="center">Entry</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">first</td>
-<td align="left">Marcus</td>
+<td align="center">first</td>
+<td align="center">Marcus</td>
 </tr>
 <tr class="even">
-<td align="left">last</td>
-<td align="left">Beck</td>
+<td align="center">last</td>
+<td align="center">Beck</td>
 </tr>
 <tr class="odd">
-<td align="left">email</td>
-<td align="left"><a href="mailto:fakeaddress@email.com" class="email">fakeaddress@email.com</a></td>
+<td align="center">email</td>
+<td align="center"><a href="mailto:fakeaddress@email.com" class="email">fakeaddress@email.com</a></td>
 </tr>
 <tr class="even">
-<td align="left">title</td>
-<td align="left">Water Quality Assessment Data</td>
+<td align="center">title</td>
+<td align="center">Water Quality Assessment Data</td>
 </tr>
 <tr class="odd">
-<td align="left">startdate</td>
-<td align="left">1/1/2020</td>
+<td align="center">startdate</td>
+<td align="center">1/1/2020</td>
 </tr>
 <tr class="even">
-<td align="left">enddate</td>
-<td align="left">12/31/2020</td>
+<td align="center">enddate</td>
+<td align="center">12/31/2020</td>
 </tr>
 <tr class="odd">
-<td align="left">location</td>
-<td align="left">Tampa Bay, FL, USA</td>
+<td align="center">location</td>
+<td align="center">Tampa Bay, FL, USA</td>
 </tr>
 <tr class="even">
-<td align="left">west</td>
-<td align="left">-82.8</td>
+<td align="center">west</td>
+<td align="center">-82.8</td>
 </tr>
 <tr class="odd">
-<td align="left">east</td>
-<td align="left">-82.3</td>
+<td align="center">east</td>
+<td align="center">-82.3</td>
 </tr>
 <tr class="even">
-<td align="left">north</td>
-<td align="left">28</td>
+<td align="center">north</td>
+<td align="center">28</td>
 </tr>
 <tr class="odd">
-<td align="left">south</td>
-<td align="left">27.4</td>
+<td align="center">south</td>
+<td align="center">27.4</td>
 </tr>
 <tr class="even">
-<td align="left">methods</td>
-<td align="left">All data were from the Environmental Protection Commission of Hillsborough County (<a href="https://www.epchc.org/i-want-to/view-gis-maps-and-data" class="uri">https://www.epchc.org/i-want-to/view-gis-maps-and-data</a>). Data are monthly at mid-depth for each of 50 stations throughout the Bay from 1974 to 2020. Stations were visited on a rotating schedule such that one third of all stations were sampled each week. Bay segments represent management units of interest with distinct chemical and physical differences. Accordingly, station data were aggregated by median values within each of four Bay segments. Data are used to assess progress in achieving programmatic goals for the Tampa Bay Estuary Program.</td>
+<td align="center">methods</td>
+<td align="center">All data were from the
+Environmental Protection
+Commission of Hillsborough
+County
+(<a href="https://www.epchc.org/i-want-to/view-gis-maps-and-data" class="uri">https://www.epchc.org/i-want-to/view-gis-maps-and-data</a>).
+Data are monthly at mid-depth
+for each of 50 stations
+throughout the Bay from 1974
+to 2020. Stations were visited
+on a rotating schedule such
+that one third of all stations
+were sampled each week. Bay
+segments represent management
+units of interest with
+distinct chemical and physical
+differences. Accordingly,
+station data were aggregated
+by median values within each
+of four Bay segments. Data are
+used to assess progress in
+achieving programmatic goals
+for the Tampa Bay Estuary
+Program.</td>
 </tr>
 </tbody>
 </table>

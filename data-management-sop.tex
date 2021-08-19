@@ -1,6 +1,7 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
 %
 \documentclass[
 ]{book}
@@ -38,7 +39,11 @@
 \hypersetup{
   pdftitle={Data Management SOP for the Tampa Bay Estuary Program},
   pdfauthor={Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood},
-  hidelinks,
+  colorlinks=true,
+  linkcolor=BlueViolet,
+  filecolor=Maroon,
+  citecolor=Blue,
+  urlcolor=BlueViolet,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage{color}
@@ -120,12 +125,13 @@
 
 \title{Data Management SOP for the Tampa Bay Estuary Program}
 \author{Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood}
-\date{2021-08-18}
+\date{2021-08-19}
 
 \begin{document}
 \maketitle
 
 {
+\hypersetup{linkcolor=}
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
@@ -204,7 +210,7 @@ Please visit our website for additional information about our program: \url{http
 
 ~~This book is licensed under a Creative Commons Attribution 4.0 International License.
 
-This version of the book was built automatically with \href{https://github.com/tbep-tech/data-management-sop/actions}{GitHub Actions} on 2021-08-18.
+This version of the book was built automatically with \href{https://github.com/tbep-tech/data-management-sop/actions}{GitHub Actions} on 2021-08-19.
 
 \hypertarget{background}{%
 \chapter{Background}\label{background}}
@@ -231,7 +237,7 @@ A classic graphic in Michener et al.~\citep{Michener97} demonstrates how knowled
 
 }
 
-\caption{Loss of information over time in the absence of data management [@Michener97]}\label{fig:michener}
+\caption{Loss of information over time in the absence of data management (from Michener et al., 1997).}\label{fig:michener}
 \end{figure}
 
 The final step in Figure \ref{fig:michener} leading to absolute and complete loss of information on a data product is death of an investigator. Although a bit morbid, this is a very real and preventable problem in the process of discovery that can lead you down the frustrating path of reconstructing a data product's origin by scouring historical records that have little to no descriptive information. As a remedy, many research teams have adopted the ``bus factor'' term as motivation to prevent this problem. The bus factor is an informal measurement of the relative risk associated with loss of information if an investigator was to, hypothetically, be hit by a bus (alternatively, the ``lottery factor'' describes departure of an individual if they were to win the lottery). Datasets or workflows that have a high bus/lottery factor are at high risk of being orphaned with the departure of a team member.
@@ -481,7 +487,7 @@ Graphically, these rules are shown in figure \ref{fig:tidy}.
 
 }
 
-\caption{A representation of the rules for tidy data (from @Wickham17).}\label{fig:tidy}
+\caption{A representation of the rules for tidy data (from Wickham and Grolemund, 2017).}\label{fig:tidy}
 \end{figure}
 
 Using these principles for data storage may seem unnatural at first because of a difference between what's easy for entering data versus what makes sense for downstream analyses. The former is what leads to abuse of tables. For example, dates are often spread across multiple columns, such as having one column for each year of data where the header indicates the year that applies to data in each column. This convention may be used because it's easy to add another year of data as an additional column when more data each year are collected. However, this is untidy because the date variable occurs across columns. If you wanted to evaluate changes across years in a formal analysis, you'd have to reorganize these data in a tidy format.
@@ -892,55 +898,148 @@ The following can be used as a generalized workflow for metadata generation, ide
 
 This workflow is a starting point for creating simple to more complex metadata. For a hypothetical example, the absolute bare minimum for metadata might look like this (e.g., in a spreadsheet):
 
-\begin{tabular}{l|l}
-\hline
-Question & Answer\\
-\hline
-Who & Marcus Beck (fakeaddress@email.com)\\
-\hline
-What & Water Quality Assessment Data\\
-\hline
-When & 2020\\
-\hline
-Where & Tampa Bay\\
-\hline
-Why & Reporing on annual water quality trends for programmatic update\\
-\hline
-How & Data were collected monthly as part of the EPCHC monitoring program\\
-\hline
-\end{tabular}
+\begin{longtable}[]{@{}cc@{}}
+\toprule
+\begin{minipage}[b]{0.14\columnwidth}\centering
+Question\strut
+\end{minipage} & \begin{minipage}[b]{0.43\columnwidth}\centering
+Answer\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.14\columnwidth}\centering
+Who\strut
+\end{minipage} & \begin{minipage}[t]{0.43\columnwidth}\centering
+Marcus Beck
+(\href{mailto:fakeaddress@email.com}{\nolinkurl{fakeaddress@email.com}})\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\centering
+What\strut
+\end{minipage} & \begin{minipage}[t]{0.43\columnwidth}\centering
+Water Quality Assessment Data\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\centering
+When\strut
+\end{minipage} & \begin{minipage}[t]{0.43\columnwidth}\centering
+2020\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\centering
+Where\strut
+\end{minipage} & \begin{minipage}[t]{0.43\columnwidth}\centering
+Tampa Bay\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\centering
+Why\strut
+\end{minipage} & \begin{minipage}[t]{0.43\columnwidth}\centering
+Reporing on annual water
+quality trends for
+programmatic update\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\centering
+How\strut
+\end{minipage} & \begin{minipage}[t]{0.43\columnwidth}\centering
+Data were collected monthly as
+part of the EPCHC monitoring
+program\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
 If we wanted to add some specificity, we could create separate fields to include more detailed information.
 
-\begin{tabular}{l|l}
-\hline
-Attribute & Entry\\
-\hline
-first & Marcus\\
-\hline
-last & Beck\\
-\hline
-email & fakeaddress@email.com\\
-\hline
-title & Water Quality Assessment Data\\
-\hline
-startdate & 1/1/2020\\
-\hline
-enddate & 12/31/2020\\
-\hline
-location & Tampa Bay, FL, USA\\
-\hline
-west & -82.8\\
-\hline
-east & -82.3\\
-\hline
-north & 28\\
-\hline
-south & 27.4\\
-\hline
-methods & All data were from the Environmental Protection Commission of Hillsborough County (https://www.epchc.org/i-want-to/view-gis-maps-and-data). Data are monthly at mid-depth for each of 50 stations throughout the Bay from 1974 to 2020. Stations were visited on a rotating schedule such that one third of all stations were sampled each week. Bay segments represent management units of interest with distinct chemical and physical differences. Accordingly, station data were aggregated by median values within each of four Bay segments. Data are used to assess progress in achieving programmatic goals for the Tampa Bay Estuary Program.\\
-\hline
-\end{tabular}
+\begin{longtable}[]{@{}cc@{}}
+\toprule
+\begin{minipage}[b]{0.16\columnwidth}\centering
+Attribute\strut
+\end{minipage} & \begin{minipage}[b]{0.78\columnwidth}\centering
+Entry\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.16\columnwidth}\centering
+first\strut
+\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
+Marcus\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\centering
+last\strut
+\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
+Beck\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\centering
+email\strut
+\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
+\href{mailto:fakeaddress@email.com}{\nolinkurl{fakeaddress@email.com}}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\centering
+title\strut
+\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
+Water Quality Assessment Data\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\centering
+startdate\strut
+\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
+1/1/2020\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\centering
+enddate\strut
+\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
+12/31/2020\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\centering
+location\strut
+\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
+Tampa Bay, FL, USA\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\centering
+west\strut
+\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
+-82.8\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\centering
+east\strut
+\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
+-82.3\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\centering
+north\strut
+\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
+28\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\centering
+south\strut
+\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
+27.4\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\centering
+methods\strut
+\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
+All data were from the
+Environmental Protection
+Commission of Hillsborough
+County
+(\url{https://www.epchc.org/i-want-to/view-gis-maps-and-data}).
+Data are monthly at mid-depth
+for each of 50 stations
+throughout the Bay from 1974
+to 2020. Stations were visited
+on a rotating schedule such
+that one third of all stations
+were sampled each week. Bay
+segments represent management
+units of interest with
+distinct chemical and physical
+differences. Accordingly,
+station data were aggregated
+by median values within each
+of four Bay segments. Data are
+used to assess progress in
+achieving programmatic goals
+for the Tampa Bay Estuary
+Program.\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
 Finally, if we wanted to convert this information to an EML metadata file, we can use some tools in the \href{https://docs.ropensci.org/EML/}{EML R package}. This example includes all of the information from the last example, but using specific tags and entry methods for the EML format, The methods information can also be entered as a separate file for more long-form documentation (i.e., \texttt{set\_methods(\textquotesingle{}data/methods.docx\textquotesingle{})}). After the file is written with \texttt{write\_eml()}, it can be validated for accuracy and completeness with \texttt{eml\_validate()}. The finished metadata file can be viewed \href{data/my_eml.xml}{here}.
 
@@ -1008,7 +1107,7 @@ In this section we describe three case studies to demonstrate how data managemen
 
 }
 
-\caption{Restoration of oyster reefs (*Crassostrea virginica*) is a critical management goal to support key habitats in Tampa Bay.}\label{fig:unnamed-chunk-11}
+\caption{Restoration of oyster reefs is a critical management goal to support key habitats in Tampa Bay.}\label{fig:unnamed-chunk-11}
 \end{figure}
 
 Establishment and restoration of oyster reefs in Tampa Bay is a critical programmatic goal defined under our \href{https://indd.adobe.com/view/cf7b3c48-d2b2-4713-921c-c2a0d4466632}{Comprehensive Conservation and Management Plan} \citep{tbep1017} and \href{https://drive.google.com/file/d/1Hp0l_qtbxp1JxKJoGatdyuANSzQrpL0I/view}{Habitat Master Plan Update} \citep{tbep0720}. Oyster reefs are formed by the cumulative build up of shell material over time and provide food and habitat for other organisms, reduce erosion, stabilize shorelines, and improve water quality. Recreational and commercial harvest of oysters are also important activities that contribute to the value of Tampa Bay. The historical distribution of oyster populations in Tampa Bay is poorly documented, although anecdotal evidence suggests current coverage of oysters in Tampa Bay is far less than previously observed. Establishment and restoration of oyster reefs have been fundamental activities to re-establish sustainable populations in the Bay.
@@ -1063,17 +1162,17 @@ FI\_sh\_05fa & Fantasy Island & Shell & 2005 & Fall\\
 \hline
 id & date & do\_perc & do\_mgl & sal\_psu & temp\_c & ph\\
 \hline
-2D\_bg\_16fa & 2019-11-18 & 109.05 & 8.290 & 25.415 & 21.65 & 7.820\\
+2D\_bg\_16fa & 2019-11-18 & 109.05 & 8.29 & 25.41 & 21.65 & 7.82\\
 \hline
-2D\_bg\_18sp & 2019-04-02 & 76.45 & 5.870 & 23.235 & 21.70 & 7.815\\
+2D\_bg\_18sp & 2019-04-02 & 76.45 & 5.87 & 23.24 & 21.70 & 7.81\\
 \hline
-2D\_bg\_18sp & 2019-11-27 & 93.10 & 7.330 & 24.970 & 19.80 & 7.865\\
+2D\_bg\_18sp & 2019-11-27 & 93.10 & 7.33 & 24.97 & 19.80 & 7.86\\
 \hline
-FI\_bg\_08fa & 2019-10-01 & 101.95 & 6.985 & 22.680 & 28.25 & 8.040\\
+FI\_bg\_08fa & 2019-10-01 & 101.95 & 6.98 & 22.68 & 28.25 & 8.04\\
 \hline
-FI\_bg\_16fa & 2019-03-06 & 95.05 & 7.525 & 21.275 & 20.60 & 8.095\\
+FI\_bg\_16fa & 2019-03-06 & 95.05 & 7.53 & 21.27 & 20.60 & 8.09\\
 \hline
-FI\_dm\_16fa & 2019-03-06 & 95.05 & 7.525 & 21.275 & 20.60 & 8.095\\
+FI\_dm\_16fa & 2019-03-06 & 95.05 & 7.53 & 21.27 & 20.60 & 8.09\\
 \hline
 \end{tabular}
 \end{table}
@@ -1086,17 +1185,17 @@ FI\_dm\_16fa & 2019-03-06 & 95.05 & 7.525 & 21.275 & 20.60 & 8.095\\
 \hline
 id & date & plot & shell\_total & live\_per & spat & aveshell\_mm & maxshell\_mm & aveshell\_cnt\\
 \hline
-2D\_bg\_16fa & 2019-11-18 & 1 & 75 & 0.9066667 & 0 & 35.480 & 54 & 25\\
+2D\_bg\_16fa & 2019-11-18 & 1 & 75 & 0.91 & 0 & 35.48 & 54 & 25\\
 \hline
-2D\_bg\_16fa & 2019-11-18 & 2 & 99 & 0.9292929 & 0 & 38.000 & 66 & 25\\
+2D\_bg\_16fa & 2019-11-18 & 2 & 99 & 0.93 & 0 & 38.00 & 66 & 25\\
 \hline
-2D\_bg\_16fa & 2019-11-18 & 3 & 39 & 0.7435897 & 0 & 42.960 & 63 & 25\\
+2D\_bg\_16fa & 2019-11-18 & 3 & 39 & 0.74 & 0 & 42.96 & 63 & 25\\
 \hline
-2D\_bg\_16fa & 2019-11-18 & 4 & 181 & 0.8121547 & 20 & 49.920 & 72 & 25\\
+2D\_bg\_16fa & 2019-11-18 & 4 & 181 & 0.81 & 20 & 49.92 & 72 & 25\\
 \hline
-2D\_bg\_16fa & 2019-11-18 & 5 & 77 & 0.8311688 & 0 & 33.160 & 55 & 25\\
+2D\_bg\_16fa & 2019-11-18 & 5 & 77 & 0.83 & 0 & 33.16 & 55 & 25\\
 \hline
-2D\_bg\_16fa & 2019-11-18 & 6 & 23 & 0.6956522 & 0 & 37.375 & 72 & 16\\
+2D\_bg\_16fa & 2019-11-18 & 6 & 23 & 0.70 & 0 & 37.38 & 72 & 16\\
 \hline
 \end{tabular}
 \end{table}
@@ -1116,13 +1215,13 @@ The \texttt{id} keys also allow us to easily join tables for follow-up analysis.
 #> # A tibble: 6 x 15
 #>   id         date.x      plot shell_total live_per  spat aveshell_mm maxshell_mm
 #>   <chr>      <date>     <dbl>       <dbl>    <dbl> <dbl>       <dbl>       <dbl>
-#> 1 2D_bg_16fa 2019-11-18     1          75    0.907     0        35.5          54
-#> 2 2D_bg_16fa 2019-11-18     2          99    0.929     0        38            66
-#> 3 2D_bg_16fa 2019-11-18     3          39    0.744     0        43.0          63
-#> 4 2D_bg_16fa 2019-11-18     4         181    0.812    20        49.9          72
-#> 5 2D_bg_16fa 2019-11-18     5          77    0.831     0        33.2          55
-#> 6 2D_bg_16fa 2019-11-18     6          23    0.696     0        37.4          72
-#> # ... with 7 more variables: aveshell_cnt <int>, date.y <date>, do_perc <dbl>,
+#> 1 2D_bg_16fa 2019-11-18     1          75     0.91     0        35.5          54
+#> 2 2D_bg_16fa 2019-11-18     2          99     0.93     0        38            66
+#> 3 2D_bg_16fa 2019-11-18     3          39     0.74     0        43.0          63
+#> 4 2D_bg_16fa 2019-11-18     4         181     0.81    20        49.9          72
+#> 5 2D_bg_16fa 2019-11-18     5          77     0.83     0        33.2          55
+#> 6 2D_bg_16fa 2019-11-18     6          23     0.7      0        37.4          72
+#> # ... with 7 more variables: aveshell_cnt <dbl>, date.y <date>, do_perc <dbl>,
 #> #   do_mgl <dbl>, sal_psu <dbl>, temp_c <dbl>, ph <dbl>
 \end{verbatim}
 
@@ -1170,7 +1269,7 @@ Data curation for the monitoring buoys included several components, all centrali
 
 }
 
-\caption{An R Shiny [dashboard](https://github.com/tbep-tech/desoto-buoy) for viewing and downloading water quality monitoring data for the Ft. DeSoto project.}\label{fig:desotoshiny}
+\caption{An R Shiny dashboard (https://github.com/tbep-tech/desoto-buoy) for viewing and downloading water quality monitoring data for the Ft. DeSoto project.}\label{fig:desotoshiny}
 \end{figure}
 
 These products were created with several goals in mind. First, they allow others to reproduce the workflow for alternative applications by exposing the source code for how the data were processed, including metadata as context for the raw data. Second, these products also increase accessibility by providing access to download information from stable locations and allowing interaction for quick visual QA/QC of the data through the dashboard. Third, routine data processing is automated through daily builds and tests that update the information used by the Shiny application by checking the source data on an FTP site. The continuous monitoring data from the buoys are uploaded to the FTP by a satellite connection and a series of tests (using the R \href{https://testthat.r-lib.org/}{testthat} package) are integrated into the daily checks that will create an alert if the processed data do not conform to expectations (i.e., column names change, dates are incorrect, etc.). This service is critical for continuous monitoring data where more information is typically produced by sensors than would be reasonably possible to manually evaluate for QA/QC.
@@ -1186,7 +1285,7 @@ This example is important for demonstrating an expansion of the general concepts
 
 }
 
-\caption{Red tide *Karenia brevis* on the Gulf Coast of Florida (image credit: NOAA)}\label{fig:unnamed-chunk-14}
+\caption{Red tide on the Gulf Coast of Florida (image credit: NOAA)}\label{fig:unnamed-chunk-14}
 \end{figure}
 
 Red tides from \emph{Karenia brevis} have been observed on the southwest coast of Florida for centuries. Similar to global trends, these events are suspected to be increasing in severity, frequency, and geographic extent in recent years. Toxins produced by these species and degradation of water quality conditions can negatively impact coastal environments. Large die-off events of marine organisms are commonly observed with red tides, including fish, birds, turtles, and large mammals. Human health during ride tides can be negatively impacted, as toxins are aerosolized out of the water column and can cause respiratory or skin irritation. Tourism and waterfront business revenues are also reduced in areas affected by red tide.
@@ -1203,11 +1302,11 @@ Identifying a location for data products was critical to ensure the results had 
 
 \begin{figure}
 
-{\centering \includegraphics[width=1\linewidth]{img/redtidereadme} 
+{\centering \includegraphics[width=0.9\linewidth]{img/redtidereadme} 
 
 }
 
-\caption{The README file for the GitHub repository, including relevant data products to evaluate Twitter responses to red tide. Available at <https://github.com/tbep-tech/red-tide-twitter>.}\label{fig:redtidereadme}
+\caption{The README file for the GitHub repository, including relevant data products to evaluate Twitter responses to red tide. Available at https://github.com/tbep-tech/red-tide-twitter.}\label{fig:redtidereadme}
 \end{figure}
 
 This example is important because it represents the common scenario of identifying an important contribution at the completion of a project. Like the other case studies, the concept of \emph{something is better than nothing} was discussed between the TBEP and project leads. At the completion of the project it was clear that documenting and curating all datasets was impractical and the conversation focused on identifying which components of this work were most important for promoting additional research and informing management actions. Because the application of analysis methods was novel for red tide events, data curation focused on documenting the workflow for tweet analysis and ensuring the lexicon was findable and accessible by others. This was a deliberate attempt to seed additional research on a topic that has not been well-studied.

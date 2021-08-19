@@ -24,7 +24,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2021-08-18" />
+<meta name="date" content="2021-08-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -316,9 +316,9 @@ Figure 3.1: An exceptional example of table abuse using Excel.
 </ol>
 <p>Graphically, these rules are shown in figure <a href="keys.html#fig:tidy">3.2</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:tidy"></span>
-<img src="img/tidy-1.png" alt="A representation of the rules for tidy data (from @Wickham17)." width="100%" />
+<img src="img/tidy-1.png" alt="A representation of the rules for tidy data (from Wickham and Grolemund, 2017)." width="100%" />
 <p class="caption">
-Figure 3.2: A representation of the rules for tidy data (from <span class="citation">Wickham and Grolemund (<a href="#ref-Wickham17" role="doc-biblioref">2017</a>)</span>).
+Figure 3.2: A representation of the rules for tidy data (from Wickham and Grolemund, 2017).
 </p>
 </div>
 <p>Using these principles for data storage may seem unnatural at first because of a difference between what’s easy for entering data versus what makes sense for downstream analyses. The former is what leads to abuse of tables. For example, dates are often spread across multiple columns, such as having one column for each year of data where the header indicates the year that applies to data in each column. This convention may be used because it’s easy to add another year of data as an additional column when more data each year are collected. However, this is untidy because the date variable occurs across columns. If you wanted to evaluate changes across years in a formal analysis, you’d have to reorganize these data in a tidy format.</p>
@@ -440,9 +440,6 @@ Figure 3.6: An example of a data dictionary.
 </div>
 <div id="ref-Wickham15">
 <p>Wickham, H., and J. Bryan. 2015. <em>R Packages</em>. Sebastopol, California: O’Reilly.</p>
-</div>
-<div id="ref-Wickham17">
-<p>Wickham, H., and G. Grolemund. 2017. <em>R for Data Science</em>. Sebastopol, California: O’Reilly.</p>
 </div>
 <div id="ref-Wilkinson16">
 <p>Wilkinson, M. D., M. Dumontier, I. J. Aalbersberg, G. Appleton, M. Axton, A. Baak, N. Blomberg, et al. 2016. “The Fair Guiding Principles for Scientific Data Management and Stewardship.” <em>Scientific Data</em> 3 (160018). <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>.</p>
