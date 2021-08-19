@@ -11,7 +11,7 @@ In this section we describe three case studies to demonstrate how data managemen
 
 ## Oyster restoration in Tampa Bay {#oyster}
 
-```{r, out.width = '50%', fig.cap = 'Restoration of oyster reefs (*Crassostrea virginica*) is a critical management goal to support key habitats in Tampa Bay.'}
+```{r, out.width = '50%', fig.cap = 'Restoration of oyster reefs is a critical management goal to support key habitats in Tampa Bay.'}
 knitr::include_graphics('img/oysters.jpg')
 ```
 
@@ -32,14 +32,17 @@ Our tidying workflow for the first year of field data is available in a GitHub r
 The final "tidy" tables include three flat files for the site data (table \@ref(tab:tabsitdat)), water quality data at each site (table \@ref(tab:tabwqmdat)), and oyster data at each site (table \@ref(tab:taboysdat)).  
 
 ```{r tabsitdat}
+sitdat <- mutate_if(sitdat, is.numeric, round, 2)
 knitr::kable(head(sitdat), caption = 'First six rows of the tidy site data.', label = 'tabsitdat')
 ```
 
 ```{r tabwqmdta}
+wqmdat <- dplyr::mutate_if(wqmdat, is.numeric, round, 2)
 knitr::kable(head(wqmdat), caption = 'First six rows of the tidy water quality data.', label = 'tabwqmdat')
 ```
 
 ```{r taboysdat}
+oysdat <- dplyr::mutate_if(oysdat, is.numeric, round, 2)
 knitr::kable(head(oysdat), caption = 'First six rows of the tidy oyster data.', label = 'taboysdat')
 ```
 
@@ -77,7 +80,7 @@ Data curation for the monitoring buoys included several components, all centrali
 * A permanent [DOI](https://zenodo.org/record/3941719#.YFM9069KiUk) made available through Zenodo that is linked directly to the GitHub repository
 * Automated daily build through [GitHub Actions](https://github.com/tbep-tech/desoto-buoy/actions) that accesses the source data, runs tests, and saves a binary RData file made accessible to the Shiny application
 
-```{r desotoshiny, fig.cap = "An R Shiny [dashboard](https://github.com/tbep-tech/desoto-buoy) for viewing and downloading water quality monitoring data for the Ft. DeSoto project."}
+```{r desotoshiny, fig.cap = "An R Shiny dashboard (https://github.com/tbep-tech/desoto-buoy) for viewing and downloading water quality monitoring data for the Ft. DeSoto project."}
 knitr::include_graphics('img/desotoshiny.PNG')
 ```
 
@@ -87,7 +90,7 @@ This example is important for demonstrating an expansion of the general concepts
 
 ## Red tide and social media {#twitter}
 
-```{r, out.width = '80%', fig.cap = 'Red tide *Karenia brevis* on the Gulf Coast of Florida (image credit: NOAA)'}
+```{r, out.width = '80%', fig.cap = 'Red tide on the Gulf Coast of Florida (image credit: NOAA)'}
 knitr::include_graphics('img/red tide.jpg')
 ```
 
@@ -103,7 +106,7 @@ The Twitter data were used in two analyses, first to characterize links between 
 
 Identifying a location for data products was critical to ensure the results had a lifespan beyond the research paper and that they could have the largest potential impact to inform future management response to red tide.  A [GitHub repository](https://github.com/tbep-tech/red-tide-twitter) (figure \@ref(fig:redtidereadme)) was created to include supplementary material for the manuscript (in review at the time of writing). The content includes anonymized tweet data ([Secure_Tweets_data.csv](https://github.com/tbep-tech/red-tide-twitter/blob/master/Secure_Tweets_Data.csv)), vocabularies for the sentiment analysis, and R code to run the sentiment analysis.  A [permanent DOI](https://zenodo.org/badge/latestdoi/318579178) was also created that linked the repository to the Zenodo archiving service. The repository was listed in the supplementary text for the manuscript to clearly point readers to actual content used for the analysis to facilitate follow-up research. 
 
-```{r redtidereadme, out.wdith = '90%', fig.cap = 'The README file for the GitHub repository, including relevant data products to evaluate Twitter responses to red tide. Available at <https://github.com/tbep-tech/red-tide-twitter>.'}
+```{r redtidereadme, out.width = '90%', fig.cap = 'The README file for the GitHub repository, including relevant data products to evaluate Twitter responses to red tide. Available at https://github.com/tbep-tech/red-tide-twitter.'}
 knitr::include_graphics('img/redtidereadme.PNG')
 ```
 

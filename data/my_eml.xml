@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="d5990745-e9de-4e52-ab36-357e1e1680d4" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="c810c443-7b2d-4933-8912-785e0fd1326e" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
   <dataset>
     <title>Water Quality Assessment Data</title>
     <creator>
@@ -41,17 +41,18 @@
       <methodStep>
         <description>
           <para>
-  All data were from the Environmental Protection Commission of 
-  Hillsborough County (https://www.epchc.org/i-want-to/view-gis-maps-and-data).
-  Data are monthly at mid-depth for each of 50 stations throughout the
-  Bay from 1974 to 2020. Stations were visited on a rotating schedule
-  such that one third of all stations were sampled each week. Bay
-  segments represent management units of interest with distinct chemical
-  and physical differences. Accordingly, station data were aggregated by
-  median values within each of four Bay segments. Data are used to
-  assess progress in achieving programmatic goals for the Tampa Bay
-  Estuary Program.
-</para>
+    All data were from the Environmental Protection Commission of
+    Hillsborough County
+    (https://www.epchc.org/i-want-to/view-gis-maps-and-data). Data are
+    monthly at mid-depth for each of 50 stations throughout the Bay from
+    1974 to 2020. Stations were visited on a rotating schedule such that
+    one third of all stations were sampled each week. Bay segments
+    represent management units of interest with distinct chemical and
+    physical differences. Accordingly, station data were aggregated by
+    median values within each of four Bay segments. Data are used to
+    assess progress in achieving programmatic goals for the Tampa Bay
+    Estuary Program.
+  </para>
         </description>
       </methodStep>
     </methods>

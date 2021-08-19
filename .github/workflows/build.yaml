@@ -16,7 +16,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v1
       - uses: r-lib/actions/setup-tinytex@master
       - name: Install R packages
-        run: Rscript -e 'install.packages(c("rmarkdown","bookdown","EML", "dplyr", "tinytex"))'
+        run: Rscript -e 'install.packages(c("rmarkdown","bookdown","EML", "dplyr", "pander", "tinytex"))'
       - name: Render Book
         run: sh _build.sh
       - uses: actions/upload-artifact@v1

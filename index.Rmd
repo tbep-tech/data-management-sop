@@ -13,6 +13,8 @@ biblio-style: apalike
 link-citations: yes
 github-repo: tbep-tech/data-management-sop
 description: "This is a web page describing the TBEP data management SOP"
+urlcolor: BlueViolet
+linkcolor: BlueViolet
 ---
 
 ```{r, include=FALSE}

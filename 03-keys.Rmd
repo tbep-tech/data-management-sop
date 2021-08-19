@@ -79,7 +79,7 @@ Now we can introduce some additional principles for tabular data that will impro
 
 Graphically, these rules are shown in figure \@ref(fig:tidy). 
 
-```{r tidy, fig.cap = 'A representation of the rules for tidy data (from @Wickham17).'}
+```{r tidy, fig.cap = 'A representation of the rules for tidy data (from Wickham and Grolemund, 2017).'}
 knitr::include_graphics('img/tidy-1.png')
 ```
 

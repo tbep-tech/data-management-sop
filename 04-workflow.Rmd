@@ -177,14 +177,14 @@ This workflow is a starting point for creating simple to more complex metadata. 
 
 ```{r, echo = F}
 tmp <- read.csv('data/metadataex.csv')
-knitr::kable(tmp)
+pander::pander(tmp)
 ```
 
 If we wanted to add some specificity, we could create separate fields to include more detailed information.  
 
 ```{r, echo = F}
 tmp <- read.csv('data/metadataex2.csv')
-knitr::kable(tmp)
+pander::pander(tmp)
 ```
 
 Finally, if we wanted to convert this information to an EML metadata file, we can use some tools in the [EML R package](https://docs.ropensci.org/EML/).  This example includes all of the information from the last example, but using specific tags and entry methods for the EML format,  The methods information can also be entered as a separate file for more long-form documentation (i.e., `set_methods('data/methods.docx')`). After the file is written with `write_eml()`, it can be validated for accuracy and completeness with `eml_validate()`.  The finished metadata file can be viewed [here](data/my_eml.xml). 
