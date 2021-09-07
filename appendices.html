@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 7 Appendices | Data Management SOP for the Tampa Bay Estuary Program</title>
   <meta name="description" content="This is a web page describing the TBEP data management SOP" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 7 Appendices | Data Management SOP for the Tampa Bay Estuary Program" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2021-08-20" />
+<meta name="date" content="2021-09-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,6 +34,7 @@
 <link rel="prev" href="final.html"/>
 <link rel="next" href="references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -347,11 +347,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="general" class="section level3">
 <h3><span class="header-section-number">7.4.2</span> General</h3>
-<p>An approach for data management should be identified as soon as possible after project inception (<a href="workflow.html#howyou">4.2</a>). This will include identifying appropriate data deliverables at the beginning of the project using guidance in the SOP (<a href="keys.html#contribs">3.1</a>). Plans for documenting and delivering identified data deliverables to the TBEP should also be identified, which primarily includes appropriate data formats (<a href="keys.html#whytidy">3.3</a>), metadata documentation (<a href="keys.html#metadatadesc">3.4</a>), and where data are hosted (<a href="keys.html#datahome">3.5</a>).</p>
+<p>An approach for data management should be identified as soon as possible after project inception (<a href="workflow.html#howyou">4.2</a>). This will include identifying appropriate data deliverables at the beginning of the project using guidance in the SOP (<a href="keys.html#contribs">3.1</a>). Plans for documenting and delivering identified data products to the TBEP should also be identified, which primarily includes appropriate data formats (<a href="keys.html#whytidy">3.3</a>), metadata documentation (<a href="keys.html#metadatadesc">3.4</a>), and where data are hosted (<a href="keys.html#datahome">3.5</a>).</p>
 </div>
 <div id="tabular-data" class="section level3">
 <h3><span class="header-section-number">7.4.3</span> Tabular data</h3>
-<p>All tabular data are to be provided in a tidy format to the extent possible. This includes following simple rules for delivering data as 1) each variable in its own column, 2) one observation per row, and 3) one value per cell (<a href="keys.html#whytidy">3.3</a>). Tidy data must be delivered in a non-proprietary or open-source compatible format, such as .csv flat files. Datasets using .xlsx file formats or that require proprietary software to access (e.g., SAS) will not be accepted.</p>
+<p>All tabular data are to be provided in a tidy format to the extent possible. This includes following simple rules for delivering data as 1) each variable in its own column, 2) one observation per row, and 3) one value per cell (<a href="keys.html#whytidy">3.3</a>). Tidy data must be delivered in a non-proprietary or open-source compatible format, such as .csv flat files. Datasets using .xlsx file formats or that require proprietary software to access (e.g., SAS) will not be accepted unless project managers can provide justification for not using open formats.</p>
 </div>
 <div id="geospatial-data" class="section level3">
 <h3><span class="header-section-number">7.4.4</span> Geospatial data</h3>
@@ -397,7 +397,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -438,7 +437,7 @@ gitbook.start({
 },
 "download": ["data-management-sop.pdf", "data-management-sop.epub"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
