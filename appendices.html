@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 7 Appendices | Data Management SOP for the Tampa Bay Estuary Program</title>
   <meta name="description" content="This is a web page describing the TBEP data management SOP" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 7 Appendices | Data Management SOP for the Tampa Bay Estuary Program" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is a web page describing the TBEP data management SOP" />
   <meta name="github-repo" content="tbep-tech/data-management-sop" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2021-09-07" />
+<meta name="date" content="2023-09-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,9 +49,9 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-70CPP26J36"></script>
 <script>
@@ -65,18 +64,18 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -96,13 +95,13 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -115,7 +114,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -129,6 +128,32 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -146,8 +171,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Data Management SOP</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#contrib"><i class="fa fa-check"></i><b>1.1</b> Contributing to this document</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#contrib"><i class="fa fa-check"></i><b>1.1</b> Contributing to this document</a>
+<ul>
 <li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#opt1"><i class="fa fa-check"></i><b>1.1.1</b> Option 1</a></li>
 <li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#opt2"><i class="fa fa-check"></i><b>1.1.2</b> Option 2</a></li>
 <li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#opt3"><i class="fa fa-check"></i><b>1.1.3</b> Option 3</a></li>
@@ -155,32 +182,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#about"><i class="fa fa-check"></i><b>1.2</b> About</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>2</b> Background</a><ul>
+<li class="chapter" data-level="2" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>2</b> Background</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="background.html"><a href="background.html#dataimp"><i class="fa fa-check"></i><b>2.1</b> Importance of data</a></li>
 <li class="chapter" data-level="2.2" data-path="background.html"><a href="background.html#whymanage"><i class="fa fa-check"></i><b>2.2</b> Why we need to effectively manage data</a></li>
 <li class="chapter" data-level="2.3" data-path="background.html"><a href="background.html#opengeneral"><i class="fa fa-check"></i><b>2.3</b> Open Science</a></li>
 <li class="chapter" data-level="2.4" data-path="background.html"><a href="background.html#philogeneral"><i class="fa fa-check"></i><b>2.4</b> The TBEP philosophy</a></li>
 <li class="chapter" data-level="2.5" data-path="background.html"><a href="background.html#goals-and-objectives-of-this-document"><i class="fa fa-check"></i><b>2.5</b> Goals and objectives of this document</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="keys.html"><a href="keys.html"><i class="fa fa-check"></i><b>3</b> Key Concepts and Principles</a><ul>
+<li class="chapter" data-level="3" data-path="keys.html"><a href="keys.html"><i class="fa fa-check"></i><b>3</b> Key Concepts and Principles</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="keys.html"><a href="keys.html#contribs"><i class="fa fa-check"></i><b>3.1</b> Identifying important contributions</a></li>
 <li class="chapter" data-level="3.2" data-path="keys.html"><a href="keys.html#fair"><i class="fa fa-check"></i><b>3.2</b> The FAIR principles</a></li>
 <li class="chapter" data-level="3.3" data-path="keys.html"><a href="keys.html#whytidy"><i class="fa fa-check"></i><b>3.3</b> The importance of tidy data</a></li>
-<li class="chapter" data-level="3.4" data-path="keys.html"><a href="keys.html#metadatadesc"><i class="fa fa-check"></i><b>3.4</b> Metadata</a><ul>
+<li class="chapter" data-level="3.4" data-path="keys.html"><a href="keys.html#metadatadesc"><i class="fa fa-check"></i><b>3.4</b> Metadata</a>
+<ul>
 <li class="chapter" data-level="3.4.1" data-path="keys.html"><a href="keys.html#metadata"><i class="fa fa-check"></i><b>3.4.1</b> Metadata examples</a></li>
 <li class="chapter" data-level="3.4.2" data-path="keys.html"><a href="keys.html#eml"><i class="fa fa-check"></i><b>3.4.2</b> The EML standard</a></li>
 <li class="chapter" data-level="3.4.3" data-path="keys.html"><a href="keys.html#dict"><i class="fa fa-check"></i><b>3.4.3</b> Data dictionaries</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="keys.html"><a href="keys.html#datahome"><i class="fa fa-check"></i><b>3.5</b> Where do data live?</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>4</b> Data Management Workflow</a><ul>
-<li class="chapter" data-level="4.1" data-path="workflow.html"><a href="workflow.html#tbepapproach"><i class="fa fa-check"></i><b>4.1</b> The TBEP approach</a><ul>
+<li class="chapter" data-level="4" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>4</b> Data Management Workflow</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="workflow.html"><a href="workflow.html#tbepapproach"><i class="fa fa-check"></i><b>4.1</b> The TBEP approach</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="workflow.html"><a href="workflow.html#philo"><i class="fa fa-check"></i><b>4.1.1</b> An Open Science philosophy</a></li>
 <li class="chapter" data-level="4.1.2" data-path="workflow.html"><a href="workflow.html#the-open-science-cake"><i class="fa fa-check"></i><b>4.1.2</b> The open science cake</a></li>
 <li class="chapter" data-level="4.1.3" data-path="workflow.html"><a href="workflow.html#automation"><i class="fa fa-check"></i><b>4.1.3</b> How do we build the cake?</a></li>
 <li class="chapter" data-level="4.1.4" data-path="workflow.html"><a href="workflow.html#moregit"><i class="fa fa-check"></i><b>4.1.4</b> More on Git and GitHub</a></li>
+<li class="chapter" data-level="4.1.5" data-path="workflow.html"><a href="workflow.html#aiuse"><i class="fa fa-check"></i><b>4.1.5</b> Use of artificial intelligence</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#howyou"><i class="fa fa-check"></i><b>4.2</b> How can you manage data?</a><ul>
+<li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#howyou"><i class="fa fa-check"></i><b>4.2</b> How can you manage data?</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="workflow.html"><a href="workflow.html#beginning"><i class="fa fa-check"></i><b>4.2.1</b> I’m at the beginning of my project</a></li>
 <li class="chapter" data-level="4.2.2" data-path="workflow.html"><a href="workflow.html#middleproject"><i class="fa fa-check"></i><b>4.2.2</b> I’m somewhere in the middle of my project</a></li>
 <li class="chapter" data-level="4.2.3" data-path="workflow.html"><a href="workflow.html#endproject"><i class="fa fa-check"></i><b>4.2.3</b> I’m at the end of my project</a></li>
@@ -188,19 +222,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.5" data-path="workflow.html"><a href="workflow.html#lets-get-it-online"><i class="fa fa-check"></i><b>4.2.5</b> Let’s get it online!</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="cases.html"><a href="cases.html"><i class="fa fa-check"></i><b>5</b> Case Studies</a><ul>
+<li class="chapter" data-level="5" data-path="cases.html"><a href="cases.html"><i class="fa fa-check"></i><b>5</b> Case Studies</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="cases.html"><a href="cases.html#oyster"><i class="fa fa-check"></i><b>5.1</b> Oyster restoration in Tampa Bay</a></li>
 <li class="chapter" data-level="5.2" data-path="cases.html"><a href="cases.html#desoto"><i class="fa fa-check"></i><b>5.2</b> RESTORE data management: Ft. DeSoto circulation study</a></li>
 <li class="chapter" data-level="5.3" data-path="cases.html"><a href="cases.html#twitter"><i class="fa fa-check"></i><b>5.3</b> Red tide and social media</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>6</b> Final Words</a><ul>
+<li class="chapter" data-level="6" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>6</b> Final Words</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="final.html"><a href="final.html#something-is-better-than-nothing"><i class="fa fa-check"></i><b>6.1</b> Something is better than nothing</a></li>
 <li class="chapter" data-level="6.2" data-path="final.html"><a href="final.html#just-remember-to-be-fair"><i class="fa fa-check"></i><b>6.2</b> Just remember to be FAIR</a></li>
 <li class="chapter" data-level="6.3" data-path="final.html"><a href="final.html#the-ever-evolving-toolbox"><i class="fa fa-check"></i><b>6.3</b> The ever-evolving toolbox</a></li>
 <li class="chapter" data-level="6.4" data-path="final.html"><a href="final.html#look-to-the-community"><i class="fa fa-check"></i><b>6.4</b> Look to the community</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="appendices.html"><a href="appendices.html"><i class="fa fa-check"></i><b>7</b> Appendices</a><ul>
-<li class="chapter" data-level="7.1" data-path="appendices.html"><a href="appendices.html#list-of-resources"><i class="fa fa-check"></i><b>7.1</b> List of resources</a><ul>
+<li class="chapter" data-level="7" data-path="appendices.html"><a href="appendices.html"><i class="fa fa-check"></i><b>7</b> Appendices</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="appendices.html"><a href="appendices.html#list-of-resources"><i class="fa fa-check"></i><b>7.1</b> List of resources</a>
+<ul>
 <li class="chapter" data-level="7.1.1" data-path="appendices.html"><a href="appendices.html#bulding-data-management-plans"><i class="fa fa-check"></i><b>7.1.1</b> Bulding Data Management Plans</a></li>
 <li class="chapter" data-level="7.1.2" data-path="appendices.html"><a href="appendices.html#tbep-r-trainings"><i class="fa fa-check"></i><b>7.1.2</b> TBEP R Trainings</a></li>
 <li class="chapter" data-level="7.1.3" data-path="appendices.html"><a href="appendices.html#r-lessons-tutorials"><i class="fa fa-check"></i><b>7.1.3</b> R Lessons &amp; Tutorials</a></li>
@@ -208,10 +246,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1.5" data-path="appendices.html"><a href="appendices.html#gitgithub"><i class="fa fa-check"></i><b>7.1.5</b> Git/Github</a></li>
 </ul></li>
 <li class="chapter" data-level="7.2" data-path="appendices.html"><a href="appendices.html#definitions"><i class="fa fa-check"></i><b>7.2</b> Definitions</a></li>
-<li class="chapter" data-level="7.3" data-path="appendices.html"><a href="appendices.html#rfp-language"><i class="fa fa-check"></i><b>7.3</b> RFP language</a><ul>
+<li class="chapter" data-level="7.3" data-path="appendices.html"><a href="appendices.html#rfp-language"><i class="fa fa-check"></i><b>7.3</b> RFP language</a>
+<ul>
 <li class="chapter" data-level="7.3.1" data-path="appendices.html"><a href="appendices.html#best-practices-for-open-data"><i class="fa fa-check"></i><b>7.3.1</b> Best practices for open data</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="appendices.html"><a href="appendices.html#contract-language"><i class="fa fa-check"></i><b>7.4</b> Contract language</a><ul>
+<li class="chapter" data-level="7.4" data-path="appendices.html"><a href="appendices.html#contract-language"><i class="fa fa-check"></i><b>7.4</b> Contract language</a>
+<ul>
 <li class="chapter" data-level="7.4.1" data-path="appendices.html"><a href="appendices.html#declaration-of-use"><i class="fa fa-check"></i><b>7.4.1</b> Declaration of use</a></li>
 <li class="chapter" data-level="7.4.2" data-path="appendices.html"><a href="appendices.html#general"><i class="fa fa-check"></i><b>7.4.2</b> General</a></li>
 <li class="chapter" data-level="7.4.3" data-path="appendices.html"><a href="appendices.html#tabular-data"><i class="fa fa-check"></i><b>7.4.3</b> Tabular data</a></li>
@@ -242,13 +282,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="appendices" class="section level1">
-<h1><span class="header-section-number">Section 7</span> Appendices</h1>
+<div id="appendices" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Section 7</span> Appendices<a href="appendices.html#appendices" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Below are several resources and definitions that may be helpful in developing a data management plan. This is by no means an exhaustive list. These are resources that we have either curated specifically for TBEP or resources we’ve found helpful in our own journey.</p>
-<div id="list-of-resources" class="section level2">
-<h2><span class="header-section-number">7.1</span> List of resources</h2>
-<div id="bulding-data-management-plans" class="section level3">
-<h3><span class="header-section-number">7.1.1</span> Bulding Data Management Plans</h3>
+<div id="list-of-resources" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> List of resources<a href="appendices.html#list-of-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="bulding-data-management-plans" class="section level3 hasAnchor" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Bulding Data Management Plans<a href="appendices.html#bulding-data-management-plans" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://environmentaldatainitiative.org/dm-resources/" target="_blank">Environmental Data Initiative <strong>Data Management Resources</strong></a></li>
 <li><a href="https://dmptool.org/" target="_blank">University of California <strong>DMPTool</strong></a></li>
@@ -256,8 +296,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://ds-wizard.org/" target="_blank">ELIXIR and others <strong>Data Stewardship Wizard</strong></a></li>
 </ul>
 </div>
-<div id="tbep-r-trainings" class="section level3">
-<h3><span class="header-section-number">7.1.2</span> TBEP R Trainings</h3>
+<div id="tbep-r-trainings" class="section level3 hasAnchor" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> TBEP R Trainings<a href="appendices.html#tbep-r-trainings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://tbep-tech.github.io/pep-r-training" target="_blank">Peconic Estuary Program R training</a>, <a href="https://drive.google.com/file/d/1ZjVHFrVpw2uTKZw-BmD29umdbl6viutM/view?usp=sharing" target="_blank">recording</a></li>
 <li><a href="https://tbep-tech.github.io/ecometab-r-training" target="_blank">NERRS ecosystem metabolism R training</a>
@@ -267,8 +307,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://tbep-tech.github.io/tbep-r-training/shiny.html" target="_blank">A soft introduction to Shiny</a></li>
 </ul>
 </div>
-<div id="r-lessons-tutorials" class="section level3">
-<h3><span class="header-section-number">7.1.3</span> R Lessons &amp; Tutorials</h3>
+<div id="r-lessons-tutorials" class="section level3 hasAnchor" number="7.1.3">
+<h3><span class="header-section-number">7.1.3</span> R Lessons &amp; Tutorials<a href="appendices.html#r-lessons-tutorials" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://data-lessons.github.io/gapminder-R/" target="_blank">Software Carpentry: <strong>R for Reproducible Scientific Analysis</strong></a></li>
 <li><a href="https://datacarpentry.org/geospatial-workshop/" target="_blank">Data Carpentry: <strong>Geospatial Workshop</strong></a></li>
@@ -284,8 +324,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf" target="_blank"><strong>Color reference</strong> PDF with text names</a>, <a href="https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf" target="_blank"><strong>Color cheatsheet</strong> PDF from NCEAS</a></li>
 </ul>
 </div>
-<div id="r-ebookscourses" class="section level3">
-<h3><span class="header-section-number">7.1.4</span> R eBooks/Courses</h3>
+<div id="r-ebookscourses" class="section level3 hasAnchor" number="7.1.4">
+<h3><span class="header-section-number">7.1.4</span> R eBooks/Courses<a href="appendices.html#r-ebookscourses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://stat545.com/" target="_blank">Jenny Bryan’s <strong>Stat545.com</strong></a></li>
 <li><a href="http://r4ds.had.co.nz/" target="_blank">Garrett Grolemund and Hadley Wickham’s <strong>R For Data Science</strong></a></li>
@@ -300,91 +340,91 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://keen-swartz-3146c4.netlify.app/index.html" target="_blank">Edszer Pebesma and Roger Bivand <strong>Spatial Data Science</strong></a></li>
 </ul>
 </div>
-<div id="gitgithub" class="section level3">
-<h3><span class="header-section-number">7.1.5</span> Git/Github</h3>
+<div id="gitgithub" class="section level3 hasAnchor" number="7.1.5">
+<h3><span class="header-section-number">7.1.5</span> Git/Github<a href="appendices.html#gitgithub" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://happygitwithr.com/" target="_blank">Jenny Bryan’s <strong>Happy Git and Github for the useR</strong></a></li>
 <li><a href="https://ourcodingclub.github.io/2017/02/27/git.html" target="_blank">Coding Club <strong>Intro to Github</strong></a></li>
 </ul>
 </div>
 </div>
-<div id="definitions" class="section level2">
-<h2><span class="header-section-number">7.2</span> Definitions</h2>
+<div id="definitions" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Definitions<a href="appendices.html#definitions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>CI/CD</strong>: Continuous Integration/Continuous Deployment, describes web services that can be used to automate data checks, tests, or workflows. These are often integrated into existing platforms, such as GitHub Actions on GitHub.</p>
 <p><strong>Dashboard</strong>: Interactive and dynamic user interfaces available online that can be created to facilitate understanding or to inform decision-making. Many flavors exist, including <a href="https://shiny.rstudio.com/">R Shiny</a>, <a href="https://dash.plotly.com/">Python Dash</a>, or <a href="https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/overview">ArcGIS storymaps</a>.</p>
 <p><strong>Data</strong>: A general term describing a variety of informational products that can support environmental decision-making or be used to test research hypotheses. Data can be as simple as a single spreadhsheet or more complex products such as model output or parameters.</p>
 <p><strong>Database</strong>: An organized collection of data, where each piece of data can be linked and accessed electronically through keys that act as unique identifiers for units of information. These are often called relational databases.</p>
 <p><strong>Data Dictionary</strong>: An informal description of the information included in a dataset, often used to place boundaries on expected values or data types. This includes column names, types of data stored in each column, and expected values for each data type.</p>
 <p><strong>DOI</strong>: Digital Object Identifier, a unique and permanent name (persistent identifier) for a dataset or other resource, used for archiving and discovery through online queries. Services like <a href="https://zenodo.org/">Zenodo</a> can be linked to GitHub to create a DOI for a repository.</p>
-<p><strong>FAIR</strong>: Findable, Accessible, Interoperable, and Reusable, describes general guidelines for creating open data products or assessing the openness of existing products <span class="citation">(Wilkinson et al. <a href="#ref-Wilkinson16" role="doc-biblioref">2016</a>)</span>.</p>
+<p><strong>FAIR</strong>: Findable, Accessible, Interoperable, and Reusable, describes general guidelines for creating open data products or assessing the openness of existing products <span class="citation">(<a href="#ref-Wilkinson16" role="doc-biblioref">Wilkinson et al. 2016</a>)</span>.</p>
 <p><strong>Flat File</strong>: The simplest form of tabular data, often as a rectangular grid of information stored as <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> text in a non-proprietary file format. There is no information stored in each cell other than the observational values.</p>
 <p><strong>Keys</strong>: Identifiers that can be used to link data between tables. They are often used to identify unique rows of data, such as a station name or station name/date combination.</p>
 <p><strong>Federated Repository</strong>: An online network of connected repositories that use similar standards to collectively store data for discovery and access. Uploading a dataset to one node of a repository will make it available through all other nodes.</p>
-<p><strong>Metadata</strong>: A suite of industry or disciplinary standards as well as additional internal and external documentation and other data necessary for the identification, representation, interoperability, technical management, performance, and use of data contained in an information system <span class="citation">(Gilliland <a href="#ref-Gilliland16" role="doc-biblioref">2016</a>)</span>. Simply put, the who, what, when, where, why, and how of data.</p>
+<p><strong>Metadata</strong>: A suite of industry or disciplinary standards as well as additional internal and external documentation and other data necessary for the identification, representation, interoperability, technical management, performance, and use of data contained in an information system <span class="citation">(<a href="#ref-Gilliland16" role="doc-biblioref">Gilliland 2016</a>)</span>. Simply put, the who, what, when, where, why, and how of data.</p>
 <p><strong>Model</strong>: A general term describing a theoretical representation of a real-world phenomenon. It can be as simple as a statistical linear regression model (i.e., y varies as a function of x in a linear fashion) or a more involved mechanistic model with linked equations that describe real-world processes occurring through space and time.</p>
-<p><strong>Open Science</strong>: A philosophy and set of tools to make research reproducible and transparent, in addition to having long-term value through effective data preservation and sharing <span class="citation">(Beck et al. <a href="#ref-Beck20" role="doc-biblioref">2020</a>)</span>.</p>
+<p><strong>Open Science</strong>: A philosophy and set of tools to make research reproducible and transparent, in addition to having long-term value through effective data preservation and sharing <span class="citation">(<a href="#ref-Beck20" role="doc-biblioref">Beck et al. 2020</a>)</span>.</p>
 <p><strong>Open Source</strong>: Software with code that is freely available under a license that typically grants users the rights to modify or distribute to others for any purpose. The <a href="https://cran.r-project.org/">R</a> statistical programming language is one example of open source software used in the environmental sciences.</p>
 <p><strong>Provenance</strong>: The history of a dataset, including its origin, purpose, and metadata. Formally, this can include the records of inputs, software, and steps of analysis used to create a dataset. The intent is to establish context and also allow reproducibility.</p>
 <p><strong>Synthesis</strong>: The collection and combination of datasets from different sources, often for research or to inform decision-making. The synthesis product may be considered a novel dataset in itself if the steps in its creation produce novel information not available from its source data.</p>
-<p><strong>Tidy Data</strong>: A set of simple rules for storing tabular data, including each variable in its own column, each observation in its own row, and each value in its own cell <span class="citation">(Wickham <a href="#ref-Wickham14c" role="doc-biblioref">2014</a>)</span></p>
+<p><strong>Tidy Data</strong>: A set of simple rules for storing tabular data, including each variable in its own column, each observation in its own row, and each value in its own cell <span class="citation">(<a href="#ref-Wickham14c" role="doc-biblioref">Wickham 2014</a>)</span></p>
 <p><strong>Version Control</strong>: A formal software or code development system that tracks and documents changes to create a record that describes the development history and that can be accessed at any time so that previous changes are never lost. <a href="https://git-scm.com/">Git</a> is version control software, as compared to <a href="https://github.com/">GitHub</a> which is an online platform for hosting projects using Git.</p>
 </div>
-<div id="rfp-language" class="section level2">
-<h2><span class="header-section-number">7.3</span> RFP language</h2>
+<div id="rfp-language" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> RFP language<a href="appendices.html#rfp-language" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The following includes standard language and links to SOP sections that can be used in competitive requests for proposal (RFPs) issued by the TBEP to support use of open science and best practices for data management as described in this SOP. This language can be used as an expression for partners to encourage use of descriptions and approaches in this document for competitive criteria used to assess proposal qualifications.</p>
-<div id="best-practices-for-open-data" class="section level3">
-<h3><span class="header-section-number">7.3.1</span> Best practices for open data</h3>
+<div id="best-practices-for-open-data" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Best practices for open data<a href="appendices.html#best-practices-for-open-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Respondents should demonstrate adequate hardware and software capabilities and personnel trained to receive, store, disseminate, print, summarize, and transmit open standard GIS and statistical package files. All final datasets, statistical assessments, data reduction methods and syntheses should be delivered to the TBEP in open standard formats using open science frameworks, such as those developed through the RMarkdown language, R or Rstudio statistical analysis platforms, Python scripts, or the QGIS environment. All data products and spatial coverages will include appropriate Federal Geographic Data Committee (FGDC) standards, Ecological Metadata Language (EML) compliant metadata, or other descriptive information appropriate for metadata (<a href="keys.html#metadatadesc">3.4</a>).</p>
 <p>Respondents must demonstrate an understanding of tidy data formats as applied to tabular data and an ability to deliver data products in non-proprietary file formats (e.g., csv flat files, shapefiles, or KML). Use of online sharing platforms that enable data products to be findable, accessible, interoperable, and reusable (<a href="keys.html#fair">3.2</a>) are strongly encouraged. These can include formal data repositories that employ standardized metadata schema (e.g., <a href="https://www.dataone.org/">DataOne</a>). Small datasets (&lt;100 Mb) can also be hosted on the TBEP GitHub website (<a href="https://github.com/tbep-tech" class="uri">https://github.com/tbep-tech</a>) by contacting staff for access. View the guidance <a href="https://tbep-tech.github.io/data-management-sop/keys.html#datahome">here</a> for other acceptable alternatives.</p>
 </div>
 </div>
-<div id="contract-language" class="section level2">
-<h2><span class="header-section-number">7.4</span> Contract language</h2>
+<div id="contract-language" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Contract language<a href="appendices.html#contract-language" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The following includes some standard language and links to SOP sections that can be used in contracts for deliverables for data products. The text here describes general expectations of how data products should be delivered to TBEP in as open a format as possible following concepts and descriptions of approaches in this document. The intent is to contractually obligate our partners to adopt best practices for data management following an open science ethos.</p>
-<div id="declaration-of-use" class="section level3">
-<h3><span class="header-section-number">7.4.1</span> Declaration of use</h3>
+<div id="declaration-of-use" class="section level3 hasAnchor" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> Declaration of use<a href="appendices.html#declaration-of-use" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>All data deliverables are to be licensed under permissive terms that enable reuse in the public domain. This could include the <a href="https://choosealicense.com/licenses/mit/">MIT</a> or <a href="https://choosealicense.com/licenses/cc0-1.0/">CC0</a> licenses provided as stand-alone text files included with data deliverables. Exceptions to the permissive reuse terms in these licenses will be handled on a case by case basis, e.g., if data are sensitive or include information on human subjects. Additional guidance on choosing a license can be found <a href="https://choosealicense.com/">here</a>.</p>
 </div>
-<div id="general" class="section level3">
-<h3><span class="header-section-number">7.4.2</span> General</h3>
+<div id="general" class="section level3 hasAnchor" number="7.4.2">
+<h3><span class="header-section-number">7.4.2</span> General<a href="appendices.html#general" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>An approach for data management should be identified as soon as possible after project inception (<a href="workflow.html#howyou">4.2</a>). This will include identifying appropriate data deliverables at the beginning of the project using guidance in the SOP (<a href="keys.html#contribs">3.1</a>). Plans for documenting and delivering identified data products to the TBEP should also be identified, which primarily includes appropriate data formats (<a href="keys.html#whytidy">3.3</a>), metadata documentation (<a href="keys.html#metadatadesc">3.4</a>), and where data are hosted (<a href="keys.html#datahome">3.5</a>).</p>
 </div>
-<div id="tabular-data" class="section level3">
-<h3><span class="header-section-number">7.4.3</span> Tabular data</h3>
+<div id="tabular-data" class="section level3 hasAnchor" number="7.4.3">
+<h3><span class="header-section-number">7.4.3</span> Tabular data<a href="appendices.html#tabular-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>All tabular data are to be provided in a tidy format to the extent possible. This includes following simple rules for delivering data as 1) each variable in its own column, 2) one observation per row, and 3) one value per cell (<a href="keys.html#whytidy">3.3</a>). Tidy data must be delivered in a non-proprietary or open-source compatible format, such as .csv flat files. Datasets using .xlsx file formats or that require proprietary software to access (e.g., SAS) will not be accepted unless project managers can provide justification for not using open formats.</p>
 </div>
-<div id="geospatial-data" class="section level3">
-<h3><span class="header-section-number">7.4.4</span> Geospatial data</h3>
+<div id="geospatial-data" class="section level3 hasAnchor" number="7.4.4">
+<h3><span class="header-section-number">7.4.4</span> Geospatial data<a href="appendices.html#geospatial-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Geospatial data must conform to Federal Geographic Data Committee (<a href="https://www.fgdc.gov/standards">FGDC</a>) standards and other open source formats as compatible with the Geographic Data Abstraction Library (<a href="https://gdal.org/">GDAL</a>) for spatial analysis (this includes most ESRI data products). Horizontal and vertical datums must be explicitly specified in any metadata, as well as any information describing attribute data accompanying spatial information. Appropriate datums should limit spatial distortion to the region of interest (e.g., <a href="https://epsg.io/2237-1714">NAD83 / Florida West (ftUS)</a> for Florida).</p>
 </div>
-<div id="source-code" class="section level3">
-<h3><span class="header-section-number">7.4.5</span> Source code</h3>
+<div id="source-code" class="section level3 hasAnchor" number="7.4.5">
+<h3><span class="header-section-number">7.4.5</span> Source code<a href="appendices.html#source-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Source code used to generate a data product or analyze/evaluate a data product can be supplied as a text file to allow reproducibility of information and conclusions relevant for the project. To the extent possible, this will include identification of data inputs required for the analysis software, dependent software packages (and versions) used for analysis, and generated output from the source code. This information can be identified with inline comments in the source code. Use of version control software as hosted on GitHub is strongly encouraged for the delivery of source code. Project managers can work with TBEP staff to create a shared repository at <a href="https://github.com/tbep-tech" class="uri">https://github.com/tbep-tech</a>.</p>
 </div>
-<div id="metadata-requirements" class="section level3">
-<h3><span class="header-section-number">7.4.6</span> Metadata requirements</h3>
+<div id="metadata-requirements" class="section level3 hasAnchor" number="7.4.6">
+<h3><span class="header-section-number">7.4.6</span> Metadata requirements<a href="appendices.html#metadata-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>All data products are to be accompanied with appropriate metadata. Formal metadata schema can be used following the EML standard (preferred, <a href="keys.html#eml">3.4.2</a>) or as more general text files (acceptable but not preferred). A workflow for metadata generation as described in the SOP can be used (<a href="workflow.html#metadata-workflow">4.2.4</a>). Plain text descriptions for metadata can include data dictionaries to aid in the interpretation of data deliverables (<a href="keys.html#dict">3.4.3</a>)</p>
 </div>
-<div id="delivery-of-data-products" class="section level3">
-<h3><span class="header-section-number">7.4.7</span> Delivery of data products</h3>
+<div id="delivery-of-data-products" class="section level3 hasAnchor" number="7.4.7">
+<h3><span class="header-section-number">7.4.7</span> Delivery of data products<a href="appendices.html#delivery-of-data-products" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Data can be delivered through online sharing platforms that enable products to be findable, accessible, interoperable, and reusable (<a href="keys.html#fair">3.2</a>). These can include formal data repositories that employ standardized metadata schema (e.g., <a href="https://www.dataone.org/">DataOne</a>). Small datasets (&lt;100 Mb) can also be hosted on the TBEP GitHub website (<a href="https://github.com/tbep-tech" class="uri">https://github.com/tbep-tech</a>) by contacting staff for access. View the guidance <a href="https://tbep-tech.github.io/data-management-sop/keys.html#datahome">here</a> for other acceptable alternatives. All data products should have an associated DOI as a globally unique and persistent identifier (through <a href="https://zenodo.org/" class="uri">https://zenodo.org/</a>). An appropriate license should also be attached to the data.</p>
 
 </div>
 </div>
 </div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-Beck20">
-<p>Beck, M. W., C. O’Hara nad J. S. S. Lowndes, R. D. Mazor, S. Theroux, D. J. Gillett, B. Lane, and G. Gearheart. 2020. “The Importance of Open Science for Biological Assessment of Aquatic Environments.” <em>PeerJ</em> 8: e9539. <a href="https://doi.org/https://doi.org/10.7717/peerj.9539">https://doi.org/https://doi.org/10.7717/peerj.9539</a>.</p>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Beck20" class="csl-entry">
+Beck, M. W., C. O’Hara nad J. S. S. Lowndes, R. D. Mazor, S. Theroux, D. J. Gillett, B. Lane, and G. Gearheart. 2020. <span>“The Importance of Open Science for Biological Assessment of Aquatic Environments.”</span> <em>PeerJ</em> 8: e9539. https://doi.org/<a href="https://doi.org/10.7717/peerj.9539">https://doi.org/10.7717/peerj.9539</a>.
 </div>
-<div id="ref-Gilliland16">
-<p>Gilliland, A. J. 2016. “Setting the Stage.” In <em>Introduction to Metadata</em>, 3rd ed. Los Angeles, California: Getty Publications.</p>
+<div id="ref-Gilliland16" class="csl-entry">
+Gilliland, A. J. 2016. <span>“Setting the Stage.”</span> In <em>Introduction to Metadata</em>, 3rd ed. Los Angeles, California: Getty Publications.
 </div>
-<div id="ref-Wickham14c">
-<p>Wickham, H. 2014. “Tidy Data.” <em>Journal of Statistical Software</em> 59 (10): 1–23. <a href="https://doi.org/10.18637/jss.v059.i10">https://doi.org/10.18637/jss.v059.i10</a>.</p>
+<div id="ref-Wickham14c" class="csl-entry">
+Wickham, H. 2014. <span>“Tidy Data.”</span> <em>Journal of Statistical Software</em> 59 (10): 1–23. <a href="https://doi.org/10.18637/jss.v059.i10">https://doi.org/10.18637/jss.v059.i10</a>.
 </div>
-<div id="ref-Wilkinson16">
-<p>Wilkinson, M. D., M. Dumontier, I. J. Aalbersberg, G. Appleton, M. Axton, A. Baak, N. Blomberg, et al. 2016. “The Fair Guiding Principles for Scientific Data Management and Stewardship.” <em>Scientific Data</em> 3 (160018). <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>.</p>
+<div id="ref-Wilkinson16" class="csl-entry">
+Wilkinson, M. D., M. Dumontier, I. J. Aalbersberg, G. Appleton, M. Axton, A. Baak, N. Blomberg, et al. 2016. <span>“The FAIR Guiding Principles for Scientific Data Management and Stewardship.”</span> <em>Scientific Data</em> 3 (160018). <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>.
 </div>
 </div>
             </section>
@@ -453,7 +493,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

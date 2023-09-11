@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 6 Final Words | Data Management SOP for the Tampa Bay Estuary Program</title>
   <meta name="description" content="This is a web page describing the TBEP data management SOP" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 6 Final Words | Data Management SOP for the Tampa Bay Estuary Program" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is a web page describing the TBEP data management SOP" />
   <meta name="github-repo" content="tbep-tech/data-management-sop" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2021-09-07" />
+<meta name="date" content="2023-09-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,9 +49,9 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-70CPP26J36"></script>
 <script>
@@ -65,18 +64,18 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -96,13 +95,13 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -115,7 +114,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -129,6 +128,32 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -146,8 +171,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Data Management SOP</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#contrib"><i class="fa fa-check"></i><b>1.1</b> Contributing to this document</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#contrib"><i class="fa fa-check"></i><b>1.1</b> Contributing to this document</a>
+<ul>
 <li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#opt1"><i class="fa fa-check"></i><b>1.1.1</b> Option 1</a></li>
 <li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#opt2"><i class="fa fa-check"></i><b>1.1.2</b> Option 2</a></li>
 <li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#opt3"><i class="fa fa-check"></i><b>1.1.3</b> Option 3</a></li>
@@ -155,32 +182,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#about"><i class="fa fa-check"></i><b>1.2</b> About</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>2</b> Background</a><ul>
+<li class="chapter" data-level="2" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>2</b> Background</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="background.html"><a href="background.html#dataimp"><i class="fa fa-check"></i><b>2.1</b> Importance of data</a></li>
 <li class="chapter" data-level="2.2" data-path="background.html"><a href="background.html#whymanage"><i class="fa fa-check"></i><b>2.2</b> Why we need to effectively manage data</a></li>
 <li class="chapter" data-level="2.3" data-path="background.html"><a href="background.html#opengeneral"><i class="fa fa-check"></i><b>2.3</b> Open Science</a></li>
 <li class="chapter" data-level="2.4" data-path="background.html"><a href="background.html#philogeneral"><i class="fa fa-check"></i><b>2.4</b> The TBEP philosophy</a></li>
 <li class="chapter" data-level="2.5" data-path="background.html"><a href="background.html#goals-and-objectives-of-this-document"><i class="fa fa-check"></i><b>2.5</b> Goals and objectives of this document</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="keys.html"><a href="keys.html"><i class="fa fa-check"></i><b>3</b> Key Concepts and Principles</a><ul>
+<li class="chapter" data-level="3" data-path="keys.html"><a href="keys.html"><i class="fa fa-check"></i><b>3</b> Key Concepts and Principles</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="keys.html"><a href="keys.html#contribs"><i class="fa fa-check"></i><b>3.1</b> Identifying important contributions</a></li>
 <li class="chapter" data-level="3.2" data-path="keys.html"><a href="keys.html#fair"><i class="fa fa-check"></i><b>3.2</b> The FAIR principles</a></li>
 <li class="chapter" data-level="3.3" data-path="keys.html"><a href="keys.html#whytidy"><i class="fa fa-check"></i><b>3.3</b> The importance of tidy data</a></li>
-<li class="chapter" data-level="3.4" data-path="keys.html"><a href="keys.html#metadatadesc"><i class="fa fa-check"></i><b>3.4</b> Metadata</a><ul>
+<li class="chapter" data-level="3.4" data-path="keys.html"><a href="keys.html#metadatadesc"><i class="fa fa-check"></i><b>3.4</b> Metadata</a>
+<ul>
 <li class="chapter" data-level="3.4.1" data-path="keys.html"><a href="keys.html#metadata"><i class="fa fa-check"></i><b>3.4.1</b> Metadata examples</a></li>
 <li class="chapter" data-level="3.4.2" data-path="keys.html"><a href="keys.html#eml"><i class="fa fa-check"></i><b>3.4.2</b> The EML standard</a></li>
 <li class="chapter" data-level="3.4.3" data-path="keys.html"><a href="keys.html#dict"><i class="fa fa-check"></i><b>3.4.3</b> Data dictionaries</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="keys.html"><a href="keys.html#datahome"><i class="fa fa-check"></i><b>3.5</b> Where do data live?</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>4</b> Data Management Workflow</a><ul>
-<li class="chapter" data-level="4.1" data-path="workflow.html"><a href="workflow.html#tbepapproach"><i class="fa fa-check"></i><b>4.1</b> The TBEP approach</a><ul>
+<li class="chapter" data-level="4" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>4</b> Data Management Workflow</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="workflow.html"><a href="workflow.html#tbepapproach"><i class="fa fa-check"></i><b>4.1</b> The TBEP approach</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="workflow.html"><a href="workflow.html#philo"><i class="fa fa-check"></i><b>4.1.1</b> An Open Science philosophy</a></li>
 <li class="chapter" data-level="4.1.2" data-path="workflow.html"><a href="workflow.html#the-open-science-cake"><i class="fa fa-check"></i><b>4.1.2</b> The open science cake</a></li>
 <li class="chapter" data-level="4.1.3" data-path="workflow.html"><a href="workflow.html#automation"><i class="fa fa-check"></i><b>4.1.3</b> How do we build the cake?</a></li>
 <li class="chapter" data-level="4.1.4" data-path="workflow.html"><a href="workflow.html#moregit"><i class="fa fa-check"></i><b>4.1.4</b> More on Git and GitHub</a></li>
+<li class="chapter" data-level="4.1.5" data-path="workflow.html"><a href="workflow.html#aiuse"><i class="fa fa-check"></i><b>4.1.5</b> Use of artificial intelligence</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#howyou"><i class="fa fa-check"></i><b>4.2</b> How can you manage data?</a><ul>
+<li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#howyou"><i class="fa fa-check"></i><b>4.2</b> How can you manage data?</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="workflow.html"><a href="workflow.html#beginning"><i class="fa fa-check"></i><b>4.2.1</b> I’m at the beginning of my project</a></li>
 <li class="chapter" data-level="4.2.2" data-path="workflow.html"><a href="workflow.html#middleproject"><i class="fa fa-check"></i><b>4.2.2</b> I’m somewhere in the middle of my project</a></li>
 <li class="chapter" data-level="4.2.3" data-path="workflow.html"><a href="workflow.html#endproject"><i class="fa fa-check"></i><b>4.2.3</b> I’m at the end of my project</a></li>
@@ -188,19 +222,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.5" data-path="workflow.html"><a href="workflow.html#lets-get-it-online"><i class="fa fa-check"></i><b>4.2.5</b> Let’s get it online!</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="cases.html"><a href="cases.html"><i class="fa fa-check"></i><b>5</b> Case Studies</a><ul>
+<li class="chapter" data-level="5" data-path="cases.html"><a href="cases.html"><i class="fa fa-check"></i><b>5</b> Case Studies</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="cases.html"><a href="cases.html#oyster"><i class="fa fa-check"></i><b>5.1</b> Oyster restoration in Tampa Bay</a></li>
 <li class="chapter" data-level="5.2" data-path="cases.html"><a href="cases.html#desoto"><i class="fa fa-check"></i><b>5.2</b> RESTORE data management: Ft. DeSoto circulation study</a></li>
 <li class="chapter" data-level="5.3" data-path="cases.html"><a href="cases.html#twitter"><i class="fa fa-check"></i><b>5.3</b> Red tide and social media</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>6</b> Final Words</a><ul>
+<li class="chapter" data-level="6" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>6</b> Final Words</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="final.html"><a href="final.html#something-is-better-than-nothing"><i class="fa fa-check"></i><b>6.1</b> Something is better than nothing</a></li>
 <li class="chapter" data-level="6.2" data-path="final.html"><a href="final.html#just-remember-to-be-fair"><i class="fa fa-check"></i><b>6.2</b> Just remember to be FAIR</a></li>
 <li class="chapter" data-level="6.3" data-path="final.html"><a href="final.html#the-ever-evolving-toolbox"><i class="fa fa-check"></i><b>6.3</b> The ever-evolving toolbox</a></li>
 <li class="chapter" data-level="6.4" data-path="final.html"><a href="final.html#look-to-the-community"><i class="fa fa-check"></i><b>6.4</b> Look to the community</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="appendices.html"><a href="appendices.html"><i class="fa fa-check"></i><b>7</b> Appendices</a><ul>
-<li class="chapter" data-level="7.1" data-path="appendices.html"><a href="appendices.html#list-of-resources"><i class="fa fa-check"></i><b>7.1</b> List of resources</a><ul>
+<li class="chapter" data-level="7" data-path="appendices.html"><a href="appendices.html"><i class="fa fa-check"></i><b>7</b> Appendices</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="appendices.html"><a href="appendices.html#list-of-resources"><i class="fa fa-check"></i><b>7.1</b> List of resources</a>
+<ul>
 <li class="chapter" data-level="7.1.1" data-path="appendices.html"><a href="appendices.html#bulding-data-management-plans"><i class="fa fa-check"></i><b>7.1.1</b> Bulding Data Management Plans</a></li>
 <li class="chapter" data-level="7.1.2" data-path="appendices.html"><a href="appendices.html#tbep-r-trainings"><i class="fa fa-check"></i><b>7.1.2</b> TBEP R Trainings</a></li>
 <li class="chapter" data-level="7.1.3" data-path="appendices.html"><a href="appendices.html#r-lessons-tutorials"><i class="fa fa-check"></i><b>7.1.3</b> R Lessons &amp; Tutorials</a></li>
@@ -208,10 +246,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1.5" data-path="appendices.html"><a href="appendices.html#gitgithub"><i class="fa fa-check"></i><b>7.1.5</b> Git/Github</a></li>
 </ul></li>
 <li class="chapter" data-level="7.2" data-path="appendices.html"><a href="appendices.html#definitions"><i class="fa fa-check"></i><b>7.2</b> Definitions</a></li>
-<li class="chapter" data-level="7.3" data-path="appendices.html"><a href="appendices.html#rfp-language"><i class="fa fa-check"></i><b>7.3</b> RFP language</a><ul>
+<li class="chapter" data-level="7.3" data-path="appendices.html"><a href="appendices.html#rfp-language"><i class="fa fa-check"></i><b>7.3</b> RFP language</a>
+<ul>
 <li class="chapter" data-level="7.3.1" data-path="appendices.html"><a href="appendices.html#best-practices-for-open-data"><i class="fa fa-check"></i><b>7.3.1</b> Best practices for open data</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="appendices.html"><a href="appendices.html#contract-language"><i class="fa fa-check"></i><b>7.4</b> Contract language</a><ul>
+<li class="chapter" data-level="7.4" data-path="appendices.html"><a href="appendices.html#contract-language"><i class="fa fa-check"></i><b>7.4</b> Contract language</a>
+<ul>
 <li class="chapter" data-level="7.4.1" data-path="appendices.html"><a href="appendices.html#declaration-of-use"><i class="fa fa-check"></i><b>7.4.1</b> Declaration of use</a></li>
 <li class="chapter" data-level="7.4.2" data-path="appendices.html"><a href="appendices.html#general"><i class="fa fa-check"></i><b>7.4.2</b> General</a></li>
 <li class="chapter" data-level="7.4.3" data-path="appendices.html"><a href="appendices.html#tabular-data"><i class="fa fa-check"></i><b>7.4.3</b> Tabular data</a></li>
@@ -242,12 +282,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="final" class="section level1">
-<h1><span class="header-section-number">Section 6</span> Final Words</h1>
+<div id="final" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Section 6</span> Final Words<a href="final.html#final" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This data management SOP is our best attempt at describing a general philosophy of how the TBEP approaches data management and a general framework for how others could manage data at their own institutions. We included a discussion of general and specific topics that are useful to understand for data management (section <a href="keys.html#keys">3</a>), a description of our philosophy towards data management (section <a href="workflow.html#philo">4.1.1</a>), a general workflow for managing data (section <a href="workflow.html#howyou">4.2</a>), and some case studies demonstrating how these principles play out in the real word (section <a href="cases.html#cases">5</a>). Our approach is constantly evolving as we work towards a more cohesive data plan. The tools described in this SOP will form the foundation of our approach as we figure out what works and what doesn’t work for our organization and our partners.</p>
 <p>We finish this document by describing some general themes and lessons learned that should serve as useful take home messages about our approach towards data management. Whether you choose to use the specific tools we mention here (e.g., GitHub, R, Shiny, etc.) or adopt other techniques, the themes and lessons present throughout this document still apply. We reiterate them here as a reminder to approach data management with these principles in mind.</p>
-<div id="something-is-better-than-nothing" class="section level2">
-<h2><span class="header-section-number">6.1</span> Something is better than nothing</h2>
+<div id="something-is-better-than-nothing" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Something is better than nothing<a href="final.html#something-is-better-than-nothing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Novice data stewards can be overwhelmed by the apparent need to “check all the boxes” in the open science workflow of data management. This might include an overwhelming desire to create full metadata documentation using an accepted standard like EML, full version control of data workflows on GitHub, linking a repository with archive services like Zenodo, developing comprehensive data dictionaries, formatting all data in tidy format, and mastering open source data science languages like R. This can be especially daunting when considering that multiple data products could be “valuable contributions” of a research project.</p>
 <p>Unless you have a fully dedicated IT support team and all the time in the world, it’s impractical to try to adopt all of the principles in this document and apply them to every single piece of data for a project. Even applying all of these principles to the single most important data contribution of a project can be impractical. In light of this challenge, the tendency may be to simply treat data in a familiar way using entrenched workflows where data is seen only as a commodity that serves to address the research question at hand. We absolutely encourage you not to fall back on old habits.</p>
 <p>Be pragmatic and embrace the idea that <strong>something is better than nothing</strong> when it comes to data management. Perhaps you set a goal of only checking one data management box for a particular project. Maybe you start by developing a simple metadata text file or developing a data dictionary. Even if you accomplish only one data management related task, this is a vast improvement over doing nothing at all. Channeling this concept, <span class="citation">Wilson et al. (<a href="#ref-Wilson17" role="doc-biblioref">2017</a>)</span> discuss “good enough practices” in scientific computing, acknowledging that very few of us are professionally trained in data science and sometimes “good enough” is all we can ask for. <span class="citation">Lowenberg et al. (<a href="#ref-Lowenberg21" role="doc-biblioref">2021</a>)</span> also advocate for simple adoption, rather than perfection, when it comes to data citation practices. So, be kind to yourself when learning new skills and realize that the first step will likely be frustration, but through frustration comes experience. The more comfortable you become in mastering a new task, the more likely you’ll be able to attempt additional data management tasks in the future.</p>
@@ -255,21 +295,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>“Dude, suckin’ at something is the first step to being sorta good at something.” - Jake The Dog, <a href="https://en.wikipedia.org/wiki/Adventure_Time">Adventure Time</a></p>
 </blockquote>
 </div>
-<div id="just-remember-to-be-fair" class="section level2">
-<h2><span class="header-section-number">6.2</span> Just remember to be FAIR</h2>
+<div id="just-remember-to-be-fair" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Just remember to be FAIR<a href="final.html#just-remember-to-be-fair" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We presented the FAIR principles early on in section <a href="keys.html#fair">3.2</a> as a set of guiding concepts that could be applied to any data management plan. Invoking these principles when managing data can help establish a set of “goal posts” to strive to achieve for any data product. If you have questions about whether or not your plan for managing a data product is appropriate, go through each of the FAIR principles to see if they align with your plans. If not, consider an alternative approach or what you can modify in your plan to make them satisfy these principles.</p>
 <p>When applying the FAIR principles, there are two considerations to keep in mind. First, we previously mentioned that the principles are purposefully vague as they describe only a general approach to achieving openness. As a result, the principles can have different interpretations to different people. What one data steward considers “findable” may not be considered the same by another data steward. This challenge absolutely applies to our descriptions of the tools we described in this SOP. For example, we heavily rely on GitHub in our data management workflows and suggest that serving up data on this platform satisfies the FAIR principles. Others may strongly disagree with this approach because GitHub was primarily developed as a code management platform and not a long-term archive for data storage. This reflects a difference of opinion on what is findable, accessible, interoperable, and reusable, and not to mention, that something is better than nothing.</p>
 <p>That being said, the second consideration in applying the FAIR principles is that they also exist on a spectrum and you should not reasonably expect to check all of the boxes to make your data product completely open when first developing a data management plan. You choose what each of the letters mean in FAIR based on your needs or the needs of your organization. Over time, you’ll more easily be able to address each of the components of FAIR, but they should be considered guiding principles rather than something that can be rigorously defined.</p>
 </div>
-<div id="the-ever-evolving-toolbox" class="section level2">
-<h2><span class="header-section-number">6.3</span> The ever-evolving toolbox</h2>
+<div id="the-ever-evolving-toolbox" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> The ever-evolving toolbox<a href="final.html#the-ever-evolving-toolbox" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The combined wisdom of a larger community of developers to contribute to the development of open source software, such as R, is what makes it so great. The existing tools are visible to others and can be built upon to fix bugs or add enhancements. A much more robust and flexible product is created, as opposed to proprietary software that is only exposed to a small cabal of developers. However, this benefit is two-sided in that the tools are constantly changing. As tools change, analysis code that once worked may behave differently or not at all. Even more, a relevant skillset may become less useful over time as new methods replace the old.</p>
 <p>Any data scientist will admit that a key challenge to maintaining relevance is staying abreast of the constantly evolving toolbox in the open source community. If you choose to incorporate open source software into your data management workflows, consider the potential burden of having to maintain workflows that depend on software under active development by the broader community. This is not an impossible task, but does require a bit of attention on your part to make sure your code is up to date and plays well with others. Making sure you have the most recent software and package versions is a good start. Also avoid incorporating “professorware” or other obscure packages into a workflow to reduce the risk of depending on poorly developed tools.</p>
 <p>Monitoring various online communication channels can also help you stay abreast of changes in your community. For example, following the <a href="https://twitter.com/hashtag/rstats">#RStats</a> hashtag on Twitter can be a good way to monitor the “conversation” around existing toolsets. Many of the lead developers actively tweet to announce changes or to solicit input on what could be done to improve software. You can also get a sense of what others are using for specific analyses or workflows. A package that is heavily discussed on Twitter will receive a lot of attention from many users, allowing bugs or features to be more readily addressed. Tracking issues on GitHub for specific packages can also be a good approach to see which changes are taking place or which software packages are actively used by others. An R package on GitHub with very few issues or “stars” (similar to “likes” on other social media platforms) may be stale or not heavily vetted by the larger community.</p>
 <p>It’s also entirely possible that broadly used tools like R or Python may no longer be relevant in the not too distant future. The historical evolution of software makes this inevitable. I am 100% anticipating the day when my skillset, built almost entirely around R, will no longer be relevant because other software platforms and data management workflows have taken its place. When that happens, flexibility and motivation to learn new skills will be critical, even if it means a temporary setback in productivity or efficiency. I have seen this in colleagues that have successfully replaced older analysis platforms (e.g, SAS) with R in their daily workflows. As long as the new tools embrace the broader ethos of open science, it shouldn’t matter which platform is the current hot topic.</p>
 </div>
-<div id="look-to-the-community" class="section level2">
-<h2><span class="header-section-number">6.4</span> Look to the community</h2>
+<div id="look-to-the-community" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Look to the community<a href="final.html#look-to-the-community" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Finally, open science embraces the idea that transparent, reproducible, and accessible data products will have the greatest value in a collaborative environment. It’s entirely possible to use the tools we describe in this SOP in a completely isolated environment, e.g., developing an R package without sharing, using private GitHub repositories, etc. Unless you use the tools with the intent of engaging and learning from others, then you will never achieve open science bliss.</p>
 <p>Interaction with peers is a critical component of the learning process when integrating new tools in a data management workflow. Our mantra above that something is better than nothing indirectly speaks to the need to involve others in this process. It is immensely challenging for a single person to check all of the open science boxes, even for the most skilled data scientists. More than likely, attempts to master all of the tools will spread you thin in other areas of your daily job or even your own expertise as you spend time learning data science skills and not staying up to date on happenings in your field. <span class="citation">Mons (<a href="#ref-Mons18" role="doc-biblioref">2018</a>)</span> warns against trying to be both a domain expert and a data expert. A more practical approach to data management is to engage a team with diverse skillsets that not only complement each other, but also can be leveraged as a resource for learning new skills when the time is right.</p>
 <p>I close with a graphic from <a href="https://twitter.com/allison_horst">Allison Horst</a> (figure <a href="final.html#fig:codehero">6.1</a>) that skillfully illustrates this concept of using your peers as a support network in learning new tools. Incorporating a new skill into your workflow can be elevated by help from the larger community of software developers, educators, bloggers, mentors, colleagues, and friends. When you hit a road block, look to this community to serve as a safety net to get you out of tricky situations. Your personal success is not achieved in isolation. I would not be where I’m at in my career without the work of others and the community available at my fingertips through a quick web search. Please keep these resources in mind as you work towards a more FAIR data management plan.</p>
@@ -282,16 +322,16 @@ Figure 6.1: Look to the helpers and your open science community! Artwork by Alli
 
 </div>
 </div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-Lowenberg21">
-<p>Lowenberg, Daniella, Rachael Lammey, Matthew B Jones, John Chodacki, and Martin Fenner. 2021. “Data Citation: Let’s Choose Adoption over Perfection.” Zenodo. <a href="https://doi.org/10.5281/zenodo.4701079">https://doi.org/10.5281/zenodo.4701079</a>.</p>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Lowenberg21" class="csl-entry">
+Lowenberg, Daniella, Rachael Lammey, Matthew B Jones, John Chodacki, and Martin Fenner. 2021. <span>“Data Citation: Let’s Choose Adoption over Perfection.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.4701079">https://doi.org/10.5281/zenodo.4701079</a>.
 </div>
-<div id="ref-Mons18">
-<p>Mons, B. 2018. <em>Data Stewardship for Open Science: Implementing FAIR Principles</em>. Boca Raton, FL: CRC Press.</p>
+<div id="ref-Mons18" class="csl-entry">
+Mons, B. 2018. <em>Data Stewardship for Open Science: Implementing <span>FAIR</span> Principles</em>. Boca Raton, FL: CRC Press.
 </div>
-<div id="ref-Wilson17">
-<p>Wilson, G., J. Bryan, K. Cranston, J. Kitzes, L. Nederbragt, and T. K. Teal. 2017. “Good Enough Practices in Scientific Computing.” <em>PLoS Computational Biology</em> 13 (6): e1005510. <a href="https://doi.org/10.1371/journal.pcbi.1005510">https://doi.org/10.1371/journal.pcbi.1005510</a>.</p>
+<div id="ref-Wilson17" class="csl-entry">
+Wilson, G., J. Bryan, K. Cranston, J. Kitzes, L. Nederbragt, and T. K. Teal. 2017. <span>“Good Enough Practices in Scientific Computing.”</span> <em>PLoS Computational Biology</em> 13 (6): e1005510. <a href="https://doi.org/10.1371/journal.pcbi.1005510">https://doi.org/10.1371/journal.pcbi.1005510</a>.
 </div>
 </div>
             </section>
@@ -360,7 +400,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

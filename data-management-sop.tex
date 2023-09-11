@@ -1,14 +1,14 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
-\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
 ]{book}
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amssymb,amsmath}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage{iftex}
+\ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
@@ -34,18 +34,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Data Management SOP for the Tampa Bay Estuary Program},
-  pdfauthor={Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood},
-  colorlinks=true,
-  linkcolor=BlueViolet,
-  filecolor=Maroon,
-  citecolor=Blue,
-  urlcolor=BlueViolet,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -86,7 +74,8 @@
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\usepackage{longtable,booktabs}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
 \makeatletter
@@ -95,7 +84,7 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
-\usepackage{graphicx,grffile}
+\usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -120,12 +109,27 @@
   \thm@postskip=\thm@preskip
 }
 \makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Data Management SOP for the Tampa Bay Estuary Program},
+  pdfauthor={Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood},
+  colorlinks=true,
+  linkcolor={BlueViolet},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={BlueViolet},
+  pdfcreator={LaTeX via pandoc}}
 
 \title{Data Management SOP for the Tampa Bay Estuary Program}
 \author{Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood}
-\date{2021-09-07}
+\date{2023-09-11}
 
 \begin{document}
 \maketitle
@@ -210,7 +214,7 @@ Please visit our website for additional information about our program: \url{http
 
 ~~This book is licensed under a Creative Commons Attribution 4.0 International License.
 
-This version of the book was built automatically with \href{https://github.com/tbep-tech/data-management-sop/actions}{GitHub Actions} on 2021-09-07.
+This version of the book was built automatically with \href{https://github.com/tbep-tech/data-management-sop/actions}{GitHub Actions} on 2023-09-11.
 
 \hypertarget{background}{%
 \chapter{Background}\label{background}}
@@ -229,7 +233,7 @@ This Data Management Standard Operating Procedure (SOP) describes TBEP's approac
 
 There are many reasons why data may not be effectively managed, chief among which is that it can be tedious and unglamorous work that is often an afterthought. However, investing time upfront to manage a dataset can have long term benefits, although these values may not be obvious or realized in the short-term. Lack of effective data management often results in ``orphaned'' datasets and data products which have lost critical reference documentation.
 
-A classic graphic in Michener et al.~\citep{Michener97} demonstrates how knowledge of a data product can be lost over time (Figure \ref{fig:michener}). As a research team publishes a paper, the information content of the data and metadata is at an all-time high because the ideas and concepts have been intensely studied and evaluated in the months leading up to publication. After publication, researchers move on to other projects or responsibilities, and specific details about the initial project are lost rapidly as attention is focused elsewhere. At longer time scales, other factors can contribute to the erosion of information content, including career changes through retirement or staff turnover or accidental loss of information (laptop takes a bath, lab fires, etc.).
+A classic graphic in Michener et al. \citep{Michener97} demonstrates how knowledge of a data product can be lost over time (Figure \ref{fig:michener}). As a research team publishes a paper, the information content of the data and metadata is at an all-time high because the ideas and concepts have been intensely studied and evaluated in the months leading up to publication. After publication, researchers move on to other projects or responsibilities, and specific details about the initial project are lost rapidly as attention is focused elsewhere. At longer time scales, other factors can contribute to the erosion of information content, including career changes through retirement or staff turnover or accidental loss of information (laptop takes a bath, lab fires, etc.).
 
 \begin{figure}
 
@@ -255,7 +259,7 @@ The costs of not effectively managing your data can vary, but each is a byproduc
   An annual reporting product requires using new data each year. The staff member in charge of this report spends several days gathering the new data and combining it with the historical data. Other projects are on hold until this report is updated. Stakeholders that use this report to make decisions do not trust or misunderstand the product because the steps for its creation are opaque.
 \end{enumerate}
 
-A more general problem with poor data management is stifled creativity. The use of other people's data and services \citep[i.e., ``OPEDAS'';][]{Mons18} to generate novel research or data products is increasingly common, particularly in the last several decades with the advance of internet communications. Entire disciplines and new analytical methods have been developed around this idea \citep[e.g., meta-analysis;][]{Carpenter09, Lortie14}. The generation of new data with an incomplete history or that lack metadata documentation is a disservice to both the researcher that created the data and the larger scientific community that could benefit from further advancing this information. As a result, scientific progress will not continue as rapidly as it could if data products are discoverable and openly available.
+A more general problem with poor data management is stifled creativity. The use of other people's data and services {[}i.e., ``OPEDAS''; \citet{Mons18}{]} to generate novel research or data products is increasingly common, particularly in the last several decades with the advance of internet communications. Entire disciplines and new analytical methods have been developed around this idea {[}e.g., meta-analysis; \citet{Carpenter09}; \citet{Lortie14}{]}. The generation of new data with an incomplete history or that lack metadata documentation is a disservice to both the researcher that created the data and the larger scientific community that could benefit from further advancing this information. As a result, scientific progress will not continue as rapidly as it could if data products are discoverable and openly available.
 
 Poor data management can also lead to peculiar or entrenched workflows that are not scalable or translatable for other users. Data managers often have their own preferences for processes that simply ``work for us'', either because they were learned out of necessity because the work had to be done or it has been done a certain way for so long that it now seems normal, despite being inefficient or prone to error. In extreme cases, this can lead to workflows that may seem legitimate on the surface but are problematic because they lack a common formality or standard.
 
@@ -328,7 +332,7 @@ Each section of the SOP addresses a critical topic or provides a roadmap that co
   Section \ref{appendices}: Definitions and resources for continued learning
 \end{itemize}
 
-The TBEP has also developed a data \href{https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view}{Quality Management Plan} \citep[QMP;][]{tbep1620}. This SOP and the QMP can be viewed as complementary documents, but they were developed to meet different needs. The goal of this SOP is described above. The goal of the QMP is to ensure the data used by TBEP for decision-making has known and documented quality and is being used appropriately. In other words, the QMP establishes an internal process for ensuring data quality conforms with federal or grant-reporting requirements, whereas this document is a generalized introduction and how-to approach for data management that can help us achieve QMP goals.
+The TBEP has also developed a data \href{https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view}{Quality Management Plan} {[}QMP; \citet{tbep1620}{]}. This SOP and the QMP can be viewed as complementary documents, but they were developed to meet different needs. The goal of this SOP is described above. The goal of the QMP is to ensure the data used by TBEP for decision-making has known and documented quality and is being used appropriately. In other words, the QMP establishes an internal process for ensuring data quality conforms with federal or grant-reporting requirements, whereas this document is a generalized introduction and how-to approach for data management that can help us achieve QMP goals.
 
 Identifying what this SOP is and what it is not can help set expectations for the use of this document. As noted above, the TBEP is a relatively small organization that interfaces directly or indirectly on many projects supported or managed primarily by our partners. Because of the diversity of projects relevant to our work, it would be inappropriate and impossible to describe a detailed step-by-step SOP that could apply to every project that has relevance to the TBEP's mission. Therefore, the approaches and workflows we describe are meant to be generalized to many project types. Any specificity that is described relates to how to use tools that have broad applicability, e.g., developing a GitHub workflow or describing general characteristics of metadata that could apply to many data types. This distinguishes this SOP from others that may apply rigorous standards to one particular problem.
 
@@ -809,6 +813,95 @@ GitHub also lowers the barrier to inclusion for engaging others in a project. Un
 
 The TBEP has a \href{https://github.com/tbep-tech}{group GitHub page} where all of our projects exist, including the source content for this SOP. We do this for all of the reasons mentioned above and as an attempt to serve as an example of how open sharing can lead to better science in less time \citep{Lowndes17}. Anyone can view our pages to understand the source code, see the changes we've made over time, and post issues/edit content to directly contribute. This has immense value for how we collectively work as a team and with our partners outside of TBEP.
 
+\hypertarget{aiuse}{%
+\subsection{Use of artificial intelligence}\label{aiuse}}
+
+Applications that use artificial intelligence (AI) to generate seemingly novel content have received increased attention for their potential to improve, support, or even replace workflows. How these tools can be used or misused to support open science applications is worth discussing. In particular, the \href{https://chat.openai.com/}{ChatGPT}\{.target=`blank'\} interface provided by the OpenAI research organization can be leveraged to support open science, in addition to supporting countless other applications. It's important to understand the advantages of these tools, while respecting their limitations and potential for misuse.
+
+``Artificial intelligence'' (AI) is a generic term that the public and private spheres use loosely, much like ``big data'' was a buzzword a few years ago. AI doesn't describe a specific method or tool, but rather the collective body of research and applications focused on using computers to mimic human logic and reasoning. What makes ChatGPT notable among other AI applications is its ability to produce text-based content that reads like it was written by a human. This content is created based on a user prompt, such as a question or request. The response is, in all practicality, informed by all of the information on the internet.
+
+You might ask ChatGPT the following:
+
+\begin{verbatim}
+How can artificial intelligence improve my life? 
+\end{verbatim}
+
+In a few seconds, you'll get a response to your question.
+
+\begin{verbatim}
+Artificial Intelligence (AI) has the potential to improve various aspects of your life in several ways. Here are some ways AI can enhance your daily life and overall well-being:
+
+1. Personal Assistants: AI-powered personal assistants like Siri, Alexa, or Google Assistant can simplify your daily tasks. They can set reminders, answer questions, provide weather updates, and control smart home devices, making your life more convenient.
+
+2. Healthcare: AI can assist in early disease detection, aid in medical diagnoses, and improve treatment planning. For example, AI-driven medical imaging can help detect diseases like cancer, while wearable health devices can monitor your vital signs and provide real-time health insights.
+
+etc.
+\end{verbatim}
+
+And so on - the answer continues with a few more examples. It's apparent that the text goes well beyond the information you might get from a standard search engine. You can even ask ChatGPT to generate novel text for you, not just providing answers to questions. For example, you might ask ChatGPT to write a cover letter for you based on job application information copied/pasted in your prompt. The answer you receive will be highly specialized for the content contained in your prompt.
+
+It may seem like ChatGPT has achieved the holy grail of AI research, but the underlying model is not fundamentally different than any other predictive tool used in conventional statistics. ChatGPT uses a ``large language model'', which is fancy speak for a predictive model that is based on ``learned'' associations between words and grammar rules. By evaluating millions of lines of online text, certain words are found to be more likely associated with one another, e.g., ``red ball'' as compared to ``red newspaper''. Even grammar rules can be identified as emergent properties from text, so words that commonly appear together can be combined into sentences and even whole paragraphs. The response returned by a prompt is simply the best guess provided by the model of what is the most likely answer to your query. These models are not new - what's new is the computational power to train the models on very, very large datasets.
+
+ChatGPT is not perfect and it's guaranteed that you will receive incorrect answers to questions. The answers will only be correct in so much as information on the internet is correct, which of course is a risky assumption. Therefore, interpreting answers from AI services like ChatGPT should be done with extreme caution. A more dangerous application is claiming its services as your own, such as the example above describing how to use ChatGPT to write a cover letter. This content is not a reflection of your abilities and using it in professional or acedemic settings could even be argued as a form of plagiarism, in addition to risking your career.
+
+Dismissing ChatGPT as an immoral application that provides incorrect information would completely ignore its potential to enhance your own workflows. In reality, most of the information provided ChatGPT is reasonably correct and most users are probably not applying it for nefarious purposes. Simply being aware of these caveats is requisite to its use. As such, the following describes how the TBEP is using ChatGPT to enhance our open science workflows without irresponsible application beyond its limitations.
+
+ChatGPT is an outstanding resource for coding, particularly for open-source applications like R, where millions of lines of code are readily available for training AI. Further, identifying incorrect or inaccurate answers to code-based questions is much simpler than for answers to knowledge-based prompts. The code works or it doesn't. As such, the TBEP is currently using ChatGPT to assist with coding to support the dozens of open science applications used by the program. Many of these activities are considered routine and require minimal thought by the programmer, thereby freeing time to focus on more thoughtful coding applications. These activities are summarized below.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Developing code templates}: Creating templates to begin more comprehensive applications, such as initial code for a plot or Shiny application.
+\item
+  \textbf{Assisting with package development}: Many aspects of package development are routine, such as writing code documentation or unit tests. Entire functions can be copied/pasted into a prompt for a request to generate supporting information. All answers are thoroughly reviewed for accuracy and verified they work as intended before use in a package.
+\item
+  \textbf{Migration of legacy code}: ChatGPT is extremely adept at converting code between programming languages. Legacy code created by TBEP (e.g., SAS routines) have been converted to R code using ChatGPT for inclusion in open science workflows. Typically, the converted code includes bugs and time is needed to identify potential errors and to ensure the expected results are accurate.
+\item
+  \textbf{Web requests}: Many TBEP applications rely on web resources (i.e., APIs) to retrieve partner data or other external datasets that support indicator reporting and routine assessments. These resources often provide instructions for retrieving data that require conversion into programming languages used by TBEP. Asking ChatGPT to format these requests into R code has been helpful for creating ``evergreen'' products that maintain seamless links between source data and outputs.\\
+\item
+  \textbf{Asking simple questions or to assist with debugging}: ChatGPT often returns more accessible and efficient solutions to common coding questions than those provided by more conventional internet queries. In this way, ChatGPT is often used as a replacement or alternative source of information to other coding support platforms, like StackOverflow.
+\end{enumerate}
+
+Many of the above examples require copying/pasting of sample code or datasets into ChatGPT prompts. One very important caveat of doing so is realizing that information used in prompts are now canon and part of the entire training database used by ChatGPT. Personally identifiable information or otherwise sensitive data should never be used in prompts. Placeholder text (e.g., anonomyzing data) or providing snippets of datasets in code prompts would be appropriate. For the latter, simply defining the column names and data types in each column is often sufficient to receive a useful answer from ChatGPT. The \texttt{glimpse()} function from the \href{https://tibble.tidyverse.org/}{tibble} package can be used to return this information without showing any of the actual data (e.g., \texttt{glimpse(epcdata,\ 0)}, note the ``0'' argument):
+
+\begin{verbatim}
+Write me some R code for plotting some of the continuous variables against SampleTime:
+
+Rows: 27,601
+Columns: 26
+$ bay_segment            <chr> …
+$ epchc_station          <dbl> …
+$ SampleTime             <dttm> …
+$ yr                     <dbl> …
+$ mo                     <dbl> …
+$ Latitude               <dbl> …
+$ Longitude              <dbl> …
+$ Total_Depth_m          <dbl> …
+$ Sample_Depth_m         <dbl> …
+$ tn                     <dbl> …
+$ tn_q                   <chr> …
+$ sd_m                   <dbl> …
+$ sd_raw_m               <dbl> …
+$ sd_q                   <chr> …
+$ chla                   <dbl> …
+$ chla_q                 <chr> …
+$ Sal_Top_ppth           <dbl> …
+$ Sal_Mid_ppth           <dbl> …
+$ Sal_Bottom_ppth        <dbl> …
+$ Temp_Water_Top_degC    <dbl> …
+$ Temp_Water_Mid_degC    <dbl> …
+$ Temp_Water_Bottom_degC <dbl> …
+$ `Turbidity_JTU-NTU`    <chr> …
+$ Turbidity_Q            <chr> …
+$ Color_345_F45_PCU      <chr> …
+$ Color_345_F45_Q        <chr> …
+\end{verbatim}
+
+Many also worry that ChatGPT will outcompete humans for their jobs, particularly in the tech industry. This fear is unfounded (at least not at this time) - ChatGPT is not a replacement for the programmer with years of experience. Although its true you can quickly get usable code through a simple request, this doesn't mean you'll understand everything the code does if you don't know the language. More importantly, it also means that you won't be able to debug or easily modify the code for your own use. Most code returned by ChatGPT includes generic placeholders or object names that require modification, preventing the code from running in isolation. The code may also simply include incorrect information. ChatGPT can sometimes create packages or function names that have never existed. These issues will be very difficult to diagnose without prior experience. The more important question you should be asking is how you can benefit from the positive aspects of ChatGPT to simplify your existing workflows.
+
+Tools like ChatGPT continue to evolve and how TBEP, as well as the broader scientific and management communities, engage with them will also change. This will require thorough understanding of their limitations and pitfalls before they can be used responsibly. Moral and ethical implications aside, these tools are here to stay and the responsibility of understanding how best to leverage these applications to improve efficiency in creating open science applications is paramount.
+
 \hypertarget{howyou}{%
 \section{How can you manage data?}\label{howyou}}
 
@@ -898,123 +991,56 @@ The following can be used as a generalized workflow for metadata generation, ide
 
 This workflow is a starting point for creating simple to more complex metadata. For a hypothetical example, the absolute bare minimum for metadata might look like this (e.g., in a spreadsheet):
 
-\begin{longtable}[]{@{}cc@{}}
-\toprule
-\begin{minipage}[b]{0.14\columnwidth}\centering
-Question\strut
-\end{minipage} & \begin{minipage}[b]{0.43\columnwidth}\centering
-Answer\strut
-\end{minipage}\tabularnewline
-\midrule
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1528}}
+  >{\centering\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4583}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\centering
+Question
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Answer
+\end{minipage} \\
+\midrule()
 \endhead
-\begin{minipage}[t]{0.14\columnwidth}\centering
-Who\strut
-\end{minipage} & \begin{minipage}[t]{0.43\columnwidth}\centering
-Marcus Beck
-(\href{mailto:fakeaddress@email.com}{\nolinkurl{fakeaddress@email.com}})\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.14\columnwidth}\centering
-What\strut
-\end{minipage} & \begin{minipage}[t]{0.43\columnwidth}\centering
-Water Quality Assessment Data\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.14\columnwidth}\centering
-When\strut
-\end{minipage} & \begin{minipage}[t]{0.43\columnwidth}\centering
-2020\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.14\columnwidth}\centering
-Where\strut
-\end{minipage} & \begin{minipage}[t]{0.43\columnwidth}\centering
-Tampa Bay\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.14\columnwidth}\centering
-Why\strut
-\end{minipage} & \begin{minipage}[t]{0.43\columnwidth}\centering
-Reporing on annual water
+Who & Marcus Beck
+(\href{mailto:fakeaddress@email.com}{\nolinkurl{fakeaddress@email.com}}) \\
+What & Water Quality Assessment Data \\
+When & 2020 \\
+Where & Tampa Bay \\
+Why & Reporing on annual water
 quality trends for
-programmatic update\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.14\columnwidth}\centering
-How\strut
-\end{minipage} & \begin{minipage}[t]{0.43\columnwidth}\centering
-Data were collected monthly as
+programmatic update \\
+How & Data were collected monthly as
 part of the EPCHC monitoring
-program\strut
-\end{minipage}\tabularnewline
-\bottomrule
+program \\
+\bottomrule()
 \end{longtable}
 
 If we wanted to add some specificity, we could create separate fields to include more detailed information.
 
-\begin{longtable}[]{@{}cc@{}}
-\toprule
-\begin{minipage}[b]{0.16\columnwidth}\centering
-Attribute\strut
-\end{minipage} & \begin{minipage}[b]{0.78\columnwidth}\centering
-Entry\strut
-\end{minipage}\tabularnewline
-\midrule
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1667}}
+  >{\centering\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8333}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\centering
+Attribute
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Entry
+\end{minipage} \\
+\midrule()
 \endhead
-\begin{minipage}[t]{0.16\columnwidth}\centering
-first\strut
-\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
-Marcus\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-last\strut
-\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
-Beck\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-email\strut
-\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
-\href{mailto:fakeaddress@email.com}{\nolinkurl{fakeaddress@email.com}}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-title\strut
-\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
-Water Quality Assessment Data\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-startdate\strut
-\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
-1/1/2020\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-enddate\strut
-\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
-12/31/2020\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-location\strut
-\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
-Tampa Bay, FL, USA\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-west\strut
-\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
--82.8\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-east\strut
-\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
--82.3\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-north\strut
-\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
-28\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-south\strut
-\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
-27.4\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-methods\strut
-\end{minipage} & \begin{minipage}[t]{0.78\columnwidth}\centering
-All data were from the
+first & Marcus \\
+last & Beck \\
+email & \href{mailto:fakeaddress@email.com}{\nolinkurl{fakeaddress@email.com}} \\
+title & Water Quality Assessment Data \\
+startdate & 1/1/2020 \\
+enddate & 12/31/2020 \\
+location & Tampa Bay, FL, USA \\
+west & -82.8 \\
+east & -82.3 \\
+north & 28 \\
+south & 27.4 \\
+methods & All data were from the
 Environmental Protection
 Commission of Hillsborough
 County
@@ -1036,47 +1062,46 @@ of four Bay segments. Data are
 used to assess progress in
 achieving programmatic goals
 for the Tampa Bay Estuary
-Program.\strut
-\end{minipage}\tabularnewline
-\bottomrule
+Program. \\
+\bottomrule()
 \end{longtable}
 
 Finally, if we wanted to convert this information to an EML metadata file, we can use some tools in the \href{https://docs.ropensci.org/EML/}{EML R package}. This example includes all of the information from the last example, but using specific tags and entry methods for the EML format, The methods information can also be entered as a separate file for more long-form documentation (i.e., \texttt{set\_methods(\textquotesingle{}data/methods.docx\textquotesingle{})}). After the file is written with \texttt{write\_eml()}, it can be validated for accuracy and completeness with \texttt{eml\_validate()}. The finished metadata file can be viewed \href{data/my_eml.xml}{here}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(EML)}
+\FunctionTok{library}\NormalTok{(EML)}
 
-\CommentTok{# enter the metadata}
-\NormalTok{me <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}
-  \DataTypeTok{individualName =} \KeywordTok{list}\NormalTok{(}\DataTypeTok{givenName =} \StringTok{'Marcus'}\NormalTok{, }\DataTypeTok{surName =} \StringTok{'Beck'}\NormalTok{), }
-  \DataTypeTok{electronicMailAddress =} \StringTok{'fakeaddress@email.com'}
+\CommentTok{\# enter the metadata}
+\NormalTok{me }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}
+  \AttributeTok{individualName =} \FunctionTok{list}\NormalTok{(}\AttributeTok{givenName =} \StringTok{\textquotesingle{}Marcus\textquotesingle{}}\NormalTok{, }\AttributeTok{surName =} \StringTok{\textquotesingle{}Beck\textquotesingle{}}\NormalTok{), }
+  \AttributeTok{electronicMailAddress =} \StringTok{\textquotesingle{}fakeaddress@email.com\textquotesingle{}}
 \NormalTok{)}
-\NormalTok{title <-}\StringTok{ 'Water Quality Assessment Data'}
-\NormalTok{coverage <-}\StringTok{ }\KeywordTok{set_coverage}\NormalTok{(}
-  \DataTypeTok{begin =} \StringTok{'2020-01-01'}\NormalTok{, }
-  \DataTypeTok{end =} \StringTok{'2020-12-31'}\NormalTok{,}
-  \DataTypeTok{geographicDescription =} \StringTok{'Tampa Bay, Florida, USA'}\NormalTok{,}
-  \DataTypeTok{west =} \FloatTok{-82.8}\NormalTok{, }\DataTypeTok{east =} \FloatTok{-82.3}\NormalTok{, }
-  \DataTypeTok{north =} \DecValTok{28}\NormalTok{, }\DataTypeTok{south =} \FloatTok{27.4}\NormalTok{)}
-\NormalTok{methods <-}\StringTok{ }\KeywordTok{set_methods}\NormalTok{(}\StringTok{'data/methods.docx'}\NormalTok{)}
+\NormalTok{title }\OtherTok{\textless{}{-}} \StringTok{\textquotesingle{}Water Quality Assessment Data\textquotesingle{}}
+\NormalTok{coverage }\OtherTok{\textless{}{-}} \FunctionTok{set\_coverage}\NormalTok{(}
+  \AttributeTok{begin =} \StringTok{\textquotesingle{}2020{-}01{-}01\textquotesingle{}}\NormalTok{, }
+  \AttributeTok{end =} \StringTok{\textquotesingle{}2020{-}12{-}31\textquotesingle{}}\NormalTok{,}
+  \AttributeTok{geographicDescription =} \StringTok{\textquotesingle{}Tampa Bay, Florida, USA\textquotesingle{}}\NormalTok{,}
+  \AttributeTok{west =} \SpecialCharTok{{-}}\FloatTok{82.8}\NormalTok{, }\AttributeTok{east =} \SpecialCharTok{{-}}\FloatTok{82.3}\NormalTok{, }
+  \AttributeTok{north =} \DecValTok{28}\NormalTok{, }\AttributeTok{south =} \FloatTok{27.4}\NormalTok{)}
+\NormalTok{methods }\OtherTok{\textless{}{-}} \FunctionTok{set\_methods}\NormalTok{(}\StringTok{\textquotesingle{}data/methods.docx\textquotesingle{}}\NormalTok{)}
 
-\CommentTok{# combine the metadata}
-\NormalTok{my_eml <-}\StringTok{ }\NormalTok{eml}\OperatorTok{$}\KeywordTok{eml}\NormalTok{(}
-  \DataTypeTok{packageId =}\NormalTok{ uuid}\OperatorTok{::}\KeywordTok{UUIDgenerate}\NormalTok{(),  }
-  \DataTypeTok{system =} \StringTok{"uuid"}\NormalTok{,}
-  \DataTypeTok{dataset =}\NormalTok{ eml}\OperatorTok{$}\KeywordTok{dataset}\NormalTok{(}
-    \DataTypeTok{title =}\NormalTok{ title,}
-    \DataTypeTok{creator =}\NormalTok{ me,}
-    \DataTypeTok{contact =}\NormalTok{ me,}
-    \DataTypeTok{coverage =}\NormalTok{ coverage, }
-    \DataTypeTok{methods =}\NormalTok{ methods}
+\CommentTok{\# combine the metadata}
+\NormalTok{my\_eml }\OtherTok{\textless{}{-}}\NormalTok{ eml}\SpecialCharTok{$}\FunctionTok{eml}\NormalTok{(}
+  \AttributeTok{packageId =}\NormalTok{ uuid}\SpecialCharTok{::}\FunctionTok{UUIDgenerate}\NormalTok{(),  }
+  \AttributeTok{system =} \StringTok{"uuid"}\NormalTok{,}
+  \AttributeTok{dataset =}\NormalTok{ eml}\SpecialCharTok{$}\FunctionTok{dataset}\NormalTok{(}
+    \AttributeTok{title =}\NormalTok{ title,}
+    \AttributeTok{creator =}\NormalTok{ me,}
+    \AttributeTok{contact =}\NormalTok{ me,}
+    \AttributeTok{coverage =}\NormalTok{ coverage, }
+    \AttributeTok{methods =}\NormalTok{ methods}
 \NormalTok{  )}
 \NormalTok{)}
 
-\CommentTok{# write and validate the file}
-\KeywordTok{write_eml}\NormalTok{(my_eml, }\StringTok{'data/my_eml.xml'}\NormalTok{)}
-\KeywordTok{eml_validate}\NormalTok{(}\StringTok{'data/my_eml.xml'}\NormalTok{)}
+\CommentTok{\# write and validate the file}
+\FunctionTok{write\_eml}\NormalTok{(my\_eml, }\StringTok{\textquotesingle{}data/my\_eml.xml\textquotesingle{}}\NormalTok{)}
+\FunctionTok{eml\_validate}\NormalTok{(}\StringTok{\textquotesingle{}data/my\_eml.xml\textquotesingle{}}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1206,8 +1231,8 @@ The \texttt{id} keys also allow us to easily join tables for follow-up analysis.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{combdat <-}\StringTok{ }\KeywordTok{full_join}\NormalTok{(oysdat, wqmdat, }\DataTypeTok{by =} \StringTok{'id'}\NormalTok{)}
-\KeywordTok{head}\NormalTok{(combdat)}
+\NormalTok{combdat }\OtherTok{\textless{}{-}} \FunctionTok{full\_join}\NormalTok{(oysdat, wqmdat, }\AttributeTok{by =} \StringTok{\textquotesingle{}id\textquotesingle{}}\NormalTok{)}
+\FunctionTok{head}\NormalTok{(combdat)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1221,7 +1246,7 @@ The \texttt{id} keys also allow us to easily join tables for follow-up analysis.
 #> 4 2D_bg_16fa 2019-11-18     4         181     0.81    20        49.9          72
 #> 5 2D_bg_16fa 2019-11-18     5          77     0.83     0        33.2          55
 #> 6 2D_bg_16fa 2019-11-18     6          23     0.7      0        37.4          72
-#> # ... with 7 more variables: aveshell_cnt <dbl>, date.y <date>, do_perc <dbl>,
+#> # i 7 more variables: aveshell_cnt <dbl>, date.y <date>, do_perc <dbl>,
 #> #   do_mgl <dbl>, sal_psu <dbl>, temp_c <dbl>, ph <dbl>
 \end{verbatim}
 

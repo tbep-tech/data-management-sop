@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Data Management SOP for the Tampa Bay Estuary Program</title>
   <meta name="description" content="This is a web page describing the TBEP data management SOP" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Data Management SOP for the Tampa Bay Estuary Program" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is a web page describing the TBEP data management SOP" />
   <meta name="github-repo" content="tbep-tech/data-management-sop" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2021-09-07" />
+<meta name="date" content="2023-09-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,9 +49,9 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-70CPP26J36"></script>
 <script>
@@ -65,18 +64,18 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -96,13 +95,13 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -115,7 +114,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -129,6 +128,32 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -146,8 +171,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Data Management SOP</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#contrib"><i class="fa fa-check"></i><b>1.1</b> Contributing to this document</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#contrib"><i class="fa fa-check"></i><b>1.1</b> Contributing to this document</a>
+<ul>
 <li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#opt1"><i class="fa fa-check"></i><b>1.1.1</b> Option 1</a></li>
 <li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#opt2"><i class="fa fa-check"></i><b>1.1.2</b> Option 2</a></li>
 <li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#opt3"><i class="fa fa-check"></i><b>1.1.3</b> Option 3</a></li>
@@ -155,32 +182,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#about"><i class="fa fa-check"></i><b>1.2</b> About</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>2</b> Background</a><ul>
+<li class="chapter" data-level="2" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>2</b> Background</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="background.html"><a href="background.html#dataimp"><i class="fa fa-check"></i><b>2.1</b> Importance of data</a></li>
 <li class="chapter" data-level="2.2" data-path="background.html"><a href="background.html#whymanage"><i class="fa fa-check"></i><b>2.2</b> Why we need to effectively manage data</a></li>
 <li class="chapter" data-level="2.3" data-path="background.html"><a href="background.html#opengeneral"><i class="fa fa-check"></i><b>2.3</b> Open Science</a></li>
 <li class="chapter" data-level="2.4" data-path="background.html"><a href="background.html#philogeneral"><i class="fa fa-check"></i><b>2.4</b> The TBEP philosophy</a></li>
 <li class="chapter" data-level="2.5" data-path="background.html"><a href="background.html#goals-and-objectives-of-this-document"><i class="fa fa-check"></i><b>2.5</b> Goals and objectives of this document</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="keys.html"><a href="keys.html"><i class="fa fa-check"></i><b>3</b> Key Concepts and Principles</a><ul>
+<li class="chapter" data-level="3" data-path="keys.html"><a href="keys.html"><i class="fa fa-check"></i><b>3</b> Key Concepts and Principles</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="keys.html"><a href="keys.html#contribs"><i class="fa fa-check"></i><b>3.1</b> Identifying important contributions</a></li>
 <li class="chapter" data-level="3.2" data-path="keys.html"><a href="keys.html#fair"><i class="fa fa-check"></i><b>3.2</b> The FAIR principles</a></li>
 <li class="chapter" data-level="3.3" data-path="keys.html"><a href="keys.html#whytidy"><i class="fa fa-check"></i><b>3.3</b> The importance of tidy data</a></li>
-<li class="chapter" data-level="3.4" data-path="keys.html"><a href="keys.html#metadatadesc"><i class="fa fa-check"></i><b>3.4</b> Metadata</a><ul>
+<li class="chapter" data-level="3.4" data-path="keys.html"><a href="keys.html#metadatadesc"><i class="fa fa-check"></i><b>3.4</b> Metadata</a>
+<ul>
 <li class="chapter" data-level="3.4.1" data-path="keys.html"><a href="keys.html#metadata"><i class="fa fa-check"></i><b>3.4.1</b> Metadata examples</a></li>
 <li class="chapter" data-level="3.4.2" data-path="keys.html"><a href="keys.html#eml"><i class="fa fa-check"></i><b>3.4.2</b> The EML standard</a></li>
 <li class="chapter" data-level="3.4.3" data-path="keys.html"><a href="keys.html#dict"><i class="fa fa-check"></i><b>3.4.3</b> Data dictionaries</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="keys.html"><a href="keys.html#datahome"><i class="fa fa-check"></i><b>3.5</b> Where do data live?</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>4</b> Data Management Workflow</a><ul>
-<li class="chapter" data-level="4.1" data-path="workflow.html"><a href="workflow.html#tbepapproach"><i class="fa fa-check"></i><b>4.1</b> The TBEP approach</a><ul>
+<li class="chapter" data-level="4" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>4</b> Data Management Workflow</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="workflow.html"><a href="workflow.html#tbepapproach"><i class="fa fa-check"></i><b>4.1</b> The TBEP approach</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="workflow.html"><a href="workflow.html#philo"><i class="fa fa-check"></i><b>4.1.1</b> An Open Science philosophy</a></li>
 <li class="chapter" data-level="4.1.2" data-path="workflow.html"><a href="workflow.html#the-open-science-cake"><i class="fa fa-check"></i><b>4.1.2</b> The open science cake</a></li>
 <li class="chapter" data-level="4.1.3" data-path="workflow.html"><a href="workflow.html#automation"><i class="fa fa-check"></i><b>4.1.3</b> How do we build the cake?</a></li>
 <li class="chapter" data-level="4.1.4" data-path="workflow.html"><a href="workflow.html#moregit"><i class="fa fa-check"></i><b>4.1.4</b> More on Git and GitHub</a></li>
+<li class="chapter" data-level="4.1.5" data-path="workflow.html"><a href="workflow.html#aiuse"><i class="fa fa-check"></i><b>4.1.5</b> Use of artificial intelligence</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#howyou"><i class="fa fa-check"></i><b>4.2</b> How can you manage data?</a><ul>
+<li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#howyou"><i class="fa fa-check"></i><b>4.2</b> How can you manage data?</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="workflow.html"><a href="workflow.html#beginning"><i class="fa fa-check"></i><b>4.2.1</b> I’m at the beginning of my project</a></li>
 <li class="chapter" data-level="4.2.2" data-path="workflow.html"><a href="workflow.html#middleproject"><i class="fa fa-check"></i><b>4.2.2</b> I’m somewhere in the middle of my project</a></li>
 <li class="chapter" data-level="4.2.3" data-path="workflow.html"><a href="workflow.html#endproject"><i class="fa fa-check"></i><b>4.2.3</b> I’m at the end of my project</a></li>
@@ -188,19 +222,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.5" data-path="workflow.html"><a href="workflow.html#lets-get-it-online"><i class="fa fa-check"></i><b>4.2.5</b> Let’s get it online!</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="cases.html"><a href="cases.html"><i class="fa fa-check"></i><b>5</b> Case Studies</a><ul>
+<li class="chapter" data-level="5" data-path="cases.html"><a href="cases.html"><i class="fa fa-check"></i><b>5</b> Case Studies</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="cases.html"><a href="cases.html#oyster"><i class="fa fa-check"></i><b>5.1</b> Oyster restoration in Tampa Bay</a></li>
 <li class="chapter" data-level="5.2" data-path="cases.html"><a href="cases.html#desoto"><i class="fa fa-check"></i><b>5.2</b> RESTORE data management: Ft. DeSoto circulation study</a></li>
 <li class="chapter" data-level="5.3" data-path="cases.html"><a href="cases.html#twitter"><i class="fa fa-check"></i><b>5.3</b> Red tide and social media</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>6</b> Final Words</a><ul>
+<li class="chapter" data-level="6" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>6</b> Final Words</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="final.html"><a href="final.html#something-is-better-than-nothing"><i class="fa fa-check"></i><b>6.1</b> Something is better than nothing</a></li>
 <li class="chapter" data-level="6.2" data-path="final.html"><a href="final.html#just-remember-to-be-fair"><i class="fa fa-check"></i><b>6.2</b> Just remember to be FAIR</a></li>
 <li class="chapter" data-level="6.3" data-path="final.html"><a href="final.html#the-ever-evolving-toolbox"><i class="fa fa-check"></i><b>6.3</b> The ever-evolving toolbox</a></li>
 <li class="chapter" data-level="6.4" data-path="final.html"><a href="final.html#look-to-the-community"><i class="fa fa-check"></i><b>6.4</b> Look to the community</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="appendices.html"><a href="appendices.html"><i class="fa fa-check"></i><b>7</b> Appendices</a><ul>
-<li class="chapter" data-level="7.1" data-path="appendices.html"><a href="appendices.html#list-of-resources"><i class="fa fa-check"></i><b>7.1</b> List of resources</a><ul>
+<li class="chapter" data-level="7" data-path="appendices.html"><a href="appendices.html"><i class="fa fa-check"></i><b>7</b> Appendices</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="appendices.html"><a href="appendices.html#list-of-resources"><i class="fa fa-check"></i><b>7.1</b> List of resources</a>
+<ul>
 <li class="chapter" data-level="7.1.1" data-path="appendices.html"><a href="appendices.html#bulding-data-management-plans"><i class="fa fa-check"></i><b>7.1.1</b> Bulding Data Management Plans</a></li>
 <li class="chapter" data-level="7.1.2" data-path="appendices.html"><a href="appendices.html#tbep-r-trainings"><i class="fa fa-check"></i><b>7.1.2</b> TBEP R Trainings</a></li>
 <li class="chapter" data-level="7.1.3" data-path="appendices.html"><a href="appendices.html#r-lessons-tutorials"><i class="fa fa-check"></i><b>7.1.3</b> R Lessons &amp; Tutorials</a></li>
@@ -208,10 +246,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1.5" data-path="appendices.html"><a href="appendices.html#gitgithub"><i class="fa fa-check"></i><b>7.1.5</b> Git/Github</a></li>
 </ul></li>
 <li class="chapter" data-level="7.2" data-path="appendices.html"><a href="appendices.html#definitions"><i class="fa fa-check"></i><b>7.2</b> Definitions</a></li>
-<li class="chapter" data-level="7.3" data-path="appendices.html"><a href="appendices.html#rfp-language"><i class="fa fa-check"></i><b>7.3</b> RFP language</a><ul>
+<li class="chapter" data-level="7.3" data-path="appendices.html"><a href="appendices.html#rfp-language"><i class="fa fa-check"></i><b>7.3</b> RFP language</a>
+<ul>
 <li class="chapter" data-level="7.3.1" data-path="appendices.html"><a href="appendices.html#best-practices-for-open-data"><i class="fa fa-check"></i><b>7.3.1</b> Best practices for open data</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="appendices.html"><a href="appendices.html#contract-language"><i class="fa fa-check"></i><b>7.4</b> Contract language</a><ul>
+<li class="chapter" data-level="7.4" data-path="appendices.html"><a href="appendices.html#contract-language"><i class="fa fa-check"></i><b>7.4</b> Contract language</a>
+<ul>
 <li class="chapter" data-level="7.4.1" data-path="appendices.html"><a href="appendices.html#declaration-of-use"><i class="fa fa-check"></i><b>7.4.1</b> Declaration of use</a></li>
 <li class="chapter" data-level="7.4.2" data-path="appendices.html"><a href="appendices.html#general"><i class="fa fa-check"></i><b>7.4.2</b> General</a></li>
 <li class="chapter" data-level="7.4.3" data-path="appendices.html"><a href="appendices.html#tabular-data"><i class="fa fa-check"></i><b>7.4.3</b> Tabular data</a></li>
@@ -245,18 +285,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Data Management SOP for the Tampa Bay Estuary Program</h1>
 <p class="author"><em>Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood</em></p>
-<p class="date"><em>2021-09-07</em></p>
+<p class="date"><em>2023-09-11</em></p>
 </div>
-<div id="overview" class="section level1">
-<h1><span class="header-section-number">Section 1</span> Overview</h1>
+<div id="overview" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Section 1</span> Overview<a href="index.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Welcome to the Tampa Bay Estuary Program Data Management Standard Operating Procedures (SOP). This document describes our philosophy and general workflow for managing data used by our Program and serves as motivation for our external partners to become stewards of their own data. Working together, we can improve how data are curated and used to support the continued protection and restoration of Tampa Bay.</p>
-<div id="contrib" class="section level2">
-<h2><span class="header-section-number">1.1</span> Contributing to this document</h2>
+<div id="contrib" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Contributing to this document<a href="index.html#contrib" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Using an open science ethos, we strongly encourage community collaboration in how this document evolves. This means anybody can contribute directly to content in this document. Please follow the guidelines in this section to learn how to contribute and improve this SOP.</p>
 <p>This SOP was created using <a href="https://bookdown.org/">bookdown</a>, which is an approach to creating long-form documents with RMarkdown. The source code is available on the TBEP GitHub group web page: <a href="https://github.com/tbep-tech/data-management-sop" class="uri">https://github.com/tbep-tech/data-management-sop</a>. Each section is a plain .Rmd text file that can be edited or commented to provide feedback on content. There are several ways you can contribute to or edit this document.</p>
 <p>Before you choose your editing option, you should be comfortable with Git/GitHub basics and have some working knowledge of RMarkdown files (but see <a href="index.html#opt4">1.1.4</a>). The first step is to make sure you have a <a href="https://github.com/join">GitHub account</a> so you can edit the files. Jenny Bryan’s <a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a> is an excellent resource to get started with version control. <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a> is a great resource for learning RMarkdown (also see the <a href="https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">cheatsheet</a>).</p>
-<div id="opt1" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> Option 1</h3>
+<div id="opt1" class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Option 1<a href="index.html#opt1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>Requires</em>: GitHub account, write access to the source code repository</p>
 <p>Each section can be edited directly by selecting the edit button at the top of the page.</p>
 <p><img src="img/editarrow.png" width="100%" style="display: block; margin: auto;" /></p>
@@ -265,35 +305,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Each edit page is specific to the section where you’ve selected the edit button, e.g., if you click the edit button for section 2, you’ll be sent to the edit page for the .Rmd file for section 2. Feel free to make any changes on the .Rmd file. When you’re done, scroll to the bottom and “commit” your changes. This simply means you write a few words describing the edits you’ve made. Be as succinct as possible. When you’re done, hit the green “Commit changes” button.</p>
 <p><img src="img/editme2.PNG" width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="opt2" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Option 2</h3>
+<div id="opt2" class="section level3 hasAnchor" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Option 2<a href="index.html#opt2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>Requires</em>: Github account</p>
 <p>Follow the above steps in <a href="index.html#opt1">1.1.1</a> by navigating to a section you’d like to edit on this website and selecting the edit button. If you don’t have write access to the repository, you will see something like this:</p>
 <p><img src="img/editme3.PNG" width="100%" style="display: block; margin: auto;" /></p>
 <p>This simply means that you need to create your own copy to edit. You can fork your own copy to your personal account and make your edits there. Once editing is done, you can submit a pull request to the original repository with your proposed changes. Not sure what this means? Check out this chapter here: <a href="https://happygitwithr.com/fork-and-clone.html">https://happygitwithr.com/fork-and-clone.html</a></p>
 </div>
-<div id="opt3" class="section level3">
-<h3><span class="header-section-number">1.1.3</span> Option 3</h3>
+<div id="opt3" class="section level3 hasAnchor" number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Option 3<a href="index.html#opt3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>Requires</em>: GitHub account</p>
 <p>If none of the above sounds appealing, you can always post any suggestions or edits as an issue under the <a href="https://github.com/tbep-tech/data-management-sop/issues">issues tab</a> of the repository. When you create a new issue by clicking the giant green “New issue” button, you’ll see something like this:</p>
 <p><img src="img/issues.PNG" width="100%" style="display: block; margin: auto;" /></p>
 <p>Give your issue a short but informative title (e.g., “Suggested edits to Section 2”). Under the “Write” tab, explain what edits or changes you’d like to see. Feel free to select a member of the TBEP staff to assign the issue using the menu on the right. The issues descriptions support Markdown syntax, so get creative in your descriptions (i.e., make lists, link to documents, etc., see the <a href="https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">cheatsheet</a>).</p>
 <p>In general, one issue should cover only one suggested change to the document. However, multiple text edits to the same document can be submitted to the same issue so long as they cover similar topics, e.g., one issue for several suggested edits to one section.</p>
 </div>
-<div id="opt4" class="section level3">
-<h3><span class="header-section-number">1.1.4</span> Option 4</h3>
+<div id="opt4" class="section level3 hasAnchor" number="1.1.4">
+<h3><span class="header-section-number">1.1.4</span> Option 4<a href="index.html#opt4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>Requires</em>: Email</p>
 <p>Just <a href="mailto:mbeck@tbep.org">email me</a> any changes you’d like to see!</p>
 </div>
 </div>
-<div id="about" class="section level2">
-<h2><span class="header-section-number">1.2</span> About</h2>
+<div id="about" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> About<a href="index.html#about" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Tampa Bay Estuary Program (TBEP) is one of <a href="http://nationalestuaries.org/">28 National Estuary Programs</a> designated by Congress to restore and protect “estuaries of national significance.” Administered by the U.S Environmental Protection Agency under the Clean Water Act, each program must develop a science-based plan using community input to protect and enhance the natural resources of its respective estuary and surrounding watershed.</p>
 <p>The TBEP <a href="http://ccmp.tbep.org/">Comprehensive Conservation and Management Plan</a> (CCMP, updated in 2017) presents 39 actions to sustain progress in bay restoration through the year 2027. To address the actions in our CCMP, our <a href="https://drive.google.com/file/d/11xohuoaHDxNHRqgXoOHdI37FpWvac_rn/view">2021-2025 Strategic Plan</a> provides a framework to guide decisions about how to align personnel and financial resources with the Program’s mission in ways that maximize our impact on Tampa Bay recovery. A cornerstone strategy of this plan is the use of open science principles and methods to allow the TBEP to be the primary source of trusted, unbiased, and actionable science for the Tampa Bay estuary. This document is a reflection of these strategies.</p>
 <p>Please visit our website for additional information about our program: <a href="https://www.tbep.org" class="uri">https://www.tbep.org</a></p>
 <hr />
 <p><a rel='license' href='http://creativecommons.org/licenses/by/4.0/'><img alt='Creative Commons License' style='border-width:0' src='https://i.creativecommons.org/l/by/4.0/88x31.png' /></a>  This book is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a>.</p>
-<p><a href="https://github.com/tbep-tech/data-management-sop/actions"><img src="https://github.com/tbep-tech/data-management-sop/workflows/build/badge.svg" alt="build"></a> This version of the book was built automatically with <a href="https://github.com/tbep-tech/data-management-sop/actions">GitHub Actions</a> on 2021-09-07.</p>
+<p><a href="https://github.com/tbep-tech/data-management-sop/actions"><img src="https://github.com/tbep-tech/data-management-sop/workflows/build/badge.svg" alt="build"></a> This version of the book was built automatically with <a href="https://github.com/tbep-tech/data-management-sop/actions">GitHub Actions</a> on 2023-09-11.</p>
 <p><a href="https://zenodo.org/badge/latestdoi/326820952"><img src="https://zenodo.org/badge/326820952.svg" alt="DOI"></a></p>
 
 </div>
@@ -364,7 +404,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

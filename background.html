@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 2 Background | Data Management SOP for the Tampa Bay Estuary Program</title>
   <meta name="description" content="This is a web page describing the TBEP data management SOP" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 2 Background | Data Management SOP for the Tampa Bay Estuary Program" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is a web page describing the TBEP data management SOP" />
   <meta name="github-repo" content="tbep-tech/data-management-sop" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2021-09-07" />
+<meta name="date" content="2023-09-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,9 +49,9 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-70CPP26J36"></script>
 <script>
@@ -65,18 +64,18 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -96,13 +95,13 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -115,7 +114,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -129,6 +128,32 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -146,8 +171,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Data Management SOP</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#contrib"><i class="fa fa-check"></i><b>1.1</b> Contributing to this document</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#contrib"><i class="fa fa-check"></i><b>1.1</b> Contributing to this document</a>
+<ul>
 <li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#opt1"><i class="fa fa-check"></i><b>1.1.1</b> Option 1</a></li>
 <li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#opt2"><i class="fa fa-check"></i><b>1.1.2</b> Option 2</a></li>
 <li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#opt3"><i class="fa fa-check"></i><b>1.1.3</b> Option 3</a></li>
@@ -155,32 +182,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#about"><i class="fa fa-check"></i><b>1.2</b> About</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>2</b> Background</a><ul>
+<li class="chapter" data-level="2" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>2</b> Background</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="background.html"><a href="background.html#dataimp"><i class="fa fa-check"></i><b>2.1</b> Importance of data</a></li>
 <li class="chapter" data-level="2.2" data-path="background.html"><a href="background.html#whymanage"><i class="fa fa-check"></i><b>2.2</b> Why we need to effectively manage data</a></li>
 <li class="chapter" data-level="2.3" data-path="background.html"><a href="background.html#opengeneral"><i class="fa fa-check"></i><b>2.3</b> Open Science</a></li>
 <li class="chapter" data-level="2.4" data-path="background.html"><a href="background.html#philogeneral"><i class="fa fa-check"></i><b>2.4</b> The TBEP philosophy</a></li>
 <li class="chapter" data-level="2.5" data-path="background.html"><a href="background.html#goals-and-objectives-of-this-document"><i class="fa fa-check"></i><b>2.5</b> Goals and objectives of this document</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="keys.html"><a href="keys.html"><i class="fa fa-check"></i><b>3</b> Key Concepts and Principles</a><ul>
+<li class="chapter" data-level="3" data-path="keys.html"><a href="keys.html"><i class="fa fa-check"></i><b>3</b> Key Concepts and Principles</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="keys.html"><a href="keys.html#contribs"><i class="fa fa-check"></i><b>3.1</b> Identifying important contributions</a></li>
 <li class="chapter" data-level="3.2" data-path="keys.html"><a href="keys.html#fair"><i class="fa fa-check"></i><b>3.2</b> The FAIR principles</a></li>
 <li class="chapter" data-level="3.3" data-path="keys.html"><a href="keys.html#whytidy"><i class="fa fa-check"></i><b>3.3</b> The importance of tidy data</a></li>
-<li class="chapter" data-level="3.4" data-path="keys.html"><a href="keys.html#metadatadesc"><i class="fa fa-check"></i><b>3.4</b> Metadata</a><ul>
+<li class="chapter" data-level="3.4" data-path="keys.html"><a href="keys.html#metadatadesc"><i class="fa fa-check"></i><b>3.4</b> Metadata</a>
+<ul>
 <li class="chapter" data-level="3.4.1" data-path="keys.html"><a href="keys.html#metadata"><i class="fa fa-check"></i><b>3.4.1</b> Metadata examples</a></li>
 <li class="chapter" data-level="3.4.2" data-path="keys.html"><a href="keys.html#eml"><i class="fa fa-check"></i><b>3.4.2</b> The EML standard</a></li>
 <li class="chapter" data-level="3.4.3" data-path="keys.html"><a href="keys.html#dict"><i class="fa fa-check"></i><b>3.4.3</b> Data dictionaries</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="keys.html"><a href="keys.html#datahome"><i class="fa fa-check"></i><b>3.5</b> Where do data live?</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>4</b> Data Management Workflow</a><ul>
-<li class="chapter" data-level="4.1" data-path="workflow.html"><a href="workflow.html#tbepapproach"><i class="fa fa-check"></i><b>4.1</b> The TBEP approach</a><ul>
+<li class="chapter" data-level="4" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>4</b> Data Management Workflow</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="workflow.html"><a href="workflow.html#tbepapproach"><i class="fa fa-check"></i><b>4.1</b> The TBEP approach</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="workflow.html"><a href="workflow.html#philo"><i class="fa fa-check"></i><b>4.1.1</b> An Open Science philosophy</a></li>
 <li class="chapter" data-level="4.1.2" data-path="workflow.html"><a href="workflow.html#the-open-science-cake"><i class="fa fa-check"></i><b>4.1.2</b> The open science cake</a></li>
 <li class="chapter" data-level="4.1.3" data-path="workflow.html"><a href="workflow.html#automation"><i class="fa fa-check"></i><b>4.1.3</b> How do we build the cake?</a></li>
 <li class="chapter" data-level="4.1.4" data-path="workflow.html"><a href="workflow.html#moregit"><i class="fa fa-check"></i><b>4.1.4</b> More on Git and GitHub</a></li>
+<li class="chapter" data-level="4.1.5" data-path="workflow.html"><a href="workflow.html#aiuse"><i class="fa fa-check"></i><b>4.1.5</b> Use of artificial intelligence</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#howyou"><i class="fa fa-check"></i><b>4.2</b> How can you manage data?</a><ul>
+<li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#howyou"><i class="fa fa-check"></i><b>4.2</b> How can you manage data?</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="workflow.html"><a href="workflow.html#beginning"><i class="fa fa-check"></i><b>4.2.1</b> I’m at the beginning of my project</a></li>
 <li class="chapter" data-level="4.2.2" data-path="workflow.html"><a href="workflow.html#middleproject"><i class="fa fa-check"></i><b>4.2.2</b> I’m somewhere in the middle of my project</a></li>
 <li class="chapter" data-level="4.2.3" data-path="workflow.html"><a href="workflow.html#endproject"><i class="fa fa-check"></i><b>4.2.3</b> I’m at the end of my project</a></li>
@@ -188,19 +222,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.5" data-path="workflow.html"><a href="workflow.html#lets-get-it-online"><i class="fa fa-check"></i><b>4.2.5</b> Let’s get it online!</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="cases.html"><a href="cases.html"><i class="fa fa-check"></i><b>5</b> Case Studies</a><ul>
+<li class="chapter" data-level="5" data-path="cases.html"><a href="cases.html"><i class="fa fa-check"></i><b>5</b> Case Studies</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="cases.html"><a href="cases.html#oyster"><i class="fa fa-check"></i><b>5.1</b> Oyster restoration in Tampa Bay</a></li>
 <li class="chapter" data-level="5.2" data-path="cases.html"><a href="cases.html#desoto"><i class="fa fa-check"></i><b>5.2</b> RESTORE data management: Ft. DeSoto circulation study</a></li>
 <li class="chapter" data-level="5.3" data-path="cases.html"><a href="cases.html#twitter"><i class="fa fa-check"></i><b>5.3</b> Red tide and social media</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>6</b> Final Words</a><ul>
+<li class="chapter" data-level="6" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>6</b> Final Words</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="final.html"><a href="final.html#something-is-better-than-nothing"><i class="fa fa-check"></i><b>6.1</b> Something is better than nothing</a></li>
 <li class="chapter" data-level="6.2" data-path="final.html"><a href="final.html#just-remember-to-be-fair"><i class="fa fa-check"></i><b>6.2</b> Just remember to be FAIR</a></li>
 <li class="chapter" data-level="6.3" data-path="final.html"><a href="final.html#the-ever-evolving-toolbox"><i class="fa fa-check"></i><b>6.3</b> The ever-evolving toolbox</a></li>
 <li class="chapter" data-level="6.4" data-path="final.html"><a href="final.html#look-to-the-community"><i class="fa fa-check"></i><b>6.4</b> Look to the community</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="appendices.html"><a href="appendices.html"><i class="fa fa-check"></i><b>7</b> Appendices</a><ul>
-<li class="chapter" data-level="7.1" data-path="appendices.html"><a href="appendices.html#list-of-resources"><i class="fa fa-check"></i><b>7.1</b> List of resources</a><ul>
+<li class="chapter" data-level="7" data-path="appendices.html"><a href="appendices.html"><i class="fa fa-check"></i><b>7</b> Appendices</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="appendices.html"><a href="appendices.html#list-of-resources"><i class="fa fa-check"></i><b>7.1</b> List of resources</a>
+<ul>
 <li class="chapter" data-level="7.1.1" data-path="appendices.html"><a href="appendices.html#bulding-data-management-plans"><i class="fa fa-check"></i><b>7.1.1</b> Bulding Data Management Plans</a></li>
 <li class="chapter" data-level="7.1.2" data-path="appendices.html"><a href="appendices.html#tbep-r-trainings"><i class="fa fa-check"></i><b>7.1.2</b> TBEP R Trainings</a></li>
 <li class="chapter" data-level="7.1.3" data-path="appendices.html"><a href="appendices.html#r-lessons-tutorials"><i class="fa fa-check"></i><b>7.1.3</b> R Lessons &amp; Tutorials</a></li>
@@ -208,10 +246,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1.5" data-path="appendices.html"><a href="appendices.html#gitgithub"><i class="fa fa-check"></i><b>7.1.5</b> Git/Github</a></li>
 </ul></li>
 <li class="chapter" data-level="7.2" data-path="appendices.html"><a href="appendices.html#definitions"><i class="fa fa-check"></i><b>7.2</b> Definitions</a></li>
-<li class="chapter" data-level="7.3" data-path="appendices.html"><a href="appendices.html#rfp-language"><i class="fa fa-check"></i><b>7.3</b> RFP language</a><ul>
+<li class="chapter" data-level="7.3" data-path="appendices.html"><a href="appendices.html#rfp-language"><i class="fa fa-check"></i><b>7.3</b> RFP language</a>
+<ul>
 <li class="chapter" data-level="7.3.1" data-path="appendices.html"><a href="appendices.html#best-practices-for-open-data"><i class="fa fa-check"></i><b>7.3.1</b> Best practices for open data</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="appendices.html"><a href="appendices.html#contract-language"><i class="fa fa-check"></i><b>7.4</b> Contract language</a><ul>
+<li class="chapter" data-level="7.4" data-path="appendices.html"><a href="appendices.html#contract-language"><i class="fa fa-check"></i><b>7.4</b> Contract language</a>
+<ul>
 <li class="chapter" data-level="7.4.1" data-path="appendices.html"><a href="appendices.html#declaration-of-use"><i class="fa fa-check"></i><b>7.4.1</b> Declaration of use</a></li>
 <li class="chapter" data-level="7.4.2" data-path="appendices.html"><a href="appendices.html#general"><i class="fa fa-check"></i><b>7.4.2</b> General</a></li>
 <li class="chapter" data-level="7.4.3" data-path="appendices.html"><a href="appendices.html#tabular-data"><i class="fa fa-check"></i><b>7.4.3</b> Tabular data</a></li>
@@ -242,18 +282,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="background" class="section level1">
-<h1><span class="header-section-number">Section 2</span> Background</h1>
-<div id="dataimp" class="section level2">
-<h2><span class="header-section-number">2.1</span> Importance of data</h2>
+<div id="background" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Section 2</span> Background<a href="background.html#background" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="dataimp" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Importance of data<a href="background.html#dataimp" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Data are critical to making informed policies and decisions about how we manage behaviors and actions that affect the environment. As a fundamental part of the scientific method, data provide the raw information to support hypotheses that inform our understanding of natural processes. Data are the foundation for environmental research which develops this understanding and ultimately support informed decisions for managing natural resources by the TBEP. As methods for managing environmental resources continue to evolve, so does our understanding of data and its potential applications.</p>
 <p>When we discuss “data” we often describe a very general term that has different meanings for different people. In its simplest form, data can be tabular information for the results of an experimental analysis or field survey. For environmental managers, data can mean the long-term record of routinely collected and updated monitoring information used to assess status and trends of a natural resource. Even further, data can be highly aggregated and novel products created through complex meta-analyses of independent datasets. In all cases, the need to describe a dataset’s purpose and origin, and identify its permanent and long-term home are critical to ensure forward progress in both conventional research and how research informs environmental management.</p>
 <p>This Data Management Standard Operating Procedure (SOP) describes TBEP’s approach to address data management needs for the long-term restoration and protection of natural resources in Tampa Bay and its watershed. We are inclusive of multiple definitions of data from simple spreadsheets to more complicated workflows that generate reporting products to support environmental decisions. This broad net is designed to account for both the variety of data we use as a Program and the diversity of partner agencies we depend on to achieve our science-based mission. The management of environmental resources combines a healthy mix of conventional science with consensus driven decisions, often with strong regulatory overtones. A robust approach for working with data that promotes trust and validity in the environmental decision and ensures that science continues to progress without reinventing the wheel is foundational for these processes.</p>
 </div>
-<div id="whymanage" class="section level2">
-<h2><span class="header-section-number">2.2</span> Why we need to effectively manage data</h2>
+<div id="whymanage" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Why we need to effectively manage data<a href="background.html#whymanage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are many reasons why data may not be effectively managed, chief among which is that it can be tedious and unglamorous work that is often an afterthought. However, investing time upfront to manage a dataset can have long term benefits, although these values may not be obvious or realized in the short-term. Lack of effective data management often results in “orphaned” datasets and data products which have lost critical reference documentation.</p>
-<p>A classic graphic in Michener et al. <span class="citation">(Michener et al. <a href="#ref-Michener97" role="doc-biblioref">1997</a>)</span> demonstrates how knowledge of a data product can be lost over time (Figure <a href="background.html#fig:michener">2.1</a>). As a research team publishes a paper, the information content of the data and metadata is at an all-time high because the ideas and concepts have been intensely studied and evaluated in the months leading up to publication. After publication, researchers move on to other projects or responsibilities, and specific details about the initial project are lost rapidly as attention is focused elsewhere. At longer time scales, other factors can contribute to the erosion of information content, including career changes through retirement or staff turnover or accidental loss of information (laptop takes a bath, lab fires, etc.).</p>
+<p>A classic graphic in Michener et al. <span class="citation">(<a href="#ref-Michener97" role="doc-biblioref">Michener et al. 1997</a>)</span> demonstrates how knowledge of a data product can be lost over time (Figure <a href="background.html#fig:michener">2.1</a>). As a research team publishes a paper, the information content of the data and metadata is at an all-time high because the ideas and concepts have been intensely studied and evaluated in the months leading up to publication. After publication, researchers move on to other projects or responsibilities, and specific details about the initial project are lost rapidly as attention is focused elsewhere. At longer time scales, other factors can contribute to the erosion of information content, including career changes through retirement or staff turnover or accidental loss of information (laptop takes a bath, lab fires, etc.).</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:michener"></span>
 <img src="img/michener.png" alt="Loss of information over time in the absence of data management (from Michener et al., 1997)." width="100%" />
 <p class="caption">
@@ -267,7 +307,7 @@ Figure 2.1: Loss of information over time in the absence of data management (fro
 <li>You receive a deliverable from a project partner that was stipulated in a scope of work. This deliverable comes in multiple formats with no reproducible workflow to recreate the datasets. You are unable to verify the information, eroding your faith in the final product and making it impossible to update the results in the future.</li>
 <li>An annual reporting product requires using new data each year. The staff member in charge of this report spends several days gathering the new data and combining it with the historical data. Other projects are on hold until this report is updated. Stakeholders that use this report to make decisions do not trust or misunderstand the product because the steps for its creation are opaque.</li>
 </ol>
-<p>A more general problem with poor data management is stifled creativity. The use of other people’s data and services <span class="citation">(i.e., “OPEDAS”; Mons <a href="#ref-Mons18" role="doc-biblioref">2018</a>)</span> to generate novel research or data products is increasingly common, particularly in the last several decades with the advance of internet communications. Entire disciplines and new analytical methods have been developed around this idea <span class="citation">(e.g., meta-analysis; Carpenter et al. <a href="#ref-Carpenter09" role="doc-biblioref">2009</a>; Lortie <a href="#ref-Lortie14" role="doc-biblioref">2014</a>)</span>. The generation of new data with an incomplete history or that lack metadata documentation is a disservice to both the researcher that created the data and the larger scientific community that could benefit from further advancing this information. As a result, scientific progress will not continue as rapidly as it could if data products are discoverable and openly available.</p>
+<p>A more general problem with poor data management is stifled creativity. The use of other people’s data and services [i.e., “OPEDAS”; <span class="citation">Mons (<a href="#ref-Mons18" role="doc-biblioref">2018</a>)</span>] to generate novel research or data products is increasingly common, particularly in the last several decades with the advance of internet communications. Entire disciplines and new analytical methods have been developed around this idea [e.g., meta-analysis; <span class="citation">Carpenter et al. (<a href="#ref-Carpenter09" role="doc-biblioref">2009</a>)</span>; <span class="citation">Lortie (<a href="#ref-Lortie14" role="doc-biblioref">2014</a>)</span>]. The generation of new data with an incomplete history or that lack metadata documentation is a disservice to both the researcher that created the data and the larger scientific community that could benefit from further advancing this information. As a result, scientific progress will not continue as rapidly as it could if data products are discoverable and openly available.</p>
 <p>Poor data management can also lead to peculiar or entrenched workflows that are not scalable or translatable for other users. Data managers often have their own preferences for processes that simply “work for us”, either because they were learned out of necessity because the work had to be done or it has been done a certain way for so long that it now seems normal, despite being inefficient or prone to error. In extreme cases, this can lead to workflows that may seem legitimate on the surface but are problematic because they lack a common formality or standard.</p>
 <p><span class="citation">Mons (<a href="#ref-Mons18" role="doc-biblioref">2018</a>)</span> describes “professorware” as a workflow to handle or generate data that addresses a novel intellectual challenge, which is important in research or discovery, but is not scalable or sustainable in the long run. Think of a pet project where you’ve written some code to achieve a certain task. It might be clunky, but you’re proud of it because it gets the job done on your computer and saves you from having to do a task by hand. These workflows often masquerade as novel “software packages” that do great things, which they can and often do, but they lack support because they’re not developed using community standards or best practices for long-term use or scalability. This is especially problematic when these workflows are intentionally or unintentionally embedded into larger data management systems. If one piece of the system lacks provenance or support, it puts the larger data management system at risk.</p>
 <p>In summary, poor data management practices can lead to the following:</p>
@@ -278,16 +318,16 @@ Figure 2.1: Loss of information over time in the absence of data management (fro
 <li>Inefficient and error prone workflows that are neither scalable nor sustainable</li>
 </ul>
 </div>
-<div id="opengeneral" class="section level2">
-<h2><span class="header-section-number">2.3</span> Open Science</h2>
+<div id="opengeneral" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Open Science<a href="background.html#opengeneral" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The open science approach provides a philosophy and set of tools to help address the costs of poor data management. Before we proceed, we need to make a distinction between the broader concept of open science and open data as one component of the former. Many of the guidelines and examples in this SOP fall broadly under the open science umbrella (or cake as you’ll see in section <a href="workflow.html#philo">4.1.1</a>), but it’s important to understand how data management includes a set of tools that are part of, but not exhaustive of, the entire open science toolbox. Conversely, many broadly applicable open science tools that can be applied to other management scenarios can also benefit data management.</p>
 <p>An example may be helpful. Metadata, a key component of data management, leads to more open sharing. When we talk about metadata, the assumption is that its creation is to promote sharing and transparency for open data. However, while metadata can be created in an open environment and is often created for the purpose of facilitating openness, it can also be created completely in isolation with a closed workflow, resulting in a significant potential for loss of important information.</p>
-<p>On the other hand, broader open science principles that support a culture of sharing can also have value for research workflows that generally have nothing to do with data. For example, the “public school of thought” for open science focuses on making science more accessible to the general public, e.g., through citizen science initiatives or science blogging <span class="citation">(Fecher and Friesike <a href="#ref-Fecher14" role="doc-biblioref">2014</a>)</span>. Although this approach doesn’t deal explicitly with best practices for data management, this mentality certainly has benefit for creating a culture that appreciates and learns from science, which logically leads to discussions on the importance of data.</p>
+<p>On the other hand, broader open science principles that support a culture of sharing can also have value for research workflows that generally have nothing to do with data. For example, the “public school of thought” for open science focuses on making science more accessible to the general public, e.g., through citizen science initiatives or science blogging <span class="citation">(<a href="#ref-Fecher14" role="doc-biblioref">Fecher and Friesike 2014</a>)</span>. Although this approach doesn’t deal explicitly with best practices for data management, this mentality certainly has benefit for creating a culture that appreciates and learns from science, which logically leads to discussions on the importance of data.</p>
 <p>For these reasons, this document covers many topics that may fall squarely under the realm of data management, while at other times advocating for more general open science principles with the intent of supporting a culture of better data management.</p>
 </div>
-<div id="philogeneral" class="section level2">
-<h2><span class="header-section-number">2.4</span> The TBEP philosophy</h2>
-<p>The Tampa Bay Estuary Program (<a href="https://www.tbep.org">TBEP</a>) is one of <a href="http://nationalestuaries.org/">28 National Estuary Programs</a> designated by Congress to restore and protect “estuaries of national significance.” Many of these estuaries are heavily urban (i.e., having economic, recreational, cultural importance) and have had historical or ongoing issues contributing to poor environmental quality. The recovery of Tampa Bay is an exceptional story of an urban estuary that demonstrates the value of the NEP approach to restoring and protecting environmental resources. Through a coordinated regional effort of environmental professionals, utility operators, community members, and local politicians, nutrient loads to the bay have been reduced by ~2⁄3 from 1970s levels and seagrasses surpassed the 1950s benchmark extent in 2014 <span class="citation">(Greening et al. <a href="#ref-Greening14" role="doc-biblioref">2014</a>; Sherwood et al. <a href="#ref-Sherwood17" role="doc-biblioref">2017</a>)</span>. Even more remarkable is that while the human population in the Tampa Bay watershed continues to increase, nutrient loads into the Bay remain low.</p>
+<div id="philogeneral" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> The TBEP philosophy<a href="background.html#philogeneral" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The Tampa Bay Estuary Program (<a href="https://www.tbep.org">TBEP</a>) is one of <a href="http://nationalestuaries.org/">28 National Estuary Programs</a> designated by Congress to restore and protect “estuaries of national significance.” Many of these estuaries are heavily urban (i.e., having economic, recreational, cultural importance) and have had historical or ongoing issues contributing to poor environmental quality. The recovery of Tampa Bay is an exceptional story of an urban estuary that demonstrates the value of the NEP approach to restoring and protecting environmental resources. Through a coordinated regional effort of environmental professionals, utility operators, community members, and local politicians, nutrient loads to the bay have been reduced by ~2⁄3 from 1970s levels and seagrasses surpassed the 1950s benchmark extent in 2014 <span class="citation">(<a href="#ref-Greening14" role="doc-biblioref">Greening et al. 2014</a>; <a href="#ref-Sherwood17" role="doc-biblioref">Sherwood et al. 2017</a>)</span>. Even more remarkable is that while the human population in the Tampa Bay watershed continues to increase, nutrient loads into the Bay remain low.</p>
 <p>The TBEP is a key facilitator among the many local partners that have an interest in the region’s natural resources. Our facilitation is guided by several documents, including an <a href="https://drive.google.com/file/d/1iJcWxmc5SeyDTqiCQ3MLQGWEY_EDGtZT/view?usp=sharing">Interlocal Agreement</a> with our partners, a <a href="https://indd.adobe.com/view/cf7b3c48-d2b2-4713-921c-c2a0d4466632">Comprehensive Conservation and Management Plan</a>, and a <a href="https://drive.google.com/file/d/11xohuoaHDxNHRqgXoOHdI37FpWvac_rn/view?usp=sharing">Strategic Plan</a>. In simple terms, these documents respectively describe <em>who</em> we work with, <em>what</em> we need to accomplish, and <em>how</em> it can be accomplished.</p>
 <p>Open science and data management have everything to do with how we facilitate bay management. Our recent update to the Strategic Plan specifically speaks to our use of open science as: 1) a general direction for how we accomplish our work to achieve the desired future state of Tampa Bay, and 2) a unique value proposition that TBEP offers within its sphere of influence. We articulate the use of open science at TBEP as a cornerstone strategy:</p>
 <blockquote>
@@ -296,8 +336,8 @@ Figure 2.1: Loss of information over time in the absence of data management (fro
 <p>As a Program with a small staff, successful protection of Tampa Bay’s natural resources depends on the work of our many partners. While we use open science principles internally, we can have a much greater impact if our partners understand the value of open science and actively work towards adopting its principles in their own workflows. We are actively supporting our partners through this journey through an Open Science Subcommittee that has a goal of developing a community of practice that works and learns together to navigate the open science landscape. The Subcommittee’s <a href="https://docs.google.com/document/d/1w6dVTwfYYDRVzGPXy0jyHxV4mwOutEY_ISMP1oAdZ_c/edit">roles and responsibilities</a> document explains how we are accomplishing this goal.</p>
 <p>Our Program rests on a strong foundation of <a href="https://tbep.org/our-work/library/">research</a> that guides decision-making for Tampa Bay covering three decades of science and collaboration. Although great strides have been made, we intend to continue building on those accomplishments as an organization, including enhanced data management practices guided by open science principles. The details of this approach and why we’ve adopted an open science ethos are explained more fully in section <a href="workflow.html#philo">4.1.1</a>.</p>
 </div>
-<div id="goals-and-objectives-of-this-document" class="section level2">
-<h2><span class="header-section-number">2.5</span> Goals and objectives of this document</h2>
+<div id="goals-and-objectives-of-this-document" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Goals and objectives of this document<a href="background.html#goals-and-objectives-of-this-document" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The overarching goal of this document is to achieve the following:</p>
 <blockquote>
 <p>Motivate internal staff and external partners to become stewards of their data by demonstrating the value of open data practices and providing a road map to achieving this goal.</p>
@@ -310,7 +350,7 @@ Figure 2.1: Loss of information over time in the absence of data management (fro
 <li>Section <a href="final.html#final">6</a>: Parting thoughts and words of wisdom to help you continue on your open science and data management journey</li>
 <li>Section <a href="appendices.html#appendices">7</a>: Definitions and resources for continued learning</li>
 </ul>
-<p>The TBEP has also developed a data <a href="https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view">Quality Management Plan</a> <span class="citation">(QMP; Sherwood et al. <a href="#ref-tbep1620" role="doc-biblioref">2020</a>)</span>. This SOP and the QMP can be viewed as complementary documents, but they were developed to meet different needs. The goal of this SOP is described above. The goal of the QMP is to ensure the data used by TBEP for decision-making has known and documented quality and is being used appropriately. In other words, the QMP establishes an internal process for ensuring data quality conforms with federal or grant-reporting requirements, whereas this document is a generalized introduction and how-to approach for data management that can help us achieve QMP goals.</p>
+<p>The TBEP has also developed a data <a href="https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view">Quality Management Plan</a> [QMP; <span class="citation">Sherwood et al. (<a href="#ref-tbep1620" role="doc-biblioref">2020</a>)</span>]. This SOP and the QMP can be viewed as complementary documents, but they were developed to meet different needs. The goal of this SOP is described above. The goal of the QMP is to ensure the data used by TBEP for decision-making has known and documented quality and is being used appropriately. In other words, the QMP establishes an internal process for ensuring data quality conforms with federal or grant-reporting requirements, whereas this document is a generalized introduction and how-to approach for data management that can help us achieve QMP goals.</p>
 <p>Identifying what this SOP is and what it is not can help set expectations for the use of this document. As noted above, the TBEP is a relatively small organization that interfaces directly or indirectly on many projects supported or managed primarily by our partners. Because of the diversity of projects relevant to our work, it would be inappropriate and impossible to describe a detailed step-by-step SOP that could apply to every project that has relevance to the TBEP’s mission. Therefore, the approaches and workflows we describe are meant to be generalized to many project types. Any specificity that is described relates to how to use tools that have broad applicability, e.g., developing a GitHub workflow or describing general characteristics of metadata that could apply to many data types. This distinguishes this SOP from others that may apply rigorous standards to one particular problem.</p>
 <p>To summarize, this document <strong>is</strong>:</p>
 <ul>
@@ -326,31 +366,31 @@ Figure 2.1: Loss of information over time in the absence of data management (fro
 
 </div>
 </div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-Carpenter09">
-<p>Carpenter, S. R., E. V. Armbrust, P. W. Arzberger, F. Stuart Chapin III, J. J. Elser, E. J. Hackett, A. R. Ives, et al. 2009. “Accelerate Synthesis in Ecology and Environmental Sciences.” <em>BioScience</em> 59 (8): 699–701. <a href="https://doi.org/10.1525/bio.2009.59.8.11">https://doi.org/10.1525/bio.2009.59.8.11</a>.</p>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Carpenter09" class="csl-entry">
+Carpenter, S. R., E. V. Armbrust, P. W. Arzberger, F. Stuart Chapin III, J. J. Elser, E. J. Hackett, A. R. Ives, et al. 2009. <span>“Accelerate Synthesis in Ecology and Environmental Sciences.”</span> <em>BioScience</em> 59 (8): 699–701. <a href="https://doi.org/10.1525/bio.2009.59.8.11">https://doi.org/10.1525/bio.2009.59.8.11</a>.
 </div>
-<div id="ref-Fecher14">
-<p>Fecher, B., and S. Friesike. 2014. “Open Science: One Term, Five Schools of Thought.” In <em>Opening Science</em>, 17–47. Springer, Cham.</p>
+<div id="ref-Fecher14" class="csl-entry">
+Fecher, B., and S. Friesike. 2014. <span>“Open Science: One Term, Five Schools of Thought.”</span> In <em>Opening Science</em>, 17–47. Springer, Cham.
 </div>
-<div id="ref-Greening14">
-<p>Greening, H. S., A. Janicki, E. T. Sherwood, R. Pribble, and J. O. R. Johansson. 2014. “Ecosystem responses to long-term nutrient management in an urban estuary: Tampa Bay, Florida, USA.” <em>Estuarine, Coastal and Shelf Science</em> 151: A1–A16. <a href="https://doi.org/10.1016/j.ecss.2014.10.003">https://doi.org/10.1016/j.ecss.2014.10.003</a>.</p>
+<div id="ref-Greening14" class="csl-entry">
+Greening, H. S., A. Janicki, E. T. Sherwood, R. Pribble, and J. O. R. Johansson. 2014. <span>“<span class="nocase">Ecosystem responses to long-term nutrient management in an urban estuary: Tampa Bay, Florida, USA</span>.”</span> <em>Estuarine, Coastal and Shelf Science</em> 151: A1–16. <a href="https://doi.org/10.1016/j.ecss.2014.10.003">https://doi.org/10.1016/j.ecss.2014.10.003</a>.
 </div>
-<div id="ref-Lortie14">
-<p>Lortie, C. J. 2014. “Formalized Synthesis Opportunities for Ecology: Systematic Reviews and Meta-Analyses.” <em>OIKOS</em> 123 (8): 897–902. <a href="https://doi.org/10.1111/j.1600-0706.2013.00970.x">https://doi.org/10.1111/j.1600-0706.2013.00970.x</a>.</p>
+<div id="ref-Lortie14" class="csl-entry">
+Lortie, C. J. 2014. <span>“Formalized Synthesis Opportunities for Ecology: Systematic Reviews and Meta-Analyses.”</span> <em>OIKOS</em> 123 (8): 897–902. <a href="https://doi.org/10.1111/j.1600-0706.2013.00970.x">https://doi.org/10.1111/j.1600-0706.2013.00970.x</a>.
 </div>
-<div id="ref-Michener97">
-<p>Michener, W. K., J. W. Brunt, J. J. Helly, T. B. Kirchner, and S. G. Stafford. 1997. “Nongeospatial Metadata for the Ecological Sciences.” <em>Ecological Applications</em> 7 (1): 330–42. <a href="https://doi.org/https://doi.org/10.1890/1051-0761(1997)007%5B0330:NMFTES%5D2.0.CO;2">https://doi.org/https://doi.org/10.1890/1051-0761(1997)007[0330:NMFTES]2.0.CO;2</a>.</p>
+<div id="ref-Michener97" class="csl-entry">
+Michener, W. K., J. W. Brunt, J. J. Helly, T. B. Kirchner, and S. G. Stafford. 1997. <span>“Nongeospatial Metadata for the Ecological Sciences.”</span> <em>Ecological Applications</em> 7 (1): 330–42. https://doi.org/<a href="https://doi.org/10.1890/1051-0761(1997)007[0330:NMFTES]2.0.CO;2">https://doi.org/10.1890/1051-0761(1997)007[0330:NMFTES]2.0.CO;2</a>.
 </div>
-<div id="ref-Mons18">
-<p>Mons, B. 2018. <em>Data Stewardship for Open Science: Implementing FAIR Principles</em>. Boca Raton, FL: CRC Press.</p>
+<div id="ref-Mons18" class="csl-entry">
+Mons, B. 2018. <em>Data Stewardship for Open Science: Implementing <span>FAIR</span> Principles</em>. Boca Raton, FL: CRC Press.
 </div>
-<div id="ref-Sherwood17">
-<p>Sherwood, E. T., H. S. Greening, J. O. R. Johansson, K. Kaufman, and G. Raulerson. 2017. “Tampa Bay (Florida, USA): Documenting Seagrass Recovery Since the 1980s and Reviewing the Benefits.” <em>Southeastern Geographer</em> 57 (3): 294–319. <a href="https://doi.org/10.1353/sgo.2017.0026">https://doi.org/10.1353/sgo.2017.0026</a>.</p>
+<div id="ref-Sherwood17" class="csl-entry">
+Sherwood, E. T., H. S. Greening, J. O. R. Johansson, K. Kaufman, and G. Raulerson. 2017. <span>“<span>T</span>ampa <span>B</span>ay (<span>F</span>lorida, <span>USA</span>): Documenting Seagrass Recovery Since the 1980s and Reviewing the Benefits.”</span> <em>Southeastern Geographer</em> 57 (3): 294–319. <a href="https://doi.org/10.1353/sgo.2017.0026">https://doi.org/10.1353/sgo.2017.0026</a>.
 </div>
-<div id="ref-tbep1620">
-<p>Sherwood, E. T., G. Raulerson, M. W. Beck, and M. Burke. 2020. “Tampa Bay Estuary Program: Quality Management Plan.” 16-20. St. Petersburg, Florida: Tampa Bay Estuary Program. <a href="https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing">https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing</a>.</p>
+<div id="ref-tbep1620" class="csl-entry">
+Sherwood, E. T., G. Raulerson, M. W. Beck, and M. Burke. 2020. <span>“<span>Tampa Bay Estuary Program: Quality Management Plan</span>.”</span> 16-20. St. Petersburg, Florida: Tampa Bay Estuary Program. <a href="https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing">https://drive.google.com/file/d/1DyA0PNHV8rEXGMwGiyS7sXY1ECLYpJJO/view?usp=sharing</a>.
 </div>
 </div>
             </section>
@@ -419,7 +459,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
