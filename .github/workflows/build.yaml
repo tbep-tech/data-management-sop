@@ -15,8 +15,17 @@ jobs:
       - uses: r-lib/actions/setup-r@v2
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-tinytex@v2
-      - name: Install R packages
-        run: Rscript -e 'install.packages(c("rmarkdown","bookdown","EML", "dplyr", "pander", "tinytex", "qpdf"))'
+      - name: Setup R dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::rmarkdown
+            any::bookdown
+            any::EML
+            any::dplyr
+            any::pander
+            any::tinytex
+            any::qpdf
       - name: Render Book
         run: sh _build.sh
       - uses: actions/upload-artifact@v1
