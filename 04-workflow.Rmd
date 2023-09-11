@@ -126,11 +126,20 @@ How can artificial intelligence improve my life?
 In a few seconds, you'll get a response to your question.  
 
 ```
-Artificial Intelligence (AI) has the potential to improve various aspects of your life in several ways. Here are some ways AI can enhance your daily life and overall well-being:
+Artificial Intelligence (AI) has the potential to improve various
+aspects of your life in several ways. Here are some ways AI can 
+enhance your daily life and overall well-being:
 
-1. Personal Assistants: AI-powered personal assistants like Siri, Alexa, or Google Assistant can simplify your daily tasks. They can set reminders, answer questions, provide weather updates, and control smart home devices, making your life more convenient.
+1. Personal Assistants: AI-powered personal assistants like Siri, 
+Alexa, or Google Assistant can simplify your daily tasks. They can 
+set reminders, answer questions, provide weather updates, and 
+control smart home devices, making your life more convenient.
 
-2. Healthcare: AI can assist in early disease detection, aid in medical diagnoses, and improve treatment planning. For example, AI-driven medical imaging can help detect diseases like cancer, while wearable health devices can monitor your vital signs and provide real-time health insights.
+2. Healthcare: AI can assist in early disease detection, aid in 
+medical diagnoses, and improve treatment planning. For example, 
+AI-driven medical imaging can help detect diseases like cancer, 
+while wearable health devices can monitor your vital signs and 
+provide real-time health insights.
 
 etc.
 ```
@@ -154,7 +163,8 @@ ChatGPT is an outstanding resource for coding, particularly for open-source appl
 Many of the above examples require copying/pasting of sample code or datasets into ChatGPT prompts.  One very important caveat of doing so is realizing that information used in prompts are now canon and part of the entire training database used by ChatGPT.  Personally identifiable information or otherwise sensitive data should never be used in prompts.  Placeholder text (e.g., anonymizing data) or providing snippets of datasets in code prompts would be appropriate.  For the latter, simply defining the column names and data types in each column is often sufficient to receive a useful answer from ChatGPT.  The `glimpse()` function from the [tibble](https://tibble.tidyverse.org/){target="_blank"} package can be used to return this information without showing any of the actual data (e.g., `glimpse(epcdata, 0)`, note the "0" argument): 
 
 ```
-Write me some R code for plotting some of the continuous variables against SampleTime:
+Write me some R code for plotting some of the continuous variables
+against SampleTime:
 
 Rows: 27,601
 Columns: 26
