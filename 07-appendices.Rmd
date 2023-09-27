@@ -11,6 +11,12 @@ Below are several resources and definitions that may be helpful in developing a 
 * [US Geological Survey resources for **Metadata Creation**](https://www.usgs.gov/products/data-and-tools/data-management/metadata-creation){target="_blank"}
 * [ELIXIR and others **Data Stewardship Wizard**](https://ds-wizard.org/){target="_blank"}
 
+### TBEP Open Science Trainings
+
+* [CERF 2021 Open Science workshop](https://tbep-tech.github.io/cerf-os-workshop/){target="_blank"}
+* [TBEP 2023 Open Science workshop](https://tbep-tech.github.io/tbep-os-workshop/){target="_blank"}
+* [FLAFS 2023 Open Science workshop](https://tbep-tech.github.io/flafs-os-workshop/){target="_blank"}
+
 ### TBEP R Trainings
 
 * [Peconic Estuary Program R training](https://tbep-tech.github.io/pep-r-training){target="_blank"}, [recording](https://drive.google.com/file/d/1ZjVHFrVpw2uTKZw-BmD29umdbl6viutM/view?usp=sharing){target="_blank"}
@@ -19,6 +25,7 @@ Below are several resources and definitions that may be helpful in developing a 
 * [Writing functions in R](https://tbep-tech.github.io/tbep-r-training/functions.html){target="_blank"}
 * [R package development workflow](https://tbep-tech.github.io/tbep-r-training/packages.html){target="_blank"}
 * [A soft introduction to Shiny](https://tbep-tech.github.io/tbep-r-training/shiny.html){target="_blank"}
+* [CERF 2023 R Shiny workshop](https://tbep-tech.github.io/shiny-workshop/){target="_blank"}
 
 ### R Lessons & Tutorials
 
