@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 3 Key Concepts and Principles | Data Management SOP for the Tampa Bay Estuary Program</title>
   <meta name="description" content="This is a web page describing the TBEP data management SOP" />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 3 Key Concepts and Principles | Data Management SOP for the Tampa Bay Estuary Program" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2023-09-27" />
+<meta name="date" content="2025-02-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -65,7 +65,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -137,6 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -313,7 +314,7 @@ div.csl-indent {
 <blockquote>
 <p>I am developing a decision-support tool:</p>
 </blockquote>
-<p>Related to the challenges of data management for modelling, so-called “decision-support” tools are increasingly used as a front-end for decision-makers to access relevant information from a research project or intensive data collection effort. Online interactive dashboards have proliferated tremendously the last decade to meet this need. These tools can be useful in the right hands, yet there is no community standard for how to treat these products as data to track their origin and metadata. In this case, documenting the workflow, source code, and requisite datasets for powering the dashboard may be the most important contributions. <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003542#s4">Rule 4</a> under the ten simple rules for the “care and feeding” of scientific data <span class="citation">(<a href="#ref-Goodman14" role="doc-biblioref">Goodman et al. 2014</a>)</span> describes publishing workflows as important context.</p>
+<p>Related to the challenges of data management for modelling, so-called “decision-support” tools are increasingly used as a front-end for decision-makers to access relevant information from a research project or intensive data collection effort. Online interactive dashboards have proliferated tremendously the last decade to meet this need. These tools can be useful in the right hands, yet there is no community standard for how to treat these products as data to track their origin and metadata. In this case, documenting the workflow, source code, and requisite datasets for powering the dashboard may be the most important contributions. <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003542#s4">Rule 4</a> under the ten simple rules for the “care and feeding” of scientific data <span class="citation">(<a href="#ref-Goodman14">Goodman et al. 2014</a>)</span> describes publishing workflows as important context.</p>
 <p>In summary, identifying the most important data contribution is a challenge that can guided through careful evaluation of the above. This may lead you to choose one or more data products to develop a data management workflow for a specific project. These could include:</p>
 <ul>
 <li>Tabular data either as standalone or as several tables linked by common keys;</li>
@@ -325,7 +326,7 @@ div.csl-indent {
 </div>
 <div id="fair" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> The FAIR principles<a href="keys.html#fair" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The previous section presented several questions to ask yourself that can aid in identifying important contributions of a research project enabled by proper data management techniques. In all cases, once that important contribution is identified, community standards or best practices for that dataset or product should be used to ensure the intended audience can find, access, use, and replicate the data. The FAIR principles <span class="citation">(<a href="#ref-Wilkinson16" role="doc-biblioref">Wilkinson et al. 2016</a>)</span> provide some general guidelines to follow for ensuring the openness of a data product. The FAIR acronym is described as follows:</p>
+<p>The previous section presented several questions to ask yourself that can aid in identifying important contributions of a research project enabled by proper data management techniques. In all cases, once that important contribution is identified, community standards or best practices for that dataset or product should be used to ensure the intended audience can find, access, use, and replicate the data. The FAIR principles <span class="citation">(<a href="#ref-Wilkinson16">Wilkinson et al. 2016</a>)</span> provide some general guidelines to follow for ensuring the openness of a data product. The FAIR acronym is described as follows:</p>
 <ul>
 <li><strong>F</strong>indable: The data have a globally unique and persistent identifier, including use of “rich” metadata.</li>
 <li><strong>A</strong>ccessible: Once found, the data can be retrieved using standardized communications protocols that are open, free, and universally implementable.</li>
@@ -340,7 +341,7 @@ div.csl-indent {
 <div id="whytidy" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> The importance of tidy data<a href="keys.html#whytidy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We introduced different data products in section <a href="keys.html#contribs">3.1</a>, ranging from tabular data to more abstract definitions that may include analysis pipelines or online services. Tabular data are by far the most recognized and most common data type and it’s worth covering a few basic principles for managing these data that will help you tremendously in the long run. At their core, tabular data are a simple conceptual model for storing information as observations in rows and variables in columns, yet its very common to try to make a data table more than it should be. Unless you spend a lot of time working with data, it can be difficult to recognize common mistakes that lead to “table abuse”.</p>
-<p>Before we get into tidy data, we need to discuss some of the downfalls of Excel as a data management system. There are <a href="http://www.eusprig.org/horror-stories.htm">many examples</a> that demonstrate how Excel has contributed to costly mistakes through the abuse of tables, often to the detriment of science <span class="citation">(<a href="#ref-Ziemann16" role="doc-biblioref">Ziemann, Eren, and El-Osta 2016</a>)</span>. Although it is a very interesting and clever program, it is not software developed for data storage. It is a graphical user interface masquerading as data management and analysis software. It includes many tools that may appear useful for organizing information, but that ultimately increases risk and make your life as an analyst more difficult.</p>
+<p>Before we get into tidy data, we need to discuss some of the downfalls of Excel as a data management system. There are <a href="http://www.eusprig.org/horror-stories.htm">many examples</a> that demonstrate how Excel has contributed to costly mistakes through the abuse of tables, often to the detriment of science <span class="citation">(<a href="#ref-Ziemann16">Ziemann, Eren, and El-Osta 2016</a>)</span>. Although it is a very interesting and clever program, it is not software developed for data storage. It is a graphical user interface masquerading as data management and analysis software. It includes many tools that may appear useful for organizing information, but that ultimately increases risk and make your life as an analyst more difficult.</p>
 <p>Excel allows you to abuse your data in many ways, such as adding color to cells, embedding formulas, and automatically formatting cell types (figure <a href="keys.html#fig:excelbad">3.1</a>). The problem occurs when this organization becomes ambiguous and only has meaning inside the head of the person who created the spreadsheet. For example, color may be used to fill cells of a given category. This may seem harmless, but in doing so, you’ve not only indirectly created more data, but you’ve created data that have an ambiguous meaning. Embedding formulas that reference specific locations in or across spreadsheets is also a nightmare scenario for reproducibility. There is no clear way to extract the hidden workflow embedded in many spreadsheets.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:excelbad"></span>
 <img src="img/excel_bad.png" alt="An exceptional example of table abuse using Excel." width="80%" />
@@ -348,8 +349,8 @@ div.csl-indent {
 Figure 3.1: An exceptional example of table abuse using Excel.
 </p>
 </div>
-<p>If you absolutely must use Excel to store data, the only acceptable format you should use as a responsible data steward is a rectangular, flat file. We mean “rectangular” as storing data only in rows and columns in matrix format (e.g., 10 rows x 5 columns), with no “dangling” cells that have values outside of the grid or more than one table in a spreadsheet. We mean “flat file” as no cell formatting, no embedded formulas, no multiple spreadsheets in the same file, and data entered only as alphanumeric characters. This will ensure that there is no ambiguous information and a machine will have no problem reading your spreadsheet. Your data will be pure and simple and not abused. <span class="citation">Broman and Woo (<a href="#ref-Broman18" role="doc-biblioref">2018</a>)</span> provide an excellent guide that expands on these ideas. Essentially, these best practices force you to isolate the analysis from the data - many people use Excel to mix the two, leading to problems.</p>
-<p>Now we can introduce some additional principles for tabular data that will improve how they are used in downstream analysis pipelines. The “tidy” data principles developed by Hadley Wickham <span class="citation">(<a href="#ref-Wickham14c" role="doc-biblioref">Wickham 2014</a>)</span> are a set of simple rules for storing tabular data that have motivated the development of the wildly popular tidyverse suite of R packages <span class="citation">(<a href="#ref-Wickham19" role="doc-biblioref">Wickham et al. 2019</a>)</span>. If you’re already using the rectangular, flat file format, adopting the tidy principles should be a breeze. The rules are simple:</p>
+<p>If you absolutely must use Excel to store data, the only acceptable format you should use as a responsible data steward is a rectangular, flat file. We mean “rectangular” as storing data only in rows and columns in matrix format (e.g., 10 rows x 5 columns), with no “dangling” cells that have values outside of the grid or more than one table in a spreadsheet. We mean “flat file” as no cell formatting, no embedded formulas, no multiple spreadsheets in the same file, and data entered only as alphanumeric characters. This will ensure that there is no ambiguous information and a machine will have no problem reading your spreadsheet. Your data will be pure and simple and not abused. <span class="citation">Broman and Woo (<a href="#ref-Broman18">2018</a>)</span> provide an excellent guide that expands on these ideas. Essentially, these best practices force you to isolate the analysis from the data - many people use Excel to mix the two, leading to problems.</p>
+<p>Now we can introduce some additional principles for tabular data that will improve how they are used in downstream analysis pipelines. The “tidy” data principles developed by Hadley Wickham <span class="citation">(<a href="#ref-Wickham14c">Wickham 2014</a>)</span> are a set of simple rules for storing tabular data that have motivated the development of the wildly popular tidyverse suite of R packages <span class="citation">(<a href="#ref-Wickham19">Wickham et al. 2019</a>)</span>. If you’re already using the rectangular, flat file format, adopting the tidy principles should be a breeze. The rules are simple:</p>
 <ol style="list-style-type: decimal">
 <li>Each variable must have its own column;</li>
 <li>Each observation must have its own row; and,</li>
@@ -375,7 +376,7 @@ Figure 3.3: Joining two tidy tables by a shared key.
 <div id="metadatadesc" class="section level2 hasAnchor" number="3.4">
 <h2><span class="header-section-number">3.4</span> Metadata<a href="keys.html#metadatadesc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Just as “data” can have different meanings to different people, “metadata” is a loosely defined term that describes one of the most important aspects of data management. Metadata varies from simple text descriptions of a dataset, such as “who”, “what”, “when”, “where”, “why”, and “how”, to more formalized standards with the intent of preparing your data for archival in a long-term repository. Having no metadata is almost a guarantee that your dataset will be orphaned or misused by others, either inadvertently or with willful acknowledgment that the original purpose of the data is unknown and its use may be inappropriate for the task at hand. Metadata are also important for enabling discovery of your data (the <strong>“F”</strong> in FAIR). So, when you think of data management, you should think of it as synonymous with metadata curation.</p>
-<p>Metadata is literally defined as “data about data” or “information about information”. A more comprehensive definition is provided by <span class="citation">Gilliland (<a href="#ref-Gilliland16" role="doc-biblioref">2016</a>)</span>:</p>
+<p>Metadata is literally defined as “data about data” or “information about information”. A more comprehensive definition is provided by <span class="citation">Gilliland (<a href="#ref-Gilliland16">2016</a>)</span>:</p>
 <blockquote>
 <p>A suite of industry or disciplinary standards as well as additional internal and external documentation and other data necessary for the identification, representation, interoperability, technical management, performance, and use of data contained in an information system.</p>
 </blockquote>
@@ -404,7 +405,7 @@ Figure 3.3: Joining two tidy tables by a shared key.
 <blockquote>
 <p>How can someone get a copy of the dataset?</p>
 </blockquote>
-<p>Good metadata has information on who has the data and how to contact them for requesting access. This contact may not be the same as who created the dataset (e.g., IT staff). For archived or publicly available data, this information is more important for who to contact should someone have questions. Information on obtaining a copy of the data should also describe any special software or licensing issues related to accessing the data. Under the <strong>I</strong> in FAIR, you should strive to make your data as interoperable as possible and not store your data in an obscure format that requires specialized software. If this is unavoidable (e.g., your data are large and it needs to be compressed), describe what needs to be done to access the data. Any licensing or permissions issues on using data should also be described, e.g., is it free for use with or without attribution, are there limitations on its use, etc. The <a href="https://r-pkgs.org/license.html">licensing chapter</a> in <span class="citation">Wickham and Bryan (<a href="#ref-Wickham15" role="doc-biblioref">2015</a>)</span> is a great resource to learn more about these issues. Although this chapter relates to code licensing, the same principles could apply to data.</p>
+<p>Good metadata has information on who has the data and how to contact them for requesting access. This contact may not be the same as who created the dataset (e.g., IT staff). For archived or publicly available data, this information is more important for who to contact should someone have questions. Information on obtaining a copy of the data should also describe any special software or licensing issues related to accessing the data. Under the <strong>I</strong> in FAIR, you should strive to make your data as interoperable as possible and not store your data in an obscure format that requires specialized software. If this is unavoidable (e.g., your data are large and it needs to be compressed), describe what needs to be done to access the data. Any licensing or permissions issues on using data should also be described, e.g., is it free for use with or without attribution, are there limitations on its use, etc. The <a href="https://r-pkgs.org/license.html">licensing chapter</a> in <span class="citation">Wickham and Bryan (<a href="#ref-Wickham15">2015</a>)</span> is a great resource to learn more about these issues. Although this chapter relates to code licensing, the same principles could apply to data.</p>
 <div id="metadata" class="section level3 hasAnchor" number="3.4.1">
 <h3><span class="header-section-number">3.4.1</span> Metadata examples<a href="keys.html#metadata" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now that we’ve covered the general concepts of what is included in metadata, we provide some examples of what this looks like in practice. At it’s simplest, metadata can be a text file that includes information on the questions above. Below is one such example of metadata that accompanies a dataset that we describe in section <a href="cases.html#desoto">5.2</a>.</p>
@@ -439,7 +440,7 @@ Figure 3.5: A very simple example of an EML file for metadata, shown in XML synt
 <blockquote>
 <p>Column names</p>
 </blockquote>
-<p>Be as descriptive as possible while trying to keep the name as short as possible. Really long names with lots of detail can be just as frustrating as very short names with very little detail. Ideally, the description of data in a column can be included in metadata, but the column name should also be intuitive to point the analyst in the right direction. Try to avoid spaces in column names since some software may interpret that as the start of a new column. It may also be useful to identify a “plot name” for each column name <span class="citation">(<a href="#ref-Broman18" role="doc-biblioref">Broman and Woo 2018</a>)</span> that uses proper spelling and punctuation. Using a column name directly in a graphic is generally a bad idea since their meaning outside of the dataset may not be obvious.</p>
+<p>Be as descriptive as possible while trying to keep the name as short as possible. Really long names with lots of detail can be just as frustrating as very short names with very little detail. Ideally, the description of data in a column can be included in metadata, but the column name should also be intuitive to point the analyst in the right direction. Try to avoid spaces in column names since some software may interpret that as the start of a new column. It may also be useful to identify a “plot name” for each column name <span class="citation">(<a href="#ref-Broman18">Broman and Woo 2018</a>)</span> that uses proper spelling and punctuation. Using a column name directly in a graphic is generally a bad idea since their meaning outside of the dataset may not be obvious.</p>
 <blockquote>
 <p>Column types</p>
 </blockquote>
@@ -463,7 +464,7 @@ Figure 3.6: An example of a data dictionary.
 </div>
 </div>
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-Broman18" class="csl-entry">
 Broman, K. W., and K. H. Woo. 2018. <span>“Data Organization in Spreadsheets.”</span> <em>The American Statistician</em> 72 (1): 2–10. <a href="https://doi.org/10.1080/00031305.2017.1375989">https://doi.org/10.1080/00031305.2017.1375989</a>.
 </div>
