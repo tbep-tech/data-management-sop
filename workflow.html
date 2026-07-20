@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 4 Data Management Workflow | Data Management SOP for the Tampa Bay Estuary Program</title>
   <meta name="description" content="This is a web page describing the TBEP data management SOP" />
-  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 4 Data Management Workflow | Data Management SOP for the Tampa Bay Estuary Program" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Marcus W. Beck, Gary E. Raulerson, Maya C. Burke, Joe Whalen, Sheila Scolaro, Ed T. Sherwood" />
 
 
-<meta name="date" content="2026-06-09" />
+<meta name="date" content="2026-07-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -213,6 +213,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.1.3" data-path="workflow.html"><a href="workflow.html#automation"><i class="fa fa-check"></i><b>4.1.3</b> How do we build the cake?</a></li>
 <li class="chapter" data-level="4.1.4" data-path="workflow.html"><a href="workflow.html#moregit"><i class="fa fa-check"></i><b>4.1.4</b> More on Git and GitHub</a></li>
 <li class="chapter" data-level="4.1.5" data-path="workflow.html"><a href="workflow.html#aiuse"><i class="fa fa-check"></i><b>4.1.5</b> Use of artificial intelligence</a></li>
+<li class="chapter" data-level="4.1.6" data-path="workflow.html"><a href="workflow.html#humandata"><i class="fa fa-check"></i><b>4.1.6</b> Handling human data</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="workflow.html"><a href="workflow.html#howyou"><i class="fa fa-check"></i><b>4.2</b> How can you manage data?</a>
 <ul>
@@ -463,6 +464,39 @@ $ Color_345_F45_Q        &lt;chr&gt; …</code></pre>
 <li><strong>Limited research support</strong>: Research is an inherently creative process where interpretation and nuance is driven by trained professionals with skillsets that cannot be replicated by AI. Research activities that should not be supported by AI include writing, hypothesis generation, and interpretation of analysis output, to name a few. However, AI could support research in limited use cases. For example, AI-generated images for social science research have been developed by TBEP staff in extreme cases where specific constraints make doing so with existing images incredibly challenging. Disclosure on the use of AI for these limited applications will remain the best practice moving forward and only when existing resources are prohibitive.</li>
 </ol>
 <p>Generative AI tools continue to evolve and how TBEP, as well as the broader scientific and management communities, engage with them will also change. This will require thorough understanding of their limitations and pitfalls before they can be used responsibly. Moral and ethical implications aside, these tools are here to stay and the responsibility of understanding how best to leverage these applications to improve efficiency in creating open science applications and communications is paramount.</p>
+</div>
+<div id="humandata" class="section level3 hasAnchor" number="4.1.6">
+<h3><span class="header-section-number">4.1.6</span> Handling human data<a href="workflow.html#humandata" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Many environmental projects involve information provided directly by people, whether through surveys, interviews, focus groups, citizen science, or other forms of community engagement. These data can provide valuable insights for research and management, but they also introduce ethical, legal, and practical responsibilities that differ from those associated with other types of environmental datasets. An open science approach does not imply that all data should be openly shared without restriction. Rather, open science encourages making data and research products as transparent and accessible as possible while respecting participant privacy, informed consent, and applicable institutional and regulatory requirements. This section describes how these considerations fit within the TBEP data management workflow so that data can be managed responsibly from collection through long-term storage and, when appropriate, public dissemination.</p>
+<p>Insofar as possible, any <em>personally identifiable information</em> collected from people should not be stored or made publicly available. Common examples of this information include people’s name, email address, physical address, and phone number. However, other information may still be considered personally identifiable when used in combination, such as a person’s job title and whom they work for. Information obtained as part of the public record are the primary exception to this standard. This includes information obtained during public meetings via public comments, discussions, and in-meeting votes, polls, or surveys.</p>
+<p>For some projects, the collection of personally identifiable information may be unavoidable or necessary, such as tracking who is completing a survey for the purpose of preventing duplicate responses or building longitudinal datasets. When collecting this sensitive information, at least one of the following approaches should be used for managing and storing this data:</p>
+<ol style="list-style-type: decimal">
+<li><strong>De-identifying data</strong>: Delete or replace the personally identifiable information after data collection is complete. A random number or alpha-numeric character generator can be used to assign unique IDs to each respondent, ensuring that responses remain anonymous but repeat respondents can be identified if needed.</li>
+<li><strong>Protecting data</strong>: Securely store the personally identifiable information in a location that is not publicly available. This can be in a secure, password-protected computer, hard drive, or internal network drive. Access to this data should be limited to as few people as possible. This approach can be used in tandem with de-identification, where public-facing records include anonymized respondent IDs and private, secured records contain a legend matching each ID with the corresponding identifiable information.</li>
+</ol>
+<p>The practices outlined in this SOP do not supersede regulatory requirements regarding the collection, use, and publication of human-derived data. Even when personally identifiable information is not being collected, review by an accredited Institutional Review Board (IRB) may be necessary to ensure compliance with the U.S. Department of Health and Human Services’ <a href="https://www.hhs.gov/ohrp/regulations-and-policy/regulations/45-cfr-46/index.html" target="_blank">45 CFR 46</a>, which outlines the federal regulations for protecting human subjects in research. Determining when IRB review may be required depends on the answer to the following question: <em>is the project considered human subjects research?</em></p>
+<p>It is a common misconception that any project collecting, analyzing, and/or publishing human-derived data constitutes human subjects research. Federal regulations have an explicit definition of what constitutes “research” and “human subjects.” As of July 20, 2026, “research” and “human subjects” have the following definitions under <a href="https://www.ecfr.gov/current/title-28/chapter-I/part-46/section-46.102" target="_blank">28 CFR 46.102</a>:</p>
+<blockquote>
+<ol start="4" style="list-style-type: lower-alpha">
+<li><strong>Research</strong> means a systematic investigation, including research development, testing and evaluation, designed to develop or contribute to generalizable knowledge. Activities which meet this definition constitute research for purposes of this policy, whether or not they are conducted or supported under a program which is considered research for other purposes. For example, some demonstration and service programs may include research activities.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6" style="list-style-type: lower-alpha">
+<li><strong>Human subject</strong> means a living individual about whom an investigor (whether professional or student) conducting research obtains: (1) Data through intervention or interaction with the individual, or (2) Identifiable private information.</li>
+</ol>
+</blockquote>
+<p>The key components of the “research” definition are (1) the use commonly accepted scientific methods, <em>AND</em> (2) the intention of drawing conclusions that have some <em>general</em> applicability. For example, the random or opportunistic collection of information about people would not be considered “research”, nor would a project that only aims to assess, improve, or develop programs or services for an organization. A project must meet both criteria to be considered “research.”</p>
+<p>A project is only considered to use “human subjects” if (1) there is some manipulation of the person or their environment for research purposes (<em>intervention</em>) - or direct communication/interpersonal contact between the person and the investigator (<em>interaction</em>), <em>OR</em> (2) the identity of the person is or may be readily ascertained by the investigator or associated with the information (<em>identifiable</em>) and the information itself is one in which the person can reasonably expect will not be made publicly available in normal circumstances (<em>private</em>). For example, a secondary analysis of existing, publicly available data about people would not represent “human subjects”, nor would a project in which there is no contact with or influence on the people involved. A project only needs to meet one of these criteria to be considered as dealing with “human subjects.”</p>
+<p>IRB review should be sought when a project is determined to be human subjects research. This is to ensure compliance with federal regulations, including data collection, storage, reporting, and dissemination protocols. The best practices outlined in this SOP should align with most IRB requirements. However, additional practices for data protection may be required by the IRB depending on the specific project or subjects involved.</p>
+<p>Regardless of whether a project goes through IRB review, all projects should follow the open science best practices outlined in this SOP. Additionally, when collecting human data, projects should always strive for obtaining <em>free, prior, and informed consent</em> from all participants. What does this mean?</p>
+<ul>
+<li><strong>Free</strong>: Consent is sought voluntarily, without coercion, bribery, haste, or punishment for refusal.</li>
+<li><strong>Prior</strong>: Consent is sought before any information is collected.</li>
+<li><strong>Informed</strong>: Consent is sought after informing the person of the project purpose, tasks involved, how their information will be used, and any potential burdens or benefits of participation.</li>
+<li><strong>Consent</strong>: The person agrees to provide information, either in written (preferred), verbal, or implied format. Implied consent should only be used when written or verbal consent is not possible, such as return-by-mail surveys where the act of submission indicates consent.</li>
+</ul>
+<p>When possible, all records of written and verbal consent should be stored in addition to the accompanying data collected. Consent provided in the form of participant names and/or signatures should be securely stored, redacted from any digitized copies, and unlinkable to their response data. Verbal consent can be recorded in written form by the investigator in their notes or - if using audio or video recording - by stating on the record that consent was provided prior to starting the recording.</p>
 </div>
 </div>
 <div id="howyou" class="section level2 hasAnchor" number="4.2">
