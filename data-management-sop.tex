@@ -616,7 +616,7 @@ Identifying a location for where your data can be stored long-term is an importa
 
 As with metadata, the same rule applies to online data storage - something is better than nothing. Making your data available in a location that can be accessed by others, including metadata, is much, much better than not sharing your data at all, even if that location is not an ``official'' data repository. For this purpose, online FTP/HTTP websites can be sufficient. Of course, the major drawback of not hosting your data in an official repository is that others can't easily find the data. You can of course send the link to anyone that's interested, but this means they need to know the data exist to request the link in the first place. A useful scenario is that you include the location of the data as a supplemental link in a published paper or technical report. This takes advantage of existing and known communication avenues in the research or management community (e.g., a scientific journal) as a means to guide someone to your data.
 
-Hosting data on \href{https://github.com/}{GitHub} is another simple solution to making your data available to a larger community. GitHub is neither a federated repository, nor is it setup specifically for long-term data storage. However, if you already use GitHub and you want to do something rather than nothing at all, GitHub can be a useful solution to begin opening your data. GitHub was initially setup as an online platform for software or code version control, so it doesn't have all the hallmarks of a conventional data repository. GitHub also does not work well with large datasets (e.g., more than 100 Mb). However, it can work well for smaller datasets and offers other amenities that can help you work towards the FAIR principles. For example, the URLs where your data are located are stable (in the sense that they don't change), a DOI can be attached to your data (e.g., through \href{https://zenodo.org/}{Zenodo}), the data are publicly accessible if you choose to make them so, and you can include any appropriate supplemental information (i.e., metadata files). GitHub can be especially useful if your data product is a workflow that includes code to create a tool for environmental decision-making.
+Hosting data on \href{https://github.com/}{GitHub} is another simple solution to making your data available to a larger community. GitHub is neither a federated repository, nor is it setup specifically for long-term data storage. However, if you already use GitHub and you want to do something rather than nothing at all, GitHub can be a useful solution to begin opening your data. GitHub was initially setup as an online platform for software or code version control, so it doesn't have all the hallmarks of a conventional data repository. GitHub also does not work well with large datasets (e.g., more than 100 Mb). However, it can work well for smaller datasets and offers other amenities that can help you work towards the FAIR principles. For example, the URLs where your data are located are stable (in the sense that they don't change), a DOI can be attached to your data (e.g., through \href{https://zenodo.org/}{Zenodo}, see appendix section \ref{zenodo}), the data are publicly accessible if you choose to make them so, and you can include any appropriate supplemental information (i.e., metadata files). GitHub can be especially useful if your data product is a workflow that includes code to create a tool for environmental decision-making.
 
 A better, but more involved, solution for opening data is using a federated data repository. These are networks of distributed nodes (online access points) or individual repositories that collectively use similar standards in archiving data. They address the problem of multiple disconnected archival systems that are difficult to navigate. For example, the \href{https://knb.ecoinformatics.org/}{KNB} repository is one node of the larger \href{https://www.dataone.org/}{DataONE} federated network. DataONE includes other repositories that are domain-, industry-, or regionally-specific that collectively fall under a more generic category of environmental or earth sciences data. All nodes in the larger DataONE network can be easily navigated and have full infrastructure support from DataONE.
 
@@ -773,7 +773,7 @@ GitHub also includes a variety of other tools that facilitate openness:
 \item
   GitHub actions to create your own CI/CD workflows (our examples in section \ref{automation} use these tools).
 \item
-  Integration with \href{https://zenodo.org/}{Zenodo} for DOI assignments to give your project a stable and permanent address. You can see these links on many of our projects on GitHub (e.g., our \href{https://github.com/tbep-tech/wq-dash}{water quality dashboard}).\\
+  Integration with \href{https://zenodo.org/}{Zenodo} for DOI assignments to give your project a stable and permanent address (see appendix section \ref{zenodo}. You can see these links on many of our projects on GitHub (e.g., our \href{https://github.com/tbep-tech/wq-dash}{water quality dashboard}).\\
 \item
   Website hosting, as for our \href{https://tbep-tech.github.io/tbeptools/}{tbeptools} R package.
 \item
@@ -1416,7 +1416,7 @@ We finish this document by describing some general themes and lessons learned th
 
 \section{Something is better than nothing}\label{something-is-better-than-nothing}
 
-Novice data stewards can be overwhelmed by the apparent need to ``check all the boxes'' in the open science workflow of data management. This might include an overwhelming desire to create full metadata documentation using an accepted standard like EML, full version control of data workflows on GitHub, linking a repository with archive services like Zenodo, developing comprehensive data dictionaries, formatting all data in tidy format, and mastering open source data science languages like R. This can be especially daunting when considering that multiple data products could be ``valuable contributions'' of a research project.
+Novice data stewards can be overwhelmed by the apparent need to ``check all the boxes'' in the open science workflow of data management. This might include an overwhelming desire to create full metadata documentation using an accepted standard like EML, full version control of data workflows on GitHub, linking a repository with archive services like Zenodo (see appendix section \ref{zenodo}), developing comprehensive data dictionaries, formatting all data in tidy format, and mastering open source data science languages like R. This can be especially daunting when considering that multiple data products could be ``valuable contributions'' of a research project.
 
 Unless you have a fully dedicated IT support team and all the time in the world, it's impractical to try to adopt all of the principles in this document and apply them to every single piece of data for a project. Even applying all of these principles to the single most important data contribution of a project can be impractical. In light of this challenge, the tendency may be to simply treat data in a familiar way using entrenched workflows where data is seen only as a commodity that serves to address the research question at hand. We absolutely encourage you not to fall back on old habits.
 
@@ -1665,6 +1665,33 @@ All data products are to be accompanied with appropriate metadata. Formal metada
 \subsection{Delivery of data products}\label{delivery-of-data-products}
 
 Data can be delivered through online sharing platforms that enable products to be findable, accessible, interoperable, and reusable (\ref{fair}). These can include formal data repositories that employ standardized metadata schema (e.g., \href{https://www.dataone.org/}{DataOne}). Small datasets (\textless100 Mb) can also be hosted on the TBEP GitHub website (\url{https://github.com/tbep-tech}) by contacting staff for access. View the guidance \href{https://tbep-tech.github.io/data-management-sop/keys.html\#datahome}{here} for other acceptable alternatives. All data products should have an associated DOI as a globally unique and persistent identifier (through \url{https://zenodo.org/}). An appropriate license should also be attached to the data.
+
+\section{Linking Zenodo to GitHub}\label{zenodo}
+
+The use of Zenodo as a third-party service to assign a unique and persistent Digital Object Identifier (DOI) to a data product is mentioned throughout this document. Doing so provides a separate archived bundle of the resources in a GitHub repository tied to specific versions, where the URL for accessing the content never changes, is fully citable, and is generally compliant with FAIR principles (section \ref{philo}). This service is easy to set up with an existing GitHub account and we outline the steps below. These steps assume you already have a GitHub account and an existing repository you'd like to link with Zenodo.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Navigate to \href{https://zenodo.org}{Zenodo}.
+\item
+  For the login options, select GitHub.
+\item
+  Once logged in, open the dropdown menu on the top right where your name is located and select GitHub. If logging in for the first time or you don't see the repository you want to link, click the button on the top-right below the navbar that says ``Sync now''. This may take a few minutes if you are syncing for the first time, otherwise it should just take a few seconds. Only public repositories can be synced. You'll see your own personal repositories and those from GitHub organizations you belong to. You can only enable organizational repositories where you have admin rights and the organization may need to approve third-party apps like Zenodo.
+\item
+  Scroll down to find the repo you want to link with Zenodo.
+\item
+  Flip the switch on the right to ``on''.
+\item
+  Click on the repo title to bring you to the linked repository's Zenodo page. A new release is required to trigger the link, even if the repository has prior releases. Zenodo may prompt you to navigate to the repository's web page to create the release.\\
+\item
+  Before creating the release, consider adding a CITATION.cff or .zenodo.json file with metadata for the citation in the repository. Otherwise, Zenodo creates the citation from existing metadata in the repository that may be incomplete.
+\item
+  On the GitHub repository page, create the release giving it a tag (formal version number), title, and short description. The tag and title can be the same (e.g., v1.0.0), but you can create a more descriptive title if you prefer (e.g., ``first release''). The description is what the release contains (e.g., ``release for Zenodo'' if the first release or descriptions of bug fixes, enhancements, etc. for later releases). Click ``Publish release'' when done. Draft or pre-releases will not link to Zenodo.
+\item
+  Go back to Zenodo after you create the release. After a few minutes you should see the DOI and the DOI badge for the repository. Zenodo creates a version-specific DOI for each release, plus a ``concept'' DOI that always resolves to the latest version. Use the concept DOI for the badge in the README so it never needs updating, and cite a version-specific DOI when you need to reference an exact snapshot.
+\end{enumerate}
 
 \bibliography{refs.bib}
 

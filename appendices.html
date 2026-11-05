@@ -263,6 +263,7 @@ div.csl-indent {
 <li class="chapter" data-level="7.4.6" data-path="appendices.html"><a href="appendices.html#metadata-requirements"><i class="fa fa-check"></i><b>7.4.6</b> Metadata requirements</a></li>
 <li class="chapter" data-level="7.4.7" data-path="appendices.html"><a href="appendices.html#delivery-of-data-products"><i class="fa fa-check"></i><b>7.4.7</b> Delivery of data products</a></li>
 </ul></li>
+<li class="chapter" data-level="7.5" data-path="appendices.html"><a href="appendices.html#zenodo"><i class="fa fa-check"></i><b>7.5</b> Linking Zenodo to GitHub</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -423,8 +424,24 @@ div.csl-indent {
 <div id="delivery-of-data-products" class="section level3 hasAnchor" number="7.4.7">
 <h3><span class="header-section-number">7.4.7</span> Delivery of data products<a href="appendices.html#delivery-of-data-products" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Data can be delivered through online sharing platforms that enable products to be findable, accessible, interoperable, and reusable (<a href="keys.html#fair">3.2</a>). These can include formal data repositories that employ standardized metadata schema (e.g., <a href="https://www.dataone.org/">DataOne</a>). Small datasets (&lt;100 Mb) can also be hosted on the TBEP GitHub website (<a href="https://github.com/tbep-tech" class="uri">https://github.com/tbep-tech</a>) by contacting staff for access. View the guidance <a href="https://tbep-tech.github.io/data-management-sop/keys.html#datahome">here</a> for other acceptable alternatives. All data products should have an associated DOI as a globally unique and persistent identifier (through <a href="https://zenodo.org/" class="uri">https://zenodo.org/</a>). An appropriate license should also be attached to the data.</p>
-
 </div>
+</div>
+<div id="zenodo" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Linking Zenodo to GitHub<a href="appendices.html#zenodo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The use of Zenodo as a third-party service to assign a unique and persistent Digital Object Identifier (DOI) to a data product is mentioned throughout this document. Doing so provides a separate archived bundle of the resources in a GitHub repository tied to specific versions, where the URL for accessing the content never changes, is fully citable, and is generally compliant with FAIR principles (section <a href="workflow.html#philo">4.1.1</a>). This service is easy to set up with an existing GitHub account and we outline the steps below. These steps assume you already have a GitHub account and an existing repository you’d like to link with Zenodo.</p>
+<ol style="list-style-type: decimal">
+<li>Navigate to <a href="https://zenodo.org">Zenodo</a>.</li>
+<li>For the login options, select GitHub.</li>
+<li>Once logged in, open the dropdown menu on the top right where your name is located and select GitHub. If logging in for the first time or you don’t see the repository you want to link, click the button on the top-right below the navbar that says “Sync now”. This may take a few minutes if you are syncing for the first time, otherwise it should just take a few seconds. Only public repositories can be synced. You’ll see your own personal repositories and those from GitHub organizations you belong to. You can only enable organizational repositories where you have admin rights and the organization may need to approve third-party apps like Zenodo.</li>
+<li>Scroll down to find the repo you want to link with Zenodo.</li>
+<li>Flip the switch on the right to “on”.</li>
+<li>Click on the repo title to bring you to the linked repository’s Zenodo page. A new release is required to trigger the link, even if the repository has prior releases. Zenodo may prompt you to navigate to the repository’s web page to create the release.<br />
+</li>
+<li>Before creating the release, consider adding a CITATION.cff or .zenodo.json file with metadata for the citation in the repository. Otherwise, Zenodo creates the citation from existing metadata in the repository that may be incomplete.</li>
+<li>On the GitHub repository page, create the release giving it a tag (formal version number), title, and short description. The tag and title can be the same (e.g., v1.0.0), but you can create a more descriptive title if you prefer (e.g., “first release”). The description is what the release contains (e.g., “release for Zenodo” if the first release or descriptions of bug fixes, enhancements, etc. for later releases). Click “Publish release” when done. Draft or pre-releases will not link to Zenodo.</li>
+<li>Go back to Zenodo after you create the release. After a few minutes you should see the DOI and the DOI badge for the repository. Zenodo creates a version-specific DOI for each release, plus a “concept” DOI that always resolves to the latest version. Use the concept DOI for the badge in the README so it never needs updating, and cite a version-specific DOI when you need to reference an exact snapshot.</li>
+</ol>
+
 </div>
 </div>
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
