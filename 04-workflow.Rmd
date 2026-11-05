@@ -101,7 +101,7 @@ GitHub also includes a variety of other tools that facilitate openness:
 
 * Release tagging to assign formal version numbers to code, data or software. 
 * GitHub actions to create your own CI/CD workflows (our examples in section \@ref(automation) use these tools).
-* Integration with [Zenodo](https://zenodo.org/) for DOI assignments to give your project a stable and permanent address (see appendix section \@ref(zenodo).  You can see these links on many of our projects on GitHub (e.g., our [water quality dashboard](https://github.com/tbep-tech/wq-dash)).  
+* Integration with [Zenodo](https://zenodo.org/) for DOI assignments to give your project a stable and permanent address (see appendix section \@ref(zenodo)).  You can see these links on many of our projects on GitHub (e.g., our [water quality dashboard](https://github.com/tbep-tech/wq-dash)).  
 * Website hosting, as for our [tbeptools](https://tbep-tech.github.io/tbeptools/) R package.
 * Attaching licenses to a project with visible links to the usages defined under each license.
 
